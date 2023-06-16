@@ -1,0 +1,142 @@
+.container {
+  position: relative;
+  width: fit-content;
+  border: 2px solid transparent;
+  border-radius: var(--border-radius);
+}
+
+.container--disabled {
+  border: 2px solid transparent !important;
+  background-color: inherit !important;
+}
+
+.button {
+  cursor: pointer;
+  font-family: var(--font-family);
+  font-weight: 500;
+}
+
+.button--small {
+  font-size: 14px;
+  padding: 8px 16px;
+}
+
+.button--medium {
+  font-size: 16px;
+  min-width: 100px;
+  padding: 12px 24px;
+}
+
+.button--large {
+  font-size: 18px;
+  min-width: 100px;
+  padding: 16px 32px;
+}
+
+.button:disabled {
+  pointer-events: none;
+  border: inherit;
+}
+
+.button--primary {
+  background-color: var(--primary);
+  border: 2px solid var(--primary);
+  color: var(--light);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.button--primary:hover {
+  background-color: var(--primary-hover);
+  border: 2px solid var(--primary-hover);
+}
+
+.container--primary:active {
+  border-radius: var(--border-radius);
+  background: var(--primary-active);
+  border: 2px solid var(--border-active);
+}
+
+.button--primary:disabled {
+  background: var(--disabled);
+  border: 2px solid var(--disabled);
+}
+
+.button--secondary {
+  background-color: var(--white);
+  border: 1px solid var(--secondary);
+  color: var(--paragraph);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.button--secondary:hover {
+  border: 1px solid var(--secondary-hover);
+}
+
+.container--secondary:active {
+  border-radius: var(--border-radius);
+  border: 2px solid var(--secondary-active);
+}
+
+.button--secondary:disabled {
+  border: 1px solid var(--secondary) !important;
+  opacity: 0.4;
+}
+
+.button--text {
+  background-color: unset;
+  border: 0;
+  color: var(--text);
+}
+
+.button--text:hover {
+  color: var(--text-hover);
+}
+
+.button--text:active {
+  color: var(--text-active);
+}
+
+.button--text:disabled {
+  color: var(--paragraph);
+  opacity: 0.4;
+}
+
+.container--text:active {
+  border-radius: var(--border-radius);
+  border: 2px solid var(--border-active);
+}
+
+@keyframes loading {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+.loader {
+  width: 0;
+  height: 100%;
+  animation: loading 5s linear forwards;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: var(--border-radius);
+}
+
+.loader--primary {
+  background-color: var(--primary);
+}
+
+.loader--secondary {
+  background-color: var(--secondary);
+}
+
+.loader--accent {
+  background-color: var(--accent);
+}
