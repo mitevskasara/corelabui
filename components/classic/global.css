@@ -1,0 +1,29 @@
+:root {
+  --primary: #00398F;
+  --primary-hover: #0049B7;
+  --primary-active: #0154D1;
+
+  --secondary: #D8DAE5;
+  --secondary-hover: #8F95B2;
+  --secondary-active: #CFE5FF;
+
+  --text: #0066FF;
+  --text-hover: #0049B7;
+  --text-active: #0154D1;
+
+  --disabled: #D8DAE5;
+
+  --heading: #222831;
+  --paragraph: #474D66;
+  --link: #0066FF;
+  --light: #fcfcfc;
+
+  --border-active: #CFE5FF;
+  --border-radius: 4px;
+
+  --box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
+    rgba(17, 17, 26, 0.1) 0px 0px 8px rgba(17, 17, 26, 0.05) 0px 1px 0px,
+    rgba(17, 17, 26, 0.1) 0px 0px 8px;
+
+  --font-family: system-ui;
+}
