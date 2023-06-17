@@ -23,18 +23,18 @@
 }
 
 .button--small {
-  font-size: 14px;
+  font-size: var(--font-small);
   padding: 8px 16px;
 }
 
 .button--medium {
-  font-size: 16px;
+  font-size: var(--font-medium);
   min-width: 100px;
   padding: 12px 24px;
 }
 
 .button--large {
-  font-size: 18px;
+  font-size: var(--font-large);
   min-width: 100px;
   padding: 16px 32px;
 }

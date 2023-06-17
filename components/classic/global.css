@@ -12,9 +12,12 @@
   --text-active: #0154D1;
 
   --disabled: #D8DAE5;
+  --error: #CC3F40;
 
   --heading: #222831;
   --paragraph: #474D66;
+  --paragraph-light: #696F8C;
+
   --link: #0066FF;
   --light: #fcfcfc;
 
@@ -26,4 +29,8 @@
     rgba(17, 17, 26, 0.1) 0px 0px 8px;
 
   --font-family: system-ui;
+  --font-xsmall: 12px;
+  --font-small: 14px;
+  --font-medium: 16px;
+  --font-large: 18px;
 }
