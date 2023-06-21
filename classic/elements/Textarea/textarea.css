@@ -1,3 +1,28 @@
+.classic {
+  --font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+
+  --primary: #00398F;
+  --primary-hover: #0049B7;
+  --primary-active: #0154D1;
+
+  --heading: #222831;
+  --paragraph: #474D66;
+  --paragraph-light: #696F8C;
+
+  --link: #0066FF;
+  --light: #fcfcfc;
+
+  --disabled: #D8DAE5;
+  --error: #CC3F40;
+
+  --border-radius: 4px;
+
+  --font-xsmall: 12px;
+  --font-small: 14px;
+  --font-medium: 16px;
+  --font-large: 18px;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -7,26 +32,14 @@
 }
 
 .input {
+  font-family: var(--font-family);
   border: 1px solid var(--disabled);
   border-radius: var(--border-radius);
   outline: none;
   font-size: var(--font-medium);
   color: var(--paragraph);
-}
-
-.input--small {
+  resize: none;
   padding: 10px 16px;
-  height: 36px;
-}
-
-.input--medium {
-  padding: 10px 16px;
-  height: 40px;
-}
-
-.input--large {
-  padding: 10px 16px;
-  height: 56px;
 }
 
 .label,
@@ -36,6 +49,7 @@
 }
 
 .input::placeholder {
+  font-family: var(--font-family);
   font-size: var(--font-medium);
   color: var(--paragraph-light);
 }
@@ -53,21 +67,21 @@
 }
 
 .container--disabled,
-.container--disabled>input:hover,
-.container--disabled>input:focus {
+.container--disabled>textarea:hover,
+.container--disabled>textarea:focus {
   border: 1px solid var(--disabled);
   color: var(--disabled);
 }
 
-.container--disabled>input::placeholder,
+.container--disabled>textarea::placeholder,
 .container--disabled>.label,
 .container--disabled>.helper-text {
   color: var(--disabled) !important;
 }
 
 .input--error,
-.container--error>input:hover,
-.container--error>input:focus {
+.container--error>textarea:hover,
+.container--error>textarea:focus {
   border: 1px solid var(--error);
 }
 

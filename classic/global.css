@@ -1,4 +1,6 @@
 :root {
+  --font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+
   --primary: #00398F;
   --primary-hover: #0049B7;
   --primary-active: #0154D1;
@@ -12,7 +14,6 @@
   --text-active: #0154D1;
 
   --disabled: #D8DAE5;
-  --error: #CC3F40;
 
   --heading: #222831;
   --paragraph: #474D66;
@@ -21,16 +22,17 @@
   --link: #0066FF;
   --light: #fcfcfc;
 
-  --border-active: #CFE5FF;
+  --disabled: #D8DAE5;
+  --error: #CC3F40;
+
   --border-radius: 4px;
 
-  --box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
-    rgba(17, 17, 26, 0.1) 0px 0px 8px rgba(17, 17, 26, 0.05) 0px 1px 0px,
-    rgba(17, 17, 26, 0.1) 0px 0px 8px;
-
-  --font-family: system-ui;
   --font-xsmall: 12px;
   --font-small: 14px;
   --font-medium: 16px;
   --font-large: 18px;
+
+  --box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
+    rgba(17, 17, 26, 0.1) 0px 0px 8px rgba(17, 17, 26, 0.05) 0px 1px 0px,
+    rgba(17, 17, 26, 0.1) 0px 0px 8px;
 }
