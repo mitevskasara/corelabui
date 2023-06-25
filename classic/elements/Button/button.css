@@ -1,182 +1,154 @@
-.classic {
-  --font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-
-  --primary: #00398F;
-  --primary-hover: #0049B7;
-  --primary-active: #0154D1;
-
-  --secondary: #D8DAE5;
-  --secondary-hover: #8F95B2;
-  --secondary-active: #CFE5FF;
-
-  --text: #0066FF;
-  --text-hover: #0049B7;
-  --text-active: #0154D1;
-
-  --disabled: #D8DAE5;
-
-  --border-radius: 4px;
-
-  --font-xsmall: 12px;
-  --font-small: 14px;
-  --font-medium: 16px;
-  --font-large: 18px;
-
-  --box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
-    rgba(17, 17, 26, 0.1) 0px 0px 8px rgba(17, 17, 26, 0.05) 0px 1px 0px,
-    rgba(17, 17, 26, 0.1) 0px 0px 8px;
+.CoreLabUI-classic__btn-root {
+    position: relative;
+    width: fit-content;
+    border: 2px solid transparent;
+    border-radius: var(--border-radius);
+    display: inline-block;
 }
 
-.container {
-  position: relative;
-  width: fit-content;
-  border: 2px solid transparent;
-  border-radius: var(--border-radius);
+.CoreLabUI-classic__btn-root--disabled {
+    border: 2px solid transparent !important;
+    background: inherit !important;
 }
 
-.container--disabled {
-  border: 2px solid transparent !important;
-  background-color: inherit !important;
+.CoreLabUI-classic__btn {
+    cursor: pointer;
+    font-family: var(--font-family);
+    font-weight: 500;
+    z-index: 1;
 }
 
-.button {
-  cursor: pointer;
-  font-family: var(--font-family);
-  font-weight: 500;
-  z-index: 1;
+.CoreLabUI-classic__btn>span {
+    position: relative;
+    z-index: 2;
 }
 
-.button>span {
-  position: relative;
-  z-index: 2;
+.CoreLabUI-classic__btn--small {
+    font-size: var(--font-small);
+    padding: 8px 16px;
 }
 
-.button--small {
-  font-size: var(--font-small);
-  padding: 8px 16px;
+.CoreLabUI-classic__btn--medium {
+    font-size: var(--font-medium);
+    min-width: 100px;
+    padding: 12px 24px;
 }
 
-.button--medium {
-  font-size: var(--font-medium);
-  min-width: 100px;
-  padding: 12px 24px;
+.CoreLabUI-classic__btn--large {
+    font-size: var(--font-large);
+    min-width: 100px;
+    padding: 16px 32px;
 }
 
-.button--large {
-  font-size: var(--font-large);
-  min-width: 100px;
-  padding: 16px 32px;
+.CoreLabUI-classic__btn:disabled {
+    pointer-events: none;
+    border: inherit;
 }
 
-.button:disabled {
-  pointer-events: none;
-  border: inherit;
+.CoreLabUI-classic__btn--primary {
+    background: var(--primary);
+    border: 2px solid var(--primary);
+    color: var(--light);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
 }
 
-.button--primary {
-  background-color: var(--primary);
-  border: 2px solid var(--primary);
-  color: var(--light);
-  border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
+.CoreLabUI-classic__btn--primary:hover {
+    background: var(--primary-hover);
+    border: 2px solid var(--primary-hover);
 }
 
-.button--primary:hover {
-  background-color: var(--primary-hover);
-  border: 2px solid var(--primary-hover);
+.CoreLabUI-classic__btn-root--primary:active {
+    border-radius: var(--border-radius);
+    background: var(--primary-active);
+    border: 2px solid var(--active);
 }
 
-.container--primary:active {
-  border-radius: var(--border-radius);
-  background: var(--primary-active);
-  border: 2px solid var(--border-active);
+.CoreLabUI-classic__btn--primary:disabled {
+    background: var(--disabled);
+    border: 2px solid var(--disabled);
 }
 
-.button--primary:disabled {
-  background: var(--disabled);
-  border: 2px solid var(--disabled);
+.CoreLabUI-classic__btn--secondary {
+    background: var(--white);
+    border: 1px solid var(--secondary);
+    color: var(--paragraph);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
 }
 
-.button--secondary {
-  background-color: var(--white);
-  border: 1px solid var(--secondary);
-  color: var(--paragraph);
-  border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
+.CoreLabUI-classic__btn--secondary:hover {
+    border: 1px solid var(--secondary-hover);
 }
 
-.button--secondary:hover {
-  border: 1px solid var(--secondary-hover);
+.CoreLabUI-classic__btn-root--secondary:active {
+    border-radius: var(--border-radius);
+    border: 2px solid var(--secondary-active);
 }
 
-.container--secondary:active {
-  border-radius: var(--border-radius);
-  border: 2px solid var(--secondary-active);
+.CoreLabUI-classic__btn--secondary:disabled {
+    border: 1px solid var(--secondary) !important;
+    color: var(--disabled);
 }
 
-.button--secondary:disabled {
-  border: 1px solid var(--secondary) !important;
-  color: var(--disabled);
+.CoreLabUI-classic__btn--text {
+    background: unset;
+    border: 0;
+    color: var(--text);
 }
 
-.button--text {
-  background-color: unset;
-  border: 0;
-  color: var(--text);
+.CoreLabUI-classic__btn--text:hover {
+    color: var(--text-hover);
 }
 
-.button--text:hover {
-  color: var(--text-hover);
+.CoreLabUI-classic__btn--text:active {
+    color: var(--text-active);
 }
 
-.button--text:active {
-  color: var(--text-active);
+.CoreLabUI-classic__btn--text:disabled {
+    color: var(--paragraph);
+    opacity: 0.4;
 }
 
-.button--text:disabled {
-  color: var(--paragraph);
-  opacity: 0.4;
+.CoreLabUI-classic__btn-root--text:active {
+    border-radius: var(--border-radius);
+    border: 2px solid var(--active);
 }
 
-.container--text:active {
-  border-radius: var(--border-radius);
-  border: 2px solid var(--border-active);
+@keyframes CoreLabUI-classic-loading-keyframe {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
 }
 
-@keyframes loading {
-  from {
+.CoreLabUI-classic__btn__loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+}
+
+.CoreLabUI-classic__btn__loader>span {
+    width: 8px;
+    height: 8px;
+    box-shadow: var(--box-shadow);
+    border-radius: 4px;
+    background: var(--text);
     transform: scale(0);
-  }
-
-  to {
-    transform: scale(1);
-  }
 }
 
-.loader {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 3px;
+.CoreLabUI-classic__btn__loader>span:first-child {
+    animation: 0.5s CoreLabUI-classic-loading-keyframe 0.5s alternate infinite;
 }
 
-.loader>span {
-  width: 8px;
-  height: 8px;
-  box-shadow: var(--box-shadow);
-  border-radius: 4px;
-  background-color: var(--text);
-  transform: scale(0);
+.CoreLabUI-classic__btn__loader>span:nth-child(2) {
+    animation: 0.5s CoreLabUI-classic-loading-keyframe 0.6s alternate infinite;
 }
 
-.loader>span:first-child {
-  animation: .5s loading 0.5s alternate infinite;
-}
-
-.loader>span:nth-child(2) {
-  animation: .5s loading 0.6s alternate infinite;
-}
-
-.loader>span:last-child {
-  animation: .5s loading 0.9s alternate infinite;
+.CoreLabUI-classic__btn__loader>span:last-child {
+    animation: 0.5s CoreLabUI-classic-loading-keyframe 0.9s alternate infinite;
 }

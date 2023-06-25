@@ -1,4 +1,4 @@
-import { Link } from './Link';
+import { Dropdown } from './Dropdown';
 import { createTheme } from '../../../utils/theme';
 createTheme();
-export default Link;
+export default Dropdown;

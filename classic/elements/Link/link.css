@@ -1,63 +1,55 @@
-.classic {
-  --font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-
-  --font-xsmall: 12px;
-  --font-small: 14px;
-  --font-medium: 16px;
-  --font-large: 18px;
+.CoreLabUI-classic__link {
+    color: var(--text);
+    text-decoration: none;
+    cursor: pointer;
+    display: block;
+    position: relative;
+    font-family: var(--font-family);
+    line-height: 1.8;
 }
 
-.link {
-  color: var(--text);
-  text-decoration: none;
-  cursor: pointer;
-  display: block;
-  position: relative;
-  font-family: var(--font-family);
+.CoreLabUI-classic__link--small {
+    font-size: var(--font-small);
 }
 
-.link--small {
-  font-size: var(--font-small);
+.CoreLabUI-classic__link--medium {
+    font-size: var(--font-medium);
 }
 
-.link--medium {
-  font-size: var(--font-medium);
+.CoreLabUI-classic__link--large {
+    font-size: var(--font-large);
 }
 
-.link--large {
-  font-size: var(--font-large);
+.CoreLabUI-classic__link:hover {
+    color: var(--text-hover);
 }
 
-.link:hover {
-  color: var(--text-hover);
+.CoreLabUI-classic__link:active {
+    color: var(--text-active);
 }
 
-.link:active {
-  color: var(--text-active);
+.CoreLabUI-classic__link--disabled {
+    color: var(--paragraph);
+    opacity: 0.4;
+    pointer-events: none;
 }
 
-.link--disabled {
-  color: var(--paragraph);
-  opacity: 0.4;
-  pointer-events: none;
+.CoreLabUI-classic__link::after {
+    transform: scale(0);
+    transform-origin: center;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.05em;
+    background-color: var(--text-hover);
+    opacity: 1;
+    transition: opacity 300ms, transform 300ms;
 }
 
-.link::after {
-  transform: scale(0);
-  transform-origin: center;
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 0.05em;
-  background-color: var(--text-hover);
-  opacity: 1;
-  transition: opacity 300ms, transform 300ms;
-}
-
-.link:hover::after,
-.link:focus::after {
-  opacity: 1;
-  transform: scale(1);
+.CoreLabUI-classic__link:hover::after,
+.CoreLabUI-classic__link:focus::after {
+    opacity: 1;
+    transform: scale(1);
 }

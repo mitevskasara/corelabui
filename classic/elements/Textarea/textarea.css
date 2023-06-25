@@ -1,91 +1,70 @@
-.classic {
-  --font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-
-  --primary: #00398F;
-  --primary-hover: #0049B7;
-  --primary-active: #0154D1;
-
-  --heading: #222831;
-  --paragraph: #474D66;
-  --paragraph-light: #696F8C;
-
-  --link: #0066FF;
-  --light: #fcfcfc;
-
-  --disabled: #D8DAE5;
-  --error: #CC3F40;
-
-  --border-radius: 4px;
-
-  --font-xsmall: 12px;
-  --font-small: 14px;
-  --font-medium: 16px;
-  --font-large: 18px;
+.CoreLabUI-classic__field-multiline-root {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    font-family: var(--font-family);
 }
 
-.container {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  width: 100%;
-  font-family: var(--font-family);
+.CoreLabUI-classic__field-multiline {
+    font-family: var(--font-family);
+    border: 1px solid var(--disabled);
+    border-radius: var(--border-radius);
+    outline: none;
+    font-size: var(--font-medium);
+    color: var(--paragraph);
+    resize: none;
+    padding: 10px 16px;
 }
 
-.input {
-  font-family: var(--font-family);
-  border: 1px solid var(--disabled);
-  border-radius: var(--border-radius);
-  outline: none;
-  font-size: var(--font-medium);
-  color: var(--paragraph);
-  resize: none;
-  padding: 10px 16px;
+.CoreLabUI-classic__field-multiline__label,
+.CoreLabUI-classic__field-multiline__helper-text {
+    font-size: var(--font-xsmall);
+    color: var(--paragraph-light);
 }
 
-.label,
-.helper-text {
-  font-size: var(--font-xsmall);
-  color: var(--paragraph-light);
+.CoreLabUI-classic__field-multiline::placeholder {
+    font-family: var(--font-family);
+    font-size: var(--font-medium);
+    color: var(--paragraph-light);
 }
 
-.input::placeholder {
-  font-family: var(--font-family);
-  font-size: var(--font-medium);
-  color: var(--paragraph-light);
+.CoreLabUI-classic__field-multiline:hover {
+    border: 1px solid var(--primary-hover);
 }
 
-.input:hover {
-  border: 1px solid var(--primary-hover);
+.CoreLabUI-classic__field-multiline:focus {
+    border: 1px solid var(--primary-active);
 }
 
-.input:focus {
-  border: 1px solid var(--primary-active);
+.CoreLabUI-classic__field-multiline-root:hover
+    > .CoreLabUI-classic__field-multiline__label {
+    color: var(--primary-hover);
 }
 
-.container:hover>.label {
-  color: var(--primary-hover);
+.CoreLabUI-classic__field-multiline-root--disabled > textarea:hover,
+.CoreLabUI-classic__field-multiline-root--disabled > textarea:focus {
+    border: 1px solid var(--disabled);
+    color: var(--disabled);
 }
 
-.container--disabled,
-.container--disabled>textarea:hover,
-.container--disabled>textarea:focus {
-  border: 1px solid var(--disabled);
-  color: var(--disabled);
+.CoreLabUI-classic__field-multiline-root--disabled > textarea::placeholder,
+.CoreLabUI-classic__field-multiline-root--disabled
+    > .CoreLabUI-classic__field-multiline__label,
+.CoreLabUI-classic__field-multiline-root--disabled
+    > .CoreLabUI-classic__field-multiline__helper-text {
+    color: var(--disabled) !important;
 }
 
-.container--disabled>textarea::placeholder,
-.container--disabled>.label,
-.container--disabled>.helper-text {
-  color: var(--disabled) !important;
+.CoreLabUI-classic__field-multiline--error,
+.CoreLabUI-classic__field-multiline-root--error > textarea:hover,
+.CoreLabUI-classic__field-multiline-root--error > textarea:focus {
+    border: 1px solid var(--error);
 }
 
-.input--error,
-.container--error>textarea:hover,
-.container--error>textarea:focus {
-  border: 1px solid var(--error);
-}
-
-.container--error>.label,
-.container--error>.helper-text {
-  color: var(--error) !important;
+.CoreLabUI-classic__field-multiline-root--error
+    > .CoreLabUI-classic__field-multiline__label,
+.CoreLabUI-classic__field-multiline-root--error
+    > .CoreLabUI-classic__field-multiline__helper-text {
+    color: var(--error) !important;
 }
