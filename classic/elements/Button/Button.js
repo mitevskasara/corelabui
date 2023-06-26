@@ -22,7 +22,7 @@ export const Button = forwardRef(
                 <button
                     {...props}
                     className={`CoreLabUI-classic__btn CoreLabUI-classic__btn--${variant} CoreLabUI-classic__btn--${size}`}
-                    disabled={disabled}>
+                    disabled={disabled || loading}>
                     {loading ? (
                         <div
                             className={`CoreLabUI-classic__btn__loader CoreLabUI-classic__btn__loader--${variant}`}>

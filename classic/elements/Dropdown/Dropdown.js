@@ -7,10 +7,8 @@ export const Dropdown = forwardRef(
         let classes = `CoreLabUI-classic CoreLabUI-classic__dropdown`;
         if (className) classes += ` ${className}`;
         const element = anchorEl?.getBoundingClientRect();
-
-        console.log(anchorEl?.getBoundingClientRect());
-        console.log(anchorEl);
         useClickAway(anchorEl, onClose);
+
         return Boolean(anchorEl) && (
             <div
                 {...props}

@@ -65,8 +65,9 @@
 }
 
 .CoreLabUI-classic__btn--primary:disabled {
-    background: var(--disabled);
-    border: 2px solid var(--disabled);
+    background: var(--primary-disabled);
+    border: 2px solid var(--primary-disabled);
+    pointer-events: none;
 }
 
 .CoreLabUI-classic__btn--secondary {
@@ -83,7 +84,7 @@
 
 .CoreLabUI-classic__btn-root--secondary:active {
     border-radius: var(--border-radius);
-    border: 2px solid var(--secondary-active);
+    border: 2px solid var(--active);
 }
 
 .CoreLabUI-classic__btn--secondary:disabled {
@@ -94,15 +95,15 @@
 .CoreLabUI-classic__btn--text {
     background: unset;
     border: 0;
-    color: var(--text);
+    color: var(--primary);
 }
 
 .CoreLabUI-classic__btn--text:hover {
-    color: var(--text-hover);
+    color: var(--primary-hover);
 }
 
 .CoreLabUI-classic__btn--text:active {
-    color: var(--text-active);
+    color: var(--primary-active);
 }
 
 .CoreLabUI-classic__btn--text:disabled {
@@ -137,8 +138,12 @@
     height: 8px;
     box-shadow: var(--box-shadow);
     border-radius: 4px;
-    background: var(--text);
+    background: var(--primary-disabled);
     transform: scale(0);
+}
+
+.CoreLabUI-classic__btn__loader--primary>span {
+    background: white !important;
 }
 
 .CoreLabUI-classic__btn__loader>span:first-child {
