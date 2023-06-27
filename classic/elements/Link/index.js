@@ -1,4 +1,0 @@
-import { Link } from './Link';
-import { createTheme } from '../../../utils/theme';
-createTheme();
-export default Link;
