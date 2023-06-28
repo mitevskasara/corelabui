@@ -12,5 +12,5 @@
     width: 1em;
     height: 1em;
     background-color: var(--background);
-    transform: rotate(45deg)
+    transform: rotate(45deg);
 }

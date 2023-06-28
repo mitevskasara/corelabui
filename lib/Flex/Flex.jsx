@@ -48,7 +48,7 @@ export const Flex = forwardRef(
                     '--md-direction': md || direction,
                     '--lg-direction': lg || direction,
                     '--margin': margin ? margin : `${mt} ${mr} ${ml} ${mb}`,
-                    '--padding': padding ? padding : `${pt} ${pr} ${pl} ${pb}`,
+                    '--padding': padding ? padding : `${pt} ${pr} ${pl} ${pb}`
                 }}>
                 {children}
             </div>

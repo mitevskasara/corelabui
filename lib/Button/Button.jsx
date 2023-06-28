@@ -15,12 +15,14 @@ export const Button = forwardRef(
             size = 'medium',
             disabled,
             className,
+            title,
             ...props
         },
         ref
     ) => {
         let classes = `CoreLabUI-classic CoreLabUI-classic__btn-root CoreLabUI-classic__btn-root--${variant}`;
-        if (disabled) classes += ' CoreLabUI-classic__btn-root--disabled';
+        if (disabled || loading)
+            classes += ' CoreLabUI-classic__btn-root--disabled';
         if (className) classes += ` ${className}`;
         return (
             <div className={classes} ref={ref}>
@@ -36,7 +38,10 @@ export const Button = forwardRef(
                             <span />
                         </div>
                     ) : (
-                        <span>{children}</span>
+                        <span>
+                            {title}
+                            {children}
+                        </span>
                     )}
                 </button>
             </div>

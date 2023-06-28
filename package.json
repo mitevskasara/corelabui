@@ -1,39 +1,39 @@
 {
-  "name": "@corelabui/classic",
-  "version": "1.0.16",
-  "description": "Collection of ready-to-use customisable React components available in multiple themes",
-  "private": false,
-  "main": "dist/index.js",
-  "module": "dist/index.js",
-  "files": [
-    "dist",
-    "README.md"
-  ],
-  "scripts": {
-    "build": "rm -rf dist && node esbuild.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mitevskasara/corelabui.git"
-  },
-  "keywords": [
-    "javascript",
-    "typescript",
-    "react",
-    "react-components"
-  ],
-  "author": "Corelab UI",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/mitevskasara/corelabui/issues"
-  },
-  "homepage": "https://github.com/mitevskasara/corelabui#readme",
-  "peerDependencies": {
-    "react": ">=18"
-  },
-  "devDependencies": {
-    "esbuild": "^0.18.10",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  }
+    "name": "@corelabui/classic",
+    "version": "1.0.16",
+    "description": "Collection of ready-to-use customisable React components available in multiple themes",
+    "private": false,
+    "main": "dist/index.js",
+    "module": "dist/index.js",
+    "files": [
+        "dist",
+        "README.md"
+    ],
+    "scripts": {
+        "build": "rm -rf dist && node esbuild.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/mitevskasara/corelabui.git"
+    },
+    "keywords": [
+        "javascript",
+        "typescript",
+        "react",
+        "react-components"
+    ],
+    "author": "Corelab UI",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/mitevskasara/corelabui/issues"
+    },
+    "homepage": "https://github.com/mitevskasara/corelabui#readme",
+    "peerDependencies": {
+        "react": ">=18"
+    },
+    "devDependencies": {
+        "esbuild": "^0.18.10",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
+    }
 }

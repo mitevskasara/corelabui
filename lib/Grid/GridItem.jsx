@@ -5,26 +5,29 @@ import styles from './gridItem.css';
 injectStyle('GridItem', styles);
 
 export const GridItem = forwardRef(
-    ({
-        children,
-        col = 12,
-        xs,
-        sm,
-        md,
-        lg,
-        className,
-        margin,
-        padding,
-        mt = 0,
-        mb = 0,
-        ml = 0,
-        mr = 0,
-        pt = 0,
-        pb = 0,
-        pl = 0,
-        pr = 0,
-        ...props
-    }, ref) => {
+    (
+        {
+            children,
+            col = 12,
+            xs,
+            sm,
+            md,
+            lg,
+            className,
+            margin,
+            padding,
+            mt = 0,
+            mb = 0,
+            ml = 0,
+            mr = 0,
+            pt = 0,
+            pb = 0,
+            pl = 0,
+            pr = 0,
+            ...props
+        },
+        ref
+    ) => {
         let classes = `CoreLabUI-classic__grid-item`;
         if (className) classes += ` ${className}`;
         return (

@@ -47,30 +47,30 @@
 }
 
 .CoreLabUI-classic__select:hover,
-.CoreLabUI-classic__root--error>input:hover {
+.CoreLabUI-classic__root--error > input:hover {
     border: 1px solid var(--primary-hover);
 }
 
 .CoreLabUI-classic__select:focus,
-.CoreLabUI-classic__root--error>input:focus {
+.CoreLabUI-classic__root--error > input:focus {
     border: 1px solid var(--primary-active);
 }
 
-.CoreLabUI-classic__root:hover>.label {
+.CoreLabUI-classic__root:hover > .label {
     color: var(--primary-hover);
 }
 
 .CoreLabUI-classic__root--disabled,
-.CoreLabUI-classic__root--disabled>input:hover,
-.CoreLabUI-classic__root--disabled>input:focus {
+.CoreLabUI-classic__root--disabled > input:hover,
+.CoreLabUI-classic__root--disabled > input:focus {
     border: 1px solid var(--disabled);
     color: var(--disabled);
     pointer-events: none;
 }
 
-.CoreLabUI-classic__root--disabled>input::placeholder,
-.CoreLabUI-classic__root--disabled>.label,
-.CoreLabUI-classic__root--disabled>.helper-text {
+.CoreLabUI-classic__root--disabled > input::placeholder,
+.CoreLabUI-classic__root--disabled > .label,
+.CoreLabUI-classic__root--disabled > .helper-text {
     color: var(--disabled) !important;
 }
 
@@ -78,8 +78,8 @@
     border: 1px solid var(--error);
 }
 
-.CoreLabUI-classic__root--error>.label,
-.CoreLabUI-classic__root--error>.helper-text {
+.CoreLabUI-classic__root--error > .label,
+.CoreLabUI-classic__root--error > .helper-text {
     color: var(--error) !important;
 }
 

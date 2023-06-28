@@ -13,6 +13,7 @@ export const Link = forwardRef(
         return (
             <a {...props} className={classes} ref={ref}>
                 {children}
+                <span className="CoreLabUI-classic__link-decoration" />
             </a>
         );
     }

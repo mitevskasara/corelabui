@@ -12,6 +12,7 @@ Make sure you have Node.js installed on your machine. Then run:
 ```bash
   npm install @corelabui/classic
 ```
+
 ## Usage
 
 Here is an example of a basic app using Corelab UI's Button component from the classic theme:
@@ -20,17 +21,11 @@ Here is an example of a basic app using Corelab UI's Button component from the c
 import { Button } from '@corelabui/classic';
 
 function App() {
-  return
-    <Button
-      onClick={() => console.log('Hello Corelab UI')}
-    >
-      Click me!
-    </Button>
+    return;
+    <Button onClick={() => console.log('Hello Corelab UI')}>Click me!</Button>;
 }
 ```
-
 
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
-

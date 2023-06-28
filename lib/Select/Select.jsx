@@ -36,25 +36,39 @@ export const Select = ({
     return (
         <div className="CoreLabUI-classic CoreLabUI-classic__wrapper">
             <div
-                className={`CoreLabUI-classic__root CoreLabUI-classic__root--${disabled ? 'disabled' : ''
-                    } CoreLabUI-classic__root--${error ? 'error' : ''}`}
+                className={`CoreLabUI-classic__root CoreLabUI-classic__root--${
+                    disabled ? 'disabled' : ''
+                } CoreLabUI-classic__root--${error ? 'error' : ''}`}
                 ref={ref}
                 onClick={() => toggle(!open)}>
-                {label && <label className="CoreLabUI-classic__select-label">{label}</label>}
+                {label && (
+                    <label className="CoreLabUI-classic__select-label">
+                        {label}
+                    </label>
+                )}
                 <input
                     {...props}
-                    className={`CoreLabUI-classic__select CoreLabUI-classic__select--${size} CoreLabUI-classic__select--${error ? 'error' : ''
-                        }`}
+                    className={`CoreLabUI-classic__select CoreLabUI-classic__select--${size} CoreLabUI-classic__select--${
+                        error ? 'error' : ''
+                    }`}
                     readOnly
                     ref={inputRef}
                 />
                 {helperText && (
-                    <span className="CoreLabUI-classic__select-helper-text">{helperText}</span>
+                    <span className="CoreLabUI-classic__select-helper-text">
+                        {helperText}
+                    </span>
                 )}
             </div>
-            <div className={`CoreLabUI-classic__select-menu CoreLabUI-classic__select-menu--${open ? 'open' : 'closed'}`}>
+            <div
+                className={`CoreLabUI-classic__select-menu CoreLabUI-classic__select-menu--${
+                    open ? 'open' : 'closed'
+                }`}>
                 {options?.map((option, index) => (
-                    <div value={option.value} className="CoreLabUI-classic__select-menu__option" key={index}>
+                    <div
+                        value={option.value}
+                        className="CoreLabUI-classic__select-menu__option"
+                        key={index}>
                         {option.label}
                     </div>
                 ))}

@@ -20,12 +20,9 @@
     font-size: var(--font-large);
 }
 
-.CoreLabUI-classic__link:hover {
-    color: var(--primary-hover);
-}
-
+.CoreLabUI-classic__link:hover,
 .CoreLabUI-classic__link:active {
-    color: var(--active);
+    color: var(--primary-hover) !important;
 }
 
 .CoreLabUI-classic__link--disabled {
@@ -34,7 +31,7 @@
     pointer-events: none;
 }
 
-.CoreLabUI-classic__link::after {
+.CoreLabUI-classic__link-decoration {
     transform: scale(0);
     transform-origin: center;
     position: absolute;
@@ -47,8 +44,8 @@
     transition: opacity 300ms, transform 300ms;
 }
 
-.CoreLabUI-classic__link:hover::after,
-.CoreLabUI-classic__link:focus::after {
+.CoreLabUI-classic__link:hover > .CoreLabUI-classic__link-decoration,
+.CoreLabUI-classic__link:focus > .CoreLabUI-classic__link-decoration {
     opacity: 1;
     transform: scale(1);
 }
