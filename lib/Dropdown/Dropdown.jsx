@@ -19,9 +19,9 @@ export const Dropdown = forwardRef(
                 ref={ref}
                 role="dropdown"
                 style={{
-                    '--left': element?.left,
-                    '--arrow-left': ((element?.width / 2) - 8),
-                    '--min-width': element?.width
+                    '--left': `${element?.left}px`,
+                    '--arrow-left': `${((element?.width / 2) - 8)}px`,
+                    '--min-width': `${element?.width}px`
                 }}>
                 <div className="CoreLabUI-classic__dropdown-arrow" />
                 {children}aaaaaaaa

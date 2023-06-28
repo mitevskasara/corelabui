@@ -40,7 +40,7 @@
     transform: rotate(45deg);
     position: absolute;
     left: var(--arrow-left);
-    border-width: 1 0 0 1;
+    border-width: 1px 0px 0px 1px;
     border-color: var(--disabled);
     border-style: solid;
     z-index: -1;

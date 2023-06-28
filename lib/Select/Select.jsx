@@ -23,9 +23,13 @@ export const Select = ({
                 toggle(false);
             }
         };
-        document?.addEventListener('click', handleClickOutside);
+        if (document) {
+            document?.addEventListener('click', handleClickOutside);
+        }
         return () => {
-            document?.removeEventListener('click', handleClickOutside);
+            if (document) {
+                document?.removeEventListener('click', handleClickOutside);
+            }
         };
     }, []);
 
