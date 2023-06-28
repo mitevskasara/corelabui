@@ -1,4 +1,10 @@
+import { injectStyle } from '../utils/injectStyle';
+import { createTheme } from '../utils/theme';
+import styles from './button.css';
 import React, { forwardRef } from 'react';
+
+injectStyle('Button', styles);
+createTheme();
 
 export const Button = forwardRef(
     (

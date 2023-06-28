@@ -1,5 +1,9 @@
+import { injectStyle } from '../utils/injectStyle';
+import styles from './dropdown.css';
 import React, { forwardRef } from 'react';
 import useClickAway from '../helpers/useClickAway';
+
+injectStyle('Dropdown', styles);
 
 export const Dropdown = forwardRef(
     ({ children, disabled, size = 'medium', className, anchorEl, onClose, ...props }, ref) => {
@@ -16,7 +20,7 @@ export const Dropdown = forwardRef(
                 role="dropdown"
                 style={{
                     '--left': element?.left,
-                    '--arrow-left': (element?.width / 2) - 8,
+                    '--arrow-left': ((element?.width / 2) - 8),
                     '--min-width': element?.width
                 }}>
                 <div className="CoreLabUI-classic__dropdown-arrow" />

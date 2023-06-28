@@ -1,4 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { injectStyle } from '../utils/injectStyle';
+import styles from './select.css';
+
+injectStyle('Select', styles);
 
 export const Select = ({
     size = 'medium',

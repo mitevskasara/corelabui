@@ -1,4 +1,8 @@
 import React, { forwardRef } from 'react';
+import { injectStyle } from '../utils/injectStyle';
+import styles from './input.css';
+
+injectStyle('Input', styles);
 
 export const Input = forwardRef(
     (

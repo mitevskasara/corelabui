@@ -37,7 +37,6 @@
 .CoreLabUI-classic__link::after {
     transform: scale(0);
     transform-origin: center;
-    content: '';
     position: absolute;
     bottom: 0;
     left: 0;

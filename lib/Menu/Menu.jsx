@@ -1,5 +1,9 @@
 import React, { forwardRef } from 'react';
 import useClickAway from '../helpers/useClickAway';
+import { injectStyle } from '../utils/injectStyle';
+import styles from './menu.css';
+
+injectStyle('Menu', styles);
 
 export const Menu = forwardRef(
     ({ children, disabled, size = 'medium', className, anchorEl, onClose, ...props }, ref) => {

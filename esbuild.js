@@ -1,4 +1,5 @@
 const esbuild = require('esbuild');
+const { customPlugin } = require('./plugins/injectCss.js');
 const { devDependencies, peerDependencies } = require('./package.json');
 
 esbuild
@@ -15,6 +16,7 @@ esbuild
       './lib/Typography/index.js',
       './lib/Flex/index.js',
       './lib/Grid/index.js',
+      './lib/utils/theme.js',
     ],
     outdir: 'dist',
     bundle: true,
@@ -23,6 +25,11 @@ esbuild
     platform: 'node',
     format: 'cjs',
     target: 'node14',
+    minify: true,
+    loader: { '.css': 'text' },
+    plugins: [customPlugin],
     external: Object.keys(devDependencies).concat(Object.keys(peerDependencies))
-  })
-  .catch(() => process.exit(1));
+  }).catch((err) => {
+    console.error(err);
+    process.exit(1);
+  });
