@@ -1,8 +1,10 @@
 import React, { forwardRef } from 'react';
 import { injectStyle } from '../utils/injectStyle';
+import { createTheme } from '../utils/theme';
 import './typography.css';
 
 injectStyle('Typography', {});
+createTheme();
 
 const VARIANTS = {
     heading1: 'h1',

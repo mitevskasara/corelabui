@@ -1,18 +1,18 @@
 import React, { forwardRef } from 'react';
 import { injectStyle } from '../utils/injectStyle';
-import './gridItem.css';
+import { createTheme } from '../utils/theme';
+import './flexItem.css';
 
-injectStyle('GridItem', {});
+injectStyle('FlexItem', {});
+createTheme();
 
-export const GridItem = forwardRef(
+export const FlexItem = forwardRef(
     (
         {
             children,
-            col = 12,
-            xs,
-            sm,
-            md,
-            lg,
+            order = 'initial',
+            flex = 'unset',
+            alignSelf = 'auto',
             className,
             margin,
             padding,
@@ -28,7 +28,7 @@ export const GridItem = forwardRef(
         },
         ref
     ) => {
-        let classes = `CoreLabUI-classic__grid-item`;
+        let classes = `CoreLabUI-classic__flex-item CoreLabUI-classic__flex-item-align-self--${alignSelf} CoreLabUI-classic__flex-item-order`;
         if (className) classes += ` ${className}`;
         return (
             <div
@@ -36,11 +36,8 @@ export const GridItem = forwardRef(
                 ref={ref}
                 className={classes}
                 style={{
-                    '--col': `span ${col} / span ${col}`,
-                    '--col-xs': `span ${xs ? xs : col}/span ${xs ? xs : col}`,
-                    '--col-sm': `span ${sm ? sm : col}/span ${sm ? sm : col}`,
-                    '--col-md': `span ${md ? md : col}/span ${md ? md : col}`,
-                    '--col-lg': `span ${lg ? lg : col}/span ${lg ? lg : col}`,
+                    '--order': order,
+                    '--flex': flex,
                     '--margin': margin ? margin : `${mt} ${mr} ${ml} ${mb}`,
                     '--padding': padding ? padding : `${pt} ${pr} ${pl} ${pb}`
                 }}>

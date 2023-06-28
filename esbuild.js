@@ -5,18 +5,17 @@ const { devDependencies, peerDependencies } = require('./package.json');
 esbuild
     .build({
         entryPoints: [
-            './lib/index.js',
-            './lib/Button/index.js',
-            './lib/Dropdown/index.js',
-            './lib/Input/index.js',
-            './lib/Link/index.js',
-            './lib/Menu/index.js',
-            './lib/Select/index.js',
-            './lib/Textarea/index.js',
-            './lib/Typography/index.js',
-            './lib/Flex/index.js',
-            './lib/Grid/index.js',
-            './lib/utils/theme.js'
+            'src/Button/index.js',
+            'src/Dropdown/index.js',
+            'src/Input/index.js',
+            'src/Link/index.js',
+            'src/Menu/index.js',
+            'src/Select/index.js',
+            'src/Textarea/index.js',
+            'src/Typography/index.js',
+            'src/Flex/index.js',
+            'src/Grid/index.js',
+            'src/utils/theme.js'
         ],
         outdir: 'dist',
         bundle: true,

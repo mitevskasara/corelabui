@@ -1,9 +1,11 @@
 import React, { forwardRef } from 'react';
 import useClickAway from '../helpers/useClickAway';
 import { injectStyle } from '../utils/injectStyle';
+import { createTheme } from '../utils/theme';
 import './menu.css';
 
 injectStyle('Menu', {});
+createTheme();
 
 export const Menu = forwardRef(
     (

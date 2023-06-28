@@ -1,8 +1,10 @@
 import React, { forwardRef } from 'react';
 import { injectStyle } from '../utils/injectStyle';
+import { createTheme } from '../utils/theme';
 import './flex.css';
 
 injectStyle('Flex', {});
+createTheme();
 
 export const Flex = forwardRef(
     (

@@ -1,10 +1,12 @@
 import React, { forwardRef, useState } from 'react';
 import { injectStyle } from '../utils/injectStyle';
+import { createTheme } from '../utils/theme';
 import Button from '../Button';
 import useClickAway from '../helpers/useClickAway';
 import './dropdown.css';
 
 injectStyle('Dropdown', {});
+createTheme();
 
 export const Dropdown = forwardRef(
     (
@@ -25,9 +27,8 @@ export const Dropdown = forwardRef(
         if (className) classes += ` ${className}`;
 
         let contentClasses = `CoreLabUI-classic__dropdown-content`;
-        contentClasses += ` CoreLabUI-classic__dropdown-content--${
-            open ? 'open' : 'closed'
-        }`;
+        contentClasses += ` CoreLabUI-classic__dropdown-content--${open ? 'open' : 'closed'
+            }`;
 
         const handleClick = (event) => {
             setAnchorEl(open ? null : event.currentTarget);

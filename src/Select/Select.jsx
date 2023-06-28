@@ -1,8 +1,10 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { injectStyle } from '../utils/injectStyle';
+import { createTheme } from '../utils/theme';
 import './select.css';
 
 injectStyle('Select', {});
+createTheme();
 
 export const Select = ({
     size = 'medium',
@@ -36,9 +38,8 @@ export const Select = ({
     return (
         <div className="CoreLabUI-classic CoreLabUI-classic__wrapper">
             <div
-                className={`CoreLabUI-classic__root CoreLabUI-classic__root--${
-                    disabled ? 'disabled' : ''
-                } CoreLabUI-classic__root--${error ? 'error' : ''}`}
+                className={`CoreLabUI-classic__root CoreLabUI-classic__root--${disabled ? 'disabled' : ''
+                    } CoreLabUI-classic__root--${error ? 'error' : ''}`}
                 ref={ref}
                 onClick={() => toggle(!open)}>
                 {label && (
@@ -48,9 +49,8 @@ export const Select = ({
                 )}
                 <input
                     {...props}
-                    className={`CoreLabUI-classic__select CoreLabUI-classic__select--${size} CoreLabUI-classic__select--${
-                        error ? 'error' : ''
-                    }`}
+                    className={`CoreLabUI-classic__select CoreLabUI-classic__select--${size} CoreLabUI-classic__select--${error ? 'error' : ''
+                        }`}
                     readOnly
                     ref={inputRef}
                 />
@@ -61,9 +61,8 @@ export const Select = ({
                 )}
             </div>
             <div
-                className={`CoreLabUI-classic__select-menu CoreLabUI-classic__select-menu--${
-                    open ? 'open' : 'closed'
-                }`}>
+                className={`CoreLabUI-classic__select-menu CoreLabUI-classic__select-menu--${open ? 'open' : 'closed'
+                    }`}>
                 {options?.map((option, index) => (
                     <div
                         value={option.value}

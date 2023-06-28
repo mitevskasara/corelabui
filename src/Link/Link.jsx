@@ -1,8 +1,10 @@
 import React, { forwardRef } from 'react';
 import { injectStyle } from '../utils/injectStyle';
+import { createTheme } from '../utils/theme';
 import './link.css';
 
 injectStyle('Link', {});
+createTheme();
 
 export const Link = forwardRef(
     ({ children, disabled, size = 'medium', className, ...props }, ref) => {
