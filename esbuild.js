@@ -1,6 +1,6 @@
-const esbuild = require('esbuild');
-const { customPlugin } = require('./plugins/injectCss.js');
-const { devDependencies, peerDependencies } = require('./package.json');
+import esbuild from 'esbuild';
+import { customPlugin } from './plugins/injectCss.js';
+import deps from './package.json' assert {type: 'json'};
 
 esbuild
     .build({
@@ -15,9 +15,9 @@ esbuild
             'src/Typography/index.js',
             'src/Flex/index.js',
             'src/Grid/index.js',
-            'src/utils/theme.js'
+            'src/theme.js'
         ],
-        outdir: 'dist',
+        outdir: '.',
         bundle: true,
         minify: true,
         treeShaking: true,
@@ -27,8 +27,8 @@ esbuild
         minify: true,
         loader: { '.css': 'text' },
         plugins: [customPlugin],
-        external: Object.keys(devDependencies).concat(
-            Object.keys(peerDependencies)
+        external: Object.keys(deps.devDependencies).concat(
+            Object.keys(deps.peerDependencies)
         )
     })
     .catch((err) => {

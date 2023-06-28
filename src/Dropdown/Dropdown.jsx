@@ -1,6 +1,6 @@
 import React, { forwardRef, useState } from 'react';
 import { injectStyle } from '../utils/injectStyle';
-import { createTheme } from '../utils/theme';
+import { createTheme } from '../theme';
 import Button from '../Button';
 import useClickAway from '../helpers/useClickAway';
 import './dropdown.css';

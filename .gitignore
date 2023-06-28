@@ -1,3 +1,10 @@
 .history
 node_modules
 dist
+*
+
+!src
+!src/*.js
+!plugins
+!esbuild.js
+!utils

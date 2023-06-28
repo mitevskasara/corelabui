@@ -1,6 +1,6 @@
 import React, { forwardRef } from 'react';
 import { injectStyle } from '../utils/injectStyle';
-import { createTheme } from '../utils/theme';
+import { createTheme } from '../theme';
 import './flex.css';
 
 injectStyle('Flex', {});

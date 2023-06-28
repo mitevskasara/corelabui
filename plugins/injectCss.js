@@ -1,7 +1,7 @@
-const fs = require('fs');
-const esbuild = require('esbuild');
+import fs from 'fs';
+import esbuild from 'esbuild';
 
-const customPlugin = {
+export const customPlugin = {
     name: 'minify-inject-css',
     async setup(build) {
         build.onLoad({ filter: /\.jsx$/ }, async (args) => {
@@ -11,7 +11,7 @@ const customPlugin = {
             dir = dir.join('/');
             const key = args.path
                 .split('/')
-                [args.path.split('/').length - 1].split('.')[0];
+            [args.path.split('/').length - 1].split('.')[0];
 
             let cssFileName = content.match(
                 new RegExp(/(?<=import)(.*)(?=.css)/)
@@ -50,5 +50,3 @@ const customPlugin = {
         });
     }
 };
-
-module.exports = { customPlugin };

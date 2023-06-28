@@ -1,7 +1,7 @@
 import React, { forwardRef } from 'react';
 import useClickAway from '../helpers/useClickAway';
 import { injectStyle } from '../utils/injectStyle';
-import { createTheme } from '../utils/theme';
+import { createTheme } from '../theme';
 import './menu.css';
 
 injectStyle('Menu', {});
