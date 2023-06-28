@@ -33,7 +33,7 @@
     min-width: var(--min-width);
     margin-top: 0.1em;
     border: 1px solid var(--disabled);
-    border-radius: var(--border-radius);
+    border-radius: 3px;
     animation: CoreLabUI-classic-dropdown-keyframe 0.3s ease-in-out forwards;
     box-sizing: border-box;
     transform-origin: top;

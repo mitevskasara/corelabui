@@ -1,8 +1,8 @@
 import React, { forwardRef } from 'react';
 import { injectStyle } from '../utils/injectStyle';
-import styles from './textarea.css';
+import './textarea.css';
 
-injectStyle('Textarea', styles);
+injectStyle('Textarea', {});
 
 export const Textarea = forwardRef(
     (

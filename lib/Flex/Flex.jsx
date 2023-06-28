@@ -1,8 +1,8 @@
 import React, { forwardRef } from 'react';
 import { injectStyle } from '../utils/injectStyle';
-import styles from './flex.css';
+import './flex.css';
 
-injectStyle('Flex', styles);
+injectStyle('Flex', {});
 
 export const Flex = forwardRef(
     (

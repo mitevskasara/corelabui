@@ -1,8 +1,8 @@
 import React, { forwardRef } from 'react';
 import { injectStyle } from '../utils/injectStyle';
-import styles from './typography.css';
+import './typography.css';
 
-injectStyle('Typography', styles);
+injectStyle('Typography', {});
 
 const VARIANTS = {
     heading1: 'h1',

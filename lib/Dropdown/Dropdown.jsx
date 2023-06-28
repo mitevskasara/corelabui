@@ -1,10 +1,10 @@
-import { injectStyle } from '../utils/injectStyle';
-import styles from './dropdown.css';
-import Button from '../Button';
 import React, { forwardRef, useState } from 'react';
+import { injectStyle } from '../utils/injectStyle';
+import Button from '../Button';
 import useClickAway from '../helpers/useClickAway';
+import './dropdown.css';
 
-injectStyle('Dropdown', styles);
+injectStyle('Dropdown', {});
 
 export const Dropdown = forwardRef(
     (

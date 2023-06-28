@@ -14,7 +14,7 @@ const customPlugin = {
                 [args.path.split('/').length - 1].split('.')[0];
 
             let cssFileName = content.match(
-                new RegExp(/(?<=from)(.*)(?=.css)/)
+                new RegExp(/(?<=import)(.*)(?=.css)/)
             );
             cssFileName = cssFileName[0]
                 .replaceAll('./', '')
@@ -39,7 +39,7 @@ const customPlugin = {
                 `const css = "` + minifiedCss.replaceAll(regex, '') + `";`;
 
             const fileContent = content.replace(
-                "injectStyle('" + key + "', styles);",
+                "injectStyle('" + key + "', {});",
                 minifiedCss + "\ninjectStyle('" + key + "', css);"
             );
 
