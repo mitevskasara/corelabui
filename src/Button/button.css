@@ -20,7 +20,6 @@
 
 .CoreLabUI-classic__btn > span {
     position: relative;
-    z-index: 2;
 }
 
 .CoreLabUI-classic__btn--small {

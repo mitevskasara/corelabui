@@ -1,6 +1,6 @@
 import esbuild from 'esbuild';
 import { customPlugin } from './plugins/injectCss.js';
-import deps from './package.json' assert {type: 'json'};
+import deps from './package.json' assert { type: 'json' };
 
 esbuild
     .build({

@@ -16,6 +16,7 @@ export const Dropdown = forwardRef(
             className,
             buttonProps,
             minWidth = '200px',
+            trigger = 'hover',
             ...props
         },
         ref
@@ -27,7 +28,9 @@ export const Dropdown = forwardRef(
         if (className) classes += ` ${className}`;
 
         let contentClasses = `CoreLabUI-classic__dropdown-content`;
-        contentClasses += ` CoreLabUI-classic__dropdown-content--${open ? 'open' : 'closed'
+        if (trigger === 'click')
+            contentClasses += ` CoreLabUI-classic__dropdown-content--${
+                open ? 'open' : 'closed'
             }`;
 
         const handleClick = (event) => {
@@ -42,6 +45,7 @@ export const Dropdown = forwardRef(
             <div {...props} className={classes} ref={ref}>
                 <Button
                     {...buttonProps}
+                    className="CoreLabUI-classic__dropdown-trigger"
                     disabled={disabled}
                     onClick={handleClick}
                 />

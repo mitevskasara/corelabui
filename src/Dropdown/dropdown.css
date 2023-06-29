@@ -9,13 +9,31 @@
     }
 }
 
-@keyframes CoreLabUI-classic-dropdown-keyframe {
+@keyframes CoreLabUI-classic-dropdown-open-keyframe {
     0% {
-        transform: scaleY(0);
+        opacity: 0;
+        transform: translateY(100%);
     }
 
     100% {
-        transform: scaleY(1);
+        opacity: 1;
+        transform: translateY(0);
+        visibility: visible;
+        z-index: 2;
+    }
+}
+
+@keyframes CoreLabUI-classic-dropdown-close-keyframe {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+        visibility: visible;
+        z-index: 2;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(100%);
     }
 }
 
@@ -29,20 +47,33 @@
     left: var(--left);
     background-color: var(--background);
     box-shadow: var(--popup-shadow);
-    padding: 0.4em 0.6em 0.4em;
+    padding: 0.7em 0.7em 0.7em;
     min-width: var(--min-width);
     margin-top: 0.1em;
     border: 1px solid var(--disabled);
     border-radius: 3px;
-    animation: CoreLabUI-classic-dropdown-keyframe 0.3s ease-in-out forwards;
     box-sizing: border-box;
-    transform-origin: top;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: transform 0.5s, opacity 0.1s;
 }
 
 .CoreLabUI-classic__dropdown-content--open {
+    animation: CoreLabUI-classic-dropdown-open-keyframe 0.3s ease-in-out
+        forwards;
     display: block;
+    z-index: 4;
 }
 
 .CoreLabUI-classic__dropdown-content--closed {
+    animation: CoreLabUI-classic-dropdown-close-keyframe 0.3s ease-in-out
+        forwards;
     display: none;
+}
+
+.CoreLabUI-classic__dropdown-trigger:hover
+    + .CoreLabUI-classic__dropdown-content {
+    opacity: 1;
+    transform: translateY(0);
+    z-index: 4;
 }
