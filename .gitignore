@@ -4,7 +4,10 @@ dist
 *
 
 !src
-!src/*.js
+!src/*
+!src/*/*.jsx
+!src/*/*.js
+!src/*/*.css
 !plugins
 !esbuild.js
 !utils

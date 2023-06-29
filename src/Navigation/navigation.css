@@ -1,0 +1,6 @@
+.CoreLabUI-classic__navigation {
+    background-color: var(--background);
+    width: var(--width);
+    max-width: var(--max-width);
+    min-width: var(--min-width);
+}
