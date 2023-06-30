@@ -1,0 +1,116 @@
+.CoreLabUI-classic__checkbox-label {
+    display: inline-block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.CoreLabUI-classic__checkbox-label > input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.CoreLabUI-classic__checkbox-checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 2px solid var(--primary);
+}
+
+.CoreLabUI-classic__checkbox-checkmark--small {
+    height: 20px;
+    width: 20px;
+}
+
+.CoreLabUI-classic__checkbox-checkmark--medium {
+    height: 25px;
+    width: 25px;
+}
+
+.CoreLabUI-classic__checkbox-checkmark--large {
+    height: 30px;
+    width: 30px;
+}
+
+.CoreLabUI-classic__checkbox-label:hover
+    > input
+    ~ .CoreLabUI-classic__checkbox-checkmark {
+    background-color: var(--checkbox);
+}
+
+.CoreLabUI-classic__checkbox-label
+    > input:checked
+    ~ .CoreLabUI-classic__checkbox-checkmark {
+    background-color: var(--primary);
+}
+
+.CoreLabUI-classic__checkbox-checkmark--disabled {
+    background-color: var(--checkbox);
+    border: 2px solid var(--primary-disabled);
+    pointer-events: none;
+}
+
+.CoreLabUI-classic__checkbox-label
+    > input:checked
+    ~ .CoreLabUI-classic__checkbox-checkmark--disabled {
+    background-color: var(--primary-disabled);
+    border: 2px solid var(--primary-disabled);
+    pointer-events: none;
+}
+
+.CoreLabUI-classic__checkbox-checkmark:after {
+    content: '';
+    position: absolute;
+    display: none;
+}
+
+.CoreLabUI-classic__checkbox-checkmark--checked:after {
+    display: block;
+}
+
+.CoreLabUI-classic__checkbox-label
+    .CoreLabUI-classic__checkbox-checkmark:after {
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.CoreLabUI-classic__checkbox-checkmark--small:after {
+    left: 7px;
+    top: 4px;
+    width: 3px;
+    height: 8px;
+}
+
+.CoreLabUI-classic__checkbox-checkmark--medium:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+}
+
+.CoreLabUI-classic__checkbox-checkmark--large:after {
+    left: 10px;
+    top: 4px;
+    width: 7px;
+    height: 15px;
+}
+
+.CoreLabUI-classic__checkbox-checkmark--standard {
+    border-radius: var(--checkbox-border-radius);
+}
+
+.CoreLabUI-classic__checkbox-checkmark--rounded {
+    border-radius: 50%;
+}

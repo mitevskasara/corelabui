@@ -1,0 +1,104 @@
+.CoreLabUI-classic__radio-label {
+    display: inline-block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.CoreLabUI-classic__radio-label > input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.CoreLabUI-classic__radio-checkmark {
+    top: 0;
+    left: 0;
+    position: absolute;
+    border: 2px solid var(--primary);
+}
+
+.CoreLabUI-classic__radio-checkmark--small {
+    height: 20px;
+    width: 20px;
+}
+
+.CoreLabUI-classic__radio-checkmark--medium {
+    height: 25px;
+    width: 25px;
+}
+
+.CoreLabUI-classic__radio-checkmark--large {
+    height: 30px;
+    width: 30px;
+}
+
+.CoreLabUI-classic__radio-label:hover
+    > input
+    ~ .CoreLabUI-classic__radio-checkmark {
+    background-color: var(--checkbox);
+}
+
+.CoreLabUI-classic__radio-checkmark--disabled {
+    background-color: var(--checkbox);
+    border: 2px solid var(--primary-disabled);
+    border-radius: var(--border-radius);
+    pointer-events: none;
+}
+
+.CoreLabUI-classic__radio-checkmark:after {
+    content: '';
+    position: absolute;
+    display: none;
+}
+
+.CoreLabUI-classic__radio-checkmark--checked:after {
+    display: block;
+}
+
+.CoreLabUI-classic__radio-label .CoreLabUI-classic__radio-checkmark:after {
+    background-color: var(--primary);
+    top: 0px;
+    left: 0px;
+    border: 3px solid white;
+}
+
+.CoreLabUI-classic__radio-label
+    .CoreLabUI-classic__radio-checkmark--disabled:after {
+    background-color: var(--primary-disabled);
+    border: 3px solid var(--checkbox);
+    pointer-events: none;
+}
+
+.CoreLabUI-classic__radio-checkmark--small:after {
+    width: 14px;
+    height: 14px;
+}
+
+.CoreLabUI-classic__radio-checkmark--medium:after {
+    width: 19px;
+    height: 19px;
+}
+
+.CoreLabUI-classic__radio-checkmark--large:after {
+    width: 24px;
+    height: 24px;
+}
+
+.CoreLabUI-classic__radio-checkmark--standard,
+.CoreLabUI-classic__radio-checkmark--standard:after {
+    border-radius: var(--checkbox-border-radius);
+}
+
+.CoreLabUI-classic__radio-checkmark--rounded,
+.CoreLabUI-classic__radio-checkmark--rounded:after {
+    border-radius: 50%;
+}
