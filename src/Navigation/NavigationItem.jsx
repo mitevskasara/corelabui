@@ -18,6 +18,7 @@ export const NavigationItem = forwardRef(
             divider = false,
             badge,
             items,
+            disabled = false,
             ...props
         },
         ref
@@ -26,6 +27,8 @@ export const NavigationItem = forwardRef(
         if (active) classes += ` CoreLabUI-classic__navigation-item--active`;
         if (!active) classes += ` CoreLabUI-classic__navigation-item--inactive`;
         if (divider) classes += ` CoreLabUI-classic__navigation-item--divided`;
+        if (disabled)
+            classes += ` CoreLabUI-classic__navigation-item--disabled`;
         if (className) classes += ` ${className}`;
         const Element = link ? 'a' : 'div';
         const elementProps = link

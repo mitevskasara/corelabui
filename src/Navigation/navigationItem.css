@@ -33,12 +33,20 @@
 
 .CoreLabUI-classic__navigation-item--divided,
 .CoreLabUI-classic__navigation-item--divided:hover,
-.CoreLabUI-classic__navigation-item--divided:active {
+.CoreLabUI-classic__navigation-item--divided:active,
+.CoreLabUI-classic__navigation-item--disabled {
     border: 1px solid transparent;
     background-color: var(--background);
     cursor: initial;
 }
 
-.CoreLabUI-classic__navigation-item--divided > div > span {
+.CoreLabUI-classic__navigation-item--disabled {
+    pointer-events: none;
+    cursor: unset;
+}
+
+.CoreLabUI-classic__navigation-item--divided > div > span,
+.CoreLabUI-classic__navigation-item--disabled > div > span,
+.CoreLabUI-classic__navigation-item--disabled > div > p {
     color: var(--caption-secondary);
 }
