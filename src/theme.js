@@ -10,18 +10,23 @@ const defaultTheme = {
     secondary: '#d8dae5',
     secondaryHover: '#8f95b2',
     secondaryActive: '#c9c5db',
+    accent: '#a25ddd',
+    accentHover: '#beaacf',
+    accentActive: '#8e38d8',
+    accentDisabled: '#e8dff0',
     disabled: '#d8dae5',
     hover: '#eeeeee',
     active: '#8f95b245',
     heading: '#222831',
     paragraph: '#474d66',
     paragraphLight: '#696f8c',
-    checkbox: '#eeeeee',
     link: '#0066ff',
     light: '#fcfcfc',
     error: '#D14D72',
     title: '#0a2540',
+    subtitle: '#0a2540',
     text: '#425466',
+    caption: '#425466',
     captionSecondary: '#00000073',
     borderRadius: '4px',
     checkboxBorderRadius: '4px',
@@ -67,4 +72,4 @@ function createTheme(style, theme = 'classic') {
     }
 }
 
-module.exports = { createTheme };
+module.exports = { createTheme, defaultTheme };

@@ -1,0 +1,18 @@
+.CoreLabUI-classic__tag {
+    width: var(--tag-width);
+    display: flex;
+    justify-content: space-evenly;
+    gap: 5px;
+    border-radius: var(--border-radius);
+    padding: 0.1em 1em;
+}
+
+.CoreLabUI-classic__tag--outlined {
+    border: 1px solid var(--tag-color);
+    background-color: var(--tag-background);
+}
+
+.CoreLabUI-classic__tag--contained {
+    border: 1px solid var(--tag-background);
+    background-color: var(--tag-background);
+}

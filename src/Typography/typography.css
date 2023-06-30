@@ -11,6 +11,7 @@
 .CoreLabUI-classic__caption {
     font-family: var(--font-family);
     margin-top: 0;
+    color: var(--typography-color);
 }
 
 .CoreLabUI-classic__heading1 {
@@ -19,7 +20,6 @@
     line-height: 1.167;
     letter-spacing: -0.01562em;
     margin-bottom: 0.35em;
-    color: var(--title);
 }
 
 .CoreLabUI-classic__heading2 {
@@ -28,7 +28,6 @@
     line-height: 1.2;
     letter-spacing: -0.00833em;
     margin-bottom: 0.35em;
-    color: var(--title);
 }
 
 .CoreLabUI-classic__heading3 {
@@ -37,7 +36,6 @@
     line-height: 1.167;
     letter-spacing: 0em;
     margin-bottom: 0.35em;
-    color: var(--title);
 }
 
 .CoreLabUI-classic__heading4 {
@@ -46,7 +44,6 @@
     line-height: 1.235;
     letter-spacing: 0.00735em;
     margin-bottom: 0.35em;
-    color: var(--title);
 }
 
 .CoreLabUI-classic__heading5 {
@@ -55,7 +52,6 @@
     line-height: 1.334;
     letter-spacing: 0em;
     margin-bottom: 0.35em;
-    color: var(--title);
 }
 
 .CoreLabUI-classic__heading6 {
@@ -64,7 +60,6 @@
     line-height: 1.6;
     letter-spacing: 0.0075em;
     margin-bottom: 0.35em;
-    color: var(--title);
 }
 
 .CoreLabUI-classic__subtitle1 {
@@ -73,7 +68,6 @@
     line-height: 1.75;
     letter-spacing: 0.00938em;
     margin-bottom: 0.35em;
-    color: var(--title);
 }
 
 .CoreLabUI-classic__subtitle2 {
@@ -82,7 +76,6 @@
     line-height: 1.57;
     letter-spacing: 0.00714em;
     margin-bottom: 0.35em;
-    color: var(--title);
 }
 
 .CoreLabUI-classic__body1 {
@@ -91,7 +84,6 @@
     line-height: 1.5;
     letter-spacing: 0.00938em;
     margin-bottom: 0.35em;
-    color: var(--text);
 }
 
 .CoreLabUI-classic__body2 {
@@ -100,7 +92,6 @@
     line-height: 1.43;
     letter-spacing: 0.01071em;
     margin-bottom: 0.35em;
-    color: var(--text);
 }
 
 .CoreLabUI-classic__caption {
@@ -110,7 +101,6 @@
     letter-spacing: 0.03333em;
     margin-bottom: 0.35em;
     display: block;
-    color: var(--text);
 }
 
 .CoreLabUI-classic__no-margin {
