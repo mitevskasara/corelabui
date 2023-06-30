@@ -44,7 +44,7 @@
 .CoreLabUI-classic__checkbox-label:hover
     > input
     ~ .CoreLabUI-classic__checkbox-checkmark {
-    background-color: var(--checkbox);
+    background-color: var(--hover);
 }
 
 .CoreLabUI-classic__checkbox-label
@@ -54,7 +54,7 @@
 }
 
 .CoreLabUI-classic__checkbox-checkmark--disabled {
-    background-color: var(--checkbox);
+    background-color: var(--hover);
     border: 2px solid var(--primary-disabled);
     pointer-events: none;
 }

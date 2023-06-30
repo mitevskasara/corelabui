@@ -13,6 +13,8 @@ export const Select = ({
     error,
     helperText,
     options,
+    onChange,
+    value,
     ...props
 }) => {
     const [open, toggle] = useState(false);
@@ -50,6 +52,7 @@ export const Select = ({
                 )}
                 <input
                     {...props}
+                    value={options?.find((o) => o.value === value)?.label}
                     className={`CoreLabUI-classic__select CoreLabUI-classic__select--${size} CoreLabUI-classic__select--${
                         error ? 'error' : ''
                     }`}
@@ -68,9 +71,24 @@ export const Select = ({
                 }`}>
                 {options?.map((option, index) => (
                     <div
+                        key={index}
                         value={option.value}
-                        className="CoreLabUI-classic__select-menu__option"
-                        key={index}>
+                        className={`CoreLabUI-classic__select-menu__option
+                        ${
+                            option.value === value
+                                ? 'CoreLabUI-classic__select-menu__option--selected'
+                                : ''
+                        }
+                        ${
+                            option?.disabled
+                                ? 'CoreLabUI-classic__select-menu__option--disabled'
+                                : ''
+                        }`}
+                        onClick={
+                            option?.disabled
+                                ? null
+                                : () => onChange(option.value)
+                        }>
                         {option.label}
                     </div>
                 ))}

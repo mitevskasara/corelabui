@@ -44,11 +44,11 @@
 .CoreLabUI-classic__radio-label:hover
     > input
     ~ .CoreLabUI-classic__radio-checkmark {
-    background-color: var(--checkbox);
+    background-color: var(--hover);
 }
 
 .CoreLabUI-classic__radio-checkmark--disabled {
-    background-color: var(--checkbox);
+    background-color: var(--hover);
     border: 2px solid var(--primary-disabled);
     border-radius: var(--border-radius);
     pointer-events: none;
@@ -74,7 +74,7 @@
 .CoreLabUI-classic__radio-label
     .CoreLabUI-classic__radio-checkmark--disabled:after {
     background-color: var(--primary-disabled);
-    border: 3px solid var(--checkbox);
+    border: 3px solid var(--hover);
     pointer-events: none;
 }
 

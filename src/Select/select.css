@@ -113,3 +113,13 @@
     background-color: var(--hover);
     cursor: pointer;
 }
+
+.CoreLabUI-classic__select-menu__option--selected {
+    background-color: var(--primary-disabled);
+}
+
+.CoreLabUI-classic__select-menu__option--disabled,
+.CoreLabUI-classic__select-menu__option--disabled:hover {
+    background-color: unset;
+    color: var(--disabled);
+}

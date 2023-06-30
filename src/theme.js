@@ -11,7 +11,7 @@ const defaultTheme = {
     secondaryHover: '#8f95b2',
     secondaryActive: '#c9c5db',
     disabled: '#d8dae5',
-    hover: '#EDEFF5',
+    hover: '#eeeeee',
     active: '#8f95b245',
     heading: '#222831',
     paragraph: '#474d66',
