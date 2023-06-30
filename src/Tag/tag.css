@@ -1,6 +1,8 @@
 .CoreLabUI-classic__tag {
+    font-family: var(--font-family);
     width: var(--tag-width);
     display: flex;
+    align-items: center;
     justify-content: space-evenly;
     gap: 5px;
     border-radius: var(--border-radius);
