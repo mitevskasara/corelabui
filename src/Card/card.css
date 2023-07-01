@@ -1,0 +1,58 @@
+@keyframes card-header-action-pulse {
+    0% {
+        transform: scale(0.95);
+    }
+
+    70% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(0.95);
+    }
+}
+
+.CoreLabUI-classic__card {
+    font-family: var(--font-family);
+    width: var(--card-width);
+    height: var(--card-height);
+    background-color: var(--background);
+    display: flex;
+    flex-direction: column;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border-color);
+    padding: 1em;
+    gap: 0.5em;
+}
+
+.CoreLabUI-classic__card--clickable {
+    cursor: pointer;
+}
+
+.CoreLabUI-classic__card--clickable:hover {
+    opacity: 0.8;
+    box-shadow: var(--box-shadow);
+}
+
+.CoreLabUI-classic__card--clickable:active {
+    transform: scale(0.97);
+}
+
+.CoreLabUI-classic__card-header,
+.CoreLabUI-classic__card-tags {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.CoreLabUI-classic__card-tags {
+    width: var(--card-width);
+    justify-content: start;
+    flex-wrap: wrap;
+    gap: 0.5em;
+}
+
+.CoreLabUI-classic__card-image {
+    width: calc(100% + 2em);
+    margin: 0px -1em;
+}

@@ -26,7 +26,7 @@
 }
 
 .CoreLabUI-classic__link--disabled {
-    color: var(--paragraph);
+    color: var(--text);
     opacity: 0.4;
     pointer-events: none;
 }

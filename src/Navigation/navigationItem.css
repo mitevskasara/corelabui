@@ -17,6 +17,10 @@
     align-items: center;
 }
 
+.CoreLabUI-classic__navigation-item:hover {
+    background-color: var(--hover);
+}
+
 .CoreLabUI-classic__navigation-item--active,
 .CoreLabUI-classic__navigation-item:active {
     background-color: var(--primary-disabled);
@@ -26,12 +30,8 @@
     color: var(--primary);
 }
 
-.CoreLabUI-classic__navigation-item:hover {
-    border: 1px solid var(--primary-disabled);
-}
-
 .CoreLabUI-classic__navigation-item-divider {
-    border-bottom: 1px solid var(--disabled);
+    border-bottom: 1px solid var(--secondary-disabled);
     padding: 0.2em 0px;
 }
 
@@ -52,5 +52,5 @@
 .CoreLabUI-classic__navigation-item--divided > div > span,
 .CoreLabUI-classic__navigation-item--disabled > div > span,
 .CoreLabUI-classic__navigation-item--disabled > div > p {
-    color: var(--caption-secondary);
+    color: var(--text-secondary);
 }

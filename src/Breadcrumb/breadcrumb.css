@@ -9,7 +9,7 @@
 .CoreLabUI-classic__breadcrumb-item,
 .CoreLabUI-classic__breadcrumb-item--inactive,
 .CoreLabUI-classic__breadcrumb-separator {
-    color: var(--caption-secondary);
+    color: var(--text-secondary);
     text-decoration: none;
     display: flex;
     align-items: center;

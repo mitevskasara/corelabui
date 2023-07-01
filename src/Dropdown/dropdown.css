@@ -46,11 +46,11 @@
     position: absolute;
     left: var(--left);
     background-color: var(--background);
-    box-shadow: var(--popup-shadow);
+    box-shadow: var(--box-shadow);
     padding: 0.7em 0.7em 0.7em;
     min-width: var(--min-width);
     margin-top: 0.1em;
-    border: 1px solid var(--disabled);
+    border: 1px solid var(--secondary-disabled);
     border-radius: 3px;
     box-sizing: border-box;
     opacity: 0;

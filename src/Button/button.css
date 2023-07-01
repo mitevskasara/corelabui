@@ -26,11 +26,13 @@
     font-size: var(--font-small);
     padding: 8px 16px;
     height: 36px;
+    width: max-content;
 }
 
 .CoreLabUI-classic__btn--medium {
     font-size: var(--font-medium);
     min-width: 100px;
+    width: max-content;
     padding: 12px 24px;
     height: 50px;
 }
@@ -38,6 +40,7 @@
 .CoreLabUI-classic__btn--large {
     font-size: var(--font-large);
     min-width: 100px;
+    width: max-content;
     padding: 16px 32px;
     height: 57px;
 }
@@ -52,7 +55,7 @@
     border: 2px solid var(--primary);
     color: var(--light);
     border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
+    box-shadow: var(--button-shadow);
 }
 
 .CoreLabUI-classic__btn--primary:hover {
@@ -63,7 +66,7 @@
 .CoreLabUI-classic__btn-root--primary:active {
     border-radius: var(--border-radius);
     background: var(--primary-active);
-    border: 2px solid var(--active);
+    border: 2px solid var(--border-color-active);
 }
 
 .CoreLabUI-classic__btn--primary:disabled {
@@ -75,9 +78,9 @@
 .CoreLabUI-classic__btn--secondary {
     background: var(--white);
     border: 1px solid var(--secondary);
-    color: var(--paragraph);
+    color: var(--text);
     border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
+    box-shadow: var(--button-shadow);
 }
 
 .CoreLabUI-classic__btn--secondary:hover {
@@ -86,12 +89,12 @@
 
 .CoreLabUI-classic__btn-root--secondary:active {
     border-radius: var(--border-radius);
-    border: 2px solid var(--active);
+    border: 2px solid var(--border-color-active);
 }
 
 .CoreLabUI-classic__btn--secondary:disabled {
     border: 1px solid var(--secondary) !important;
-    color: var(--disabled);
+    color: var(--secondary-disabled);
 }
 
 .CoreLabUI-classic__btn--text {
@@ -109,13 +112,13 @@
 }
 
 .CoreLabUI-classic__btn--text:disabled {
-    color: var(--paragraph);
+    color: var(--text);
     opacity: 0.4;
 }
 
 .CoreLabUI-classic__btn-root--text:active {
     border-radius: var(--border-radius);
-    border: 2px solid var(--active);
+    border: 2px solid var(--border-color-active);
 }
 
 @keyframes CoreLabUI-classic-loading-keyframe {
@@ -138,7 +141,7 @@
 .CoreLabUI-classic__btn__loader > span {
     width: 8px;
     height: 8px;
-    box-shadow: var(--box-shadow);
+    box-shadow: var(--button-shadow);
     border-radius: 4px;
     background: var(--primary-disabled);
     transform: scale(0);

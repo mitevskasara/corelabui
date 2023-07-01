@@ -1,8 +1,6 @@
 const defaultTheme = {
     fontFamily: "'Roboto', 'Helvetica', 'Arial', sans-serif",
     background: '#ffffff',
-    popupShadow:
-        'rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px',
     primary: '#393053',
     primaryHover: '#443C68',
     primaryActive: '#605786',
@@ -10,24 +8,21 @@ const defaultTheme = {
     secondary: '#d8dae5',
     secondaryHover: '#8f95b2',
     secondaryActive: '#c9c5db',
+    secondaryDisabled: '#d8dae5',
     accent: '#a25ddd',
     accentHover: '#beaacf',
     accentActive: '#8e38d8',
     accentDisabled: '#e8dff0',
-    disabled: '#d8dae5',
     hover: '#eeeeee',
-    active: '#8f95b245',
-    heading: '#222831',
-    paragraph: '#474d66',
-    paragraphLight: '#696f8c',
-    link: '#0066ff',
+    borderColor: '#d8dae5',
+    borderColorActive: '#8f95b245',
     light: '#fcfcfc',
     error: '#D14D72',
     title: '#0a2540',
     subtitle: '#0a2540',
     text: '#425466',
+    textSecondary: '#00000073',
     caption: '#425466',
-    captionSecondary: '#00000073',
     borderRadius: '4px',
     checkboxBorderRadius: '4px',
     fontXsmall: '12px',
@@ -35,6 +30,8 @@ const defaultTheme = {
     fontMedium: '16px',
     fontLarge: '18px',
     boxShadow:
+        'rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px',
+    buttonShadow:
         'rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px rgba(17, 17, 26, 0.05) 0px 1px 0px,rgba(17, 17, 26, 0.1) 0px 0px 8px'
 };
 

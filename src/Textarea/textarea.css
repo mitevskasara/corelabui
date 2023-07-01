@@ -8,11 +8,11 @@
 
 .CoreLabUI-classic__field-multiline {
     font-family: var(--font-family);
-    border: 1px solid var(--disabled);
+    border: 1px solid var(--secondary-disabled);
     border-radius: var(--border-radius);
     outline: none;
     font-size: var(--font-medium);
-    color: var(--paragraph);
+    color: var(--text);
     resize: none;
     padding: 10px 16px;
 }
@@ -20,13 +20,13 @@
 .CoreLabUI-classic__field-multiline__label,
 .CoreLabUI-classic__field-multiline__helper-text {
     font-size: var(--font-xsmall);
-    color: var(--paragraph-light);
+    color: var(--text-secondary);
 }
 
 .CoreLabUI-classic__field-multiline::placeholder {
     font-family: var(--font-family);
     font-size: var(--font-medium);
-    color: var(--paragraph-light);
+    color: var(--text-secondary);
 }
 
 .CoreLabUI-classic__field-multiline:hover {
@@ -44,8 +44,8 @@
 
 .CoreLabUI-classic__field-multiline-root--disabled > textarea:hover,
 .CoreLabUI-classic__field-multiline-root--disabled > textarea:focus {
-    border: 1px solid var(--disabled);
-    color: var(--disabled);
+    border: 1px solid var(--secondary-disabled);
+    color: var(--secondary-disabled);
 }
 
 .CoreLabUI-classic__field-multiline-root--disabled > textarea::placeholder,
@@ -53,7 +53,7 @@
     > .CoreLabUI-classic__field-multiline__label,
 .CoreLabUI-classic__field-multiline-root--disabled
     > .CoreLabUI-classic__field-multiline__helper-text {
-    color: var(--disabled) !important;
+    color: var(--secondary-disabled) !important;
 }
 
 .CoreLabUI-classic__field-multiline--error,
