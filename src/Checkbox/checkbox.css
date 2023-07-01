@@ -11,7 +11,7 @@
     user-select: none;
 }
 
-.CoreLabUI-classic__checkbox-label > input {
+.CoreLabUI-classic__checkbox-label>input {
     position: absolute;
     opacity: 0;
     cursor: pointer;
@@ -41,15 +41,11 @@
     width: 30px;
 }
 
-.CoreLabUI-classic__checkbox-label:hover
-    > input
-    ~ .CoreLabUI-classic__checkbox-checkmark {
+.CoreLabUI-classic__checkbox-label:hover>input~.CoreLabUI-classic__checkbox-checkmark {
     background-color: var(--hover);
 }
 
-.CoreLabUI-classic__checkbox-label
-    > input:checked
-    ~ .CoreLabUI-classic__checkbox-checkmark {
+.CoreLabUI-classic__checkbox-label>input:checked~.CoreLabUI-classic__checkbox-checkmark {
     background-color: var(--primary);
 }
 
@@ -59,16 +55,14 @@
     pointer-events: none;
 }
 
-.CoreLabUI-classic__checkbox-label
-    > input:checked
-    ~ .CoreLabUI-classic__checkbox-checkmark--disabled {
+.CoreLabUI-classic__checkbox-label>input:checked~.CoreLabUI-classic__checkbox-checkmark--disabled {
     background-color: var(--primary-disabled);
     border: 2px solid var(--primary-disabled);
     pointer-events: none;
 }
 
 .CoreLabUI-classic__checkbox-checkmark:after {
-    content: '';
+    content: var(--content);
     position: absolute;
     display: none;
 }
@@ -77,8 +71,7 @@
     display: block;
 }
 
-.CoreLabUI-classic__checkbox-label
-    .CoreLabUI-classic__checkbox-checkmark:after {
+.CoreLabUI-classic__checkbox-label .CoreLabUI-classic__checkbox-checkmark:after {
     border: solid white;
     border-width: 0 3px 3px 0;
     -webkit-transform: rotate(45deg);

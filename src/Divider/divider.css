@@ -11,7 +11,7 @@
 
 .CoreLabUI-classic__divider::before,
 .CoreLabUI-classic__divider::after {
-    content: '';
+    content: var(--content);
     padding: 0.5px;
     background-color: var(--divider-color);
 }

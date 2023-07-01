@@ -11,7 +11,7 @@
     user-select: none;
 }
 
-.CoreLabUI-classic__radio-label > input {
+.CoreLabUI-classic__radio-label>input {
     position: absolute;
     opacity: 0;
     cursor: pointer;
@@ -41,9 +41,7 @@
     width: 30px;
 }
 
-.CoreLabUI-classic__radio-label:hover
-    > input
-    ~ .CoreLabUI-classic__radio-checkmark {
+.CoreLabUI-classic__radio-label:hover>input~.CoreLabUI-classic__radio-checkmark {
     background-color: var(--hover);
 }
 
@@ -55,7 +53,7 @@
 }
 
 .CoreLabUI-classic__radio-checkmark:after {
-    content: '';
+    content: var(--content);
     position: absolute;
     display: none;
 }
@@ -71,8 +69,7 @@
     border: 3px solid white;
 }
 
-.CoreLabUI-classic__radio-label
-    .CoreLabUI-classic__radio-checkmark--disabled:after {
+.CoreLabUI-classic__radio-label .CoreLabUI-classic__radio-checkmark--disabled:after {
     background-color: var(--primary-disabled);
     border: 3px solid var(--hover);
     pointer-events: none;
