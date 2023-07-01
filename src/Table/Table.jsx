@@ -1,0 +1,90 @@
+import React, { forwardRef } from 'react';
+import Typography from '../Typography';
+import { injectStyle } from '../utils/injectStyle';
+import { createTheme, defaultTheme } from '../theme';
+import './table.css';
+
+injectStyle('Table', {});
+createTheme();
+
+export const Table = forwardRef(
+    (
+        {
+            headers,
+            data,
+            className,
+            children,
+            spacing = '0.5em 1em',
+            striped = false,
+            bordered,
+            ...props
+        },
+        ref
+    ) => {
+        let classes = `CoreLabUI-classic CoreLabUI-classic__table`;
+        let rowClasses = 'CoreLabUI-classic__table-body-row';
+        if (striped)
+            rowClasses += ` CoreLabUI-classic__table-body-row--striped`;
+        if (bordered)
+            rowClasses += ` CoreLabUI-classic__table-body-row--bordered`;
+        if (className) classes += ` ${className}`;
+
+        return (
+            <table
+                {...props}
+                className={classes}
+                ref={ref}
+                style={{ '--spacing': spacing }}>
+                {headers && (
+                    <thead className="CoreLabUI-classic__table-head">
+                        <tr className={rowClasses}>
+                            {headers?.map((header, index) => (
+                                <th
+                                    key={index}
+                                    className="CoreLabUI-classic__table-head-column">
+                                    <div>
+                                        <Typography
+                                            variant="subtitle2"
+                                            margin={false}
+                                            overflow="ellipsis">
+                                            {header}
+                                        </Typography>
+                                    </div>
+                                </th>
+                            ))}
+                        </tr>
+                    </thead>
+                )}
+                {data ? (
+                    <tbody className="CoreLabUI-classic__table-body">
+                        {data.map((row, rowId) => (
+                            <tr key={rowId} className={rowClasses}>
+                                {Object.keys(row)?.map((column, columnId) => (
+                                    <td
+                                        key={columnId}
+                                        className="CoreLabUI-classic__table-body-column">
+                                        <div>
+                                            {typeof row[column] === 'string' ||
+                                            typeof row[column] === 'number' ? (
+                                                <Typography
+                                                    variant="body1"
+                                                    margin={false}
+                                                    overflow="ellipsis">
+                                                    {row[column]}
+                                                </Typography>
+                                            ) : (
+                                                row[column]
+                                            )}
+                                        </div>
+                                    </td>
+                                ))}
+                            </tr>
+                        ))}
+                    </tbody>
+                ) : (
+                    children
+                )}
+            </table>
+        );
+    }
+);

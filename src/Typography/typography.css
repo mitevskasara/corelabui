@@ -23,7 +23,7 @@
 }
 
 .CoreLabUI-classic__heading2 {
-    font-weight: 300;
+    font-weight: 400;
     font-size: 3.75rem;
     line-height: 1.2;
     letter-spacing: -0.00833em;
@@ -63,7 +63,7 @@
 }
 
 .CoreLabUI-classic__subtitle1 {
-    font-weight: 400;
+    font-weight: 600;
     font-size: 1rem;
     line-height: 1.75;
     letter-spacing: 0.00938em;
@@ -71,7 +71,7 @@
 }
 
 .CoreLabUI-classic__subtitle2 {
-    font-weight: 500;
+    font-weight: 600;
     font-size: 0.875rem;
     line-height: 1.57;
     letter-spacing: 0.00714em;

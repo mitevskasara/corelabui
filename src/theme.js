@@ -14,6 +14,7 @@ const defaultTheme = {
     accentActive: '#8e38d8',
     accentDisabled: '#e8dff0',
     hover: '#eeeeee',
+    hoverLight: '#fcfcfc',
     borderColor: '#d8dae5',
     borderColorActive: '#8f95b245',
     light: '#fcfcfc',

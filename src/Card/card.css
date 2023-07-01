@@ -30,7 +30,6 @@
 }
 
 .CoreLabUI-classic__card--clickable:hover {
-    opacity: 0.8;
     box-shadow: var(--box-shadow);
 }
 
