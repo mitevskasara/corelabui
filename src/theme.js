@@ -1,4 +1,4 @@
-const defaultTheme = {
+export const defaultTheme = {
     fontFamily: "'Roboto', 'Helvetica', 'Arial', sans-serif",
     background: '#ffffff',
     primary: '#393053',
@@ -41,16 +41,16 @@ function generateStyle(style, theme) {
     let injectedStyle = `body{background: ${mergedThemes.background}} .CoreLabUI-${theme} {`;
     Object.keys(mergedThemes).map(
         (key) =>
-            (injectedStyle += `--${key
-                .split(/(?=[A-Z])/)
-                .join('-')
-                .toLowerCase()}:${mergedThemes[key]};`)
+        (injectedStyle += `--${key
+            .split(/(?=[A-Z])/)
+            .join('-')
+            .toLowerCase()}:${mergedThemes[key]};`)
     );
     injectedStyle += '}';
     return injectedStyle;
 }
 
-function createTheme(style, theme = 'classic') {
+export function createTheme(style, theme = 'classic') {
     if (document) {
         if (!document.getElementById(`CoreLabUI-${theme}`)) {
             document.head.insertAdjacentHTML(
@@ -69,5 +69,3 @@ function createTheme(style, theme = 'classic') {
         }
     }
 }
-
-module.exports = { createTheme, defaultTheme };

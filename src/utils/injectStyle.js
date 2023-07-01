@@ -1,4 +1,4 @@
-function injectStyle(component, style) {
+export function injectStyle(component, style) {
     if (document && !document.getElementById(`CoreLabUI-${component}`)) {
         document.head.insertAdjacentHTML(
             'beforeend',
@@ -6,5 +6,3 @@ function injectStyle(component, style) {
         );
     }
 }
-
-module.exports = { injectStyle };

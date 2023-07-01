@@ -1,6 +1,6 @@
 {
     "name": "@corelabui/classic",
-    "version": "1.0.29",
+    "version": "1.0.30",
     "description": "Collection of ready-to-use customisable React components available in multiple themes",
     "private": false,
     "type": "module",
