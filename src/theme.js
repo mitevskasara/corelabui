@@ -42,11 +42,12 @@ function generateStyle(style, theme) {
     let injectedStyle = `body{background: ${mergedThemes.background}} .CoreLabUI-${theme} {`;
     Object.keys(mergedThemes).map(
         (key) =>
-        (injectedStyle += `--${key
-            .split(/(?=[A-Z])/)
-            .join('-')
-            .toLowerCase()}:${mergedThemes[key]};`)
+            (injectedStyle += `--${key
+                .split(/(?=[A-Z])/)
+                .join('-')
+                .toLowerCase()}:${mergedThemes[key]};`)
     );
+    injectedStyle += '--content: ""';
     injectedStyle += '}';
     return injectedStyle;
 }
