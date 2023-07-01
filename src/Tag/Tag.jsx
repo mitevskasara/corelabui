@@ -33,7 +33,7 @@ export const Tag = forwardRef(
     ) => {
         let classes = `CoreLabUI-classic CoreLabUI-classic__tag CoreLabUI-classic__tag--${variant}`;
         if (className) classes += ` ${className}`;
-        console.log(textColor);
+
         return (
             <div
                 {...props}

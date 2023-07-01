@@ -128,3 +128,19 @@
     -webkit-line-clamp: var(--line-clamp);
     -webkit-box-orient: vertical;
 }
+
+.CoreLabUI-classic__typography--left {
+    text-align: left;
+}
+
+.CoreLabUI-classic__typography--center {
+    text-align: center;
+}
+
+.CoreLabUI-classic__typography--right {
+    text-align: right;
+}
+
+.CoreLabUI-classic__typography--justify {
+    text-align: justify;
+}

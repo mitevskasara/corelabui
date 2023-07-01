@@ -44,6 +44,7 @@ export const Typography = forwardRef(
             lines,
             overflow,
             className,
+            align = 'left',
             color
         },
         ref
@@ -53,6 +54,7 @@ export const Typography = forwardRef(
         if (!margin) classes += ' CoreLabUI-classic__no-margin';
         if (overflow) classes += ` CoreLabUI-classic__${overflow}`;
         if (lines) classes += ` CoreLabUI-classic__lines`;
+        if (align) classes += ` CoreLabUI-classic__typography--${align}`;
         if (className) classes += ` ${className}`;
 
         let style = { '--typography-color': color ? color : COLORS[variant] };
