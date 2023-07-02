@@ -3,10 +3,10 @@ import { injectStyle } from '../utils/injectStyle';
 import { createTheme } from '../theme';
 import './highlight.css';
 
-injectStyle('Hightlight', {});
+injectStyle('Highlight', {});
 createTheme();
 
-export const Hightlight = forwardRef(
+export const Highlight = forwardRef(
     (
         {
             className,

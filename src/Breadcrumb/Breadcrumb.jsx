@@ -15,10 +15,9 @@ export const Breadcrumb = forwardRef(
         return (
             <div {...props} className={classes} ref={ref}>
                 {items?.map((item, index) => (
-                    <>
+                    <div key={index}>
                         <a
                             href={item?.link}
-                            key={index}
                             className={`CoreLabUI-classic__breadcrumb-item 
                                 CoreLabUI-classic__breadcrumb-item--${
                                     item?.active ? 'active' : 'inactive'
@@ -39,7 +38,7 @@ export const Breadcrumb = forwardRef(
                                     : '/'
                                 : null}
                         </span>
-                    </>
+                    </div>
                 ))}
             </div>
         );
