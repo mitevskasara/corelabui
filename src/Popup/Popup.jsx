@@ -16,7 +16,7 @@ export const Popup = forwardRef(
             open,
             close,
             disableClose = false,
-            width = 'fit-content',
+            width = '50%',
             height = 'unset',
             ...props
         },

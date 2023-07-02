@@ -1,7 +1,7 @@
-import React, { forwardRef } from 'react';
+import React, { forwardRef, useContext } from 'react';
 import Typography from '../Typography';
 import { injectStyle } from '../utils/injectStyle';
-import { createTheme, defaultTheme } from '../theme';
+import { createTheme, ThemeContext } from '../theme';
 import './divider.css';
 
 injectStyle('Divider', {});
@@ -14,7 +14,7 @@ export const Divider = forwardRef(
             text,
             textProps = { variant: 'body1' },
             variant = 'outlined',
-            color = defaultTheme.borderColor,
+            color,
             width = '100%',
             textAlign = 'center',
             ...props
@@ -24,6 +24,7 @@ export const Divider = forwardRef(
         let classes = `CoreLabUI-classic CoreLabUI-classic__divider CoreLabUI-classic__divider--${textAlign}`;
         if (!text) classes += ' CoreLabUI-classic__divider--no-text';
         if (className) classes += ` ${className}`;
+        const theme = useContext(ThemeContext);
 
         return (
             <div
@@ -31,7 +32,7 @@ export const Divider = forwardRef(
                 className={classes}
                 ref={ref}
                 style={{
-                    '--divider-color': color,
+                    '--divider-color': color || theme.borderColor,
                     '--divider-width': width
                 }}>
                 {text && (

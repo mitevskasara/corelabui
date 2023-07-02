@@ -14,10 +14,7 @@ export const TableOfContents = forwardRef(
 
         return (
             <div {...props} ref={ref}>
-                <Typography
-                    variant="heading6"
-                    overflow="ellipsis"
-                    color="inherit">
+                <Typography variant="heading6" overflow="ellipsis">
                     {title}
                 </Typography>
                 <div className={classes}>
@@ -31,8 +28,7 @@ export const TableOfContents = forwardRef(
                             <Typography
                                 variant="caption"
                                 margin={false}
-                                overflow="ellipsis"
-                                color="inherit">
+                                overflow="ellipsis">
                                 {item?.title}
                             </Typography>
                         </a>

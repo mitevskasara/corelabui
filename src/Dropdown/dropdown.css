@@ -50,7 +50,7 @@
     padding: 0.7em 0.7em 0.7em;
     min-width: var(--min-width);
     margin-top: 0.1em;
-    border: 1px solid var(--secondary-disabled);
+    border: 1px solid var(--border-color);
     border-radius: 3px;
     box-sizing: border-box;
     opacity: 0;

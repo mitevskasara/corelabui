@@ -11,12 +11,9 @@
 .CoreLabUI-classic__breadcrumb-separator {
     color: var(--text-secondary);
     text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 5px;
 }
 
 .CoreLabUI-classic__breadcrumb-item--active,
 .CoreLabUI-classic__breadcrumb-item:hover {
-    color: var(--caption);
+    color: var(--text);
 }

@@ -23,7 +23,7 @@
 
 .CoreLabUI-classic__navigation-item--active,
 .CoreLabUI-classic__navigation-item:active {
-    background-color: var(--primary-disabled);
+    background-color: var(--primary-active);
 }
 
 .CoreLabUI-classic__navigation-item--active > div > span {
@@ -31,7 +31,7 @@
 }
 
 .CoreLabUI-classic__navigation-item-divider {
-    border-bottom: 1px solid var(--secondary-disabled);
+    border-bottom: 1px solid var(--border-color);
     padding: 0.2em 0px;
 }
 

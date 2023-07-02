@@ -55,16 +55,18 @@
 
 .CoreLabUI-classic__checkbox-checkmark--disabled {
     background-color: var(--hover);
-    border: 2px solid var(--primary-disabled);
+    border: 2px solid var(--primary);
     pointer-events: none;
+    opacity: 0.4;
 }
 
 .CoreLabUI-classic__checkbox-label
     > input:checked
     ~ .CoreLabUI-classic__checkbox-checkmark--disabled {
-    background-color: var(--primary-disabled);
-    border: 2px solid var(--primary-disabled);
+    background-color: var(--primary);
+    border: 2px solid var(--primary);
     pointer-events: none;
+    opacity: 0.4;
 }
 
 .CoreLabUI-classic__checkbox-checkmark:after {

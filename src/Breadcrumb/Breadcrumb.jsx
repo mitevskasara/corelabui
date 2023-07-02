@@ -1,5 +1,6 @@
 import React, { forwardRef } from 'react';
 import Typography from '../Typography';
+import Flex from '../Flex';
 import { injectStyle } from '../utils/injectStyle';
 import { createTheme } from '../theme';
 import './breadcrumb.css';
@@ -15,7 +16,7 @@ export const Breadcrumb = forwardRef(
         return (
             <div {...props} className={classes} ref={ref}>
                 {items?.map((item, index) => (
-                    <div key={index}>
+                    <Flex key={index} alignItems="center" gap="0.5">
                         <a
                             href={item?.link}
                             className={`CoreLabUI-classic__breadcrumb-item 
@@ -38,7 +39,7 @@ export const Breadcrumb = forwardRef(
                                     : '/'
                                 : null}
                         </span>
-                    </div>
+                    </Flex>
                 ))}
             </div>
         );

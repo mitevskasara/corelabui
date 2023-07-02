@@ -13,11 +13,12 @@
 }
 
 .CoreLabUI-classic__select {
-    border: 1px solid var(--secondary-disabled);
+    border: 1px solid var(--border-color);
     border-radius: var(--border-radius);
     outline: none;
     font-size: var(--font-medium);
     color: var(--text);
+    background-color: var(--fields-background);
 }
 
 .CoreLabUI-classic__select--small {
@@ -53,7 +54,7 @@
 
 .CoreLabUI-classic__select:focus,
 .CoreLabUI-classic__root--error > input:focus {
-    border: 1px solid var(--primary-active);
+    border: 1px solid var(--primary-hover);
 }
 
 .CoreLabUI-classic__root:hover > .label {
@@ -63,15 +64,15 @@
 .CoreLabUI-classic__root--disabled,
 .CoreLabUI-classic__root--disabled > input:hover,
 .CoreLabUI-classic__root--disabled > input:focus {
-    border: 1px solid var(--secondary-disabled);
-    color: var(--secondary-disabled);
+    border: 1px solid var(--border-color);
+    color: var(--border-color);
     pointer-events: none;
 }
 
 .CoreLabUI-classic__root--disabled > input::placeholder,
 .CoreLabUI-classic__root--disabled > .label,
 .CoreLabUI-classic__root--disabled > .helper-text {
-    color: var(--secondary-disabled) !important;
+    color: var(--border-color) !important;
 }
 
 .CoreLabUI-classic__select--error {
@@ -84,9 +85,9 @@
 }
 
 .CoreLabUI-classic__select-menu {
-    border: 1px solid var(--secondary-disabled);
+    border: 1px solid var(--border-color);
     border-radius: var(--border-radius);
-    background-color: var(--light);
+    background-color: var(--fields-background);
     box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
     position: absolute;
     width: 100%;
@@ -121,5 +122,5 @@
 .CoreLabUI-classic__select-menu__option--disabled,
 .CoreLabUI-classic__select-menu__option--disabled:hover {
     background-color: unset;
-    color: var(--secondary-disabled);
+    color: var(--border-color);
 }

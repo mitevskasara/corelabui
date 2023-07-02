@@ -7,11 +7,12 @@
 }
 
 .CoreLabUI-classic__field {
-    border: 1px solid var(--secondary-disabled);
+    border: 1px solid var(--border-color);
     border-radius: var(--border-radius);
     outline: none;
     font-size: var(--font-medium);
     color: var(--text);
+    background-color: var(--fields-background);
 }
 
 .CoreLabUI-classic__field--small {
@@ -45,7 +46,7 @@
 }
 
 .CoreLabUI-classic__field:focus {
-    border: 1px solid var(--primary-active);
+    border: 1px solid var(--primary-hover);
 }
 
 .CoreLabUI-classic__field-root:hover > .CoreLabUI-classic__field__label {
@@ -54,15 +55,15 @@
 
 .CoreLabUI-classic__field-root--disabled > input:hover,
 .CoreLabUI-classic__field-root--disabled > input:focus {
-    border: 1px solid var(--secondary-disabled);
-    color: var(--secondary-disabled);
+    border: 1px solid var(--border-color);
+    color: var(--border-color);
 }
 
 .CoreLabUI-classic__field-root--disabled > input::placeholder,
 .CoreLabUI-classic__field-root--disabled > .CoreLabUI-classic__field__label,
 .CoreLabUI-classic__field-root--disabled
     > .CoreLabUI-classic__field__helper-text {
-    color: var(--secondary-disabled) !important;
+    color: var(--border-color) !important;
 }
 
 .CoreLabUI-classic__field--error,

@@ -9,21 +9,23 @@
 }
 
 .CoreLabUI-classic__popup-backdrop {
-    position: fixed;
+    position: absolute;
     z-index: 1;
-    width: 100vw;
-    height: 100vh;
-    background-color: #000;
+    width: 100%;
+    height: 1000%;
+    background-color: var(--backdrop);
     top: 0;
     left: 0;
+    right: 0;
+    bottom: 0;
     opacity: 0.1;
 }
 
 .CoreLabUI-classic__popup {
+    position: fixed;
     border: 1px solid var(--border-color);
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
-    position: fixed;
     z-index: 2;
     animation: CoreLabUI-classic-popup-keyframe 0.2s ease-in-out forwards;
     background-color: var(--background);
@@ -32,6 +34,7 @@
     flex-direction: column;
     width: var(--popup-width);
     height: var(--popup-height);
+    top: 25%;
 }
 
 .CoreLabUI-classic__popup-close-icon {

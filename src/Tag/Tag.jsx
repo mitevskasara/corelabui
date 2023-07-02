@@ -1,21 +1,11 @@
-import React, { forwardRef } from 'react';
+import React, { forwardRef, useContext } from 'react';
 import Typography from '../Typography';
 import { injectStyle } from '../utils/injectStyle';
-import { createTheme, defaultTheme } from '../theme';
+import { createTheme, ThemeContext } from '../theme';
 import './tag.css';
 
 injectStyle('Tag', {});
 createTheme();
-
-const COLORS = {
-    outlined: defaultTheme.accentDisabled,
-    contained: defaultTheme.primary
-};
-
-const TEXT_COLORS = {
-    outlined: defaultTheme.accent,
-    contained: 'white'
-};
 
 export const Tag = forwardRef(
     (
@@ -33,6 +23,7 @@ export const Tag = forwardRef(
     ) => {
         let classes = `CoreLabUI-classic CoreLabUI-classic__tag CoreLabUI-classic__tag--${variant}`;
         if (className) classes += ` ${className}`;
+        const theme = useContext(ThemeContext);
 
         return (
             <div
@@ -40,8 +31,9 @@ export const Tag = forwardRef(
                 className={classes}
                 ref={ref}
                 style={{
-                    '--tag-color': textColor || TEXT_COLORS[variant],
-                    '--tag-background': color || COLORS[variant],
+                    '--tag-color': textColor || theme.tagColor,
+                    '--tag-background': color || theme.tagBackground,
+                    '--tag-border': textColor || theme.tagColor,
                     '--tag-width': width
                 }}>
                 {text ? (
@@ -49,7 +41,7 @@ export const Tag = forwardRef(
                         variant="caption"
                         margin={false}
                         overflow="ellipsis"
-                        color={textColor || TEXT_COLORS[variant]}>
+                        color={textColor || theme.tagColor}>
                         {text}
                     </Typography>
                 ) : (

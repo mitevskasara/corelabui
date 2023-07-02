@@ -1,29 +1,29 @@
+import { createContext } from 'react';
+
 export const defaultTheme = {
     fontFamily: "'Roboto', 'Helvetica', 'Arial', sans-serif",
     background: '#ffffff',
+    fieldsBackground: '#ffffff',
+    backdrop: '#000000',
     primary: '#393053',
     primaryHover: '#443C68',
-    primaryActive: '#605786',
-    primaryDisabled: '#b8b2cf',
+    primaryActive: '#8f95b245',
+    primaryDisabled: '#3930534D',
     secondary: '#d8dae5',
     secondaryHover: '#8f95b2',
     secondaryActive: '#c9c5db',
-    secondaryDisabled: '#d8dae5',
-    accent: '#a25ddd',
-    accentHover: '#beaacf',
-    accentActive: '#8e38d8',
-    accentDisabled: '#e8dff0',
-    hover: '#eeeeee',
+    secondaryDisabled: '#d8dae566',
+    hover: '#E9ECEF',
     hoverLight: '#fcfcfc',
     borderColor: '#d8dae5',
-    borderColorActive: '#8f95b245',
     light: '#fcfcfc',
     error: '#D14D72',
-    title: '#0a2540',
-    subtitle: '#0a2540',
-    text: '#425466',
+    title: '#000000e0',
+    subtitle: '#000000e0',
+    text: '#000000e0',
     textSecondary: '#00000073',
-    caption: '#425466',
+    textDisabled: '#00000040',
+    caption: '#00000073',
     borderRadius: '4px',
     checkboxBorderRadius: '4px',
     fontXsmall: '12px',
@@ -36,12 +36,64 @@ export const defaultTheme = {
         'rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px rgba(17, 17, 26, 0.05) 0px 1px 0px,rgba(17, 17, 26, 0.1) 0px 0px 8px',
     scrollBarWidth: '6px',
     scrollBarTrackColor: '#F5F5F5',
-    scrollBarThumbColor: '#C8C8C8'
+    scrollBarThumbColor: '#C8C8C8',
+    tagColor: '#000000a6',
+    tagBackground: '#00000014'
+};
+
+export const winterTheme = {
+    ...defaultTheme,
+    primary: '#023E8A',
+    primaryHover: '#0077B6',
+    primaryActive: '#0096C745',
+    primaryDisabled: '#023E8A4D'
+};
+
+export const springTheme = {
+    ...defaultTheme,
+    primary: '#77BFA3',
+    primaryHover: '#98C9A3',
+    primaryActive: '#EDEEC94f',
+    primaryDisabled: '#77BFA34D'
+};
+
+export const summerTheme = {
+    ...defaultTheme,
+    primary: '#FFD400',
+    primaryHover: '#FFDD32',
+    primaryActive: '#fffae580',
+    primaryDisabled: '#FFD4004D'
+};
+
+export const fallTheme = {
+    ...defaultTheme,
+    primary: '#F1580C',
+    primaryHover: '#F5793B',
+    primaryActive: '#f79a6b4f',
+    primaryDisabled: '#F1580C4D'
+};
+
+export const darkTheme = {
+    background: '#1B263B',
+    fieldsBackground: '#ffffff0f',
+    backdrop: '#ffffff',
+    hover: '#5b6d83',
+    hoverLight: '#5b6d8366',
+    title: '#ffffffe0',
+    subtitle: '#ffffffe0',
+    text: '#ffffffe0',
+    textSecondary: '#ffffff73',
+    textDisabled: '#ffffff40',
+    caption: '#ffffff73',
+    borderColor: '#415A77',
+    boxShadow: 'rgba(17, 17, 26, 0.1) 0px 4px 16px, #cbcbcb14 0px 8px 32px',
+    tagColor: '#ffffff8f',
+    tagBackground: '#ffffff05'
 };
 
 function generateStyle(style, theme) {
     const mergedThemes = { ...defaultTheme, ...style };
-    let injectedStyle = `::root{background: ${mergedThemes.background}} .CoreLabUI-${theme} {`;
+    let injectedStyle = `body {background: ${mergedThemes.background}} .CoreLabUI-${theme} {`;
     Object.keys(mergedThemes).map(
         (key) =>
             (injectedStyle += `--${key
@@ -85,4 +137,8 @@ export function createTheme(style, theme = 'classic') {
             );
         }
     }
+
+    return { ...defaultTheme, ...style };
 }
+
+export const ThemeContext = createContext(defaultTheme);

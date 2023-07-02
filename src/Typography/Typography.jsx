@@ -1,6 +1,6 @@
-import React, { forwardRef } from 'react';
+import React, { forwardRef, useContext } from 'react';
 import { injectStyle } from '../utils/injectStyle';
-import { createTheme, defaultTheme } from '../theme';
+import { createTheme, ThemeContext } from '../theme';
 import './typography.css';
 
 injectStyle('Typography', {});
@@ -18,20 +18,6 @@ const VARIANTS = {
     body1: 'p',
     body2: 'p',
     caption: 'span'
-};
-
-const COLORS = {
-    heading1: defaultTheme.title,
-    heading2: defaultTheme.title,
-    heading3: defaultTheme.title,
-    heading4: defaultTheme.title,
-    heading5: defaultTheme.title,
-    heading6: defaultTheme.title,
-    subtitle1: defaultTheme.title,
-    subtitle2: defaultTheme.title,
-    body1: defaultTheme.text,
-    body2: defaultTheme.text,
-    caption: defaultTheme.text
 };
 
 export const Typography = forwardRef(
@@ -56,6 +42,22 @@ export const Typography = forwardRef(
         if (lines) classes += ` CoreLabUI-classic__lines`;
         if (align) classes += ` CoreLabUI-classic__typography--${align}`;
         if (className) classes += ` ${className}`;
+
+        const theme = useContext(ThemeContext);
+
+        const COLORS = {
+            heading1: theme.title,
+            heading2: theme.title,
+            heading3: theme.title,
+            heading4: theme.title,
+            heading5: theme.title,
+            heading6: theme.title,
+            subtitle1: theme.title,
+            subtitle2: theme.title,
+            body1: theme.text,
+            body2: theme.text,
+            caption: theme.text
+        };
 
         let style = { '--typography-color': color ? color : COLORS[variant] };
         if (lines) style['--line-clamp'] = lines;

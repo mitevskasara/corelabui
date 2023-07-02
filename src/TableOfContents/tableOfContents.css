@@ -16,5 +16,5 @@
 .CoreLabUI-classic__table-of-contents-item--active,
 .CoreLabUI-classic__table-of-contents-item:active {
     border-left: 2px solid var(--primary);
-    background-color: var(--primary-disabled);
+    background-color: var(--primary-active);
 }

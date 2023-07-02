@@ -49,6 +49,7 @@
     justify-content: start;
     flex-wrap: wrap;
     gap: 0.5em;
+    margin-top: 1em;
 }
 
 .CoreLabUI-classic__card-image {
