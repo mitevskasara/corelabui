@@ -19,6 +19,7 @@ esbuild
             'src/RadioButton/index.js',
             'src/Select/index.js',
             'src/Table/index.js',
+            'src/TableOfContents/index.js',
             'src/Tag/index.js',
             'src/Textarea/index.js',
             'src/Typography/index.js',
