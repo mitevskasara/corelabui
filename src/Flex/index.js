@@ -1,4 +1,4 @@
 import { Flex } from './Flex';
 import { FlexItem } from './FlexItem';
 
-export { Flex, FlexItem };
+export { Flex as default, FlexItem };

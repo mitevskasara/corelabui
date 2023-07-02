@@ -1,0 +1,67 @@
+@keyframes CoreLabUI-classic-popup-keyframe {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.CoreLabUI-classic__popup-backdrop {
+    position: fixed;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    top: 0;
+    left: 0;
+    opacity: 0.1;
+}
+
+.CoreLabUI-classic__popup {
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    position: fixed;
+    z-index: 2;
+    animation: CoreLabUI-classic-popup-keyframe 0.2s ease-in-out forwards;
+    background-color: var(--background);
+    padding: 1.5em 2em;
+    display: flex;
+    flex-direction: column;
+    width: var(--popup-width);
+    height: var(--popup-height);
+}
+
+.CoreLabUI-classic__popup-close-icon {
+    width: 20px;
+    height: 20px;
+    opacity: 0.3;
+    cursor: pointer;
+    position: relative;
+    margin-bottom: 1em;
+    margin-left: auto;
+}
+
+.CoreLabUI-classic__popup-close-icon:hover {
+    opacity: 1;
+}
+
+.CoreLabUI-classic__popup-close-icon:before,
+.CoreLabUI-classic__popup-close-icon:after {
+    content: var(--content);
+    height: 20px;
+    width: 2.5px;
+    background-color: var(--text);
+    position: absolute;
+    right: 10px;
+}
+
+.CoreLabUI-classic__popup-close-icon:before {
+    transform: rotate(45deg);
+}
+
+.CoreLabUI-classic__popup-close-icon:after {
+    transform: rotate(-45deg);
+}
