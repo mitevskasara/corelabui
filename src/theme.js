@@ -34,12 +34,14 @@ export const defaultTheme = {
         'rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px',
     buttonShadow:
         'rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px rgba(17, 17, 26, 0.05) 0px 1px 0px,rgba(17, 17, 26, 0.1) 0px 0px 8px',
-    content: ''
+    scrollBarWidth: '6px',
+    scrollBarTrackColor: '#F5F5F5',
+    scrollBarThumbColor: '#C8C8C8'
 };
 
 function generateStyle(style, theme) {
     const mergedThemes = { ...defaultTheme, ...style };
-    let injectedStyle = `body{background: ${mergedThemes.background}} .CoreLabUI-${theme} {`;
+    let injectedStyle = `::root{background: ${mergedThemes.background}} .CoreLabUI-${theme} {`;
     Object.keys(mergedThemes).map(
         (key) =>
             (injectedStyle += `--${key
@@ -68,6 +70,19 @@ export function createTheme(style, theme = 'classic') {
         ) {
             document.getElementById(`CoreLabUI-${theme}`).innerHTML =
                 generateStyle(style, theme);
+        }
+
+        if (!document.getElementById(`CoreLabUI-${theme}-scrollbar`)) {
+            const mergedThemes = { ...defaultTheme, ...style };
+            const scrollBarStyle =
+                `::-webkit-scrollbar { width: ${mergedThemes.scrollBarWidth}; }\n` +
+                `::-webkit-scrollbar-track { background: ${mergedThemes.scrollBarTrackColor}; }\n` +
+                `::-webkit-scrollbar-thumb { background: ${mergedThemes.scrollBarThumbColor}; border-radius: var(--border-radius) }`;
+
+            document.head.insertAdjacentHTML(
+                'beforeend',
+                `<style id='CoreLabUI-${theme}-scrollbar'>${scrollBarStyle}</style>`
+            );
         }
     }
 }

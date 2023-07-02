@@ -1,0 +1,7 @@
+.CoreLabUI-classic__scrollable {
+    overflow-y: hidden;
+}
+
+.CoreLabUI-classic__scrollable:hover {
+    overflow-y: auto;
+}
