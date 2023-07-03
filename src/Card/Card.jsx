@@ -1,11 +1,7 @@
 import React, { forwardRef } from 'react';
 import Typography from '../Typography';
 import Tag from '../Tag';
-import { injectStyle } from '../utils/injectStyle';
-
 import './card.css';
-
-injectStyle('Card', {});
 
 export const Card = forwardRef(
     (
@@ -29,6 +25,12 @@ export const Card = forwardRef(
         if (responsive) classes += ` CoreLabUI-classic__card--responsive`;
         if (clickable) classes += ` CoreLabUI-classic__card--clickable`;
         if (className) classes += ` ${className}`;
+
+        useEffect(() => {
+            import('../utils/injectStyle').then((script) => {
+                script.injectStyle('Card', {});
+            });
+        }, []);
 
         return (
             <div

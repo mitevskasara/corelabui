@@ -1,9 +1,5 @@
-import React, { forwardRef } from 'react';
-import { injectStyle } from '../utils/injectStyle';
-
+import React, { forwardRef, useEffect } from 'react';
 import './button.css';
-
-injectStyle('Button', {});
 
 export const Button = forwardRef(
     (
@@ -19,6 +15,12 @@ export const Button = forwardRef(
         },
         ref
     ) => {
+        useEffect(() => {
+            import('../utils/injectStyle').then((script) => {
+                script.injectStyle('Button', {});
+            });
+        }, []);
+
         let classes = `CoreLabUI-classic CoreLabUI-classic__btn-root CoreLabUI-classic__btn-root--${variant}`;
         if (disabled || loading)
             classes += ' CoreLabUI-classic__btn-root--disabled';

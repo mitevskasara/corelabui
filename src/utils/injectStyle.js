@@ -1,7 +1,7 @@
 export function injectStyle(component, style) {
     if (
-        window !== undefined &&
-        document !== undefined &&
+        window !== 'undefined' &&
+        document !== 'undefined' &&
         !document?.getElementById(`CoreLabUI-${component}`)
     ) {
         document?.head?.insertAdjacentHTML(

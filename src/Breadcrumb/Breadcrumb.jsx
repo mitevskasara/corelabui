@@ -1,15 +1,18 @@
-import React, { forwardRef } from 'react';
+import React, { forwardRef, useEffect } from 'react';
 import Typography from '../Typography';
 import Flex from '../Flex';
-import { injectStyle } from '../utils/injectStyle';
 import './breadcrumb.css';
-
-injectStyle('Breadcrumb', {});
 
 export const Breadcrumb = forwardRef(
     ({ items, className, separator, ...props }, ref) => {
         let classes = `CoreLabUI-classic CoreLabUI-classic__breadcrumb`;
         if (className) classes += ` ${className}`;
+
+        useEffect(() => {
+            import('../utils/injectStyle').then((script) => {
+                script.injectStyle('Breadcrumb', {});
+            });
+        }, []);
 
         return (
             <div {...props} className={classes} ref={ref}>

@@ -7,11 +7,11 @@ const useClickAway = (ref, handler) => {
                 handler(event);
             }
         };
-        if (window !== undefined && document !== undefined && ref) {
+        if (window !== 'undefined' && document !== 'undefined' && ref) {
             document?.addEventListener('click', listener);
         }
         return () => {
-            if (window !== undefined && document !== undefined) {
+            if (window !== 'undefined' && document !== 'undefined') {
                 document?.removeEventListener('click', listener);
             }
         };
