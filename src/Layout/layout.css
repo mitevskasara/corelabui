@@ -3,14 +3,11 @@
 }
 
 .CoreLabUI-classic__layout--website {
-    grid-template-areas: 'header' 'main' 'footer';
+    grid-template-areas: var(--layout-website-template-areas);
 }
 
 .CoreLabUI-classic__layout--dashboard {
-    grid-template-areas:
-        'header header header'
-        'left main right'
-        'left footer footer';
+    grid-template-areas: var(--layout-dashboard-template-areas);
 }
 
 .CoreLabUI-classic__layout--custom {

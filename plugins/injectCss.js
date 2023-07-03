@@ -11,37 +11,42 @@ export const customPlugin = {
             dir = dir.join('/');
             const key = args.path
                 .split('/')
-                [args.path.split('/').length - 1].split('.')[0];
+            [args.path.split('/').length - 1].split('.')[0];
 
             let cssFileName = content.match(
                 new RegExp(/(?<=import)(.*)(?=.css)/)
             );
-            cssFileName = cssFileName[0]
-                .replaceAll('./', '')
-                .replaceAll(`'`, '')
-                .trim();
 
-            let cssStyle = await fs.promises.readFile(
-                `${dir}/${cssFileName}.css`,
-                'utf8'
-            );
+            let fileContent = '';
 
-            let minifiedCss = (
-                await esbuild.transform(cssStyle, {
-                    loader: 'css',
-                    minify: true
-                })
-            ).code;
+            if (cssFileName) {
+                cssFileName = cssFileName[0]
+                    .replaceAll('./', '')
+                    .replaceAll(`'`, '')
+                    .trim();
 
-            const regex = /(\r\n|\n|\r)/gi;
-            minifiedCss = minifiedCss.replaceAll(regex, '');
-            minifiedCss =
-                `const css = "` + minifiedCss.replaceAll(regex, '') + `";`;
+                let cssStyle = await fs.promises.readFile(
+                    `${dir}/${cssFileName}.css`,
+                    'utf8'
+                );
 
-            const fileContent = content.replace(
-                "injectStyle('" + key + "', {});",
-                minifiedCss + "\ninjectStyle('" + key + "', css);"
-            );
+                let minifiedCss = (
+                    await esbuild.transform(cssStyle, {
+                        loader: 'css',
+                        minify: true
+                    })
+                ).code;
+
+                const regex = /(\r\n|\n|\r)/gi;
+                minifiedCss = minifiedCss.replaceAll(regex, '');
+                minifiedCss =
+                    `const css = "` + minifiedCss.replaceAll(regex, '') + `";`;
+
+                fileContent = content.replace(
+                    "injectStyle('" + key + "', {});",
+                    minifiedCss + "\ninjectStyle('" + key + "', css);"
+                );
+            }
 
             return {
                 contents: fileContent,
