@@ -1,0 +1,17 @@
+.CoreLabUI-classic__layout-header--dashboard {
+    grid-area: header;
+    grid-column: 1 / span 12;
+    grid-row: 1 / span 1;
+}
+
+.CoreLabUI-classic__layout-header--website {
+    grid-area: header;
+    grid-column: 1 / span 12;
+    grid-row: 1 / span 1;
+}
+
+.CoreLabUI-classic__layout-header--custom {
+    grid-area: header;
+    grid-column: var(--header-layout-grid-column);
+    grid-row: var(--header-layout-grid-row);
+}

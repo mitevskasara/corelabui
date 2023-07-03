@@ -1,0 +1,34 @@
+import React from 'react';
+import { injectStyle } from '../utils/injectStyle';
+import './layoutRight.css';
+
+injectStyle('LayoutRight', {});
+
+export const LayoutRight = ({
+    children,
+    className,
+    type = 'dashboard',
+    colStart,
+    rowStart,
+    colSpan,
+    rowSpan,
+    ...props
+}) => {
+    let classes = `CoreLabUI-classic CoreLabUI-classic__layout-right--${type}`;
+    if (className) classes += ` ${className}`;
+    return (
+        <section
+            {...props}
+            className={classes}
+            style={
+                type === 'custom'
+                    ? {
+                          '--right-layout-grid-column': `${colStart} / span ${colSpan}`,
+                          '--right-layout-grid-row': `${rowStart} / span ${rowSpan}`
+                      }
+                    : null
+            }>
+            {children}
+        </section>
+    );
+};

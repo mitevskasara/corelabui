@@ -1,0 +1,18 @@
+.CoreLabUI-classic__layout {
+    display: grid;
+}
+
+.CoreLabUI-classic__layout--website {
+    grid-template-areas: 'header' 'main' 'footer';
+}
+
+.CoreLabUI-classic__layout--dashboard {
+    grid-template-areas:
+        'header header header'
+        'left main right'
+        'left footer footer';
+}
+
+.CoreLabUI-classic__layout--custom {
+    grid-template-areas: var(--layout-template-areas);
+}
