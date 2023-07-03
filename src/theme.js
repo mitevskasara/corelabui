@@ -104,18 +104,18 @@ function generateStyle(style, theme) {
                 .join('-')
                 .toLowerCase()}:${mergedThemes[key]};`)
     );
-    injectedStyle += '--content: ""';
     injectedStyle +=
         '--layout-website-template-areas: "header" "main" "footer"';
     injectedStyle +=
         '--layout-dashboard-template-areas:  "header header header" "left main right" "left footer footer"';
+    injectedStyle += '--content: ""';
     injectedStyle += '}';
     return injectedStyle;
 }
 
 export function createTheme(style, theme = 'classic') {
-    if (document) {
-        if (!document.getElementById(`CoreLabUI-${theme}`)) {
+    if (window !== undefined && document !== undefined) {
+        if (!document?.getElementById(`CoreLabUI-${theme}`)) {
             document.head.insertAdjacentHTML(
                 'beforeend',
                 `<style id='CoreLabUI-${theme}'>${generateStyle(
