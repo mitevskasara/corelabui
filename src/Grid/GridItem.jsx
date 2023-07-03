@@ -1,10 +1,9 @@
 import React, { forwardRef } from 'react';
 import { injectStyle } from '../utils/injectStyle';
-import { createTheme } from '../theme';
+
 import './gridItem.css';
 
 injectStyle('GridItem', {});
-createTheme();
 
 export const GridItem = forwardRef(
     (

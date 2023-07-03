@@ -1,12 +1,11 @@
 import React, { forwardRef, useState } from 'react';
 import { injectStyle } from '../utils/injectStyle';
-import { createTheme } from '../theme';
+
 import Button from '../Button';
 import useClickAway from '../helpers/useClickAway';
 import './dropdown.css';
 
 injectStyle('Dropdown', {});
-createTheme();
 
 export const Dropdown = forwardRef(
     (

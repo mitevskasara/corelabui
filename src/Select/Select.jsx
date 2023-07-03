@@ -1,10 +1,9 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { injectStyle } from '../utils/injectStyle';
-import { createTheme } from '../theme';
+
 import './select.css';
 
 injectStyle('Select', {});
-createTheme();
 
 export const Select = ({
     size = 'medium',

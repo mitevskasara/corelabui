@@ -1,11 +1,10 @@
 import React, { forwardRef, useContext } from 'react';
 import Typography from '../Typography';
 import { injectStyle } from '../utils/injectStyle';
-import { createTheme, ThemeContext } from '../theme';
+import { ThemeContext } from '../theme';
 import './divider.css';
 
 injectStyle('Divider', {});
-createTheme();
 
 export const Divider = forwardRef(
     (

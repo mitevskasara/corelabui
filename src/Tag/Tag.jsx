@@ -1,11 +1,10 @@
 import React, { forwardRef, useContext } from 'react';
 import Typography from '../Typography';
 import { injectStyle } from '../utils/injectStyle';
-import { createTheme, ThemeContext } from '../theme';
+import { ThemeContext } from '../theme';
 import './tag.css';
 
 injectStyle('Tag', {});
-createTheme();
 
 export const Tag = forwardRef(
     (
@@ -24,16 +23,30 @@ export const Tag = forwardRef(
         let classes = `CoreLabUI-classic CoreLabUI-classic__tag CoreLabUI-classic__tag--${variant}`;
         if (className) classes += ` ${className}`;
         const theme = useContext(ThemeContext);
-
         return (
             <div
                 {...props}
                 className={classes}
                 ref={ref}
                 style={{
-                    '--tag-color': textColor || theme.tagColor,
-                    '--tag-background': color || theme.tagBackground,
-                    '--tag-border': textColor || theme.tagColor,
+                    '--tag-color':
+                        variant === 'outlined'
+                            ? color
+                                ? color
+                                : theme.tagColor
+                            : theme.white,
+                    '--tag-background':
+                        variant === 'outlined'
+                            ? color
+                                ? `${color}4D`
+                                : `${theme.tagColor}14`
+                            : color || `${theme.tagColor}14`,
+                    '--tag-border':
+                        variant === 'outlined'
+                            ? color
+                                ? color
+                                : `${theme.tagColor}14`
+                            : color || `${theme.tagColor}14`,
                     '--tag-width': width
                 }}>
                 {text ? (
@@ -41,7 +54,15 @@ export const Tag = forwardRef(
                         variant="caption"
                         margin={false}
                         overflow="ellipsis"
-                        color={textColor || theme.tagColor}>
+                        color={
+                            variant === 'outlined'
+                                ? color
+                                    ? color
+                                    : theme.tagColor
+                                : color
+                                ? theme.white
+                                : theme.tagColor
+                        }>
                         {text}
                     </Typography>
                 ) : (

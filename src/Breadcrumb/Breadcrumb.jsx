@@ -2,11 +2,9 @@ import React, { forwardRef } from 'react';
 import Typography from '../Typography';
 import Flex from '../Flex';
 import { injectStyle } from '../utils/injectStyle';
-import { createTheme } from '../theme';
 import './breadcrumb.css';
 
 injectStyle('Breadcrumb', {});
-createTheme();
 
 export const Breadcrumb = forwardRef(
     ({ items, className, separator, ...props }, ref) => {

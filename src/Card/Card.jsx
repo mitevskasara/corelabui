@@ -2,11 +2,10 @@ import React, { forwardRef } from 'react';
 import Typography from '../Typography';
 import Tag from '../Tag';
 import { injectStyle } from '../utils/injectStyle';
-import { createTheme } from '../theme';
+
 import './card.css';
 
 injectStyle('Card', {});
-createTheme();
 
 export const Card = forwardRef(
     (

@@ -1,10 +1,9 @@
 import React, { forwardRef } from 'react';
 import { injectStyle } from '../utils/injectStyle';
-import { createTheme } from '../theme';
+
 import './input.css';
 
 injectStyle('Input', {});
-createTheme();
 
 export const Input = forwardRef(
     (

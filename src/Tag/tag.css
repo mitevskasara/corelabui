@@ -15,6 +15,6 @@
 }
 
 .CoreLabUI-classic__tag--contained {
-    border: 1px solid var(--tag-background);
+    border: 1px solid transparent;
     background-color: var(--tag-background);
 }

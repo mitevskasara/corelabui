@@ -76,7 +76,7 @@
 }
 
 .CoreLabUI-classic__btn--secondary {
-    background: var(--white);
+    background: var(--background);
     border: 1px solid var(--secondary);
     color: var(--text);
     border-radius: var(--border-radius);

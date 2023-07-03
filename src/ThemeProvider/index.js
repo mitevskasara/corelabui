@@ -1,8 +1,11 @@
-import { ThemeContext } from '../theme';
+import { ThemeContext, createTheme } from '../theme';
 
-export const ThemeProvider = ({ theme, children }) => {
+export const ThemeProvider = ({ theme = {}, children }) => {
+    const createdTheme = createTheme(theme);
     return (
-        <ThemeContext.Provider value={theme}>{children}</ThemeContext.Provider>
+        <ThemeContext.Provider value={createdTheme}>
+            {children}
+        </ThemeContext.Provider>
     );
 };
 

@@ -2,11 +2,10 @@ import React, { forwardRef, useContext } from 'react';
 import Typography from '../Typography';
 import Divider from '../Divider';
 import { injectStyle } from '../utils/injectStyle';
-import { createTheme, ThemeContext } from '../theme';
+import { ThemeContext } from '../theme';
 import './quote.css';
 
 injectStyle('Quote', {});
-createTheme();
 
 export const Quote = forwardRef(
     ({ className, children, cite, separator = 'line', ...props }, ref) => {

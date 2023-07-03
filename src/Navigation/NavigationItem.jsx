@@ -1,11 +1,10 @@
 import React, { forwardRef } from 'react';
 import Typography from '../Typography';
 import { injectStyle } from '../utils/injectStyle';
-import { createTheme } from '../theme';
+
 import './navigationItem.css';
 
 injectStyle('NavigationItem', {});
-createTheme();
 
 export const NavigationItem = forwardRef(
     (

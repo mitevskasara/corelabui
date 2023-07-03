@@ -1,10 +1,9 @@
 import React, { forwardRef, useContext } from 'react';
 import { injectStyle } from '../utils/injectStyle';
-import { createTheme, ThemeContext } from '../theme';
+import { ThemeContext } from '../theme';
 import './typography.css';
 
 injectStyle('Typography', {});
-createTheme();
 
 const VARIANTS = {
     heading1: 'h1',

@@ -17,7 +17,11 @@ export const defaultTheme = {
     hoverLight: '#fcfcfc',
     borderColor: '#d8dae5',
     light: '#fcfcfc',
-    error: '#D14D72',
+    info: '#5390d9',
+    white: '#ffffff',
+    error: '#da344d',
+    warning: '#fdc921',
+    success: '#40916c',
     title: '#000000e0',
     subtitle: '#000000e0',
     text: '#000000e0',
@@ -37,8 +41,7 @@ export const defaultTheme = {
     scrollBarWidth: '6px',
     scrollBarTrackColor: '#F5F5F5',
     scrollBarThumbColor: '#C8C8C8',
-    tagColor: '#000000a6',
-    tagBackground: '#00000014'
+    tagColor: '#555555'
 };
 
 export const winterTheme = {
@@ -76,6 +79,7 @@ export const fallTheme = {
 export const darkTheme = {
     background: '#1B263B',
     fieldsBackground: '#ffffff0f',
+    secondary: '#ffffff',
     backdrop: '#ffffff',
     hover: '#5b6d83',
     hoverLight: '#5b6d8366',
@@ -87,8 +91,7 @@ export const darkTheme = {
     caption: '#ffffff73',
     borderColor: '#415A77',
     boxShadow: 'rgba(17, 17, 26, 0.1) 0px 4px 16px, #cbcbcb14 0px 8px 32px',
-    tagColor: '#ffffff8f',
-    tagBackground: '#ffffff05'
+    tagColor: '#ffffff'
 };
 
 function generateStyle(style, theme) {

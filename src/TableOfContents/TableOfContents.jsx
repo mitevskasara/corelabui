@@ -1,11 +1,10 @@
 import React, { forwardRef } from 'react';
 import Typography from '../Typography';
 import { injectStyle } from '../utils/injectStyle';
-import { createTheme } from '../theme';
+
 import './tableOfContents.css';
 
 injectStyle('TableOfContents', {});
-createTheme();
 
 export const TableOfContents = forwardRef(
     ({ className, title, items, ...props }, ref) => {

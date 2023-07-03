@@ -1,10 +1,9 @@
 import React, { forwardRef } from 'react';
 import { injectStyle } from '../utils/injectStyle';
-import { createTheme } from '../theme';
+
 import './radioButton.css';
 
 injectStyle('RadioButton', {});
-createTheme();
 
 export const RadioButton = forwardRef(
     (

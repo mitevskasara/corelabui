@@ -10,5 +10,3 @@ export { default as Typography } from './Typography';
 export * from './Flex';
 export * from './Grid';
 export * from './utils/theme';
-
-createTheme();

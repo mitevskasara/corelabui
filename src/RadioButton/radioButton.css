@@ -47,6 +47,13 @@
     background-color: var(--hover);
 }
 
+.CoreLabUI-classic__radio-checkmark--checked,
+.CoreLabUI-classic__radio-label:hover
+    > input
+    ~ .CoreLabUI-classic__radio-checkmark--checked {
+    background-color: var(--primary);
+}
+
 .CoreLabUI-classic__radio-checkmark--disabled {
     background-color: var(--hover);
     border: 2px solid var(--primary);

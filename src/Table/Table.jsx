@@ -5,7 +5,6 @@ import { createTheme, defaultTheme } from '../theme';
 import './table.css';
 
 injectStyle('Table', {});
-createTheme();
 
 export const Table = forwardRef(
     (
