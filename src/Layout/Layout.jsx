@@ -13,7 +13,8 @@ export const Layout = ({
 }) => {
     let classes = `CoreLabUI-classic CoreLabUI-classic__layout CoreLabUI-classic__layout--${type}`;
     if (className) classes += ` ${className}`;
-    let templateAreas = areas && areas?.split(',').map((area) => (templateAreas += ` "${area}"`));
+    let templateAreas = '';
+    if (areas) areas?.split(',').map((area) => (templateAreas += ` "${area}"`));
     return (
         <div
             {...props}
@@ -21,8 +22,8 @@ export const Layout = ({
             style={
                 type === 'custom' && templateAreas
                     ? {
-                        '--layout-template-areas': templateAreas
-                    }
+                          '--layout-template-areas': templateAreas
+                      }
                     : null
             }>
             {children}

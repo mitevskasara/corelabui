@@ -99,14 +99,16 @@ function generateStyle(style, theme) {
     let injectedStyle = `body {background: ${mergedThemes.background}} .CoreLabUI-${theme} {`;
     Object.keys(mergedThemes).map(
         (key) =>
-        (injectedStyle += `--${key
-            .split(/(?=[A-Z])/)
-            .join('-')
-            .toLowerCase()}:${mergedThemes[key]};`)
+            (injectedStyle += `--${key
+                .split(/(?=[A-Z])/)
+                .join('-')
+                .toLowerCase()}:${mergedThemes[key]};`)
     );
     injectedStyle += '--content: ""';
-    injectedStyle += '--layout-website-template-areas: "header" "main" "footer"';
-    injectedStyle += '--layout-dashboard-template-areas:  "header header header" "left main right" "left footer footer"';
+    injectedStyle +=
+        '--layout-website-template-areas: "header" "main" "footer"';
+    injectedStyle +=
+        '--layout-dashboard-template-areas:  "header header header" "left main right" "left footer footer"';
     injectedStyle += '}';
     return injectedStyle;
 }

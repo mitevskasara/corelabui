@@ -11,7 +11,7 @@ export const customPlugin = {
             dir = dir.join('/');
             const key = args.path
                 .split('/')
-            [args.path.split('/').length - 1].split('.')[0];
+                [args.path.split('/').length - 1].split('.')[0];
 
             let cssFileName = content.match(
                 new RegExp(/(?<=import)(.*)(?=.css)/)
