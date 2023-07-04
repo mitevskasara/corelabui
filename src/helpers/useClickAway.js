@@ -7,11 +7,11 @@ const useClickAway = (ref, handler) => {
                 handler(event);
             }
         };
-        if (document && ref) {
+        if (typeof document === 'object' && ref) {
             document.addEventListener('click', listener);
         }
         return () => {
-            if (document) {
+            if (typeof document === 'object') {
                 document.removeEventListener('click', listener);
             }
         };

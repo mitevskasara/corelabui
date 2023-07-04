@@ -114,7 +114,7 @@ function generateStyle(style, theme) {
 }
 
 export function createTheme(style, theme = 'classic') {
-    if (document) {
+    if (typeof document === 'object') {
         if (!document.getElementById(`CoreLabUI-${theme}`)) {
             document.head.insertAdjacentHTML(
                 'beforeend',
