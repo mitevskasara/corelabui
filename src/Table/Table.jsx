@@ -63,7 +63,7 @@ const Table = forwardRef(
                                         className="CoreLabUI-classic__table-body-column">
                                         <div>
                                             {typeof row[column] === 'string' ||
-                                                typeof row[column] === 'number' ? (
+                                            typeof row[column] === 'number' ? (
                                                 <Typography
                                                     variant="body1"
                                                     margin={false}

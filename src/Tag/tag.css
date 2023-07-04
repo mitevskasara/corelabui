@@ -10,11 +10,12 @@
 }
 
 .CoreLabUI-classic__tag--outlined {
-    border: 1px solid var(--tag-border);
-    background-color: var(--tag-background);
+    border: 1px solid var(--tag-border-outlined);
+    background-color: var(--tag-background-outlined);
 }
 
 .CoreLabUI-classic__tag--contained {
     border: 1px solid transparent;
-    background-color: var(--tag-background);
+    color: var(--tag-color-contained);
+    background-color: var(--tag-background-contained);
 }

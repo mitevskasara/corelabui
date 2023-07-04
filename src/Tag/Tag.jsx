@@ -1,7 +1,6 @@
-import React, { forwardRef, useContext } from 'react';
+import React, { forwardRef } from 'react';
 import Typography from '../Typography';
 import { injectStyle } from '../utils';
-import ThemeContext from '../ThemeProvider';
 import './tag.css';
 
 injectStyle('Tag', {});
@@ -14,55 +13,31 @@ const Tag = forwardRef(
             text = '',
             variant = 'outlined',
             color,
-            textColor,
             width = 'fit-content',
             ...props
         },
         ref
     ) => {
-        let classes = `CoreLabUI-classic CoreLabUI-classic__tag CoreLabUI-classic__tag--${variant}`;
+        let classes = `CoreLabUI-classic__tag CoreLabUI-classic__tag--${variant}`;
         if (className) classes += ` ${className}`;
-        const theme = useContext(ThemeContext);
+        classes += ' CoreLabUI-classic';
+        let style = { '--tag-width': width };
+        if (color)
+            style = {
+                ...style,
+                [`--tag-color-${variant}`]: variant === 'outlined' && color,
+                [`--tag-background-${variant}`]:
+                    variant === 'outlined' ? `${color}4D` : color,
+                [`--tag-border-${variant}`]: color
+            };
         return (
-            <div
-                {...props}
-                className={classes}
-                ref={ref}
-                style={{
-                    '--tag-color':
-                        variant === 'outlined'
-                            ? color
-                                ? color
-                                : theme.tagColor
-                            : theme.white,
-                    '--tag-background':
-                        variant === 'outlined'
-                            ? color
-                                ? `${color}4D`
-                                : `${theme.tagColor}14`
-                            : color || `${theme.tagColor}14`,
-                    '--tag-border':
-                        variant === 'outlined'
-                            ? color
-                                ? color
-                                : `${theme.tagColor}14`
-                            : color || `${theme.tagColor}14`,
-                    '--tag-width': width
-                }}>
+            <div {...props} className={classes} ref={ref} style={style}>
                 {text ? (
                     <Typography
                         variant="caption"
                         margin={false}
                         overflow="ellipsis"
-                        color={
-                            variant === 'outlined'
-                                ? color
-                                    ? color
-                                    : theme.tagColor
-                                : color
-                                    ? theme.white
-                                    : theme.tagColor
-                        }>
+                        color="initial">
                         {text}
                     </Typography>
                 ) : (

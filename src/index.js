@@ -19,7 +19,6 @@ export { default as Table } from './Table';
 export { default as TableOfContents } from './TableOfContents';
 export { default as Tag } from './Tag';
 export { default as Textarea } from './Textarea';
-export { default as ThemeProvider } from './ThemeProvider';
 export { default as Typography } from './Typography';
 
 export * from './Flex';
@@ -27,3 +26,5 @@ export * from './Grid';
 export * from './Layout';
 export * from './Theme';
 export * from './utils';
+
+export { default as ThemeProvider } from './ThemeProvider';

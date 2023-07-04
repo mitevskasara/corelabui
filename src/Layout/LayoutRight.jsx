@@ -23,9 +23,9 @@ export default ({
             style={
                 type === 'custom'
                     ? {
-                        '--right-layout-grid-column': `${colStart} / span ${colSpan}`,
-                        '--right-layout-grid-row': `${rowStart} / span ${rowSpan}`
-                    }
+                          '--right-layout-grid-column': `${colStart} / span ${colSpan}`,
+                          '--right-layout-grid-row': `${rowStart} / span ${rowSpan}`
+                      }
                     : null
             }>
             {children}

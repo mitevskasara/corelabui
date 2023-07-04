@@ -17,7 +17,8 @@ const Breadcrumb = forwardRef(
                         <a
                             href={item?.link}
                             className={`CoreLabUI-classic__breadcrumb-item 
-                                CoreLabUI-classic__breadcrumb-item--${item?.active ? 'active' : 'inactive'
+                                CoreLabUI-classic__breadcrumb-item--${
+                                    item?.active ? 'active' : 'inactive'
                                 }`}>
                             {item?.icon ? item?.icon : null}
                             <Typography

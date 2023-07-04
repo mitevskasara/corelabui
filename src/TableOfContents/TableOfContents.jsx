@@ -21,8 +21,9 @@ const TableOfContents = forwardRef(
                         <a
                             key={key}
                             href={item?.anchor}
-                            className={`CoreLabUI-classic__table-of-contents-item CoreLabUI-classic__table-of-contents-item--${item?.active ? 'active' : 'inactive'
-                                }`}>
+                            className={`CoreLabUI-classic__table-of-contents-item CoreLabUI-classic__table-of-contents-item--${
+                                item?.active ? 'active' : 'inactive'
+                            }`}>
                             <Typography
                                 variant="caption"
                                 margin={false}

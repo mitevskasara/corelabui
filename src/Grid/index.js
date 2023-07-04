@@ -1,2 +1,2 @@
 export { default } from './Grid';
-export { default as FlexItem } from './GridItem';
+export { default as GridItem } from './GridItem';

@@ -1,5 +1,3 @@
-import { createContext } from 'react';
-
 export const defaultTheme = {
     fontFamily: "'Roboto', 'Helvetica', 'Arial', sans-serif",
     background: '#ffffff',
@@ -41,7 +39,12 @@ export const defaultTheme = {
     scrollBarWidth: '6px',
     scrollBarTrackColor: '#F5F5F5',
     scrollBarThumbColor: '#C8C8C8',
-    tagColor: '#555555',
+    tagColorOutlined: '#555555',
+    tagBackgroundOutlined: '#55555514',
+    tagBorderOutlined: '#55555514',
+    tagColorContained: '#ffffff',
+    tagBackgroundContained: '#555555',
+    tagBorderContained: '#555555',
     dividerColor: '#d8dae5'
 };
 
@@ -78,6 +81,7 @@ export const fallTheme = {
 };
 
 export const darkTheme = {
+    ...defaultTheme,
     background: '#1B263B',
     fieldsBackground: '#ffffff0f',
     secondary: '#ffffff',
@@ -94,57 +98,3 @@ export const darkTheme = {
     boxShadow: 'rgba(17, 17, 26, 0.1) 0px 4px 16px, #cbcbcb14 0px 8px 32px',
     tagColor: '#ffffff'
 };
-
-function generateStyle(style, theme) {
-    const mergedThemes = { ...defaultTheme, ...style };
-    let injectedStyle = `body {background: ${mergedThemes.background}} .CoreLabUI-${theme} {`;
-    Object.keys(mergedThemes).map(
-        (key) =>
-        (injectedStyle += `--${key
-            .split(/(?=[A-Z])/)
-            .join('-')
-            .toLowerCase()}:${mergedThemes[key]};`)
-    );
-    injectedStyle +=
-        '--layout-website-template-areas: "header" "main" "footer";';
-    injectedStyle +=
-        '--layout-dashboard-template-areas:  "header header header" "left main right" "left footer footer";';
-    injectedStyle += '--content: ""';
-    injectedStyle += '}';
-    return injectedStyle;
-}
-
-export function createTheme(style, theme = 'classic') {
-    if (typeof document === 'object') {
-        if (!document.getElementById(`CoreLabUI-${theme}`)) {
-            document.head.insertAdjacentHTML(
-                'beforeend',
-                `<style id='CoreLabUI-${theme}'>${generateStyle(
-                    style,
-                    theme
-                )}</style>`
-            );
-        } else if (
-            document.getElementById(`CoreLabUI-${theme}`)?.innerHTML !=
-            generateStyle(style, theme)
-        ) {
-            document.getElementById(`CoreLabUI-${theme}`).innerHTML =
-                generateStyle(style, theme);
-        }
-
-        if (!document.getElementById(`CoreLabUI-${theme}-scrollbar`)) {
-            const mergedThemes = { ...defaultTheme, ...style };
-            const scrollBarStyle =
-                `::-webkit-scrollbar { width: ${mergedThemes.scrollBarWidth}; }\n` +
-                `::-webkit-scrollbar-track { background: ${mergedThemes.scrollBarTrackColor}; }\n` +
-                `::-webkit-scrollbar-thumb { background: ${mergedThemes.scrollBarThumbColor}; border-radius: var(--border-radius) }`;
-
-            document.head.insertAdjacentHTML(
-                'beforeend',
-                `<style id='CoreLabUI-${theme}-scrollbar'>${scrollBarStyle}</style>`
-            );
-        }
-    }
-
-    return { ...defaultTheme, ...style };
-}

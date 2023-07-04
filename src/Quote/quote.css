@@ -12,6 +12,8 @@
     margin-top: 1em;
 }
 
-.CoreLabUI-classic__quote-cite > .CoreLabUI-classic__divider {
+.CoreLabUI-classic__quote-divider {
+    border-top: 1px solid var(--primary);
+    width: 30%;
     padding-bottom: 0.5em;
 }

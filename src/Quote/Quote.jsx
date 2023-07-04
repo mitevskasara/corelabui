@@ -1,6 +1,5 @@
 import React, { forwardRef } from 'react';
 import Typography from '../Typography';
-import Divider from '../Divider';
 import { injectStyle } from '../utils';
 import './quote.css';
 
@@ -28,7 +27,6 @@ const Quote = forwardRef(
                 )}
                 {cite && (
                     <figcaption className="CoreLabUI-classic__quote-cite">
-                        <Divider color={theme.primary} width="30%" />
                         <div className="CoreLabUI-classic__quote-divider" />
                         {typeof cite === 'string' ? (
                             <Typography variant="caption">{cite}</Typography>

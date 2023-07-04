@@ -24,11 +24,11 @@ const Card = forwardRef(
         },
         ref
     ) => {
-        let classes = `CoreLabUI-classic CoreLabUI-classic__card`;
+        let classes = `CoreLabUI-classic__card`;
         if (responsive) classes += ` CoreLabUI-classic__card--responsive`;
         if (clickable) classes += ` CoreLabUI-classic__card--clickable`;
         if (className) classes += ` ${className}`;
-
+        classes += ' CoreLabUI-classic';
         return (
             <div
                 {...props}
@@ -74,7 +74,6 @@ const Card = forwardRef(
                             <Tag
                                 text={tag?.text}
                                 color={tag?.color}
-                                textColor={tag?.textColor}
                                 key={index}
                             />
                         ))}

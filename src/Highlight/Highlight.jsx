@@ -28,11 +28,13 @@ const Highlight = forwardRef(
         if (className) classes += ` ${className}`;
         let gradientStyle = gradient
             ? {
-                '--highlight-webkit-linear-gradient': `-webkit-linear-gradient(to ${gradient?.direction || 'right'
-                    }, ${gradient?.colors})`,
-                '--highlight-linear-gradient': `linear-gradient(to ${gradient?.direction || 'right'
-                    }, ${gradient?.colors})`
-            }
+                  '--highlight-webkit-linear-gradient': `-webkit-linear-gradient(to ${
+                      gradient?.direction || 'right'
+                  }, ${gradient?.colors})`,
+                  '--highlight-linear-gradient': `linear-gradient(to ${
+                      gradient?.direction || 'right'
+                  }, ${gradient?.colors})`
+              }
             : {};
         if (textGradient)
             gradientStyle = {
