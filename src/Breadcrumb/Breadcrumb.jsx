@@ -1,19 +1,14 @@
-import React, { forwardRef, useEffect } from 'react';
+import React, { forwardRef } from 'react';
 import Typography from '../Typography';
 import Flex from '../Flex';
 import './breadcrumb.css';
+
+injectStyle('Breadcrumb', {});
 
 export const Breadcrumb = forwardRef(
     ({ items, className, separator, ...props }, ref) => {
         let classes = `CoreLabUI-classic CoreLabUI-classic__breadcrumb`;
         if (className) classes += ` ${className}`;
-
-        useEffect(() => {
-            import('../utils/injectStyle').then((script) => {
-                script.injectStyle('Breadcrumb', {});
-            });
-        }, []);
-
         return (
             <div {...props} className={classes} ref={ref}>
                 {items?.map((item, index) => (
@@ -21,8 +16,7 @@ export const Breadcrumb = forwardRef(
                         <a
                             href={item?.link}
                             className={`CoreLabUI-classic__breadcrumb-item 
-                                CoreLabUI-classic__breadcrumb-item--${
-                                    item?.active ? 'active' : 'inactive'
+                                CoreLabUI-classic__breadcrumb-item--${item?.active ? 'active' : 'inactive'
                                 }`}>
                             {item?.icon ? item?.icon : null}
                             <Typography
