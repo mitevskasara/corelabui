@@ -1,6 +1,7 @@
 import React, { forwardRef } from 'react';
 import Typography from '../Typography';
 import Flex from '../Flex';
+import { injectStyle } from '../utils/injectStyle';
 import './breadcrumb.css';
 
 injectStyle('Breadcrumb', {});
@@ -16,7 +17,8 @@ export const Breadcrumb = forwardRef(
                         <a
                             href={item?.link}
                             className={`CoreLabUI-classic__breadcrumb-item 
-                                CoreLabUI-classic__breadcrumb-item--${item?.active ? 'active' : 'inactive'
+                                CoreLabUI-classic__breadcrumb-item--${
+                                    item?.active ? 'active' : 'inactive'
                                 }`}>
                             {item?.icon ? item?.icon : null}
                             <Typography

@@ -29,12 +29,6 @@ export const Card = forwardRef(
         if (clickable) classes += ` CoreLabUI-classic__card--clickable`;
         if (className) classes += ` ${className}`;
 
-        useEffect(() => {
-            import('../utils/injectStyle').then((script) => {
-                script.injectStyle('Card', {});
-            });
-        }, []);
-
         return (
             <div
                 {...props}
