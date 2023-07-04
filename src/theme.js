@@ -99,23 +99,23 @@ function generateStyle(style, theme) {
     let injectedStyle = `body {background: ${mergedThemes.background}} .CoreLabUI-${theme} {`;
     Object.keys(mergedThemes).map(
         (key) =>
-            (injectedStyle += `--${key
-                .split(/(?=[A-Z])/)
-                .join('-')
-                .toLowerCase()}:${mergedThemes[key]};`)
+        (injectedStyle += `--${key
+            .split(/(?=[A-Z])/)
+            .join('-')
+            .toLowerCase()}:${mergedThemes[key]};`)
     );
+    injectedStyle += '--content: ""';
     injectedStyle +=
         '--layout-website-template-areas: "header" "main" "footer"';
     injectedStyle +=
         '--layout-dashboard-template-areas:  "header header header" "left main right" "left footer footer"';
-    injectedStyle += '--content: ""';
     injectedStyle += '}';
     return injectedStyle;
 }
 
 export function createTheme(style, theme = 'classic') {
-    if (window !== 'undefined' && document !== 'undefined') {
-        if (!document?.getElementById(`CoreLabUI-${theme}`)) {
+    if (document) {
+        if (!document.getElementById(`CoreLabUI-${theme}`)) {
             document.head.insertAdjacentHTML(
                 'beforeend',
                 `<style id='CoreLabUI-${theme}'>${generateStyle(
