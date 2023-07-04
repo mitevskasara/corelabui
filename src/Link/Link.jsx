@@ -1,11 +1,11 @@
 import React, { forwardRef } from 'react';
-import { injectStyle } from '../utils/injectStyle';
+import { injectStyle } from '../utils';
 
 import './link.css';
 
 injectStyle('Link', {});
 
-export const Link = forwardRef(
+const Link = forwardRef(
     ({ children, disabled, size = 'medium', className, ...props }, ref) => {
         let classes = `CoreLabUI-classic CoreLabUI-classic__link CoreLabUI-classic__link--${size}`;
         if (disabled) classes += ' CoreLabUI-classic__link--disabled';
@@ -19,3 +19,5 @@ export const Link = forwardRef(
         );
     }
 );
+
+export default Link;

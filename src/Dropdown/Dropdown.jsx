@@ -1,5 +1,5 @@
 import React, { forwardRef, useState } from 'react';
-import { injectStyle } from '../utils/injectStyle';
+import { injectStyle } from '../utils';
 
 import Button from '../Button';
 import useClickAway from '../helpers/useClickAway';
@@ -7,7 +7,7 @@ import './dropdown.css';
 
 injectStyle('Dropdown', {});
 
-export const Dropdown = forwardRef(
+const Dropdown = forwardRef(
     (
         {
             children,
@@ -28,9 +28,8 @@ export const Dropdown = forwardRef(
 
         let contentClasses = `CoreLabUI-classic__dropdown-content`;
         if (trigger === 'click')
-            contentClasses += ` CoreLabUI-classic__dropdown-content--${
-                open ? 'open' : 'closed'
-            }`;
+            contentClasses += ` CoreLabUI-classic__dropdown-content--${open ? 'open' : 'closed'
+                }`;
 
         const handleClick = (event) => {
             setAnchorEl(open ? null : event.currentTarget);
@@ -60,3 +59,5 @@ export const Dropdown = forwardRef(
         );
     }
 );
+
+export default Dropdown;

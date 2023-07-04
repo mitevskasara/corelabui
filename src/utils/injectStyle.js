@@ -1,4 +1,4 @@
-export function injectStyle(component, style) {
+function injectStyle(component, style) {
     if (
         typeof document === 'object' &&
         !document.getElementById(`CoreLabUI-${component}`)
@@ -9,3 +9,5 @@ export function injectStyle(component, style) {
         );
     }
 }
+
+export default injectStyle;

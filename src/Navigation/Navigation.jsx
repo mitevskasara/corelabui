@@ -1,13 +1,13 @@
 import React, { forwardRef } from 'react';
 import Typography from '../Typography';
 import { NavigationItem } from '../Navigation';
-import { injectStyle } from '../utils/injectStyle';
+import { injectStyle } from '../utils';
 
 import './navigation.css';
 
 injectStyle('Navigation', {});
 
-export const Navigation = forwardRef(
+const Navigation = forwardRef(
     (
         {
             items,
@@ -52,3 +52,5 @@ export const Navigation = forwardRef(
         );
     }
 );
+
+export default Navigation;

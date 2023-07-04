@@ -1,6 +1,6 @@
 import React, { forwardRef, useContext } from 'react';
-import { injectStyle } from '../utils/injectStyle';
-import { ThemeContext } from '../theme';
+import { injectStyle } from '../utils';
+import ThemeContext from '../ThemeProvider';
 import './typography.css';
 
 injectStyle('Typography', {});
@@ -19,7 +19,7 @@ const VARIANTS = {
     caption: 'span'
 };
 
-export const Typography = forwardRef(
+const Typography = forwardRef(
     (
         {
             children,
@@ -68,3 +68,5 @@ export const Typography = forwardRef(
         );
     }
 );
+
+export default Typography;

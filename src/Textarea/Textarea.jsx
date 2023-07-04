@@ -1,11 +1,10 @@
 import React, { forwardRef } from 'react';
-import { injectStyle } from '../utils/injectStyle';
-
+import { injectStyle } from '../utils';
 import './textarea.css';
 
 injectStyle('Textarea', {});
 
-export const Textarea = forwardRef(
+const Textarea = forwardRef(
     (
         { disabled = false, label, error, helperText, className, ...props },
         ref
@@ -43,3 +42,5 @@ export const Textarea = forwardRef(
         );
     }
 );
+
+export default Textarea;

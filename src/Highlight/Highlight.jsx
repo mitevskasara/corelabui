@@ -1,11 +1,11 @@
 import React, { forwardRef } from 'react';
-import { injectStyle } from '../utils/injectStyle';
+import { injectStyle } from '../utils';
 
 import './highlight.css';
 
 injectStyle('Highlight', {});
 
-export const Highlight = forwardRef(
+const Highlight = forwardRef(
     (
         {
             className,
@@ -28,13 +28,11 @@ export const Highlight = forwardRef(
         if (className) classes += ` ${className}`;
         let gradientStyle = gradient
             ? {
-                  '--highlight-webkit-linear-gradient': `-webkit-linear-gradient(to ${
-                      gradient?.direction || 'right'
-                  }, ${gradient?.colors})`,
-                  '--highlight-linear-gradient': `linear-gradient(to ${
-                      gradient?.direction || 'right'
-                  }, ${gradient?.colors})`
-              }
+                '--highlight-webkit-linear-gradient': `-webkit-linear-gradient(to ${gradient?.direction || 'right'
+                    }, ${gradient?.colors})`,
+                '--highlight-linear-gradient': `linear-gradient(to ${gradient?.direction || 'right'
+                    }, ${gradient?.colors})`
+            }
             : {};
         if (textGradient)
             gradientStyle = {
@@ -57,3 +55,5 @@ export const Highlight = forwardRef(
         );
     }
 );
+
+export default Highlight;

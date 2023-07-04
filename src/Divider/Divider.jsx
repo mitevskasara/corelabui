@@ -1,12 +1,11 @@
-import React, { forwardRef, useContext } from 'react';
+import React, { forwardRef } from 'react';
 import Typography from '../Typography';
-import { injectStyle } from '../utils/injectStyle';
-import { ThemeContext } from '../theme';
+import { injectStyle } from '../utils';
 import './divider.css';
 
 injectStyle('Divider', {});
 
-export const Divider = forwardRef(
+const Divider = forwardRef(
     (
         {
             className,
@@ -23,15 +22,14 @@ export const Divider = forwardRef(
         let classes = `CoreLabUI-classic CoreLabUI-classic__divider CoreLabUI-classic__divider--${textAlign}`;
         if (!text) classes += ' CoreLabUI-classic__divider--no-text';
         if (className) classes += ` ${className}`;
-        const theme = useContext(ThemeContext);
-
+        const style = color ? { '--divider-color': color } : {};
         return (
             <div
                 {...props}
                 className={classes}
                 ref={ref}
                 style={{
-                    '--divider-color': color || theme.borderColor,
+                    ...style,
                     '--divider-width': width
                 }}>
                 {text && (
@@ -47,3 +45,5 @@ export const Divider = forwardRef(
         );
     }
 );
+
+export default Divider;

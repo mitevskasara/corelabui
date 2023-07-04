@@ -1,11 +1,10 @@
 import React, { forwardRef } from 'react';
-import { injectStyle } from '../utils/injectStyle';
-
+import { injectStyle } from '../utils';
 import './scrollable.css';
 
 injectStyle('Scrollable', {});
 
-export const Scrollable = forwardRef(
+const Scrollable = forwardRef(
     ({ className, children, ...props }, ref) => {
         let classes = 'CoreLabUI-classic CoreLabUI-classic__scrollable';
         if (className) classes += ` ${className}`;
@@ -17,3 +16,5 @@ export const Scrollable = forwardRef(
         );
     }
 );
+
+export default Scrollable;

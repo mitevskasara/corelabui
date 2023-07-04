@@ -1,12 +1,12 @@
 import React, { forwardRef } from 'react';
 import Typography from '../Typography';
 import Tag from '../Tag';
-import { injectStyle } from '../utils/injectStyle';
+import { injectStyle } from '../utils';
 import './card.css';
 
 injectStyle('Card', {});
 
-export const Card = forwardRef(
+const Card = forwardRef(
     (
         {
             className,
@@ -84,3 +84,5 @@ export const Card = forwardRef(
         );
     }
 );
+
+export default Card;

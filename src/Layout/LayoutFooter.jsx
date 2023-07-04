@@ -1,10 +1,10 @@
 import React from 'react';
-import { injectStyle } from '../utils/injectStyle';
+import { injectStyle } from '../utils';
 import './layoutFooter.css';
 
 injectStyle('LayoutFooter', {});
 
-export const LayoutFooter = ({
+export default ({
     children,
     className,
     type = 'dashboard',

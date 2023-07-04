@@ -1,4 +1,2 @@
-import { Navigation } from './Navigation';
-import { NavigationItem } from './NavigationItem';
-
-export { Navigation as default, NavigationItem };
+export { default } from './Navigation';
+export { default as NavigationItem } from './NavigationItem';

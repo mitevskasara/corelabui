@@ -41,7 +41,8 @@ export const defaultTheme = {
     scrollBarWidth: '6px',
     scrollBarTrackColor: '#F5F5F5',
     scrollBarThumbColor: '#C8C8C8',
-    tagColor: '#555555'
+    tagColor: '#555555',
+    dividerColor: '#d8dae5'
 };
 
 export const winterTheme = {
@@ -99,16 +100,16 @@ function generateStyle(style, theme) {
     let injectedStyle = `body {background: ${mergedThemes.background}} .CoreLabUI-${theme} {`;
     Object.keys(mergedThemes).map(
         (key) =>
-            (injectedStyle += `--${key
-                .split(/(?=[A-Z])/)
-                .join('-')
-                .toLowerCase()}:${mergedThemes[key]};`)
+        (injectedStyle += `--${key
+            .split(/(?=[A-Z])/)
+            .join('-')
+            .toLowerCase()}:${mergedThemes[key]};`)
     );
+    injectedStyle +=
+        '--layout-website-template-areas: "header" "main" "footer";';
+    injectedStyle +=
+        '--layout-dashboard-template-areas:  "header header header" "left main right" "left footer footer";';
     injectedStyle += '--content: ""';
-    injectedStyle +=
-        '--layout-website-template-areas: "header" "main" "footer"';
-    injectedStyle +=
-        '--layout-dashboard-template-areas:  "header header header" "left main right" "left footer footer"';
     injectedStyle += '}';
     return injectedStyle;
 }
@@ -147,5 +148,3 @@ export function createTheme(style, theme = 'classic') {
 
     return { ...defaultTheme, ...style };
 }
-
-export const ThemeContext = createContext(defaultTheme);

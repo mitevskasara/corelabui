@@ -1,12 +1,11 @@
 import React, { forwardRef } from 'react';
 import Typography from '../Typography';
-import { injectStyle } from '../utils/injectStyle';
-import { createTheme, defaultTheme } from '../theme';
+import { injectStyle } from '../utils';
 import './table.css';
 
 injectStyle('Table', {});
 
-export const Table = forwardRef(
+const Table = forwardRef(
     (
         {
             headers,
@@ -64,7 +63,7 @@ export const Table = forwardRef(
                                         className="CoreLabUI-classic__table-body-column">
                                         <div>
                                             {typeof row[column] === 'string' ||
-                                            typeof row[column] === 'number' ? (
+                                                typeof row[column] === 'number' ? (
                                                 <Typography
                                                     variant="body1"
                                                     margin={false}
@@ -87,3 +86,5 @@ export const Table = forwardRef(
         );
     }
 );
+
+export default Table;

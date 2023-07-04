@@ -1,3 +1,1 @@
-import { Scrollable } from './Scrollable';
-
-export default Scrollable;
+export { default } from './Scrollable';

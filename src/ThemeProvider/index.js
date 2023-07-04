@@ -1,3 +1,2 @@
-import { ThemeProvider } from './ThemeProvider';
-
-export default ThemeProvider;
+export { default } from './ThemeProvider';
+export { default as ThemeContext } from './ThemeContext';

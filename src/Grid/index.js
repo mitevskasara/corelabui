@@ -1,4 +1,2 @@
-import { Grid } from './Grid';
-import { GridItem } from './GridItem';
-
-export { Grid as default, GridItem };
+export { default } from './Grid';
+export { default as FlexItem } from './GridItem';

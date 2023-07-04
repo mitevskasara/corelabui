@@ -1,11 +1,11 @@
 import React, { forwardRef } from 'react';
-import { injectStyle } from '../utils/injectStyle';
+import { injectStyle } from '../utils';
 
 import './flex.css';
 
 injectStyle('Flex', {});
 
-export const Flex = forwardRef(
+const Flex = forwardRef(
     (
         {
             children,
@@ -56,3 +56,5 @@ export const Flex = forwardRef(
         );
     }
 );
+
+export default Flex;

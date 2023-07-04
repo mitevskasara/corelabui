@@ -1,19 +1,17 @@
-import React, { forwardRef, useContext } from 'react';
+import React, { forwardRef } from 'react';
 import Typography from '../Typography';
 import Divider from '../Divider';
-import { injectStyle } from '../utils/injectStyle';
-import { ThemeContext } from '../theme';
+import { injectStyle } from '../utils';
 import './quote.css';
 
 injectStyle('Quote', {});
 
-export const Quote = forwardRef(
+const Quote = forwardRef(
     ({ className, children, cite, separator = 'line', ...props }, ref) => {
-        let classes = 'CoreLabUI-classic CoreLabUI-classic__quote';
+        let classes = 'CoreLabUI-classic__quote';
         if (separator === 'line') classes += ' CoreLabUI-classic__quote--line';
         if (className) classes += ` ${className}`;
-
-        const theme = useContext(ThemeContext);
+        classes += ' CoreLabUI-classic';
 
         return (
             <blockquote {...props} className={classes} ref={ref}>
@@ -31,6 +29,7 @@ export const Quote = forwardRef(
                 {cite && (
                     <figcaption className="CoreLabUI-classic__quote-cite">
                         <Divider color={theme.primary} width="30%" />
+                        <div className="CoreLabUI-classic__quote-divider" />
                         {typeof cite === 'string' ? (
                             <Typography variant="caption">{cite}</Typography>
                         ) : (
@@ -42,3 +41,5 @@ export const Quote = forwardRef(
         );
     }
 );
+
+export default Quote;

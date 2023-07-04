@@ -1,10 +1,10 @@
 import React from 'react';
-import { injectStyle } from '../utils/injectStyle';
+import { injectStyle } from '../utils';
 import './layoutRight.css';
 
 injectStyle('LayoutRight', {});
 
-export const LayoutRight = ({
+export default ({
     children,
     className,
     type = 'dashboard',
@@ -23,9 +23,9 @@ export const LayoutRight = ({
             style={
                 type === 'custom'
                     ? {
-                          '--right-layout-grid-column': `${colStart} / span ${colSpan}`,
-                          '--right-layout-grid-row': `${rowStart} / span ${rowSpan}`
-                      }
+                        '--right-layout-grid-column': `${colStart} / span ${colSpan}`,
+                        '--right-layout-grid-row': `${rowStart} / span ${rowSpan}`
+                    }
                     : null
             }>
             {children}

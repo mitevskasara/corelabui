@@ -1,11 +1,11 @@
 import React, { forwardRef } from 'react';
-import { injectStyle } from '../utils/injectStyle';
+import { injectStyle } from '../utils';
 
 import './input.css';
 
 injectStyle('Input', {});
 
-export const Input = forwardRef(
+const Input = forwardRef(
     (
         {
             size = 'medium',
@@ -48,3 +48,5 @@ export const Input = forwardRef(
         );
     }
 );
+
+export default Input;

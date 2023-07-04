@@ -1,11 +1,11 @@
 import React, { forwardRef } from 'react';
-import { injectStyle } from '../utils/injectStyle';
+import { injectStyle } from '../utils';
 
 import './flexItem.css';
 
 injectStyle('FlexItem', {});
 
-export const FlexItem = forwardRef(
+const FlexItem = forwardRef(
     (
         {
             children,
@@ -45,3 +45,5 @@ export const FlexItem = forwardRef(
         );
     }
 );
+
+export default FlexItem;

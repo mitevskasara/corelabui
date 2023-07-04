@@ -1,3 +1,1 @@
-import { Highlight } from './Highlight';
-
-export default Highlight;
+export { default } from './Highlight';

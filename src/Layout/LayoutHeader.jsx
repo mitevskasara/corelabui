@@ -1,10 +1,10 @@
 import React from 'react';
-import { injectStyle } from '../utils/injectStyle';
+import { injectStyle } from '../utils';
 import './layoutHeader.css';
 
 injectStyle('LayoutHeader', {});
 
-export const LayoutHeader = ({
+export default ({
     children,
     className,
     type = 'dashboard',
@@ -24,9 +24,9 @@ export const LayoutHeader = ({
             style={
                 type === 'custom'
                     ? {
-                          '--header-layout-grid-column': `${colStart} / span ${colSpan}`,
-                          '--header-layout-grid-row': `${rowStart} / span ${rowSpan}`
-                      }
+                        '--header-layout-grid-column': `${colStart} / span ${colSpan}`,
+                        '--header-layout-grid-row': `${rowStart} / span ${rowSpan}`
+                    }
                     : null
             }>
             {children}

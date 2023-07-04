@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const LayoutCustom = ({
+export default ({
     children,
     className,
     area,

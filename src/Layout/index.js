@@ -1,17 +1,7 @@
-import { Layout } from './Layout';
-import { LayoutHeader } from './LayoutHeader';
-import { LayoutLeft } from './LayoutLeft';
-import { LayoutMain } from './LayoutMain';
-import { LayoutRight } from './LayoutRight';
-import { LayoutFooter } from './LayoutFooter';
-import { LayoutCustom } from './LayoutCustom';
-
-export {
-    Layout as default,
-    LayoutHeader,
-    LayoutLeft,
-    LayoutMain,
-    LayoutRight,
-    LayoutFooter,
-    LayoutCustom
-};
+export { default } from './Layout';
+export { default as LayoutHeader } from './LayoutHeader';
+export { default as LayoutLeft } from './LayoutLeft';
+export { default as LayoutMain } from './LayoutMain';
+export { default as LayoutRight } from './LayoutRight';
+export { default as LayoutFooter } from './LayoutFooter';
+export { default as LayoutCustom } from './LayoutCustom';

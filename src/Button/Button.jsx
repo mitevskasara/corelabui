@@ -1,10 +1,10 @@
 import React, { forwardRef } from 'react';
-import { injectStyle } from '../utils/injectStyle';
+import { injectStyle } from '../utils';
 import './button.css';
 
 injectStyle('Button', {});
 
-export const Button = forwardRef(
+const Button = forwardRef(
     (
         {
             children,
@@ -46,3 +46,5 @@ export const Button = forwardRef(
         );
     }
 );
+
+export default Button;

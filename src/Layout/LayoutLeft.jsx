@@ -1,10 +1,10 @@
 import React from 'react';
-import { injectStyle } from '../utils/injectStyle';
+import { injectStyle } from '../utils';
 import './layoutLeft.css';
 
 injectStyle('LayoutLeft', {});
 
-export const LayoutLeft = ({
+export default ({
     children,
     className,
     type = 'dashboard',
@@ -23,9 +23,9 @@ export const LayoutLeft = ({
             style={
                 type === 'custom'
                     ? {
-                          '--left-layout-grid-column': `${colStart} / span ${colSpan}`,
-                          '--left-layout-grid-row': `${rowStart} / span ${rowSpan}`
-                      }
+                        '--left-layout-grid-column': `${colStart} / span ${colSpan}`,
+                        '--left-layout-grid-row': `${rowStart} / span ${rowSpan}`
+                    }
                     : null
             }>
             {children}

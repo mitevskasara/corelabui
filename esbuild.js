@@ -1,17 +1,21 @@
-import esbuild from 'esbuild';
-import { customPlugin } from './plugins/injectCss.js';
-import deps from './package.json' assert { type: 'json' };
+const esbuild = require('esbuild');
+const { styleEnginePlugin } = require('./plugins/injectCss.js');
+const deps = require('./package.json');
 
 esbuild
     .build({
         entryPoints: [
+            'src/utils/index.js',
+            'src/Theme/index.js',
+            'src/ThemeProvider/index.js',
+            'src/Typography/index.js',
+            'src/Flex/index.js',
             'src/Breadcrumb/index.js',
             'src/Button/index.js',
             'src/Card/index.js',
             'src/Checkbox/index.js',
             'src/Divider/index.js',
             'src/Dropdown/index.js',
-            'src/Flex/index.js',
             'src/Grid/index.js',
             'src/Highlight/index.js',
             'src/Input/index.js',
@@ -27,9 +31,7 @@ esbuild
             'src/TableOfContents/index.js',
             'src/Tag/index.js',
             'src/Textarea/index.js',
-            'src/ThemeProvider/index.js',
-            'src/Typography/index.js',
-            'src/theme.js'
+            // 'src/index.js'
         ],
         outdir: '.',
         bundle: true,
@@ -38,9 +40,8 @@ esbuild
         platform: 'node',
         format: 'cjs',
         target: 'node14',
-        minify: true,
         loader: { '.css': 'text' },
-        plugins: [customPlugin],
+        plugins: [styleEnginePlugin],
         external: Object.keys(deps.devDependencies).concat(
             Object.keys(deps.peerDependencies)
         )

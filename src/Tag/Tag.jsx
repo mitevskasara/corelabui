@@ -1,12 +1,12 @@
 import React, { forwardRef, useContext } from 'react';
 import Typography from '../Typography';
-import { injectStyle } from '../utils/injectStyle';
-import { ThemeContext } from '../theme';
+import { injectStyle } from '../utils';
+import ThemeContext from '../ThemeProvider';
 import './tag.css';
 
 injectStyle('Tag', {});
 
-export const Tag = forwardRef(
+const Tag = forwardRef(
     (
         {
             children,
@@ -60,8 +60,8 @@ export const Tag = forwardRef(
                                     ? color
                                     : theme.tagColor
                                 : color
-                                ? theme.white
-                                : theme.tagColor
+                                    ? theme.white
+                                    : theme.tagColor
                         }>
                         {text}
                     </Typography>
@@ -72,3 +72,5 @@ export const Tag = forwardRef(
         );
     }
 );
+
+export default Tag;

@@ -1,11 +1,10 @@
 import React, { forwardRef } from 'react';
-import { injectStyle } from '../utils/injectStyle';
-
+import { injectStyle } from '../utils';
 import './radioButton.css';
 
 injectStyle('RadioButton', {});
 
-export const RadioButton = forwardRef(
+const RadioButton = forwardRef(
     (
         {
             size = 'medium',
@@ -45,3 +44,5 @@ export const RadioButton = forwardRef(
         );
     }
 );
+
+export default RadioButton;

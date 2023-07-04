@@ -1,12 +1,12 @@
 import React, { forwardRef } from 'react';
 import Scrollable from '../Scrollable';
-import { injectStyle } from '../utils/injectStyle';
+import { injectStyle } from '../utils';
 
 import './popup.css';
 
 injectStyle('Popup', {});
 
-export const Popup = forwardRef(
+const Popup = forwardRef(
     (
         {
             className,
@@ -51,3 +51,5 @@ export const Popup = forwardRef(
         ) : null;
     }
 );
+
+export default Popup;

@@ -1,10 +1,10 @@
 import React, { forwardRef } from 'react';
-import { injectStyle } from '../utils/injectStyle';
+import { injectStyle } from '../utils';
 import './checkbox.css';
 
 injectStyle('Checkbox', {});
 
-export const Checkbox = forwardRef(
+const Checkbox = forwardRef(
     (
         {
             size = 'medium',
@@ -45,3 +45,5 @@ export const Checkbox = forwardRef(
         );
     }
 );
+
+export default Checkbox;

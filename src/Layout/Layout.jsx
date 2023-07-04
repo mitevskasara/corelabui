@@ -1,10 +1,10 @@
 import React from 'react';
-import { injectStyle } from '../utils/injectStyle';
+import { injectStyle } from '../utils';
 import './layout.css';
 
 injectStyle('Layout', {});
 
-export const Layout = ({
+export default ({
     children,
     className,
     type = 'dashboard',
@@ -22,8 +22,8 @@ export const Layout = ({
             style={
                 type === 'custom' && templateAreas
                     ? {
-                          '--layout-template-areas': templateAreas
-                      }
+                        '--layout-template-areas': templateAreas
+                    }
                     : null
             }>
             {children}

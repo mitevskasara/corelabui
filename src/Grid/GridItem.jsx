@@ -1,11 +1,11 @@
 import React, { forwardRef } from 'react';
-import { injectStyle } from '../utils/injectStyle';
+import { injectStyle } from '../utils';
 
 import './gridItem.css';
 
 injectStyle('GridItem', {});
 
-export const GridItem = forwardRef(
+const GridItem = forwardRef(
     (
         {
             children,
@@ -50,3 +50,5 @@ export const GridItem = forwardRef(
         );
     }
 );
+
+export default GridItem;

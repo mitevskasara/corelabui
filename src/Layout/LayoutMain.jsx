@@ -1,10 +1,10 @@
 import React from 'react';
-import { injectStyle } from '../utils/injectStyle';
+import { injectStyle } from '../utils';
 import './layoutMain.css';
 
 injectStyle('LayoutMain', {});
 
-export const LayoutMain = ({
+export default ({
     children,
     className,
     type = 'dashboard',
@@ -23,9 +23,9 @@ export const LayoutMain = ({
             style={
                 type === 'custom'
                     ? {
-                          '--main-layout-grid-column': `${colStart} / span ${colSpan}`,
-                          '--main-layout-grid-row': `${rowStart} / span ${rowSpan}`
-                      }
+                        '--main-layout-grid-column': `${colStart} / span ${colSpan}`,
+                        '--main-layout-grid-row': `${rowStart} / span ${rowSpan}`
+                    }
                     : null
             }>
             {children}
