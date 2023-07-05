@@ -24,8 +24,8 @@ export default ({
             style={
                 type === 'custom' && templateAreas
                     ? {
-                        '--layout-template-areas': templateAreas
-                    }
+                          '--layout-template-areas': templateAreas
+                      }
                     : null
             }>
             {children}

@@ -26,9 +26,9 @@ export default ({
             style={
                 type === 'custom'
                     ? {
-                        '--header-layout-grid-column': `${colStart} / span ${colSpan}`,
-                        '--header-layout-grid-row': `${rowStart} / span ${rowSpan}`
-                    }
+                          '--header-layout-grid-column': `${colStart} / span ${colSpan}`,
+                          '--header-layout-grid-row': `${rowStart} / span ${rowSpan}`
+                      }
                     : null
             }>
             {children}

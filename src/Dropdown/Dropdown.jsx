@@ -30,8 +30,9 @@ const Dropdown = forwardRef(
 
         let contentClasses = `CoreLabUI-classic__dropdown-content`;
         if (trigger === 'click')
-            contentClasses += ` CoreLabUI-classic__dropdown-content--${open ? 'open' : 'closed'
-                }`;
+            contentClasses += ` CoreLabUI-classic__dropdown-content--${
+                open ? 'open' : 'closed'
+            }`;
 
         const handleClick = (event) => {
             setAnchorEl(open ? null : event.currentTarget);
