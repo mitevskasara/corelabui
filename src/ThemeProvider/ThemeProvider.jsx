@@ -1,8 +1,9 @@
+import React from 'react';
 import { createTheme } from '../Theme';
 
 const ThemeProvider = ({ theme, children }) => {
     createTheme(theme);
-    return <>{children}</>;
+    return <React.Fragment>{children}</React.Fragment>;
 };
 
 export default ThemeProvider;

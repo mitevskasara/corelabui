@@ -1,10 +1,10 @@
 {
     "name": "@corelabui/classic",
-    "version": "1.0.46",
+    "version": "1.0.56",
     "description": "Collection of ready-to-use customisable React components available in multiple themes",
     "private": false,
     "scripts": {
-        "build": "rm -rf dist && node esbuild.js"
+        "build": "find . -mindepth 1 -maxdepth 1 -type d ! -name 'node_modules' ! -name 'src' ! -name 'plugins' -exec sh -c 'find \"{}\" -type f -name \"*.js\" | read' \\; -exec rm -rf {} \\; && node esbuild.js"
     },
     "repository": {
         "type": "git",
@@ -19,8 +19,8 @@
     "sideEffects": [
         "**/*.css"
     ],
-    "main": "lib/index.js",
-    "module": "lib/index.js",
+    "main": "index.js",
+    "module": "index.js",
     "author": "Corelab UI",
     "license": "MIT",
     "bugs": {
