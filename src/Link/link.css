@@ -1,5 +1,5 @@
 .CoreLabUI-classic__link {
-    color: var(--primary);
+    color: var(--text);
     text-decoration: none;
     cursor: pointer;
     display: block;
@@ -46,6 +46,7 @@
 
 .CoreLabUI-classic__link:hover > .CoreLabUI-classic__link-decoration,
 .CoreLabUI-classic__link:focus > .CoreLabUI-classic__link-decoration {
+    color: var(--primary);
     opacity: 1;
     transform: scale(1);
 }

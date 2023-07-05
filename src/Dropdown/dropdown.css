@@ -44,7 +44,6 @@
 
 .CoreLabUI-classic__dropdown-content {
     position: absolute;
-    left: var(--left);
     background-color: var(--background);
     box-shadow: var(--box-shadow);
     padding: 0.7em 0.7em 0.7em;
@@ -56,6 +55,8 @@
     opacity: 0;
     transform: translateY(100%);
     transition: transform 0.5s, opacity 0.1s;
+    left: var(--left);
+    right: var(--right);
 }
 
 .CoreLabUI-classic__dropdown-content--open {

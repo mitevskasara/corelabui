@@ -1,10 +1,14 @@
 .CoreLabUI-classic__navigation-item {
     border: 1px solid transparent;
-    padding: 0.5em 2em;
+    padding: 0.2em 2em;
     cursor: pointer;
     display: block;
     text-decoration: none;
     margin-bottom: 0.5em;
+}
+
+.CoreLabUI-classic__navigation-item--divided {
+    padding: 0.5em 2em;
 }
 
 .CoreLabUI-classic__navigation-item:visited {
@@ -28,11 +32,6 @@
 
 .CoreLabUI-classic__navigation-item--active > div > span {
     color: var(--primary);
-}
-
-.CoreLabUI-classic__navigation-item-divider {
-    border-bottom: 1px solid var(--border-color);
-    padding: 0.2em 0px;
 }
 
 .CoreLabUI-classic__navigation-item--divided,

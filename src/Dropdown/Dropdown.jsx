@@ -18,6 +18,7 @@ const Dropdown = forwardRef(
             buttonProps,
             minWidth = '200px',
             trigger = 'hover',
+            position = 'left',
             ...props
         },
         ref
@@ -53,7 +54,13 @@ const Dropdown = forwardRef(
                 <div
                     className={contentClasses}
                     style={{
-                        '--min-width': minWidth
+                        '--min-width': minWidth,
+                        '--left':
+                            position === 'left'
+                                ? 0
+                                : position === 'center' &&
+                                  `calc(50% - ${minWidth}/2)`,
+                        '--right': position === 'right' && 0
                     }}>
                     <div className="CoreLabUI-classic__dropdown-arrow" />
                     {children}

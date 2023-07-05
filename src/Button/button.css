@@ -25,7 +25,7 @@
 .CoreLabUI-classic__btn--small {
     font-size: var(--font-small);
     padding: 8px 16px;
-    height: 36px;
+    height: 33px;
     width: max-content;
 }
 
@@ -34,7 +34,7 @@
     min-width: 100px;
     width: max-content;
     padding: 12px 24px;
-    height: 50px;
+    height: 47px;
 }
 
 .CoreLabUI-classic__btn--large {
@@ -42,7 +42,7 @@
     min-width: 100px;
     width: max-content;
     padding: 16px 32px;
-    height: 57px;
+    height: 54px;
 }
 
 .CoreLabUI-classic__btn:disabled {
@@ -101,7 +101,11 @@
 .CoreLabUI-classic__btn--text {
     background: unset;
     border: 0;
+    padding: 4px;
     color: var(--primary);
+    height: auto;
+    min-width: fit-content;
+    width: fit-content;
 }
 
 .CoreLabUI-classic__btn--text:hover {

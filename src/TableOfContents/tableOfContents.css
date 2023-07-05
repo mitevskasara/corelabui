@@ -3,7 +3,6 @@
     padding: 0.2em 1em;
     text-decoration: none;
     color: inherit;
-    width: 100%;
     cursor: pointer;
     border-left: 2px solid var(--border-color);
 }

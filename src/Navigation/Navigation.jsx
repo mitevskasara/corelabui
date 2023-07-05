@@ -1,5 +1,4 @@
 import React, { forwardRef } from 'react';
-import Typography from '../Typography';
 import { NavigationItem } from '../Navigation';
 import { injectTheme } from '../Theme';
 import { injectStyle } from '../utils';
