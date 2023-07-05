@@ -1,7 +1,9 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { injectTheme } from '../Theme';
 import { injectStyle } from '../utils';
 import './select.css';
 
+injectTheme();
 injectStyle('Select', {});
 
 export default ({
@@ -38,9 +40,8 @@ export default ({
     return (
         <div className="CoreLabUI-classic CoreLabUI-classic__wrapper">
             <div
-                className={`CoreLabUI-classic__root CoreLabUI-classic__root--${
-                    disabled ? 'disabled' : ''
-                } CoreLabUI-classic__root--${error ? 'error' : ''}`}
+                className={`CoreLabUI-classic__root CoreLabUI-classic__root--${disabled ? 'disabled' : ''
+                    } CoreLabUI-classic__root--${error ? 'error' : ''}`}
                 ref={ref}
                 onClick={() => toggle(!open)}>
                 {label && (
@@ -51,9 +52,8 @@ export default ({
                 <input
                     {...props}
                     value={options?.find((o) => o.value === value)?.label}
-                    className={`CoreLabUI-classic__select CoreLabUI-classic__select--${size} CoreLabUI-classic__select--${
-                        error ? 'error' : ''
-                    }`}
+                    className={`CoreLabUI-classic__select CoreLabUI-classic__select--${size} CoreLabUI-classic__select--${error ? 'error' : ''
+                        }`}
                     readOnly
                     ref={inputRef}
                 />
@@ -64,24 +64,21 @@ export default ({
                 )}
             </div>
             <div
-                className={`CoreLabUI-classic__select-menu CoreLabUI-classic__select-menu--${
-                    open ? 'open' : 'closed'
-                }`}>
+                className={`CoreLabUI-classic__select-menu CoreLabUI-classic__select-menu--${open ? 'open' : 'closed'
+                    }`}>
                 {options?.map((option, index) => (
                     <div
                         key={index}
                         value={option.value}
                         className={`CoreLabUI-classic__select-menu__option
-                        ${
-                            option.value === value
+                        ${option.value === value
                                 ? 'CoreLabUI-classic__select-menu__option--selected'
                                 : ''
-                        }
-                        ${
-                            option?.disabled
+                            }
+                        ${option?.disabled
                                 ? 'CoreLabUI-classic__select-menu__option--disabled'
                                 : ''
-                        }`}
+                            }`}
                         onClick={
                             option?.disabled
                                 ? null

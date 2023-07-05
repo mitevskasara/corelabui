@@ -1,7 +1,9 @@
 import React from 'react';
+import { injectTheme } from '../Theme';
 import { injectStyle } from '../utils';
 import './layoutFooter.css';
 
+injectTheme();
 injectStyle('LayoutFooter', {});
 
 export default ({ children, className, type = 'dashboard', ...props }) => {

@@ -1,7 +1,9 @@
 import React from 'react';
+import { injectTheme } from '../Theme';
 import { injectStyle } from '../utils';
 import './layoutHeader.css';
 
+injectTheme();
 injectStyle('LayoutHeader', {});
 
 export default ({
@@ -24,9 +26,9 @@ export default ({
             style={
                 type === 'custom'
                     ? {
-                          '--header-layout-grid-column': `${colStart} / span ${colSpan}`,
-                          '--header-layout-grid-row': `${rowStart} / span ${rowSpan}`
-                      }
+                        '--header-layout-grid-column': `${colStart} / span ${colSpan}`,
+                        '--header-layout-grid-row': `${rowStart} / span ${rowSpan}`
+                    }
                     : null
             }>
             {children}

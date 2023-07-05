@@ -1,7 +1,9 @@
 import React, { forwardRef } from 'react';
+import { injectTheme } from '../Theme';
 import { injectStyle } from '../utils';
 import './button.css';
 
+injectTheme();
 injectStyle('Button', {});
 
 const Button = forwardRef(

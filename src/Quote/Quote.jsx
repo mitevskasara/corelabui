@@ -1,8 +1,10 @@
 import React, { forwardRef } from 'react';
 import Typography from '../Typography';
+import { injectTheme } from '../Theme';
 import { injectStyle } from '../utils';
 import './quote.css';
 
+injectTheme();
 injectStyle('Quote', {});
 
 const Quote = forwardRef(

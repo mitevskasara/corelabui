@@ -1,9 +1,11 @@
 import React, { forwardRef } from 'react';
 import Button from '../Button';
 import Flex from '../Flex';
+import { injectTheme } from '../Theme';
 import { injectStyle } from '../utils';
 import './popupActions.css';
 
+injectTheme();
 injectStyle('PopupActions', {});
 
 const PopupActions = forwardRef(({ className, actions }, ref) => {

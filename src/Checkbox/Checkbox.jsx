@@ -1,7 +1,9 @@
 import React, { forwardRef } from 'react';
+import { injectTheme } from '../Theme';
 import { injectStyle } from '../utils';
 import './checkbox.css';
 
+injectTheme();
 injectStyle('Checkbox', {});
 
 const Checkbox = forwardRef(

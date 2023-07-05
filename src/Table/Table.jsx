@@ -1,8 +1,10 @@
 import React, { forwardRef } from 'react';
 import Typography from '../Typography';
+import { injectTheme } from '../Theme';
 import { injectStyle } from '../utils';
 import './table.css';
 
+injectTheme();
 injectStyle('Table', {});
 
 const Table = forwardRef(
@@ -63,7 +65,7 @@ const Table = forwardRef(
                                         className="CoreLabUI-classic__table-body-column">
                                         <div>
                                             {typeof row[column] === 'string' ||
-                                            typeof row[column] === 'number' ? (
+                                                typeof row[column] === 'number' ? (
                                                 <Typography
                                                     variant="body1"
                                                     margin={false}

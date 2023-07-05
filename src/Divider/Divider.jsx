@@ -1,8 +1,10 @@
 import React, { forwardRef } from 'react';
 import Typography from '../Typography';
+import { injectTheme } from '../Theme';
 import { injectStyle } from '../utils';
 import './divider.css';
 
+injectTheme();
 injectStyle('Divider', {});
 
 const Divider = forwardRef(

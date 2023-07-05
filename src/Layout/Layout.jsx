@@ -1,7 +1,9 @@
 import React from 'react';
+import { injectTheme } from '../Theme';
 import { injectStyle } from '../utils';
 import './layout.css';
 
+injectTheme();
 injectStyle('Layout', {});
 
 export default ({
@@ -22,8 +24,8 @@ export default ({
             style={
                 type === 'custom' && templateAreas
                     ? {
-                          '--layout-template-areas': templateAreas
-                      }
+                        '--layout-template-areas': templateAreas
+                    }
                     : null
             }>
             {children}

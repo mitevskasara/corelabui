@@ -1,8 +1,10 @@
 import React, { forwardRef } from 'react';
+import { injectTheme } from '../Theme';
 import { injectStyle } from '../utils';
 
 import './link.css';
 
+injectTheme();
 injectStyle('Link', {});
 
 const Link = forwardRef(

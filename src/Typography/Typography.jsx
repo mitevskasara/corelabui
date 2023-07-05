@@ -1,7 +1,9 @@
 import React, { forwardRef } from 'react';
+import { injectTheme } from '../Theme';
 import { injectStyle } from '../utils';
 import './typography.css';
 
+injectTheme();
 injectStyle('Typography', {});
 
 const VARIANTS = {

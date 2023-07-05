@@ -1,7 +1,9 @@
 import React from 'react';
+import { injectTheme } from '../Theme';
 import { injectStyle } from '../utils';
 import './layoutLeft.css';
 
+injectTheme();
 injectStyle('LayoutLeft', {});
 
 export default ({
@@ -23,9 +25,9 @@ export default ({
             style={
                 type === 'custom'
                     ? {
-                          '--left-layout-grid-column': `${colStart} / span ${colSpan}`,
-                          '--left-layout-grid-row': `${rowStart} / span ${rowSpan}`
-                      }
+                        '--left-layout-grid-column': `${colStart} / span ${colSpan}`,
+                        '--left-layout-grid-row': `${rowStart} / span ${rowSpan}`
+                    }
                     : null
             }>
             {children}

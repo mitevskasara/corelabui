@@ -1,9 +1,11 @@
 import React, { forwardRef } from 'react';
 import Scrollable from '../Scrollable';
+import { injectTheme } from '../Theme';
 import { injectStyle } from '../utils';
 
 import './popup.css';
 
+injectTheme();
 injectStyle('Popup', {});
 
 const Popup = forwardRef(

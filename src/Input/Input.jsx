@@ -1,8 +1,10 @@
 import React, { forwardRef } from 'react';
+import { injectTheme } from '../Theme';
 import { injectStyle } from '../utils';
 
 import './input.css';
 
+injectTheme();
 injectStyle('Input', {});
 
 const Input = forwardRef(
