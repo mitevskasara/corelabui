@@ -2,7 +2,6 @@ import { defaultTheme } from '.';
 
 function generateStyle(style, theme) {
     const mergedThemes = { ...defaultTheme, ...style };
-    console.log('generateStyle', mergedThemes);
     let injectedStyle = `body {background: ${mergedThemes.background}} .CoreLabUI-${theme} {`;
     Object.keys(mergedThemes).map(
         (key) =>

@@ -4,7 +4,6 @@ import { generateStyle } from '.';
 function createTheme(style, theme = 'classic') {
     if (typeof document === 'object') {
         if (!document.getElementById(`CoreLabUI-${theme}`)) {
-            console.log('createTheme style');
             document.head.insertAdjacentHTML(
                 'beforeend',
                 `<style id='CoreLabUI-${theme}'>${generateStyle(
@@ -16,13 +15,11 @@ function createTheme(style, theme = 'classic') {
             document.getElementById(`CoreLabUI-${theme}`)?.innerHTML !=
             generateStyle(style, theme)
         ) {
-            console.log('createTheme update theme');
             document.getElementById(`CoreLabUI-${theme}`).innerHTML =
                 generateStyle(style, theme);
         }
 
         if (!document.getElementById(`CoreLabUI-${theme}-scrollbar`)) {
-            console.log('createTheme style');
             const mergedThemes = { ...defaultTheme, ...style };
             const scrollBarStyle =
                 `::-webkit-scrollbar { width: ${mergedThemes.scrollBarWidth}; }\n` +

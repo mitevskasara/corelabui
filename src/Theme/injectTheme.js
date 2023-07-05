@@ -4,7 +4,6 @@ import { generateStyle } from '.';
 export function injectTheme(style, theme = 'classic') {
     if (typeof document === 'object') {
         if (!document.getElementById(`CoreLabUI-${theme}`)) {
-            console.log('injectTheme style');
             document.head.insertAdjacentHTML(
                 'beforeend',
                 `<style id='CoreLabUI-${theme}'>${generateStyle(
@@ -14,7 +13,6 @@ export function injectTheme(style, theme = 'classic') {
             );
         }
         if (!document.getElementById(`CoreLabUI-${theme}-scrollbar`)) {
-            console.log('injectTheme scrollbar');
             const mergedThemes = { ...defaultTheme, ...style };
             const scrollBarStyle =
                 `::-webkit-scrollbar { width: ${mergedThemes.scrollBarWidth}; }\n` +
