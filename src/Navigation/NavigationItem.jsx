@@ -33,7 +33,7 @@ const NavigationItem = forwardRef(
         if (className) classes += ` ${className}`;
         const Element = link ? 'a' : 'div';
         const elementProps = link
-            ? { ...props, href: link, target: '__blank' }
+            ? { ...props, href: link }
             : { ...props, onClick };
 
         return (

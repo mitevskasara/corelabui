@@ -1,5 +1,5 @@
 .CoreLabUI-classic__btn-root {
-    width: fit-content;
+    width: var(--button-width);
     border: 2px solid transparent;
     border-radius: var(--border-radius);
     display: inline-block;
@@ -16,6 +16,7 @@
     font-family: var(--font-family);
     font-weight: 500;
     z-index: 1;
+    width: var(--button-width);
 }
 
 .CoreLabUI-classic__btn > span {
@@ -24,25 +25,23 @@
 
 .CoreLabUI-classic__btn--small {
     font-size: var(--font-small);
-    padding: 8px 16px;
+    min-width: 59px;
     height: 33px;
-    width: max-content;
+    padding: 0 0.5em;
 }
 
 .CoreLabUI-classic__btn--medium {
     font-size: var(--font-medium);
-    min-width: 100px;
-    width: max-content;
-    padding: 12px 24px;
-    height: 47px;
+    min-width: 96px;
+    height: 40px;
+    padding: 0 1em;
 }
 
 .CoreLabUI-classic__btn--large {
     font-size: var(--font-large);
     min-width: 100px;
-    width: max-content;
-    padding: 16px 32px;
-    height: 54px;
+    height: 47px;
+    padding: 0 1em;
 }
 
 .CoreLabUI-classic__btn:disabled {

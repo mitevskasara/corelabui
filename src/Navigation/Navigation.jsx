@@ -16,6 +16,8 @@ const Navigation = forwardRef(
             width = 'auto',
             maxWidth = 'unset',
             minWidth = 'unset',
+            border = 'none',
+            overflow,
             ...props
         },
         ref
@@ -31,7 +33,12 @@ const Navigation = forwardRef(
                 style={{
                     '--width': width,
                     '--max-width': maxWidth,
-                    '--min-width': minWidth
+                    '--min-width': minWidth,
+                    '--overflow': overflow && 'auto',
+                    '--border-left':
+                        border === 'left' && '1px solid var(--border-color)',
+                    '--border-right':
+                        border === 'right' && '1px solid var(--border-color)'
                 }}>
                 {items?.map((item, index) => (
                     <div

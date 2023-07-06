@@ -1,0 +1,159 @@
+@keyframes CoreLabUI-classic-header-menu-open-keyframe {
+    0% {
+        top: -100vh;
+    }
+
+    100% {
+        top: calc(var(--header-height) + 1em);
+    }
+}
+
+@-webkit-keyframes CoreLabUI-classic-header-menu-open-keyframe {
+    0% {
+        top: -100vh;
+    }
+
+    100% {
+        top: calc(var(--header-height) + 1em);
+    }
+}
+
+@keyframes CoreLabUI-classic-header-menu-closed-keyframe {
+    0% {
+        top: calc(var(--header-height) + 1em);
+    }
+
+    100% {
+        top: -100vh;
+    }
+}
+
+@-webkit-keyframes CoreLabUI-classic-header-menu-closed-keyframe {
+    0% {
+        top: calc(var(--header-height) + 1em);
+    }
+
+    100% {
+        top: -100vh;
+    }
+}
+
+.CoreLabUI-classic__header {
+    position: fixed;
+    top: 0;
+    height: var(--header-height);
+    padding: 0.5em var(--header-padding);
+    box-shadow: var(--header-shadow);
+    background-color: var(--background);
+    width: -webkit-fill-available;
+    display: flex;
+    align-items: center;
+    z-index: 2;
+}
+
+.CoreLabUI-classic__header-nav {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    margin: var(--header-items-margin);
+    margin-left: var(--header-items-margin-left);
+    margin-right: var(--header-items-margin-right);
+    padding-left: 1em;
+}
+
+.CoreLabUI-classic__header-menu {
+    list-style: none;
+    display: flex;
+    gap: 1em;
+    padding-left: 0;
+    align-items: center;
+}
+
+.CoreLabUI-classic__header-logo {
+    max-width: 200px;
+    width: 200px;
+    border: 1px solid;
+    height: 50px;
+}
+
+.CoreLabUI-classic__header-menu-icon {
+    display: none;
+    grid-template-columns: auto auto;
+    gap: 2px;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.CoreLabUI-classic__header-menu-icon:hover {
+    transform: scale(1.05);
+}
+
+.CoreLabUI-classic__header-menu-icon:active {
+    transform: scale(0.95);
+}
+
+.CoreLabUI-classic__header-menu-icon:hover > span {
+    background-color: var(--primary);
+}
+
+.CoreLabUI-classic__header-menu-icon > span {
+    width: 10px;
+    height: 10px;
+    border-radius: 3px;
+    background-color: var(--text);
+}
+
+.CoreLabUI-classic__header-nav--mobile {
+    display: none;
+    position: fixed;
+    padding: 1em var(--header-padding);
+    width: -webkit-fill-available;
+    background: var(--background);
+    top: calc(var(--header-height) + 1em);
+    left: 0;
+    margin: 0;
+    margin-left: 0;
+    margin-right: 0;
+    border-top: 1px solid var(--border-color);
+    flex-direction: column;
+    justify-content: start;
+    align-items: baseline;
+    box-shadow: var(--bottom-shadow);
+    z-index: 1;
+}
+
+.CoreLabUI-classic__header-nav--mobile--open {
+    -webkit-animation: CoreLabUI-classic-header-menu-open-keyframe 0.7s forwards;
+    animation: CoreLabUI-classic-header-menu-open-keyframe 0.7s forwards;
+}
+
+.CoreLabUI-classic__header-nav--mobile--closed {
+    -webkit-animation: CoreLabUI-classic-header-menu-closed-keyframe 0.7s
+        forwards;
+    animation: CoreLabUI-classic-header-menu-closed-keyframe 0.7s forwards;
+}
+
+.CoreLabUI-classic__header-nav--mobile > .CoreLabUI-classic__header-menu {
+    flex-direction: column;
+    align-items: baseline;
+    margin: 0;
+}
+
+@media only screen and (max-width: 768px) {
+    .CoreLabUI-classic__header-nav--mobile {
+        display: flex;
+        gap: 1em;
+    }
+
+    .CoreLabUI-classic__header-nav {
+        display: none;
+    }
+
+    .CoreLabUI-classic__header-menu {
+        width: 100%;
+    }
+
+    .CoreLabUI-classic__header-menu-icon {
+        display: grid;
+    }
+}

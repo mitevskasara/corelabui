@@ -3,4 +3,7 @@
     width: var(--width);
     max-width: var(--max-width);
     min-width: var(--min-width);
+    overflow-y: var(--overflow);
+    border-left: var(--border-left);
+    border-right: var(--border-right);
 }

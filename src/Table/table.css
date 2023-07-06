@@ -2,19 +2,25 @@
     border-spacing: 1em;
     border-collapse: collapse;
     border-radius: var(--border-radius);
-    background-color: var(--background);
+    background-color: var(--border-color);
     overflow: hidden;
     width: 100%;
     margin: 0 auto;
     position: relative;
     text-align: left;
+    box-shadow: var(--box-shadow);
+    border: 1px solid var(--border-color);
 }
 
 .CoreLabUI-classic__table > * {
     position: relative;
 }
 
-.CoreLabUI-classic__table-head-column,
+.CoreLabUI-classic__table-head-column {
+    padding: 1em;
+    color: var(--text-secondary);
+}
+
 .CoreLabUI-classic__table-body-column {
     padding: 0.5em 1em;
 }
@@ -24,16 +30,12 @@
 }
 
 .CoreLabUI-classic__table-head > .CoreLabUI-classic__table-body-row {
-    background-color: var(--hover);
-}
-
-.CoreLabUI-classic__table-head > .CoreLabUI-classic__table-body-row--bordered {
-    border: 1px solid var(--border-color);
+    background-color: var(--background);
 }
 
 .CoreLabUI-classic__table-body-row--bordered {
     background-color: var(--background);
-    border: 1px solid var(--border-color);
+    border: 0.5px solid var(--border-color);
 }
 
 .CoreLabUI-classic__table-body

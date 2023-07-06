@@ -20,9 +20,11 @@
     display: flex;
     flex-direction: column;
     border-radius: var(--border-radius);
-    border: 1px solid var(--border-color);
+    border: 1px solid transparent;
     padding: 1em;
     gap: 0.5em;
+    box-shadow: var(--box-shadow);
+    border: 1px solid var(--border-color);
 }
 
 .CoreLabUI-classic__card--clickable {
@@ -30,7 +32,8 @@
 }
 
 .CoreLabUI-classic__card--clickable:hover {
-    box-shadow: var(--box-shadow);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--box-shadow-hover);
 }
 
 .CoreLabUI-classic__card--clickable:active {

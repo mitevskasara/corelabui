@@ -16,7 +16,7 @@ const Table = forwardRef(
             children,
             spacing = '0.5em 1em',
             striped = false,
-            bordered,
+            bordered = true,
             ...props
         },
         ref
@@ -44,9 +44,10 @@ const Table = forwardRef(
                                     className="CoreLabUI-classic__table-head-column">
                                     <div>
                                         <Typography
-                                            variant="subtitle2"
+                                            variant="body2"
                                             margin={false}
-                                            overflow="ellipsis">
+                                            overflow="ellipsis"
+                                            color="initial">
                                             {header}
                                         </Typography>
                                     </div>
@@ -67,7 +68,7 @@ const Table = forwardRef(
                                             {typeof row[column] === 'string' ||
                                             typeof row[column] === 'number' ? (
                                                 <Typography
-                                                    variant="body1"
+                                                    variant="body2"
                                                     margin={false}
                                                     overflow="ellipsis">
                                                     {row[column]}

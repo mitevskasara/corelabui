@@ -16,6 +16,7 @@ const Button = forwardRef(
             disabled,
             className,
             title,
+            width = 'fit-content',
             ...props
         },
         ref
@@ -25,7 +26,10 @@ const Button = forwardRef(
             classes += ' CoreLabUI-classic__btn-root--disabled';
         if (className) classes += ` ${className}`;
         return (
-            <div className={classes} ref={ref}>
+            <div
+                className={classes}
+                ref={ref}
+                style={{ '--button-width': width }}>
                 <button
                     {...props}
                     className={`CoreLabUI-classic__btn CoreLabUI-classic__btn--${variant} CoreLabUI-classic__btn--${size}`}

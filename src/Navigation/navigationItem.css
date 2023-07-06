@@ -4,11 +4,19 @@
     cursor: pointer;
     display: block;
     text-decoration: none;
-    margin-bottom: 0.5em;
+    margin: 0 0.3em 0.5em;
 }
 
 .CoreLabUI-classic__navigation-item--divided {
-    padding: 0.5em 2em;
+    padding: 1em 2em;
+}
+
+.CoreLabUI-classic__navigation-item--divided
+    > .CoreLabUI-classic__navigation-item-title
+    > span {
+    font-size: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 .CoreLabUI-classic__navigation-item:visited {
@@ -23,6 +31,7 @@
 
 .CoreLabUI-classic__navigation-item:hover {
     background-color: var(--hover);
+    border-radius: var(--border-radius);
 }
 
 .CoreLabUI-classic__navigation-item--active,

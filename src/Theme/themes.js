@@ -13,7 +13,7 @@ export const defaultTheme = {
     secondaryDisabled: '#d8dae566',
     hover: '#E9ECEF',
     hoverLight: '#fcfcfc',
-    borderColor: '#d8dae5',
+    borderColor: '#e6e8f1',
     light: '#fcfcfc',
     info: '#5390d9',
     white: '#ffffff',
@@ -26,16 +26,18 @@ export const defaultTheme = {
     textSecondary: '#00000073',
     textDisabled: '#00000040',
     caption: '#00000073',
-    borderRadius: '4px',
+    borderRadius: '6px',
     checkboxBorderRadius: '4px',
     fontXsmall: '12px',
     fontSmall: '14px',
     fontMedium: '16px',
     fontLarge: '18px',
-    boxShadow:
+    boxShadowHover:
         'rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px',
+    boxShadow: 'rgba(0, 0, 0, 0.04) 0px 3px 5px',
     buttonShadow:
         'rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px rgba(17, 17, 26, 0.05) 0px 1px 0px,rgba(17, 17, 26, 0.1) 0px 0px 8px',
+    bottomShadow: 'rgba(0, 0, 0, 0.45) 0px 17px 20px -20px',
     scrollBarWidth: '6px',
     scrollBarTrackColor: '#F5F5F5',
     scrollBarThumbColor: '#C8C8C8',
@@ -45,7 +47,9 @@ export const defaultTheme = {
     tagColorContained: '#ffffff',
     tagBackgroundContained: '#555555',
     tagBorderContained: '#555555',
-    dividerColor: '#d8dae5'
+    dividerColor: '#d8dae5',
+    headerHeight: '55px',
+    headerShadow: 'rgba(0, 0, 0, 0.05) 0px 1px 2px 0px'
 };
 
 export const winterTheme = {
