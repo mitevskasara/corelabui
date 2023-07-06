@@ -2,10 +2,12 @@
     grid-area: right;
     grid-column: 12 / span 1;
     grid-row: 2 / span 10;
+    margin-top: calc(var(--header-height) + 1em);
 }
 
 .CoreLabUI-classic__layout-right--custom {
     grid-area: right;
     grid-column: var(--right-layout-grid-column);
     grid-row: var(--right-layout-grid-row);
+    margin-top: calc(var(--header-height) + 1em);
 }

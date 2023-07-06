@@ -17,6 +17,7 @@ esbuild
             'src/Divider/index.js',
             'src/Dropdown/index.js',
             'src/Grid/index.js',
+            'src/Header/index.js',
             'src/Highlight/index.js',
             'src/Input/index.js',
             'src/Layout/index.js',
