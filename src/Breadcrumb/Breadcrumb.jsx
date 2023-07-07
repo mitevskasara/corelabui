@@ -27,7 +27,7 @@ const Breadcrumb = forwardRef(
                                 variant="body2"
                                 margin={false}
                                 overflow="ellipsis"
-                                color="inherit">
+                                color="initial">
                                 {item?.title}
                             </Typography>
                         </a>

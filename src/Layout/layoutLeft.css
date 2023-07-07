@@ -3,6 +3,9 @@
     grid-column: 1 / span 2;
     grid-row: 2 / span 12;
     margin-top: calc(var(--header-height) + 1em);
+    padding: var(--padding);
+    margin: var(--margin);
+    overflow-y: auto;
 }
 
 .CoreLabUI-classic__layout-left--custom {
@@ -10,4 +13,7 @@
     grid-column: var(--left-layout-grid-column);
     grid-row: var(--left-layout-grid-row);
     margin-top: calc(var(--header-height) + 1em);
+    padding: var(--padding);
+    margin: var(--margin);
+    overflow-y: auto;
 }

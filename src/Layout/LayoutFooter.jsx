@@ -6,11 +6,24 @@ import './layoutFooter.css';
 injectTheme();
 injectStyle('LayoutFooter', {});
 
-export default ({ children, className, type = 'dashboard', ...props }) => {
+export default ({
+    children,
+    className,
+    type = 'dashboard',
+    padding,
+    margin,
+    ...props
+}) => {
     let classes = `CoreLabUI-classic CoreLabUI-classic__layout-footer--${type}`;
     if (className) classes += ` ${className}`;
     return (
-        <section {...props} className={classes}>
+        <section
+            {...props}
+            className={classes}
+            style={{
+                '--padding': padding,
+                '--margin': margin
+            }}>
             {children}
         </section>
     );

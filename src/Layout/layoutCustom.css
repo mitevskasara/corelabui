@@ -2,4 +2,7 @@
     grid-area: var(--custom-layout-grid-area);
     grid-column: var(--custom-layout-grid-column);
     grid-row: var(--custom-layout-grid-column);
+    padding: var(--padding);
+    margin: var(--margin);
+    overflow-y: auto;
 }

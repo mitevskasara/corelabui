@@ -14,6 +14,8 @@ export default ({
     rowStart,
     colSpan,
     rowSpan,
+    padding,
+    margin,
     ...props
 }) => {
     let classes = `CoreLabUI-classic CoreLabUI-classic__layout-left--${type}`;
@@ -26,9 +28,14 @@ export default ({
                 type === 'custom'
                     ? {
                           '--left-layout-grid-column': `${colStart} / span ${colSpan}`,
-                          '--left-layout-grid-row': `${rowStart} / span ${rowSpan}`
+                          '--left-layout-grid-row': `${rowStart} / span ${rowSpan}`,
+                          '--padding': padding,
+                          '--margin': margin
                       }
-                    : null
+                    : {
+                          '--padding': padding,
+                          '--margin': margin
+                      }
             }>
             {children}
         </section>

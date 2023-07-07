@@ -2,16 +2,25 @@
     grid-area: footer;
     grid-column: 3 / span 10;
     grid-row: 12 / span 2;
+    padding: var(--padding);
+    margin: var(--margin);
+    overflow-y: auto;
 }
 
 .CoreLabUI-classic__layout-footer--website {
     grid-area: footer;
     grid-column: 1 / span 12;
     grid-row: 12 / span 2;
+    padding: var(--padding);
+    margin: var(--margin);
+    overflow-y: auto;
 }
 
 .CoreLabUI-classic__layout-footer--custom {
     grid-area: footer;
     grid-column: 1 / span 12;
     grid-row: 12 / span 2;
+    padding: var(--padding);
+    margin: var(--margin);
+    overflow-y: auto;
 }

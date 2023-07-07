@@ -8,6 +8,8 @@ export default ({
     rowStart,
     colSpan,
     rowSpan,
+    padding,
+    margin,
     ...props
 }) => {
     return (
@@ -17,7 +19,9 @@ export default ({
             style={{
                 gridColumn: `${colStart} / span ${colSpan}`,
                 gridRow: `${rowStart} / span ${rowSpan}`,
-                gridArea: area
+                gridArea: area,
+                '--padding': padding,
+                '--margin': margin
             }}>
             {children}
         </section>

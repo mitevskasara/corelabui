@@ -1,10 +1,10 @@
 .CoreLabUI-classic__navigation-item {
     border: 1px solid transparent;
-    padding: 0.2em 2em;
+    padding: var(--nav-item-padding);
     cursor: pointer;
     display: block;
     text-decoration: none;
-    margin: 0 0.3em 0.5em;
+    margin: var(--nav-item-margin);
 }
 
 .CoreLabUI-classic__navigation-item--divided {

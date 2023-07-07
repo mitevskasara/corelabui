@@ -15,7 +15,7 @@
 
 .CoreLabUI-classic__heading1 {
     font-weight: 300;
-    font-size: 5rem;
+    font-size: var(--heading1);
     line-height: 1.167;
     letter-spacing: -0.01562em;
     margin-bottom: 0.35em;
@@ -24,7 +24,7 @@
 
 .CoreLabUI-classic__heading2 {
     font-weight: 400;
-    font-size: 3.75rem;
+    font-size: var(--heading2);
     line-height: 1.2;
     letter-spacing: -0.00833em;
     margin-bottom: 0.35em;
@@ -33,7 +33,7 @@
 
 .CoreLabUI-classic__heading3 {
     font-weight: 400;
-    font-size: 3rem;
+    font-size: var(--heading3);
     line-height: 1.167;
     letter-spacing: 0em;
     margin-bottom: 0.35em;
@@ -42,7 +42,7 @@
 
 .CoreLabUI-classic__heading4 {
     font-weight: 400;
-    font-size: 2.125rem;
+    font-size: var(--heading4);
     line-height: 1.235;
     letter-spacing: 0.00735em;
     margin-bottom: 0.35em;
@@ -51,7 +51,7 @@
 
 .CoreLabUI-classic__heading5 {
     font-weight: 400;
-    font-size: 1.5rem;
+    font-size: var(--heading5);
     line-height: 1.334;
     letter-spacing: 0em;
     margin-bottom: 0.35em;
@@ -60,7 +60,7 @@
 
 .CoreLabUI-classic__heading6 {
     font-weight: 500;
-    font-size: 1.25rem;
+    font-size: var(--heading6);
     line-height: 1.6;
     letter-spacing: 0.0075em;
     margin-bottom: 0.35em;
@@ -69,7 +69,7 @@
 
 .CoreLabUI-classic__subtitle1 {
     font-weight: 600;
-    font-size: 1rem;
+    font-size: var(--subtitle1);
     line-height: 1.75;
     letter-spacing: 0.00938em;
     margin-bottom: 0.35em;
@@ -78,7 +78,7 @@
 
 .CoreLabUI-classic__subtitle2 {
     font-weight: 600;
-    font-size: 0.875rem;
+    font-size: var(--subtitle2);
     line-height: 1.57;
     letter-spacing: 0.00714em;
     margin-bottom: 0.35em;
@@ -87,7 +87,7 @@
 
 .CoreLabUI-classic__body1 {
     font-weight: 400;
-    font-size: 1rem;
+    font-size: var(--body1);
     line-height: 1.5;
     letter-spacing: 0.00938em;
     margin-bottom: 0.35em;
@@ -96,7 +96,7 @@
 
 .CoreLabUI-classic__body2 {
     font-weight: 400;
-    font-size: 0.875rem;
+    font-size: var(--body2);
     line-height: 1.43;
     letter-spacing: 0.01071em;
     margin-bottom: 0.35em;
@@ -105,7 +105,7 @@
 
 .CoreLabUI-classic__caption {
     font-weight: 400;
-    font-size: 0.8rem;
+    font-size: var(--caption);
     line-height: 1.66;
     letter-spacing: 0.03333em;
     margin-bottom: 0.35em;

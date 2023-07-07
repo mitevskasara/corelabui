@@ -20,6 +20,8 @@ const NavigationItem = forwardRef(
             badge,
             items,
             disabled = false,
+            margin = '0 0.5em 0.5',
+            padding = '0.2em 2em',
             ...props
         },
         ref
@@ -37,7 +39,14 @@ const NavigationItem = forwardRef(
             : { ...props, onClick };
 
         return (
-            <Element {...elementProps} ref={ref} className={classes}>
+            <Element
+                {...elementProps}
+                ref={ref}
+                className={classes}
+                style={{
+                    '--nav-item-margin': margin,
+                    '--nav-item-padding': padding
+                }}>
                 <div className="CoreLabUI-classic__navigation-item-title">
                     <Typography
                         variant={divider ? 'caption' : 'body1'}
