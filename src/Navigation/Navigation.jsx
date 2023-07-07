@@ -18,6 +18,8 @@ const Navigation = forwardRef(
             minWidth = 'unset',
             border = 'none',
             overflow,
+            margin = '0 0.5em 0.5',
+            padding = '0.2em 2em',
             ...props
         },
         ref
@@ -46,13 +48,29 @@ const Navigation = forwardRef(
                         className="CoreLabUI-classic__navigation-items">
                         {item.items?.length ? (
                             <div className="CoreLabUI-classic__navigation-subitems">
-                                <NavigationItem {...item} key={index} divider />
+                                <NavigationItem
+                                    {...item}
+                                    key={index}
+                                    divider
+                                    margin={margin}
+                                    padding={padding}
+                                />
                                 {item.items.map((subitem, index) => (
-                                    <NavigationItem {...subitem} key={index} />
+                                    <NavigationItem
+                                        {...subitem}
+                                        key={index}
+                                        margin={margin}
+                                        padding={padding}
+                                    />
                                 ))}
                             </div>
                         ) : (
-                            <NavigationItem {...item} key={index} />
+                            <NavigationItem
+                                {...item}
+                                key={index}
+                                margin={margin}
+                                padding={padding}
+                            />
                         )}
                     </div>
                 ))}

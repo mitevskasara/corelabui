@@ -20,8 +20,8 @@ const NavigationItem = forwardRef(
             badge,
             items,
             disabled = false,
-            margin = '0 0.5em 0.5',
-            padding = '0.2em 2em',
+            margin,
+            padding,
             ...props
         },
         ref
