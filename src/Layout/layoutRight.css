@@ -1,6 +1,6 @@
 .CoreLabUI-classic__layout-right--dashboard {
     grid-area: right;
-    grid-column: 12 / span 1;
+    grid-column: 11 / span 2;
     grid-row: 2 / span 10;
     margin-top: calc(var(--header-height) + 1em);
     padding: var(--padding);
@@ -16,4 +16,10 @@
     padding: var(--padding);
     margin: var(--margin);
     overflow-y: auto;
+}
+
+@media only screen and (max-width: 1200px) {
+    .CoreLabUI-classic__layout-right--dashboard {
+        display: none;
+    }
 }
