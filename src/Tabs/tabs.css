@@ -1,0 +1,7 @@
+.CoreLabUI-classic__tabs {
+    display: flex;
+    border-bottom: 2px solid var(--border-color);
+    justify-content: space-between;
+    width: fit-content;
+    gap: 1em;
+}

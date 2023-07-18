@@ -2,6 +2,7 @@ import React, { forwardRef } from 'react';
 import Scrollable from '../Scrollable';
 import { injectTheme } from '../Theme';
 import { injectStyle } from '../utils';
+import useKeyPress from '../helpers/useKeyPress';
 
 import './popup.css';
 
@@ -25,6 +26,8 @@ const Popup = forwardRef(
     ) => {
         let classes = `CoreLabUI-classic CoreLabUI-classic__popup`;
         if (className) classes += ` ${className}`;
+        const escPressed = useKeyPress('Escape');
+        if (escPressed) close();
 
         return isOpen ? (
             <>

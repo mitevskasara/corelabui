@@ -43,13 +43,17 @@ const Table = forwardRef(
                                     key={index}
                                     className="CoreLabUI-classic__table-head-column">
                                     <div>
-                                        <Typography
-                                            variant="body2"
-                                            margin={false}
-                                            overflow="ellipsis"
-                                            color="initial">
-                                            {header}
-                                        </Typography>
+                                        {typeof header === 'string' ||
+                                        typeof header === 'number' ? (
+                                            <Typography
+                                                variant="body2"
+                                                margin={false}
+                                                overflow="ellipsis">
+                                                {header}
+                                            </Typography>
+                                        ) : (
+                                            header
+                                        )}
                                     </div>
                                 </th>
                             ))}

@@ -33,8 +33,7 @@ export default ({
                           '--margin': margin
                       }
                     : {
-                          '--padding': padding,
-                          '--margin': margin
+                          '--padding': padding
                       }
             }>
             {children}

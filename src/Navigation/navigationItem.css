@@ -5,6 +5,7 @@
     display: block;
     text-decoration: none;
     margin: var(--nav-item-margin);
+    border-radius: var(--border-radius);
 }
 
 .CoreLabUI-classic__navigation-item--divided {
