@@ -41,6 +41,8 @@
 .CoreLabUI-classic__header-root {
     position: fixed;
     top: 0;
+    right: 0px;
+    left: 0px;
     height: var(--header-height);
     padding: 0.5em var(--header-padding);
     box-shadow: var(--header-shadow);

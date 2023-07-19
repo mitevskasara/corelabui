@@ -54,8 +54,9 @@ const Header = forwardRef(
                             className="CoreLabUI-classic__header-logo"
                         />
                         <div
-                            className={`CoreLabUI-classic__header-nav CoreLabUI-classic__header-nav--${isOpen ? 'open' : 'closed'
-                                }`}
+                            className={`CoreLabUI-classic__header-nav CoreLabUI-classic__header-nav--${
+                                isOpen ? 'open' : 'closed'
+                            }`}
                             style={{
                                 '--header-items-margin':
                                     align === 'center' && 'auto',
@@ -88,23 +89,24 @@ const Header = forwardRef(
                             <span />
                         </div>
                     </div>
-                </div>
-                <div
-                    className={`CoreLabUI-classic__header-nav--mobile CoreLabUI-classic__header-nav--mobile--${isOpen ? 'open' : 'closed'
+                    <div
+                        className={`CoreLabUI-classic__header-nav--mobile CoreLabUI-classic__header-nav--mobile--${
+                            isOpen ? 'open' : 'closed'
                         }`}
-                    style={{
-                        '--header-padding': spacing
-                    }}>
-                    <menu className="CoreLabUI-classic__header-menu">
-                        {items?.map((item, key) => (
-                            <Link href={item.link} key={key}>
-                                {item.title}
-                            </Link>
-                        ))}
-                        {actions?.map((action, key) => (
-                            <Button {...action} key={key} />
-                        ))}
-                    </menu>
+                        style={{
+                            '--header-padding': spacing
+                        }}>
+                        <menu className="CoreLabUI-classic__header-menu">
+                            {items?.map((item, key) => (
+                                <Link href={item.link} key={key}>
+                                    {item.title}
+                                </Link>
+                            ))}
+                            {actions?.map((action, key) => (
+                                <Button {...action} key={key} />
+                            ))}
+                        </menu>
+                    </div>
                 </div>
             </>
         );
