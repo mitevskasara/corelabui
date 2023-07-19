@@ -78,7 +78,7 @@
 }
 
 .CoreLabUI-classic__header-logo {
-    max-width: 200px;
+    max-width: 140px;
     object-fit: scale-down;
 }
 
@@ -98,11 +98,11 @@
     transform: scale(0.95);
 }
 
-.CoreLabUI-classic__header-menu-icon:hover > span {
+.CoreLabUI-classic__header-menu-icon:hover>span {
     background-color: var(--primary);
 }
 
-.CoreLabUI-classic__header-menu-icon > span {
+.CoreLabUI-classic__header-menu-icon>span {
     width: 10px;
     height: 10px;
     border-radius: 3px;
@@ -134,12 +134,11 @@
 }
 
 .CoreLabUI-classic__header-nav--mobile--closed {
-    -webkit-animation: CoreLabUI-classic-header-menu-closed-keyframe 0.7s
-        forwards;
+    -webkit-animation: CoreLabUI-classic-header-menu-closed-keyframe 0.7s forwards;
     animation: CoreLabUI-classic-header-menu-closed-keyframe 0.7s forwards;
 }
 
-.CoreLabUI-classic__header-nav--mobile > .CoreLabUI-classic__header-menu {
+.CoreLabUI-classic__header-nav--mobile>.CoreLabUI-classic__header-menu {
     flex-direction: column;
     align-items: baseline;
     margin: 0;

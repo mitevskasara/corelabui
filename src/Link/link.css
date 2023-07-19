@@ -6,6 +6,7 @@
     position: relative;
     font-family: var(--font-family);
     line-height: 1.5;
+    font-weight: 500;
 }
 
 .CoreLabUI-classic__link--small {
@@ -44,8 +45,8 @@
     transition: opacity 300ms, transform 300ms;
 }
 
-.CoreLabUI-classic__link:hover > .CoreLabUI-classic__link-decoration,
-.CoreLabUI-classic__link:focus > .CoreLabUI-classic__link-decoration {
+.CoreLabUI-classic__link:hover>.CoreLabUI-classic__link-decoration,
+.CoreLabUI-classic__link:focus>.CoreLabUI-classic__link-decoration {
     color: var(--primary);
     opacity: 1;
     transform: scale(1);
