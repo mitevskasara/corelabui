@@ -13,21 +13,25 @@ const Header = forwardRef(
     (
         {
             children,
-            className,
+            classes,
             logo,
             items,
             actions,
             align = 'right',
             spacing = '2.5em',
+            maxWidth,
             ...props
         },
         ref
     ) => {
         const headerRef = useRef();
         const [isOpen, open] = useState(false);
-        let classes = `CoreLabUI-classic__header`;
-        if (className) classes += ` ${className}`;
+        let classes = `CoreLabUI-classic__header-root`;
+        if (classes?.root) classes += ` ${classes?.root}`;
         classes += ' CoreLabUI-classic';
+
+        let classesInner = `CoreLabUI-classic__header`;
+        if (classes?.inner) classesInner += ` ${classes?.inner}`;
 
         useClickAway(headerRef?.current, () => open(false));
 
@@ -40,40 +44,50 @@ const Header = forwardRef(
                     style={{
                         '--header-padding': spacing
                     }}>
-                    <img
-                        src={logo}
-                        className="CoreLabUI-classic__header-logo"
-                    />
                     <div
-                        className={`CoreLabUI-classic__header-nav CoreLabUI-classic__header-nav--${
-                            isOpen ? 'open' : 'closed'
-                        }`}
+                        className={classesInner}
                         style={{
-                            '--header-items-margin':
-                                align === 'center' && 'auto',
-                            '--header-items-margin-left':
-                                align === 'right' && 'auto',
-                            '--header-items-margin-right':
-                                align === 'left' && 'auto'
+                            '--header-max-width': maxWidth
                         }}>
-                        <menu className="CoreLabUI-classic__header-menu">
-                            {items?.map((item, key) => (
-                                <Link href={item.link} key={key}>
-                                    {item.title}
-                                </Link>
-                            ))}
-                            {actions?.map((action, key) => (
-                                <Button {...action} key={key} width="100%" />
-                            ))}
-                        </menu>
-                    </div>
-                    <div
-                        className="CoreLabUI-classic__header-menu-icon"
-                        onClick={() => open(!isOpen)}>
-                        <span />
-                        <span />
-                        <span />
-                        <span />
+                        <img
+                            src={logo}
+                            className="CoreLabUI-classic__header-logo"
+                        />
+                        <div
+                            className={`CoreLabUI-classic__header-nav CoreLabUI-classic__header-nav--${
+                                isOpen ? 'open' : 'closed'
+                            }`}
+                            style={{
+                                '--header-items-margin':
+                                    align === 'center' && 'auto',
+                                '--header-items-margin-left':
+                                    align === 'right' && 'auto',
+                                '--header-items-margin-right':
+                                    align === 'left' && 'auto'
+                            }}>
+                            <menu className="CoreLabUI-classic__header-menu">
+                                {items?.map((item, key) => (
+                                    <Link href={item.link} key={key}>
+                                        {item.title}
+                                    </Link>
+                                ))}
+                                {actions?.map((action, key) => (
+                                    <Button
+                                        {...action}
+                                        key={key}
+                                        width="100%"
+                                    />
+                                ))}
+                            </menu>
+                        </div>
+                        <div
+                            className="CoreLabUI-classic__header-menu-icon"
+                            onClick={() => open(!isOpen)}>
+                            <span />
+                            <span />
+                            <span />
+                            <span />
+                        </div>
                     </div>
                 </div>
                 <div
