@@ -26,9 +26,9 @@ const Header = forwardRef(
     ) => {
         const headerRef = useRef();
         const [isOpen, open] = useState(false);
-        let classes = `CoreLabUI-classic__header-root`;
-        if (classes?.root) classes += ` ${classes?.root}`;
-        classes += ' CoreLabUI-classic';
+        let classesRoot = `CoreLabUI-classic__header-root`;
+        if (classes?.root) classesRoot += ` ${classes?.root}`;
+        classesRoot += ' CoreLabUI-classic';
 
         let classesInner = `CoreLabUI-classic__header`;
         if (classes?.inner) classesInner += ` ${classes?.inner}`;
@@ -39,7 +39,7 @@ const Header = forwardRef(
             <>
                 <div
                     {...props}
-                    className={classes}
+                    className={classesRoot}
                     ref={headerRef}
                     style={{
                         '--header-padding': spacing
@@ -54,9 +54,8 @@ const Header = forwardRef(
                             className="CoreLabUI-classic__header-logo"
                         />
                         <div
-                            className={`CoreLabUI-classic__header-nav CoreLabUI-classic__header-nav--${
-                                isOpen ? 'open' : 'closed'
-                            }`}
+                            className={`CoreLabUI-classic__header-nav CoreLabUI-classic__header-nav--${isOpen ? 'open' : 'closed'
+                                }`}
                             style={{
                                 '--header-items-margin':
                                     align === 'center' && 'auto',
@@ -91,9 +90,8 @@ const Header = forwardRef(
                     </div>
                 </div>
                 <div
-                    className={`CoreLabUI-classic__header-nav--mobile CoreLabUI-classic__header-nav--mobile--${
-                        isOpen ? 'open' : 'closed'
-                    }`}
+                    className={`CoreLabUI-classic__header-nav--mobile CoreLabUI-classic__header-nav--mobile--${isOpen ? 'open' : 'closed'
+                        }`}
                     style={{
                         '--header-padding': spacing
                     }}>

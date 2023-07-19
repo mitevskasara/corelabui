@@ -25,7 +25,7 @@ export const defaultTheme = {
     text: '#000000bf',
     textSecondary: '#00000073',
     textDisabled: '#00000040',
-    caption: '#00000073',
+    captionColor: '#00000073',
     borderRadius: '6px',
     checkboxBorderRadius: '4px',
     fontXsmall: '12px',
@@ -108,7 +108,7 @@ export const darkTheme = {
     text: '#ffffffe0',
     textSecondary: '#ffffff73',
     textDisabled: '#ffffff40',
-    caption: '#ffffff73',
+    captionColor: '#ffffff73',
     borderColor: '#415A77',
     boxShadow: 'rgba(17, 17, 26, 0.1) 0px 4px 16px, #cbcbcb14 0px 8px 32px',
     tagColor: '#ffffff'
