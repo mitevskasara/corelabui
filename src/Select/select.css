@@ -19,6 +19,7 @@
     font-size: var(--font-medium);
     color: var(--text);
     background-color: var(--fields-background);
+    cursor: pointer;
 }
 
 .CoreLabUI-classic__select--small {
@@ -45,30 +46,30 @@
 }
 
 .CoreLabUI-classic__select:hover,
-.CoreLabUI-classic__root--error>input:hover {
+.CoreLabUI-classic__root--error > input:hover {
     border: 1px solid var(--primary-hover);
 }
 
 .CoreLabUI-classic__select:focus,
-.CoreLabUI-classic__root--error>input:focus {
+.CoreLabUI-classic__root--error > input:focus {
     border: 1px solid var(--primary-hover);
 }
 
-.CoreLabUI-classic__root:hover>.label {
+.CoreLabUI-classic__root:hover > .label {
     color: var(--primary-hover);
 }
 
 .CoreLabUI-classic__root--disabled,
-.CoreLabUI-classic__root--disabled>input:hover,
-.CoreLabUI-classic__root--disabled>input:focus {
+.CoreLabUI-classic__root--disabled > input:hover,
+.CoreLabUI-classic__root--disabled > input:focus {
     border: 1px solid var(--border-color);
     color: var(--border-color);
     pointer-events: none;
 }
 
-.CoreLabUI-classic__root--disabled>input::placeholder,
-.CoreLabUI-classic__root--disabled>.label,
-.CoreLabUI-classic__root--disabled>.helper-text {
+.CoreLabUI-classic__root--disabled > input::placeholder,
+.CoreLabUI-classic__root--disabled > .label,
+.CoreLabUI-classic__root--disabled > .helper-text {
     color: var(--border-color) !important;
 }
 
@@ -76,8 +77,8 @@
     border: 1px solid var(--error);
 }
 
-.CoreLabUI-classic__root--error>.label,
-.CoreLabUI-classic__root--error>.helper-text {
+.CoreLabUI-classic__root--error > .label,
+.CoreLabUI-classic__root--error > .helper-text {
     color: var(--error) !important;
 }
 
@@ -103,12 +104,16 @@
     display: none;
 }
 
-.CoreLabUI-classic__select-menu__option {
+.CoreLabUI-classic__select-menu__option--small,
+.CoreLabUI-classic__select-menu__option--medium,
+.CoreLabUI-classic__select-menu__option--large {
     padding: 10px 16px;
-    font-size: var(--body2);
+    font-size: var(--font-small);
 }
 
-.CoreLabUI-classic__select-menu__option:hover {
+.CoreLabUI-classic__select-menu__option--small,
+.CoreLabUI-classic__select-menu__option--medium,
+.CoreLabUI-classic__select-menu__option--large:hover {
     background-color: var(--hover);
     cursor: pointer;
 }

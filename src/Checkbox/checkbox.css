@@ -23,7 +23,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    border: 2px solid var(--primary);
+    border: 1.5px solid var(--primary);
 }
 
 .CoreLabUI-classic__checkbox-checkmark--small {

@@ -22,7 +22,8 @@ const TableOfContents = forwardRef(
                     {items?.map((item, key) => (
                         <a
                             key={key}
-                            href={item?.anchor}
+                            href={!item?.onClick && item?.anchor}
+                            onClick={item?.onClick && item?.onClick}
                             className={`CoreLabUI-classic__table-of-contents-item CoreLabUI-classic__table-of-contents-item--${
                                 item?.active ? 'active' : 'inactive'
                             }`}>

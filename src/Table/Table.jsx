@@ -17,7 +17,7 @@ const Table = forwardRef(
             spacing = '0.5em 1em',
             striped = false,
             bordered = true,
-            overflow,
+            textOverflow,
             ...props
         },
         ref
@@ -45,12 +45,14 @@ const Table = forwardRef(
                                     className="CoreLabUI-classic__table-head-column">
                                     <div>
                                         {typeof header === 'string' ||
-                                            typeof header === 'number' ? (
+                                        typeof header === 'number' ? (
                                             <Typography
                                                 variant="subtitle2"
                                                 htmlElement="p"
                                                 margin={false}
-                                                overflow={overflow && "ellipsis"}>
+                                                overflow={
+                                                    textOverflow && 'ellipsis'
+                                                }>
                                                 {header}
                                             </Typography>
                                         ) : (
@@ -72,11 +74,14 @@ const Table = forwardRef(
                                         className="CoreLabUI-classic__table-body-column">
                                         <div>
                                             {typeof row[column] === 'string' ||
-                                                typeof row[column] === 'number' ? (
+                                            typeof row[column] === 'number' ? (
                                                 <Typography
                                                     variant="body2"
                                                     margin={false}
-                                                    overflow={overflow && "ellipsis"}>
+                                                    overflow={
+                                                        textOverflow &&
+                                                        'ellipsis'
+                                                    }>
                                                     {row[column]}
                                                 </Typography>
                                             ) : (

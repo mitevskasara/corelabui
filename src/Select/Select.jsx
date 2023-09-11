@@ -73,7 +73,7 @@ export default ({
                     <div
                         key={index}
                         value={option.value}
-                        className={`CoreLabUI-classic__select-menu__option
+                        className={`CoreLabUI-classic__select-menu__option--${size}
                         ${
                             option.value === value
                                 ? 'CoreLabUI-classic__select-menu__option--selected'

@@ -32,18 +32,20 @@ const Checkbox = forwardRef(
                 ' CoreLabUI-classic__checkbox-checkmark--disabled';
 
         return (
-            <label className={classes}>
-                {label}
-                <input
-                    {...props}
-                    type="checkbox"
-                    checked={checked}
-                    ref={ref}
-                    onChange={onChange}
-                    disabled={disabled}
-                />
-                <span className={checkmarkClasses}></span>
-            </label>
+            <div>
+                <label className={classes}>
+                    {label}
+                    <input
+                        {...props}
+                        type="checkbox"
+                        checked={checked}
+                        ref={ref}
+                        onChange={onChange}
+                        disabled={disabled}
+                    />
+                    <span className={checkmarkClasses}></span>
+                </label>
+            </div>
         );
     }
 );
