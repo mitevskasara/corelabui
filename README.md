@@ -10,7 +10,7 @@ Corelab UI is available as an npm package.
 Make sure you have Node.js installed on your machine. Then run:
 
 ```bash
-  npm install @corelabui/classic
+  npm install corelabui
 ```
 
 ## Usage
@@ -18,11 +18,10 @@ Make sure you have Node.js installed on your machine. Then run:
 Here is an example of a basic app using Corelab UI's Button component from the classic theme:
 
 ```javascript
-import Button from '@corelabui/classic/Button';
+import Button from 'corelabui/Button';
 
 function App() {
-    return;
-    <Button onClick={() => console.log('Hello Corelab UI')}>Click me!</Button>;
+    return <Button onClick={() => console.log('Hello Corelab UI')}>Click me!</Button>;
 }
 ```
 
