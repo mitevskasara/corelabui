@@ -31,7 +31,9 @@ const Input = forwardRef(
         return (
             <div className={classes}>
                 {label && (
-                    <label className="CoreLabUI-classic__field__label">
+                    <label
+                        className="CoreLabUI-classic__field__label"
+                        htmlFor={props.name}>
                         {label}
                     </label>
                 )}

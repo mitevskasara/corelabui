@@ -46,12 +46,15 @@ export default ({
                 ref={ref}
                 onClick={() => toggle(!open)}>
                 {label && (
-                    <label className="CoreLabUI-classic__select-label">
+                    <label
+                        className="CoreLabUI-classic__select-label"
+                        htmlFor={props.name}>
                         {label}
                     </label>
                 )}
                 <input
                     {...props}
+                    name={props.name}
                     value={options?.find((o) => o.value === value)?.label}
                     className={`CoreLabUI-classic__select CoreLabUI-classic__select--${size} CoreLabUI-classic__select--${
                         error ? 'error' : ''

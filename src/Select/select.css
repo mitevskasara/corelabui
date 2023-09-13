@@ -36,8 +36,9 @@
 
 .CoreLabUI-classic__select-label,
 .CoreLabUI-classic__select-helper-text {
-    font-size: var(--font-xsmall);
-    color: var(--text-secondary);
+    font-size: var(--font-small);
+    color: var(--text);
+    font-weight: 600;
 }
 
 .CoreLabUI-classic__select::placeholder {
@@ -111,8 +112,8 @@
     font-size: var(--font-small);
 }
 
-.CoreLabUI-classic__select-menu__option--small,
-.CoreLabUI-classic__select-menu__option--medium,
+.CoreLabUI-classic__select-menu__option--small:hover,
+.CoreLabUI-classic__select-menu__option--medium:hover,
 .CoreLabUI-classic__select-menu__option--large:hover {
     background-color: var(--hover);
     cursor: pointer;
