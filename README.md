@@ -21,7 +21,11 @@ Here is an example of a basic app using Corelab UI's Button component from the c
 import Button from 'corelabui/Button';
 
 function App() {
-    return <Button onClick={() => console.log('Hello Corelab UI')}>Click me!</Button>;
+    return (
+        <Button onClick={() => console.log('Hello Corelab UI')}>
+            Click me!
+        </Button>
+    );
 }
 ```
 
