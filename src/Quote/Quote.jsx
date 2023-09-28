@@ -9,10 +9,10 @@ injectStyle('Quote', {});
 
 const Quote = forwardRef(
     ({ className, children, cite, separator = 'line', ...props }, ref) => {
-        let classes = 'CoreLabUI-classic__quote';
-        if (separator === 'line') classes += ' CoreLabUI-classic__quote--line';
+        let classes = 'CoreLabUI__quote';
+        if (separator === 'line') classes += ' CoreLabUI__quote--line';
         if (className) classes += ` ${className}`;
-        classes += ' CoreLabUI-classic';
+        classes += ' CoreLabUI';
 
         return (
             <blockquote {...props} className={classes} ref={ref}>
@@ -28,8 +28,8 @@ const Quote = forwardRef(
                     children
                 )}
                 {cite && (
-                    <figcaption className="CoreLabUI-classic__quote-cite">
-                        <div className="CoreLabUI-classic__quote-divider" />
+                    <figcaption className="CoreLabUI__quote-cite">
+                        <div className="CoreLabUI__quote-divider" />
                         {typeof cite === 'string' ? (
                             <Typography variant="caption">{cite}</Typography>
                         ) : (

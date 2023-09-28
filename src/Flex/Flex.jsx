@@ -36,7 +36,7 @@ const Flex = forwardRef(
         },
         ref
     ) => {
-        let classes = `CoreLabUI-classic__flex CoreLabUI-classic__flex-gap CoreLabUI-classic__flex-direction CoreLabUI-classic__flex-align-items--${alignItems} CoreLabUI-classic__flex-align-content--${alignContent} CoreLabUI-classic__flex-justify-content--${justifyContent} CoreLabUI-classic__flex-${wrap}`;
+        let classes = `CoreLabUI__flex CoreLabUI__flex-gap CoreLabUI__flex-direction CoreLabUI__flex-align-items--${alignItems} CoreLabUI__flex-align-content--${alignContent} CoreLabUI__flex-justify-content--${justifyContent} CoreLabUI__flex-${wrap}`;
         if (className) classes += ` ${className}`;
         return (
             <div

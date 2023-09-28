@@ -1,29 +1,29 @@
-.CoreLabUI-classic__layout {
+.CoreLabUI__layout {
     display: grid;
 }
 
-.CoreLabUI-classic__layout--website {
+.CoreLabUI__layout--website {
     grid-template-areas: var(--layout-website-template-areas);
     height: 100%;
 }
 
-.CoreLabUI-classic__layout--dashboard {
+.CoreLabUI__layout--dashboard {
     grid-template-areas: var(--layout-dashboard-template-areas);
     height: 100%;
 }
 
-.CoreLabUI-classic__layout--custom {
+.CoreLabUI__layout--custom {
     grid-template-areas: var(--layout-template-areas);
 }
 
 @media only screen and (max-width: 1200px) {
-    .CoreLabUI-classic__layout--dashboard {
+    .CoreLabUI__layout--dashboard {
         grid-template-areas: var(--layout-dashboard-template-areas-md);
     }
 }
 
 @media only screen and (max-width: 768px) {
-    .CoreLabUI-classic__layout--dashboard {
+    .CoreLabUI__layout--dashboard {
         grid-template-areas: var(--layout-dashboard-template-areas-sm);
     }
 }

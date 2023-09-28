@@ -1,8 +1,8 @@
-.CoreLabUI-classic__tab-content {
+.CoreLabUI__tab-content {
     display: none;
     padding: 1em 0px;
 }
 
-.CoreLabUI-classic__tab-content--active {
+.CoreLabUI__tab-content--active {
     display: block;
 }

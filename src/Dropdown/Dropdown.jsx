@@ -26,12 +26,12 @@ const Dropdown = forwardRef(
         const [anchorEl, setAnchorEl] = useState(null);
         const open = Boolean(anchorEl);
 
-        let classes = `CoreLabUI-classic CoreLabUI-classic__dropdown`;
+        let classes = `CoreLabUI CoreLabUI__dropdown`;
         if (className) classes += ` ${className}`;
 
-        let contentClasses = `CoreLabUI-classic__dropdown-content`;
+        let contentClasses = `CoreLabUI__dropdown-content`;
         if (trigger === 'click')
-            contentClasses += ` CoreLabUI-classic__dropdown-content--${
+            contentClasses += ` CoreLabUI__dropdown-content--${
                 open ? 'open' : 'closed'
             }`;
 
@@ -47,7 +47,7 @@ const Dropdown = forwardRef(
             <div {...props} className={classes} ref={ref}>
                 <Button
                     {...buttonProps}
-                    className="CoreLabUI-classic__dropdown-trigger"
+                    className="CoreLabUI__dropdown-trigger"
                     disabled={disabled}
                     onClick={handleClick}
                 />
@@ -62,7 +62,7 @@ const Dropdown = forwardRef(
                                   `calc(50% - ${minWidth}/2)`,
                         '--right': position === 'right' && 0
                     }}>
-                    <div className="CoreLabUI-classic__dropdown-arrow" />
+                    <div className="CoreLabUI__dropdown-arrow" />
                     {children}
                 </div>
             </div>

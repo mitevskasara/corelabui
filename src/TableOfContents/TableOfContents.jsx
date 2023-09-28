@@ -10,7 +10,7 @@ injectStyle('TableOfContents', {});
 
 const TableOfContents = forwardRef(
     ({ className, title, items, ...props }, ref) => {
-        let classes = `CoreLabUI-classic CoreLabUI-classic__table-of-contents`;
+        let classes = `CoreLabUI CoreLabUI__table-of-contents`;
         if (className) classes += ` ${className}`;
 
         return (
@@ -24,7 +24,7 @@ const TableOfContents = forwardRef(
                             key={key}
                             href={!item?.onClick && item?.anchor}
                             onClick={item?.onClick && item?.onClick}
-                            className={`CoreLabUI-classic__table-of-contents-item CoreLabUI-classic__table-of-contents-item--${
+                            className={`CoreLabUI__table-of-contents-item CoreLabUI__table-of-contents-item--${
                                 item?.active ? 'active' : 'inactive'
                             }`}>
                             <Typography

@@ -9,9 +9,9 @@ injectTheme();
 injectStyle('Tabs', {});
 
 const Tabs = ({ children, className, items, active, onChange, ...props }) => {
-    let classes = 'CoreLabUI-classic__tabs';
+    let classes = 'CoreLabUI__tabs';
     if (className) classes += ` ${className}`;
-    classes += ' CoreLabUI-classic';
+    classes += ' CoreLabUI';
     const leftPressed = useKeyPress('ArrowLeft');
     const rightPressed = useKeyPress('ArrowRight');
 

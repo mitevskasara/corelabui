@@ -1,4 +1,4 @@
-.CoreLabUI-classic__link {
+.CoreLabUI__link {
     color: var(--text);
     text-decoration: none;
     cursor: pointer;
@@ -9,30 +9,30 @@
     font-weight: 500;
 }
 
-.CoreLabUI-classic__link--small {
+.CoreLabUI__link--small {
     font-size: var(--font-small);
 }
 
-.CoreLabUI-classic__link--medium {
+.CoreLabUI__link--medium {
     font-size: var(--font-medium);
 }
 
-.CoreLabUI-classic__link--large {
+.CoreLabUI__link--large {
     font-size: var(--font-large);
 }
 
-.CoreLabUI-classic__link:hover,
-.CoreLabUI-classic__link:active {
+.CoreLabUI__link:hover,
+.CoreLabUI__link:active {
     color: var(--primary-hover) !important;
 }
 
-.CoreLabUI-classic__link--disabled {
+.CoreLabUI__link--disabled {
     color: var(--text-disabled);
     opacity: 0.4;
     pointer-events: none;
 }
 
-.CoreLabUI-classic__link-decoration {
+.CoreLabUI__link-decoration {
     transform: scale(0);
     transform-origin: center;
     position: absolute;
@@ -45,8 +45,8 @@
     transition: opacity 300ms, transform 300ms;
 }
 
-.CoreLabUI-classic__link:hover > .CoreLabUI-classic__link-decoration,
-.CoreLabUI-classic__link:focus > .CoreLabUI-classic__link-decoration {
+.CoreLabUI__link:hover > .CoreLabUI__link-decoration,
+.CoreLabUI__link:focus > .CoreLabUI__link-decoration {
     color: var(--primary);
     opacity: 1;
     transform: scale(1);

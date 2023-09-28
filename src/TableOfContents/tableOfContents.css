@@ -1,4 +1,4 @@
-.CoreLabUI-classic__table-of-contents-item {
+.CoreLabUI__table-of-contents-item {
     display: block;
     padding: 0.2em 1em;
     text-decoration: none;
@@ -7,13 +7,13 @@
     border-left: 2px solid transparent;
 }
 
-.CoreLabUI-classic__table-of-contents-item:hover {
+.CoreLabUI__table-of-contents-item:hover {
     border-left: 2px solid var(--primary);
     color: var(--primary);
 }
 
-.CoreLabUI-classic__table-of-contents-item--active,
-.CoreLabUI-classic__table-of-contents-item:active {
+.CoreLabUI__table-of-contents-item--active,
+.CoreLabUI__table-of-contents-item:active {
     border-left: 2px solid var(--primary);
     background-color: var(--primary-active);
 }

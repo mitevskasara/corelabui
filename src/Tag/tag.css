@@ -1,4 +1,4 @@
-.CoreLabUI-classic__tag {
+.CoreLabUI__tag {
     font-family: var(--font-family);
     width: var(--tag-width);
     display: flex;
@@ -9,12 +9,13 @@
     padding: 0.1em 1em;
 }
 
-.CoreLabUI-classic__tag--outlined {
+.CoreLabUI__tag--outlined {
+    color: var(--tag-color-outlined);
     border: 1px solid var(--tag-border-outlined);
     background-color: var(--tag-background-outlined);
 }
 
-.CoreLabUI-classic__tag--contained {
+.CoreLabUI__tag--contained {
     border: 1px solid transparent;
     color: var(--tag-color-contained);
     background-color: var(--tag-background-contained);

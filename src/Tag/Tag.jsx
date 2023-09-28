@@ -14,15 +14,15 @@ const Tag = forwardRef(
             className,
             text = '',
             variant = 'outlined',
-            color,
+            color = 'inherit',
             width = 'fit-content',
             ...props
         },
         ref
     ) => {
-        let classes = `CoreLabUI-classic__tag CoreLabUI-classic__tag--${variant}`;
+        let classes = `CoreLabUI__tag CoreLabUI__tag--${variant}`;
         if (className) classes += ` ${className}`;
-        classes += ' CoreLabUI-classic';
+        classes += ' CoreLabUI';
         let style = { '--tag-width': width };
         if (color)
             style = {

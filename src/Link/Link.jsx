@@ -12,8 +12,8 @@ const Link = forwardRef(
         { children, disabled, size = 'medium', color, className, ...props },
         ref
     ) => {
-        let classes = `CoreLabUI-classic CoreLabUI-classic__link CoreLabUI-classic__link--${size}`;
-        if (disabled) classes += ' CoreLabUI-classic__link--disabled';
+        let classes = `CoreLabUI CoreLabUI__link CoreLabUI__link--${size}`;
+        if (disabled) classes += ' CoreLabUI__link--disabled';
         if (className) classes += ` ${className}`;
 
         return (
@@ -23,7 +23,7 @@ const Link = forwardRef(
                 ref={ref}
                 style={color ? { '--text': color } : null}>
                 {children}
-                <span className="CoreLabUI-classic__link-decoration" />
+                <span className="CoreLabUI__link-decoration" />
             </a>
         );
     }

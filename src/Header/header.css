@@ -1,4 +1,4 @@
-@keyframes CoreLabUI-classic-header-menu-open-keyframe {
+@keyframes CoreLabUI-header-menu-open-keyframe {
     0% {
         top: -100vh;
     }
@@ -8,7 +8,7 @@
     }
 }
 
-@-webkit-keyframes CoreLabUI-classic-header-menu-open-keyframe {
+@-webkit-keyframes CoreLabUI-header-menu-open-keyframe {
     0% {
         top: -100vh;
     }
@@ -18,7 +18,7 @@
     }
 }
 
-@keyframes CoreLabUI-classic-header-menu-closed-keyframe {
+@keyframes CoreLabUI-header-menu-closed-keyframe {
     0% {
         top: calc(var(--header-height) + 1em);
     }
@@ -28,7 +28,7 @@
     }
 }
 
-@-webkit-keyframes CoreLabUI-classic-header-menu-closed-keyframe {
+@-webkit-keyframes CoreLabUI-header-menu-closed-keyframe {
     0% {
         top: calc(var(--header-height) + 1em);
     }
@@ -38,7 +38,7 @@
     }
 }
 
-.CoreLabUI-classic__header-root {
+.CoreLabUI__header-root {
     position: fixed;
     top: 0;
     right: 0px;
@@ -51,7 +51,7 @@
     z-index: 2;
 }
 
-.CoreLabUI-classic__header {
+.CoreLabUI__header {
     max-width: var(--header-max-width);
     margin: auto;
     display: flex;
@@ -59,7 +59,7 @@
     height: inherit;
 }
 
-.CoreLabUI-classic__header-nav {
+.CoreLabUI__header-nav {
     display: flex;
     align-items: center;
     gap: 1em;
@@ -69,7 +69,7 @@
     padding-left: 1em;
 }
 
-.CoreLabUI-classic__header-menu {
+.CoreLabUI__header-menu {
     list-style: none;
     display: flex;
     gap: 1em;
@@ -77,12 +77,12 @@
     align-items: center;
 }
 
-.CoreLabUI-classic__header-logo {
+.CoreLabUI__header-logo {
     max-width: 140px;
     object-fit: scale-down;
 }
 
-.CoreLabUI-classic__header-menu-icon {
+.CoreLabUI__header-menu-icon {
     display: none;
     grid-template-columns: auto auto;
     gap: 2px;
@@ -90,26 +90,26 @@
     margin-left: auto;
 }
 
-.CoreLabUI-classic__header-menu-icon:hover {
+.CoreLabUI__header-menu-icon:hover {
     transform: scale(1.05);
 }
 
-.CoreLabUI-classic__header-menu-icon:active {
+.CoreLabUI__header-menu-icon:active {
     transform: scale(0.95);
 }
 
-.CoreLabUI-classic__header-menu-icon:hover > span {
+.CoreLabUI__header-menu-icon:hover > span {
     background-color: var(--primary);
 }
 
-.CoreLabUI-classic__header-menu-icon > span {
+.CoreLabUI__header-menu-icon > span {
     width: 10px;
     height: 10px;
     border-radius: 3px;
     background-color: var(--text);
 }
 
-.CoreLabUI-classic__header-nav--mobile {
+.CoreLabUI__header-nav--mobile {
     display: none;
     position: fixed;
     padding: 1em var(--header-padding);
@@ -128,38 +128,37 @@
     z-index: 1;
 }
 
-.CoreLabUI-classic__header-nav--mobile--open {
-    -webkit-animation: CoreLabUI-classic-header-menu-open-keyframe 0.7s forwards;
-    animation: CoreLabUI-classic-header-menu-open-keyframe 0.7s forwards;
+.CoreLabUI__header-nav--mobile--open {
+    -webkit-animation: CoreLabUI-header-menu-open-keyframe 0.7s forwards;
+    animation: CoreLabUI-header-menu-open-keyframe 0.7s forwards;
 }
 
-.CoreLabUI-classic__header-nav--mobile--closed {
-    -webkit-animation: CoreLabUI-classic-header-menu-closed-keyframe 0.7s
-        forwards;
-    animation: CoreLabUI-classic-header-menu-closed-keyframe 0.7s forwards;
+.CoreLabUI__header-nav--mobile--closed {
+    -webkit-animation: CoreLabUI-header-menu-closed-keyframe 0.7s forwards;
+    animation: CoreLabUI-header-menu-closed-keyframe 0.7s forwards;
 }
 
-.CoreLabUI-classic__header-nav--mobile > .CoreLabUI-classic__header-menu {
+.CoreLabUI__header-nav--mobile > .CoreLabUI__header-menu {
     flex-direction: column;
     align-items: baseline;
     margin: 0;
 }
 
 @media only screen and (max-width: 768px) {
-    .CoreLabUI-classic__header-nav--mobile {
+    .CoreLabUI__header-nav--mobile {
         display: flex;
         gap: 1em;
     }
 
-    .CoreLabUI-classic__header-nav {
+    .CoreLabUI__header-nav {
         display: none;
     }
 
-    .CoreLabUI-classic__header-menu {
+    .CoreLabUI__header-menu {
         width: 100%;
     }
 
-    .CoreLabUI-classic__header-menu-icon {
+    .CoreLabUI__header-menu-icon {
         display: grid;
     }
 }

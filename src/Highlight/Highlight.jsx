@@ -20,13 +20,11 @@ const Highlight = forwardRef(
         },
         ref
     ) => {
-        let classes = 'CoreLabUI-classic CoreLabUI-classic__highlight';
-        if (gradient)
-            classes =
-                'CoreLabUI-classic CoreLabUI-classic__highlight--gradient';
+        let classes = 'CoreLabUI CoreLabUI__highlight';
+        if (gradient) classes = 'CoreLabUI CoreLabUI__highlight--gradient';
         if (textGradient)
             classes =
-                'CoreLabUI-classic CoreLabUI-classic__highlight--gradient CoreLabUI-classic CoreLabUI-classic__highlight--gradient-text';
+                'CoreLabUI CoreLabUI__highlight--gradient CoreLabUI CoreLabUI__highlight--gradient-text';
         if (className) classes += ` ${className}`;
         let gradientStyle = gradient
             ? {

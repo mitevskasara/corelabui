@@ -26,12 +26,11 @@ const NavigationItem = forwardRef(
         },
         ref
     ) => {
-        let classes = `CoreLabUI-classic CoreLabUI-classic__navigation-item`;
-        if (active) classes += ` CoreLabUI-classic__navigation-item--active`;
-        if (!active) classes += ` CoreLabUI-classic__navigation-item--inactive`;
-        if (divider) classes += ` CoreLabUI-classic__navigation-item--divided`;
-        if (disabled)
-            classes += ` CoreLabUI-classic__navigation-item--disabled`;
+        let classes = `CoreLabUI CoreLabUI__navigation-item`;
+        if (active) classes += ` CoreLabUI__navigation-item--active`;
+        if (!active) classes += ` CoreLabUI__navigation-item--inactive`;
+        if (divider) classes += ` CoreLabUI__navigation-item--divided`;
+        if (disabled) classes += ` CoreLabUI__navigation-item--disabled`;
         if (className) classes += ` ${className}`;
         const Element = link ? 'a' : 'div';
         const elementProps = link
@@ -47,7 +46,7 @@ const NavigationItem = forwardRef(
                     '--nav-item-margin': margin,
                     '--nav-item-padding': padding
                 }}>
-                <div className="CoreLabUI-classic__navigation-item-title">
+                <div className="CoreLabUI__navigation-item-title">
                     <Typography
                         variant={divider ? 'caption' : 'body1'}
                         margin={false}
@@ -57,7 +56,7 @@ const NavigationItem = forwardRef(
                     {badge ? badge : null}
                 </div>
                 {divider && (
-                    <div className="CoreLabUI-classic__navigation-item-divider" />
+                    <div className="CoreLabUI__navigation-item-divider" />
                 )}
             </Element>
         );

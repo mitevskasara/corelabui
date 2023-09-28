@@ -40,7 +40,7 @@ export const defaultTheme = {
     heading6: '1.25rem',
     subtitle1: '1rem',
     subtitle2: '0.875rem',
-    body1: '1rem',
+    body1: '0.95rem',
     body2: '0.875rem',
     caption: '0.8rem',
     boxShadowHover:
@@ -97,8 +97,13 @@ export const fallTheme = {
 
 export const darkTheme = {
     ...defaultTheme,
-    background: '#1B263B',
-    fieldsBackground: '#ffffff0f',
+    primary: '#75a2ce',
+    primaryHover: '#8db1d7',
+    primaryActive: '#0096C745',
+    primaryDisabled: '#8e9093',
+    light: '#171b20',
+    background: '#171b20',
+    fieldsBackground: '#282828',
     secondary: '#ffffff',
     backdrop: '#ffffff',
     hover: '#5b6d83',
@@ -107,9 +112,11 @@ export const darkTheme = {
     subtitle: '#ffffffe0',
     text: '#ffffffe0',
     textSecondary: '#ffffff73',
-    textDisabled: '#ffffff40',
+    textDisabled: '#74777a',
     captionColor: '#ffffff73',
-    borderColor: '#415A77',
+    borderColor: '#575757',
     boxShadow: 'rgba(17, 17, 26, 0.1) 0px 4px 16px, #cbcbcb14 0px 8px 32px',
-    tagColor: '#ffffff'
+    tagColorOutlined: '#ffffffe0',
+    tagBackgroundOutlined: '#55555514',
+    tagBorderOutlined: '#ffffffe0'
 };

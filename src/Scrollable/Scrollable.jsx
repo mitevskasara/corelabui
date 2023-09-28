@@ -7,7 +7,7 @@ injectTheme();
 injectStyle('Scrollable', {});
 
 const Scrollable = forwardRef(({ className, children, ...props }, ref) => {
-    let classes = 'CoreLabUI-classic CoreLabUI-classic__scrollable';
+    let classes = 'CoreLabUI CoreLabUI__scrollable';
     if (className) classes += ` ${className}`;
 
     return (

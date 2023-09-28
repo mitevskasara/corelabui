@@ -24,7 +24,7 @@ const Navigation = forwardRef(
         },
         ref
     ) => {
-        let classes = `CoreLabUI-classic CoreLabUI-classic__navigation`;
+        let classes = `CoreLabUI CoreLabUI__navigation`;
         if (className) classes += ` ${className}`;
 
         return (
@@ -43,11 +43,9 @@ const Navigation = forwardRef(
                         border === 'right' && '1px solid var(--border-color)'
                 }}>
                 {items?.map((item, index) => (
-                    <div
-                        key={index}
-                        className="CoreLabUI-classic__navigation-items">
+                    <div key={index} className="CoreLabUI__navigation-items">
                         {item.items?.length ? (
-                            <div className="CoreLabUI-classic__navigation-subitems">
+                            <div className="CoreLabUI__navigation-subitems">
                                 <NavigationItem
                                     {...item}
                                     key={index}

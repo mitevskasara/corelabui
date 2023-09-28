@@ -1,19 +1,19 @@
-.CoreLabUI-classic__heading1,
-.CoreLabUI-classic__heading2,
-.CoreLabUI-classic__heading3,
-.CoreLabUI-classic__heading4,
-.CoreLabUI-classic__heading5,
-.CoreLabUI-classic__heading6,
-.CoreLabUI-classic__subtitle1,
-.CoreLabUI-classic__subtitle2,
-.CoreLabUI-classic__body1,
-.CoreLabUI-classic__body2,
-.CoreLabUI-classic__caption {
+.CoreLabUI__heading1,
+.CoreLabUI__heading2,
+.CoreLabUI__heading3,
+.CoreLabUI__heading4,
+.CoreLabUI__heading5,
+.CoreLabUI__heading6,
+.CoreLabUI__subtitle1,
+.CoreLabUI__subtitle2,
+.CoreLabUI__body1,
+.CoreLabUI__body2,
+.CoreLabUI__caption {
     font-family: var(--font-family);
     margin-top: 0;
 }
 
-.CoreLabUI-classic__heading1 {
+.CoreLabUI__heading1 {
     font-weight: 600;
     font-size: var(--heading1);
     line-height: 1.167;
@@ -22,7 +22,7 @@
     color: var(--title);
 }
 
-.CoreLabUI-classic__heading2 {
+.CoreLabUI__heading2 {
     font-weight: 500;
     font-size: var(--heading2);
     line-height: 1.2;
@@ -31,7 +31,7 @@
     color: var(--title);
 }
 
-.CoreLabUI-classic__heading3 {
+.CoreLabUI__heading3 {
     font-weight: 500;
     font-size: var(--heading3);
     line-height: 1.167;
@@ -40,7 +40,7 @@
     color: var(--title);
 }
 
-.CoreLabUI-classic__heading4 {
+.CoreLabUI__heading4 {
     font-weight: 500;
     font-size: var(--heading4);
     line-height: 1.235;
@@ -49,7 +49,7 @@
     color: var(--title);
 }
 
-.CoreLabUI-classic__heading5 {
+.CoreLabUI__heading5 {
     font-weight: 500;
     font-size: var(--heading5);
     line-height: 1.334;
@@ -58,7 +58,7 @@
     color: var(--title);
 }
 
-.CoreLabUI-classic__heading6 {
+.CoreLabUI__heading6 {
     font-weight: 500;
     font-size: var(--heading6);
     line-height: 1.6;
@@ -67,7 +67,7 @@
     color: var(--title);
 }
 
-.CoreLabUI-classic__subtitle1 {
+.CoreLabUI__subtitle1 {
     font-weight: 600;
     font-size: var(--subtitle1);
     line-height: 1.75;
@@ -76,7 +76,7 @@
     color: var(--title);
 }
 
-.CoreLabUI-classic__subtitle2 {
+.CoreLabUI__subtitle2 {
     font-weight: 600;
     font-size: var(--subtitle2);
     line-height: 1.57;
@@ -85,7 +85,7 @@
     color: var(--title);
 }
 
-.CoreLabUI-classic__body1 {
+.CoreLabUI__body1 {
     font-weight: 500;
     font-size: var(--body1);
     line-height: 1.5;
@@ -94,7 +94,7 @@
     color: var(--text);
 }
 
-.CoreLabUI-classic__body2 {
+.CoreLabUI__body2 {
     font-weight: 500;
     font-size: var(--body2);
     line-height: 1.43;
@@ -103,7 +103,7 @@
     color: var(--text);
 }
 
-.CoreLabUI-classic__caption {
+.CoreLabUI__caption {
     font-weight: 500;
     font-size: var(--caption);
     line-height: 1.66;
@@ -113,44 +113,44 @@
     color: var(--text);
 }
 
-.CoreLabUI-classic__no-margin {
+.CoreLabUI__no-margin {
     margin-bottom: 0;
 }
 
-.CoreLabUI-classic__ellipsis,
-.CoreLabUI-classic__clip {
+.CoreLabUI__ellipsis,
+.CoreLabUI__clip {
     width: 100%;
     white-space: nowrap;
     overflow: hidden;
 }
 
-.CoreLabUI-classic__ellipsis {
+.CoreLabUI__ellipsis {
     text-overflow: ellipsis;
 }
 
-.CoreLabUI-classic__clip {
+.CoreLabUI__clip {
     text-overflow: clip;
 }
 
-.CoreLabUI-classic__lines {
+.CoreLabUI__lines {
     display: -webkit-box;
     white-space: normal;
     -webkit-line-clamp: var(--line-clamp);
     -webkit-box-orient: vertical;
 }
 
-.CoreLabUI-classic__typography--left {
+.CoreLabUI__typography--left {
     text-align: left;
 }
 
-.CoreLabUI-classic__typography--center {
+.CoreLabUI__typography--center {
     text-align: center;
 }
 
-.CoreLabUI-classic__typography--right {
+.CoreLabUI__typography--right {
     text-align: right;
 }
 
-.CoreLabUI-classic__typography--justify {
+.CoreLabUI__typography--justify {
     text-align: justify;
 }

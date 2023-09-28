@@ -26,11 +26,11 @@ const Card = forwardRef(
         },
         ref
     ) => {
-        let classes = `CoreLabUI-classic__card`;
-        if (responsive) classes += ` CoreLabUI-classic__card--responsive`;
-        if (clickable) classes += ` CoreLabUI-classic__card--clickable`;
+        let classes = `CoreLabUI__card`;
+        if (responsive) classes += ` CoreLabUI__card--responsive`;
+        if (clickable) classes += ` CoreLabUI__card--clickable`;
         if (className) classes += ` ${className}`;
-        classes += ' CoreLabUI-classic';
+        classes += ' CoreLabUI';
         return (
             <div
                 {...props}
@@ -38,7 +38,7 @@ const Card = forwardRef(
                 ref={ref}
                 style={{ '--card-width': width, '--card-height': height }}
                 onClick={clickable ? onClick : null}>
-                <div className="CoreLabUI-classic__card-header">
+                <div className="CoreLabUI__card-header">
                     {typeof title === 'string' ? (
                         <Typography
                             variant="heading5"
@@ -50,17 +50,12 @@ const Card = forwardRef(
                         title
                     )}
                     {icon && (
-                        <div className="CoreLabUI-classic__card-header-action">
+                        <div className="CoreLabUI__card-header-action">
                             {icon}
                         </div>
                     )}
                 </div>
-                {image && (
-                    <img
-                        src={image}
-                        className="CoreLabUI-classic__card-image"
-                    />
-                )}
+                {image && <img src={image} className="CoreLabUI__card-image" />}
                 {description && (
                     <Typography
                         variant="body2"
@@ -71,7 +66,7 @@ const Card = forwardRef(
                     </Typography>
                 )}
                 {tags && (
-                    <div className="CoreLabUI-classic__card-tags">
+                    <div className="CoreLabUI__card-tags">
                         {tags?.map((tag, index) => (
                             <Tag
                                 text={tag?.text}

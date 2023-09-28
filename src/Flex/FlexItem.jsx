@@ -29,7 +29,7 @@ const FlexItem = forwardRef(
         },
         ref
     ) => {
-        let classes = `CoreLabUI-classic__flex-item CoreLabUI-classic__flex-item-align-self--${alignSelf} CoreLabUI-classic__flex-item-order`;
+        let classes = `CoreLabUI__flex-item CoreLabUI__flex-item-align-self--${alignSelf} CoreLabUI__flex-item-order`;
         if (className) classes += ` ${className}`;
         return (
             <div

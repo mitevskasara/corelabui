@@ -20,16 +20,14 @@ const Checkbox = forwardRef(
         },
         ref
     ) => {
-        let classes = 'CoreLabUI-classic CoreLabUI-classic__checkbox-label';
+        let classes = 'CoreLabUI CoreLabUI__checkbox-label';
         if (className) classes += ` ${className}`;
 
-        let checkmarkClasses = `CoreLabUI-classic__checkbox-checkmark CoreLabUI-classic__checkbox-checkmark--${size} CoreLabUI-classic__checkbox-checkmark--${variant}`;
+        let checkmarkClasses = `CoreLabUI__checkbox-checkmark CoreLabUI__checkbox-checkmark--${size} CoreLabUI__checkbox-checkmark--${variant}`;
         if (checked)
-            checkmarkClasses +=
-                ' CoreLabUI-classic__checkbox-checkmark--checked';
+            checkmarkClasses += ' CoreLabUI__checkbox-checkmark--checked';
         if (disabled)
-            checkmarkClasses +=
-                ' CoreLabUI-classic__checkbox-checkmark--disabled';
+            checkmarkClasses += ' CoreLabUI__checkbox-checkmark--disabled';
 
         return (
             <div>

@@ -1,10 +1,10 @@
-.CoreLabUI-classic__wrapper {
+.CoreLabUI__wrapper {
     position: relative;
     width: 100%;
     font-family: var(--font-family);
 }
 
-.CoreLabUI-classic__root {
+.CoreLabUI__root {
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -12,7 +12,7 @@
     font-family: var(--font-family);
 }
 
-.CoreLabUI-classic__select {
+.CoreLabUI__select {
     border: 1px solid var(--border-color);
     border-radius: var(--border-radius);
     outline: none;
@@ -22,73 +22,73 @@
     cursor: pointer;
 }
 
-.CoreLabUI-classic__select--small {
+.CoreLabUI__select--small {
     padding: 10px 16px;
 }
 
-.CoreLabUI-classic__select--medium {
+.CoreLabUI__select--medium {
     padding: 10px 16px;
 }
 
-.CoreLabUI-classic__select--large {
+.CoreLabUI__select--large {
     padding: 10px 16px;
 }
 
-.CoreLabUI-classic__select-label {
+.CoreLabUI__select-label {
     font-size: var(--font-small);
     color: var(--text);
     font-weight: 600;
 }
 
-.CoreLabUI-classic__select-helper-text {
+.CoreLabUI__select-helper-text {
     font-size: var(--font-xsmall);
     color: var(--text-secondary);
     font-weight: 500;
 }
 
-.CoreLabUI-classic__select::placeholder {
+.CoreLabUI__select::placeholder {
     font-size: var(--font-medium);
     color: var(--text-secondary);
 }
 
-.CoreLabUI-classic__select:hover,
-.CoreLabUI-classic__root--error > input:hover {
+.CoreLabUI__select:hover,
+.CoreLabUI__root--error > input:hover {
     border: 1px solid var(--primary-hover);
 }
 
-.CoreLabUI-classic__select:focus,
-.CoreLabUI-classic__root--error > input:focus {
+.CoreLabUI__select:focus,
+.CoreLabUI__root--error > input:focus {
     border: 1px solid var(--primary-hover);
 }
 
-.CoreLabUI-classic__root:hover > .label {
+.CoreLabUI__root:hover > .label {
     color: var(--primary-hover);
 }
 
-.CoreLabUI-classic__root--disabled,
-.CoreLabUI-classic__root--disabled > input:hover,
-.CoreLabUI-classic__root--disabled > input:focus {
+.CoreLabUI__root--disabled,
+.CoreLabUI__root--disabled > input:hover,
+.CoreLabUI__root--disabled > input:focus {
     border: 1px solid var(--border-color);
     color: var(--border-color);
     pointer-events: none;
 }
 
-.CoreLabUI-classic__root--disabled > input::placeholder,
-.CoreLabUI-classic__root--disabled > .label,
-.CoreLabUI-classic__root--disabled > .helper-text {
+.CoreLabUI__root--disabled > input::placeholder,
+.CoreLabUI__root--disabled > .label,
+.CoreLabUI__root--disabled > .helper-text {
     color: var(--border-color) !important;
 }
 
-.CoreLabUI-classic__select--error {
+.CoreLabUI__select--error {
     border: 1px solid var(--error);
 }
 
-.CoreLabUI-classic__root--error > .label,
-.CoreLabUI-classic__root--error > .helper-text {
+.CoreLabUI__root--error > .label,
+.CoreLabUI__root--error > .helper-text {
     color: var(--error) !important;
 }
 
-.CoreLabUI-classic__select-menu {
+.CoreLabUI__select-menu {
     border: 1px solid var(--border-color);
     border-radius: var(--border-radius);
     background-color: var(--fields-background);
@@ -101,35 +101,35 @@
     overflow: auto;
 }
 
-.CoreLabUI-classic__select-menu--open {
+.CoreLabUI__select-menu--open {
     display: block;
     z-index: 1;
 }
 
-.CoreLabUI-classic__select-menu--closed {
+.CoreLabUI__select-menu--closed {
     display: none;
 }
 
-.CoreLabUI-classic__select-menu__option--small,
-.CoreLabUI-classic__select-menu__option--medium,
-.CoreLabUI-classic__select-menu__option--large {
+.CoreLabUI__select-menu__option--small,
+.CoreLabUI__select-menu__option--medium,
+.CoreLabUI__select-menu__option--large {
     padding: 10px 16px;
     font-size: var(--font-small);
 }
 
-.CoreLabUI-classic__select-menu__option--small:hover,
-.CoreLabUI-classic__select-menu__option--medium:hover,
-.CoreLabUI-classic__select-menu__option--large:hover {
+.CoreLabUI__select-menu__option--small:hover,
+.CoreLabUI__select-menu__option--medium:hover,
+.CoreLabUI__select-menu__option--large:hover {
     background-color: var(--hover);
     cursor: pointer;
 }
 
-.CoreLabUI-classic__select-menu__option--selected {
+.CoreLabUI__select-menu__option--selected {
     background-color: var(--primary-disabled);
 }
 
-.CoreLabUI-classic__select-menu__option--disabled,
-.CoreLabUI-classic__select-menu__option--disabled:hover {
+.CoreLabUI__select-menu__option--disabled,
+.CoreLabUI__select-menu__option--disabled:hover {
     background-color: unset;
     color: var(--border-color);
 }

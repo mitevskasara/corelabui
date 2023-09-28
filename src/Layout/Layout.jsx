@@ -13,7 +13,7 @@ export default ({
     areas,
     ...props
 }) => {
-    let classes = `CoreLabUI-classic CoreLabUI-classic__layout CoreLabUI-classic__layout--${type}`;
+    let classes = `CoreLabUI CoreLabUI__layout CoreLabUI__layout--${type}`;
     if (className) classes += ` ${className}`;
     let templateAreas = '';
     if (areas) areas?.split(',').map((area) => (templateAreas += ` "${area}"`));

@@ -1,38 +1,38 @@
-.CoreLabUI-classic__divider {
+.CoreLabUI__divider {
     display: flex;
     width: var(--divider-width);
     align-items: center;
 }
 
-.CoreLabUI-classic__divider-text {
+.CoreLabUI__divider-text {
     width: fit-content;
     margin: 1em;
 }
 
-.CoreLabUI-classic__divider::before,
-.CoreLabUI-classic__divider::after {
+.CoreLabUI__divider::before,
+.CoreLabUI__divider::after {
     content: var(--content);
     padding: 0.5px;
     background-color: var(--divider-color);
 }
 
-.CoreLabUI-classic__divider--center::before,
-.CoreLabUI-classic__divider--center::after {
+.CoreLabUI__divider--center::before,
+.CoreLabUI__divider--center::after {
     flex: 1;
 }
 
-.CoreLabUI-classic__divider--left::before {
+.CoreLabUI__divider--left::before {
     flex: 0.1;
 }
 
-.CoreLabUI-classic__divider--left::after {
+.CoreLabUI__divider--left::after {
     flex: 2;
 }
 
-.CoreLabUI-classic__divider--right::before {
+.CoreLabUI__divider--right::before {
     flex: 2;
 }
 
-.CoreLabUI-classic__divider--right::after {
+.CoreLabUI__divider--right::after {
     flex: 0.1;
 }

@@ -1,4 +1,4 @@
-.CoreLabUI-classic__navigation-item {
+.CoreLabUI__navigation-item {
     border: 1px solid transparent;
     padding: var(--nav-item-padding);
     cursor: pointer;
@@ -8,58 +8,58 @@
     border-radius: var(--border-radius);
 }
 
-.CoreLabUI-classic__navigation-item--divided {
+.CoreLabUI__navigation-item--divided {
     padding: 1em 2em;
 }
 
-.CoreLabUI-classic__navigation-item--divided
-    > .CoreLabUI-classic__navigation-item-title
+.CoreLabUI__navigation-item--divided
+    > .CoreLabUI__navigation-item-title
     > span {
     font-size: 10px;
     text-transform: uppercase;
     font-weight: bold;
 }
 
-.CoreLabUI-classic__navigation-item:visited {
+.CoreLabUI__navigation-item:visited {
     color: inherit;
 }
 
-.CoreLabUI-classic__navigation-item-title {
+.CoreLabUI__navigation-item-title {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.CoreLabUI-classic__navigation-item:hover {
+.CoreLabUI__navigation-item:hover {
     background-color: var(--hover);
     border-radius: var(--border-radius);
 }
 
-.CoreLabUI-classic__navigation-item--active,
-.CoreLabUI-classic__navigation-item:active {
+.CoreLabUI__navigation-item--active,
+.CoreLabUI__navigation-item:active {
     background-color: var(--primary-active);
 }
 
-.CoreLabUI-classic__navigation-item--active > div > span {
+.CoreLabUI__navigation-item--active > div > span {
     color: var(--primary);
 }
 
-.CoreLabUI-classic__navigation-item--divided,
-.CoreLabUI-classic__navigation-item--divided:hover,
-.CoreLabUI-classic__navigation-item--divided:active,
-.CoreLabUI-classic__navigation-item--disabled {
+.CoreLabUI__navigation-item--divided,
+.CoreLabUI__navigation-item--divided:hover,
+.CoreLabUI__navigation-item--divided:active,
+.CoreLabUI__navigation-item--disabled {
     border: 1px solid transparent;
     background-color: var(--background);
     cursor: initial;
 }
 
-.CoreLabUI-classic__navigation-item--disabled {
+.CoreLabUI__navigation-item--disabled {
     pointer-events: none;
     cursor: unset;
 }
 
-.CoreLabUI-classic__navigation-item--divided > div > span,
-.CoreLabUI-classic__navigation-item--disabled > div > span,
-.CoreLabUI-classic__navigation-item--disabled > div > p {
+.CoreLabUI__navigation-item--divided > div > span,
+.CoreLabUI__navigation-item--disabled > div > span,
+.CoreLabUI__navigation-item--disabled > div > p {
     color: var(--text-secondary);
 }

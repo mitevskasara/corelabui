@@ -21,8 +21,8 @@ const Divider = forwardRef(
         },
         ref
     ) => {
-        let classes = `CoreLabUI-classic CoreLabUI-classic__divider CoreLabUI-classic__divider--${textAlign}`;
-        if (!text) classes += ' CoreLabUI-classic__divider--no-text';
+        let classes = `CoreLabUI CoreLabUI__divider CoreLabUI__divider--${textAlign}`;
+        if (!text) classes += ' CoreLabUI__divider--no-text';
         if (className) classes += ` ${className}`;
         const style = color ? { '--divider-color': color } : {};
         return (
@@ -39,7 +39,7 @@ const Divider = forwardRef(
                         {...textProps}
                         margin={false}
                         overflow="ellipsis"
-                        className="CoreLabUI-classic__divider-text">
+                        className="CoreLabUI__divider-text">
                         {text}
                     </Typography>
                 )}

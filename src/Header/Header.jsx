@@ -26,11 +26,11 @@ const Header = forwardRef(
     ) => {
         const headerRef = useRef();
         const [isOpen, open] = useState(false);
-        let classesRoot = `CoreLabUI-classic__header-root`;
+        let classesRoot = `CoreLabUI__header-root`;
         if (classes?.root) classesRoot += ` ${classes?.root}`;
-        classesRoot += ' CoreLabUI-classic';
+        classesRoot += ' CoreLabUI';
 
-        let classesInner = `CoreLabUI-classic__header`;
+        let classesInner = `CoreLabUI__header`;
         if (classes?.inner) classesInner += ` ${classes?.inner}`;
 
         useClickAway(headerRef?.current, () => open(false));
@@ -49,12 +49,9 @@ const Header = forwardRef(
                         style={{
                             '--header-max-width': maxWidth
                         }}>
-                        <img
-                            src={logo}
-                            className="CoreLabUI-classic__header-logo"
-                        />
+                        <img src={logo} className="CoreLabUI__header-logo" />
                         <div
-                            className={`CoreLabUI-classic__header-nav CoreLabUI-classic__header-nav--${
+                            className={`CoreLabUI__header-nav CoreLabUI__header-nav--${
                                 isOpen ? 'open' : 'closed'
                             }`}
                             style={{
@@ -65,7 +62,7 @@ const Header = forwardRef(
                                 '--header-items-margin-right':
                                     align === 'left' && 'auto'
                             }}>
-                            <menu className="CoreLabUI-classic__header-menu">
+                            <menu className="CoreLabUI__header-menu">
                                 {items?.map((item, key) => (
                                     <Link href={item.link} key={key}>
                                         {item.title}
@@ -81,7 +78,7 @@ const Header = forwardRef(
                             </menu>
                         </div>
                         <div
-                            className="CoreLabUI-classic__header-menu-icon"
+                            className="CoreLabUI__header-menu-icon"
                             onClick={() => open(!isOpen)}>
                             <span />
                             <span />
@@ -90,13 +87,13 @@ const Header = forwardRef(
                         </div>
                     </div>
                     <div
-                        className={`CoreLabUI-classic__header-nav--mobile CoreLabUI-classic__header-nav--mobile--${
+                        className={`CoreLabUI__header-nav--mobile CoreLabUI__header-nav--mobile--${
                             isOpen ? 'open' : 'closed'
                         }`}
                         style={{
                             '--header-padding': spacing
                         }}>
-                        <menu className="CoreLabUI-classic__header-menu">
+                        <menu className="CoreLabUI__header-menu">
                             {items?.map((item, key) => (
                                 <Link href={item.link} key={key}>
                                     {item.title}

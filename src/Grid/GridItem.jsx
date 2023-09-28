@@ -31,7 +31,7 @@ const GridItem = forwardRef(
         },
         ref
     ) => {
-        let classes = `CoreLabUI-classic__grid-item`;
+        let classes = `CoreLabUI__grid-item`;
         if (className) classes += ` ${className}`;
         return (
             <div

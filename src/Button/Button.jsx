@@ -21,9 +21,8 @@ const Button = forwardRef(
         },
         ref
     ) => {
-        let classes = `CoreLabUI-classic CoreLabUI-classic__btn-root CoreLabUI-classic__btn-root--${variant}`;
-        if (disabled || loading)
-            classes += ' CoreLabUI-classic__btn-root--disabled';
+        let classes = `CoreLabUI CoreLabUI__btn-root CoreLabUI__btn-root--${variant}`;
+        if (disabled || loading) classes += ' CoreLabUI__btn-root--disabled';
         if (className) classes += ` ${className}`;
         return (
             <div
@@ -32,11 +31,11 @@ const Button = forwardRef(
                 style={{ '--button-width': width }}>
                 <button
                     {...props}
-                    className={`CoreLabUI-classic__btn CoreLabUI-classic__btn--${variant} CoreLabUI-classic__btn--${size}`}
+                    className={`CoreLabUI__btn CoreLabUI__btn--${variant} CoreLabUI__btn--${size}`}
                     disabled={disabled || loading}>
                     {loading ? (
                         <div
-                            className={`CoreLabUI-classic__btn__loader CoreLabUI-classic__btn__loader--${variant}`}>
+                            className={`CoreLabUI__btn__loader CoreLabUI__btn__loader--${variant}`}>
                             <span />
                             <span />
                             <span />

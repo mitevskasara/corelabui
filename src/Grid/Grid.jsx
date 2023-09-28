@@ -28,7 +28,7 @@ const Grid = forwardRef(
         },
         ref
     ) => {
-        let classes = `CoreLabUI-classic__grid CoreLabUI-classic__grid-gap`;
+        let classes = `CoreLabUI__grid CoreLabUI__grid-gap`;
         if (className) classes += ` ${className}`;
         return (
             <div

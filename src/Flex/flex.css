@@ -1,145 +1,145 @@
-.CoreLabUI-classic__flex {
+.CoreLabUI__flex {
     display: flex;
     margin: var(--margin);
     padding: var(--padding);
 }
 
-.CoreLabUI-classic__flex-align-items--baseline {
+.CoreLabUI__flex-align-items--baseline {
     align-items: baseline;
 }
 
-.CoreLabUI-classic__flex-align-items--center {
+.CoreLabUI__flex-align-items--center {
     align-items: center;
 }
 
-.CoreLabUI-classic__flex-align-items--start {
+.CoreLabUI__flex-align-items--start {
     align-items: flex-start;
 }
 
-.CoreLabUI-classic__flex-align-items--end {
+.CoreLabUI__flex-align-items--end {
     align-items: flex-end;
 }
 
-.CoreLabUI-classic__flex-align-items--strech {
+.CoreLabUI__flex-align-items--strech {
     align-items: stretch;
 }
 
-.CoreLabUI-classic__flex-align-items--unset {
+.CoreLabUI__flex-align-items--unset {
     align-items: unset;
 }
 
-.CoreLabUI-classic__flex-align-content--baseline {
+.CoreLabUI__flex-align-content--baseline {
     align-content: baseline;
 }
 
-.CoreLabUI-classic__flex-align-content--center {
+.CoreLabUI__flex-align-content--center {
     align-content: center;
 }
 
-.CoreLabUI-classic__flex-align-content--start {
+.CoreLabUI__flex-align-content--start {
     align-content: flex-start;
 }
 
-.CoreLabUI-classic__flex-align-content--end {
+.CoreLabUI__flex-align-content--end {
     align-content: flex-end;
 }
 
-.CoreLabUI-classic__flex-align-content--strech {
+.CoreLabUI__flex-align-content--strech {
     align-content: stretch;
 }
 
-.CoreLabUI-classic__flex-align-content--space-between {
+.CoreLabUI__flex-align-content--space-between {
     align-content: space-between;
 }
 
-.CoreLabUI-classic__flex-align-content--space-around {
+.CoreLabUI__flex-align-content--space-around {
     align-content: space-around;
 }
 
-.CoreLabUI-classic__flex-align-content--space-evenly {
+.CoreLabUI__flex-align-content--space-evenly {
     align-content: space-evenly;
 }
 
-.CoreLabUI-classic__flex-align-content--unset {
+.CoreLabUI__flex-align-content--unset {
     align-content: unset;
 }
 
-.CoreLabUI-classic__flex-justify-content--baseline {
+.CoreLabUI__flex-justify-content--baseline {
     justify-content: baseline;
 }
 
-.CoreLabUI-classic__flex-justify-content--center {
+.CoreLabUI__flex-justify-content--center {
     justify-content: center;
 }
 
-.CoreLabUI-classic__flex-justify-content--start {
+.CoreLabUI__flex-justify-content--start {
     justify-content: flex-start;
 }
 
-.CoreLabUI-classic__flex-justify-content--end {
+.CoreLabUI__flex-justify-content--end {
     justify-content: flex-end;
 }
 
-.CoreLabUI-classic__flex-justify-content--strech {
+.CoreLabUI__flex-justify-content--strech {
     justify-content: stretch;
 }
 
-.CoreLabUI-classic__flex-justify-content--space-between {
+.CoreLabUI__flex-justify-content--space-between {
     justify-content: space-between;
 }
 
-.CoreLabUI-classic__flex-justify-content--space-around {
+.CoreLabUI__flex-justify-content--space-around {
     justify-content: space-around;
 }
 
-.CoreLabUI-classic__flex-justify-content--space-evenly {
+.CoreLabUI__flex-justify-content--space-evenly {
     justify-content: space-evenly;
 }
 
-.CoreLabUI-classic__flex-justify-content--unset {
+.CoreLabUI__flex-justify-content--unset {
     justify-content: unset;
 }
 
-.CoreLabUI-classic__flex-nowrap {
+.CoreLabUI__flex-nowrap {
     flex-wrap: nowrap;
 }
 
-.CoreLabUI-classic__flex-wrap {
+.CoreLabUI__flex-wrap {
     flex-wrap: wrap;
 }
 
-.CoreLabUI-classic__flex-wrap-reverse {
+.CoreLabUI__flex-wrap-reverse {
     flex-wrap: wrap-reverse;
 }
 
-.CoreLabUI-classic__flex-direction {
+.CoreLabUI__flex-direction {
     flex-direction: var(--direction);
 }
 
 @media (max-width: 600px) {
-    .CoreLabUI-classic__flex-direction {
+    .CoreLabUI__flex-direction {
         flex-direction: var(--xs-direction);
     }
 }
 
 @media only screen and (min-width: 768px) {
-    .CoreLabUI-classic__flex-direction {
+    .CoreLabUI__flex-direction {
         flex-direction: var(--sm-direction);
     }
 }
 
 @media only screen and (min-width: 992px) {
-    .CoreLabUI-classic__flex-direction {
+    .CoreLabUI__flex-direction {
         flex-direction: var(--md-direction);
     }
 }
 
 @media only screen and (min-width: 1200px) {
-    .CoreLabUI-classic__flex-direction {
+    .CoreLabUI__flex-direction {
         flex-direction: var(--lg-direction);
     }
 }
 
-.CoreLabUI-classic__flex-gap {
+.CoreLabUI__flex-gap {
     gap: var(--gap);
 }

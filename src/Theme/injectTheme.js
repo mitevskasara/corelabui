@@ -1,18 +1,15 @@
 import { defaultTheme } from '.';
 import { generateStyle } from '.';
 
-export function injectTheme(style, theme = 'classic') {
+export function injectTheme(style) {
     if (typeof document === 'object') {
-        if (!document.getElementById(`CoreLabUI-${theme}`)) {
+        if (!document.getElementById(`CoreLabUI`)) {
             document.head.insertAdjacentHTML(
                 'beforeend',
-                `<style id='CoreLabUI-${theme}'>${generateStyle(
-                    style,
-                    theme
-                )}</style>`
+                `<style id='CoreLabUI'>${generateStyle(style)}</style>`
             );
         }
-        if (!document.getElementById(`CoreLabUI-${theme}-scrollbar`)) {
+        if (!document.getElementById(`CoreLabUI-scrollbar`)) {
             const mergedThemes = { ...defaultTheme, ...style };
             const scrollBarStyle =
                 `::-webkit-scrollbar { width: ${mergedThemes.scrollBarWidth}; }\n` +
@@ -21,7 +18,7 @@ export function injectTheme(style, theme = 'classic') {
 
             document.head.insertAdjacentHTML(
                 'beforeend',
-                `<style id='CoreLabUI-${theme}-scrollbar'>${scrollBarStyle}</style>`
+                `<style id='CoreLabUI-scrollbar'>${scrollBarStyle}</style>`
             );
         }
     }

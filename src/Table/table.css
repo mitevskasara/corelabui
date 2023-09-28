@@ -1,4 +1,4 @@
-.CoreLabUI-classic__table {
+.CoreLabUI__table {
     border-spacing: 1em;
     border-collapse: collapse;
     border-radius: var(--border-radius);
@@ -13,33 +13,32 @@
     table-layout: fixed;
 }
 
-.CoreLabUI-classic__table > * {
+.CoreLabUI__table > * {
     position: relative;
 }
 
-.CoreLabUI-classic__table-head-column {
+.CoreLabUI__table-head-column {
     padding: 1em;
     color: var(--text-secondary);
 }
 
-.CoreLabUI-classic__table-body-column {
+.CoreLabUI__table-body-column {
     padding: 0.5em 1em;
 }
 
-.CoreLabUI-classic__table-head-column > div {
+.CoreLabUI__table-head-column > div {
     display: flex;
 }
 
-.CoreLabUI-classic__table-head > .CoreLabUI-classic__table-body-row {
+.CoreLabUI__table-head > .CoreLabUI__table-body-row {
     background-color: var(--background);
 }
 
-.CoreLabUI-classic__table-body-row--bordered {
+.CoreLabUI__table-body-row--bordered {
     background-color: var(--background);
     border: 0.5px solid var(--border-color);
 }
 
-.CoreLabUI-classic__table-body
-    > .CoreLabUI-classic__table-body-row--striped:nth-child(even) {
+.CoreLabUI__table-body > .CoreLabUI__table-body-row--striped:nth-child(even) {
     background-color: var(--hover-light);
 }

@@ -14,7 +14,7 @@ export default ({
     margin,
     ...props
 }) => {
-    let classes = `CoreLabUI-classic CoreLabUI-classic__layout-footer--${type}`;
+    let classes = `CoreLabUI CoreLabUI__layout-footer--${type}`;
     if (className) classes += ` ${className}`;
     return (
         <section

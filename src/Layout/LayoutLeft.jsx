@@ -18,7 +18,7 @@ export default ({
     margin,
     ...props
 }) => {
-    let classes = `CoreLabUI-classic CoreLabUI-classic__layout-left--${type}`;
+    let classes = `CoreLabUI CoreLabUI__layout-left--${type}`;
     if (className) classes += ` ${className}`;
     return (
         <section

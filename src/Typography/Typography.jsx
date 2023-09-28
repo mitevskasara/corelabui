@@ -36,13 +36,13 @@ const Typography = forwardRef(
         ref
     ) => {
         const Element = htmlElement || VARIANTS[variant];
-        let classes = `CoreLabUI-classic__${variant}`;
-        if (!margin) classes += ' CoreLabUI-classic__no-margin';
-        if (overflow) classes += ` CoreLabUI-classic__${overflow}`;
-        if (lines) classes += ` CoreLabUI-classic__lines`;
-        if (align) classes += ` CoreLabUI-classic__typography--${align}`;
+        let classes = `CoreLabUI__${variant}`;
+        if (!margin) classes += ' CoreLabUI__no-margin';
+        if (overflow) classes += ` CoreLabUI__${overflow}`;
+        if (lines) classes += ` CoreLabUI__lines`;
+        if (align) classes += ` CoreLabUI__typography--${align}`;
         if (className) classes += ` ${className}`;
-        classes += ' CoreLabUI-classic';
+        classes += ' CoreLabUI';
 
         const COLORS = {
             heading1: '--title',

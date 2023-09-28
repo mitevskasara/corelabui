@@ -20,15 +20,14 @@ const RadioButton = forwardRef(
         },
         ref
     ) => {
-        let classes = `CoreLabUI-classic CoreLabUI-classic__radio-label CoreLabUI-classic__radio-label--${size}`;
+        let classes = `CoreLabUI CoreLabUI__radio-label CoreLabUI__radio-label--${size}`;
         if (className) classes += ` ${className}`;
 
-        let checkmarkClasses = `CoreLabUI-classic__radio-checkmark CoreLabUI-classic__radio-checkmark--${size} CoreLabUI-classic__radio-checkmark--${variant}`;
+        let checkmarkClasses = `CoreLabUI__radio-checkmark CoreLabUI__radio-checkmark--${size} CoreLabUI__radio-checkmark--${variant}`;
 
-        if (checked)
-            checkmarkClasses += ' CoreLabUI-classic__radio-checkmark--checked';
+        if (checked) checkmarkClasses += ' CoreLabUI__radio-checkmark--checked';
         if (disabled)
-            checkmarkClasses += ' CoreLabUI-classic__radio-checkmark--disabled';
+            checkmarkClasses += ' CoreLabUI__radio-checkmark--disabled';
 
         return (
             <label className={classes}>

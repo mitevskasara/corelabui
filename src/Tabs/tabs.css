@@ -1,4 +1,4 @@
-.CoreLabUI-classic__tabs {
+.CoreLabUI__tabs {
     display: flex;
     border-bottom: 2px solid var(--border-color);
     justify-content: space-between;

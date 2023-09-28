@@ -11,20 +11,18 @@ const Textarea = forwardRef(
         { disabled = false, label, error, helperText, className, ...props },
         ref
     ) => {
-        let classes = `CoreLabUI-classic CoreLabUI-classic__field-multiline-root`;
-        if (disabled)
-            classes += ' CoreLabUI-classic__field-multiline-root--disabled';
-        if (error) classes += ' CoreLabUI-classic__field-multiline-root--error';
+        let classes = `CoreLabUI CoreLabUI__field-multiline-root`;
+        if (disabled) classes += ' CoreLabUI__field-multiline-root--disabled';
+        if (error) classes += ' CoreLabUI__field-multiline-root--error';
         if (className) classes += ` ${className}`;
 
-        let textareaClasses = 'CoreLabUI-classic__field-multiline';
-        if (error)
-            textareaClasses += ' CoreLabUI-classic__field-multiline--error';
+        let textareaClasses = 'CoreLabUI__field-multiline';
+        if (error) textareaClasses += ' CoreLabUI__field-multiline--error';
 
         return (
             <div className={classes}>
                 {label && (
-                    <label className="CoreLabUI-classic__field-multiline__label">
+                    <label className="CoreLabUI__field-multiline__label">
                         {label}
                     </label>
                 )}
@@ -36,7 +34,7 @@ const Textarea = forwardRef(
                     ref={ref}
                 />
                 {helperText && (
-                    <span className="CoreLabUI-classic__field-multiline__helper-text">
+                    <span className="CoreLabUI__field-multiline__helper-text">
                         {helperText}
                     </span>
                 )}

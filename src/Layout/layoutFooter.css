@@ -1,4 +1,4 @@
-.CoreLabUI-classic__layout-footer--dashboard {
+.CoreLabUI__layout-footer--dashboard {
     grid-area: ft;
     grid-row: 11 / span 2;
     padding: var(--padding);
@@ -6,14 +6,14 @@
     overflow-y: auto;
 }
 
-.CoreLabUI-classic__layout-footer--website {
+.CoreLabUI__layout-footer--website {
     grid-area: ft;
     padding: var(--padding);
     margin: var(--margin);
     overflow-y: auto;
 }
 
-.CoreLabUI-classic__layout-footer--custom {
+.CoreLabUI__layout-footer--custom {
     grid-column: 1 / span 12;
     grid-row: 12 / span 2;
     padding: var(--padding);

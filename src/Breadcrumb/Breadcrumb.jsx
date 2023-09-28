@@ -10,7 +10,7 @@ injectStyle('Breadcrumb', {});
 
 const Breadcrumb = forwardRef(
     ({ items, className, separator, ...props }, ref) => {
-        let classes = `CoreLabUI-classic CoreLabUI-classic__breadcrumb`;
+        let classes = `CoreLabUI CoreLabUI__breadcrumb`;
         if (className) classes += ` ${className}`;
         return (
             <div {...props} className={classes} ref={ref}>
@@ -18,8 +18,8 @@ const Breadcrumb = forwardRef(
                     <Flex key={index} alignItems="center" gap="0.5">
                         <a
                             href={item?.link}
-                            className={`CoreLabUI-classic__breadcrumb-item 
-                                CoreLabUI-classic__breadcrumb-item--${
+                            className={`CoreLabUI__breadcrumb-item 
+                                CoreLabUI__breadcrumb-item--${
                                     item?.active ? 'active' : 'inactive'
                                 }`}>
                             {item?.icon ? item?.icon : null}
@@ -31,7 +31,7 @@ const Breadcrumb = forwardRef(
                                 {item?.title}
                             </Typography>
                         </a>
-                        <span className="CoreLabUI-classic__breadcrumb-separator">
+                        <span className="CoreLabUI__breadcrumb-separator">
                             {index < items?.length - 1
                                 ? separator
                                     ? separator

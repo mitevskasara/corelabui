@@ -7,10 +7,10 @@ injectTheme();
 injectStyle('TabContent', {});
 
 const TabContent = ({ children, className, active, index, ...props }) => {
-    let classes = 'CoreLabUI-classic__tab-content';
-    if (active === index) classes += ' CoreLabUI-classic__tab-content--active';
+    let classes = 'CoreLabUI__tab-content';
+    if (active === index) classes += ' CoreLabUI__tab-content--active';
     if (className) classes += ` ${className}`;
-    classes += ' CoreLabUI-classic';
+    classes += ' CoreLabUI';
 
     return (
         <div

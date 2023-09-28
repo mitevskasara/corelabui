@@ -20,19 +20,19 @@ const Input = forwardRef(
         },
         ref
     ) => {
-        let classes = `CoreLabUI-classic CoreLabUI-classic__field-root`;
-        if (disabled) classes += ' CoreLabUI-classic__field-root--disabled';
-        if (error) classes += ' CoreLabUI-classic__field-root--error';
+        let classes = `CoreLabUI CoreLabUI__field-root`;
+        if (disabled) classes += ' CoreLabUI__field-root--disabled';
+        if (error) classes += ' CoreLabUI__field-root--error';
         if (className) classes += ` ${className}`;
 
-        let inputClasses = `CoreLabUI-classic__field CoreLabUI-classic__field--${size}`;
-        if (error) inputClasses += ' CoreLabUI-classic__field--error';
+        let inputClasses = `CoreLabUI__field CoreLabUI__field--${size}`;
+        if (error) inputClasses += ' CoreLabUI__field--error';
 
         return (
             <div className={classes}>
                 {label && (
                     <label
-                        className="CoreLabUI-classic__field__label"
+                        className="CoreLabUI__field__label"
                         htmlFor={props.name}>
                         {label}
                     </label>
@@ -44,7 +44,7 @@ const Input = forwardRef(
                     ref={ref}
                 />
                 {helperText && (
-                    <span className="CoreLabUI-classic__field__helper-text">
+                    <span className="CoreLabUI__field__helper-text">
                         {helperText}
                     </span>
                 )}

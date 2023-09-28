@@ -1,4 +1,4 @@
-.CoreLabUI-classic__breadcrumb {
+.CoreLabUI__breadcrumb {
     display: flex;
     position: relative;
     align-items: center;
@@ -6,14 +6,14 @@
     font-family: var(--font-family);
 }
 
-.CoreLabUI-classic__breadcrumb-item,
-.CoreLabUI-classic__breadcrumb-item--inactive,
-.CoreLabUI-classic__breadcrumb-separator {
+.CoreLabUI__breadcrumb-item,
+.CoreLabUI__breadcrumb-item--inactive,
+.CoreLabUI__breadcrumb-separator {
     color: var(--text-secondary);
     text-decoration: none;
 }
 
-.CoreLabUI-classic__breadcrumb-item--active,
-.CoreLabUI-classic__breadcrumb-item:hover {
+.CoreLabUI__breadcrumb-item--active,
+.CoreLabUI__breadcrumb-item:hover {
     color: var(--text);
 }

@@ -1,4 +1,4 @@
-.CoreLabUI-classic__field-root {
+.CoreLabUI__field-root {
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -6,7 +6,7 @@
     font-family: var(--font-family);
 }
 
-.CoreLabUI-classic__field {
+.CoreLabUI__field {
     border: 1px solid var(--border-color);
     border-radius: var(--border-radius);
     outline: none;
@@ -15,67 +15,66 @@
     background-color: var(--fields-background);
 }
 
-.CoreLabUI-classic__field--small {
+.CoreLabUI__field--small {
     padding: 10px 16px;
 }
 
-.CoreLabUI-classic__field--medium {
+.CoreLabUI__field--medium {
     padding: 10px 16px;
 }
 
-.CoreLabUI-classic__field--large {
+.CoreLabUI__field--large {
     padding: 10px 16px;
 }
 
-.CoreLabUI-classic__field__helper-text {
+.CoreLabUI__field__helper-text {
     font-size: var(--font-xsmall);
     color: var(--text-secondary);
     font-weight: 500;
 }
 
-.CoreLabUI-classic__field__label {
+.CoreLabUI__field__label {
     font-size: var(--font-small);
     color: var(--text);
     font-weight: 600;
 }
 
-.CoreLabUI-classic__field::placeholder {
+.CoreLabUI__field::placeholder {
     font-size: var(--font-medium);
     color: var(--text-secondary);
 }
 
-.CoreLabUI-classic__field:hover {
+.CoreLabUI__field:hover {
     border: 1px solid var(--primary-hover);
 }
 
-.CoreLabUI-classic__field:focus {
+.CoreLabUI__field:focus {
     border: 1px solid var(--primary-hover);
 }
 
-.CoreLabUI-classic__field-root:hover > .CoreLabUI-classic__field__label {
+.CoreLabUI__field-root:hover > .CoreLabUI__field__label {
     color: var(--primary-hover);
 }
 
-.CoreLabUI-classic__field-root--disabled > input:hover,
-.CoreLabUI-classic__field-root--disabled > input:focus {
+.CoreLabUI__field-root--disabled > input:hover,
+.CoreLabUI__field-root--disabled > input:focus {
     border: 1px solid var(--border-color);
     color: var(--border-color);
 }
 
-.CoreLabUI-classic__field-root--disabled > input::placeholder,
-.CoreLabUI-classic__field-root--disabled > .CoreLabUI-classic__field__label,
-.CoreLabUI-classic__field-root--disabled
-    > .CoreLabUI-classic__field__helper-text {
+.CoreLabUI__field-root--disabled > input::placeholder,
+.CoreLabUI__field-root--disabled > .CoreLabUI__field__label,
+.CoreLabUI__field-root--disabled > .CoreLabUI__field__helper-text {
     color: var(--border-color) !important;
 }
 
-.CoreLabUI-classic__field--error,
-.CoreLabUI-classic__field-root--error > input:hover,
-.CoreLabUI-classic__field-root--error > input:focus {
+.CoreLabUI__field--error,
+.CoreLabUI__field-root--error > input:hover,
+.CoreLabUI__field-root--error > input:focus {
     border: 1px solid var(--error);
 }
 
-.CoreLabUI-classic__field-root--error > .CoreLabUI-classic__field__label,
-.CoreLabUI-classic__field-root--error > .CoreLabUI-classic__field__helper-text {
+.CoreLabUI__field-root--error > .CoreLabUI__field__label,
+.CoreLabUI__field-root--error > .CoreLabUI__field__helper-text {
     color: var(--error) !important;
 }

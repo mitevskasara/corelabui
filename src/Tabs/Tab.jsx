@@ -8,13 +8,13 @@ injectTheme();
 injectStyle('Tab', {});
 
 const Tab = ({ className, active, index, title, onChange }) => {
-    let classes = 'CoreLabUI-classic__tab';
-    if (active === index) classes += ' CoreLabUI-classic__tab--active';
+    let classes = 'CoreLabUI__tab';
+    if (active === index) classes += ' CoreLabUI__tab--active';
     if (className) classes += ` ${className}`;
-    classes += ' CoreLabUI-classic';
+    classes += ' CoreLabUI';
 
     return (
-        <div className="CoreLabUI-classic__tab-root">
+        <div className="CoreLabUI__tab-root">
             <button
                 className={classes}
                 role="tab"
@@ -32,7 +32,7 @@ const Tab = ({ className, active, index, title, onChange }) => {
                 )}
             </button>
             <div
-                className={`CoreLabUI-classic__tab-line--${
+                className={`CoreLabUI__tab-line--${
                     active === index ? 'active' : 'inactive'
                 }`}
             />

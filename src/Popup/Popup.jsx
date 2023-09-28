@@ -24,17 +24,14 @@ const Popup = forwardRef(
         },
         ref
     ) => {
-        let classes = `CoreLabUI-classic CoreLabUI-classic__popup`;
+        let classes = `CoreLabUI CoreLabUI__popup`;
         if (className) classes += ` ${className}`;
         const escPressed = useKeyPress('Escape');
         if (escPressed) close();
 
         return isOpen ? (
             <>
-                <div
-                    className="CoreLabUI-classic__popup-backdrop"
-                    onClick={close}
-                />
+                <div className="CoreLabUI__popup-backdrop" onClick={close} />
                 <dialog
                     {...props}
                     open={isOpen}
@@ -46,7 +43,7 @@ const Popup = forwardRef(
                     }}>
                     {!disableClose && (
                         <span
-                            className="CoreLabUI-classic__popup-close-icon"
+                            className="CoreLabUI__popup-close-icon"
                             onClick={close}
                         />
                     )}
