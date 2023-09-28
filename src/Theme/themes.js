@@ -60,7 +60,10 @@ export const defaultTheme = {
     tagBorderContained: '#555555',
     dividerColor: '#d8dae5',
     headerHeight: '55px',
-    headerShadow: 'rgba(0, 0, 0, 0.05) 0px 1px 2px 0px'
+    headerShadow: 'rgba(0, 0, 0, 0.05) 0px 1px 2px 0px',
+    surface: '#ffffff',
+    surfaceLight: '#ffffff',
+    surfaceDark: '#ffffff'
 };
 
 export const winterTheme = {
@@ -115,8 +118,11 @@ export const darkTheme = {
     textDisabled: '#74777a',
     captionColor: '#ffffff73',
     borderColor: '#575757',
-    boxShadow: 'rgba(17, 17, 26, 0.1) 0px 4px 16px, #cbcbcb14 0px 8px 32px',
+    boxShadow: 'none',
     tagColorOutlined: '#ffffffe0',
     tagBackgroundOutlined: '#55555514',
-    tagBorderOutlined: '#ffffffe0'
+    tagBorderOutlined: '#ffffffe0',
+    surface: '#2c3035',
+    surfaceDark: '#353b43',
+    surfaceLight: '#62676e'
 };

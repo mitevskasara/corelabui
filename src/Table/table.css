@@ -31,14 +31,14 @@
 }
 
 .CoreLabUI__table-head > .CoreLabUI__table-body-row {
-    background-color: var(--background);
+    background-color: var(--surface);
 }
 
 .CoreLabUI__table-body-row--bordered {
-    background-color: var(--background);
+    background-color: var(--surface);
     border: 0.5px solid var(--border-color);
 }
 
 .CoreLabUI__table-body > .CoreLabUI__table-body-row--striped:nth-child(even) {
-    background-color: var(--hover-light);
+    background-color: var(--surface-light);
 }
