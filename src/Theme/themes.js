@@ -40,7 +40,7 @@ export const defaultTheme = {
     heading6: '1.25rem',
     subtitle1: '1rem',
     subtitle2: '0.875rem',
-    body1: '0.95rem',
+    body1: '1rem',
     body2: '0.875rem',
     caption: '0.8rem',
     boxShadowHover:
@@ -106,7 +106,7 @@ export const darkTheme = {
     primaryDisabled: '#8e9093',
     light: '#171b20',
     background: '#171b20',
-    fieldsBackground: '#282828',
+    fieldsBackground: '#2a2f45',
     secondary: '#ffffff',
     backdrop: '#ffffff',
     hover: '#5b6d83',
@@ -122,7 +122,7 @@ export const darkTheme = {
     tagColorOutlined: '#ffffffe0',
     tagBackgroundOutlined: '#55555514',
     tagBorderOutlined: '#ffffffe0',
-    surface: '#2c3035',
+    surface: '#2a2f45',
     surfaceDark: '#353b43',
-    surfaceLight: '#62676e'
+    surfaceLight: '#3c4257'
 };

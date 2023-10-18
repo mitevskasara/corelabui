@@ -31,7 +31,7 @@
 }
 
 .CoreLabUI__table-head > .CoreLabUI__table-body-row {
-    background-color: var(--surface);
+    background-color: var(--surface-light);
 }
 
 .CoreLabUI__table-body-row--bordered {

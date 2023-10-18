@@ -82,6 +82,22 @@ const Table = forwardRef(
                                                     }>
                                                     {row[column]}
                                                 </Typography>
+                                            ) : typeof row[column] ===
+                                              'object' ? (
+                                                <Typography
+                                                    variant="body2"
+                                                    margin={false}
+                                                    overflow={
+                                                        textOverflow &&
+                                                        'ellipsis'
+                                                    }
+                                                    dangerouslySetInnerHTML={
+                                                        row[column].node && {
+                                                            __html: row[column]
+                                                                .text
+                                                        }
+                                                    }
+                                                />
                                             ) : (
                                                 row[column]
                                             )}

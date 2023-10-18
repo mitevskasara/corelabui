@@ -31,7 +31,8 @@ const Typography = forwardRef(
             overflow,
             className,
             align = 'left',
-            color
+            color,
+            dangerouslySetInnerHTML
         },
         ref
     ) => {
@@ -61,8 +62,19 @@ const Typography = forwardRef(
         let style = color ? { [COLORS[variant]]: color } : {};
         if (lines) style['--line-clamp'] = lines;
 
-        return (
-            <Element className={classes} style={style} ref={ref}>
+        return dangerouslySetInnerHTML ? (
+            <Element
+                className={classes}
+                style={style}
+                ref={ref}
+                dangerouslySetInnerHTML={dangerouslySetInnerHTML}
+            />
+        ) : (
+            <Element
+                className={classes}
+                style={style}
+                ref={ref}
+                dangerouslySetInnerHTML={dangerouslySetInnerHTML}>
                 {children}
             </Element>
         );
