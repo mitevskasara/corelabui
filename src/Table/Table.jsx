@@ -43,7 +43,7 @@ const Table = forwardRef(
                                     className="CoreLabUI__table-head-column">
                                     <div>
                                         {typeof header === 'string' ||
-                                        typeof header === 'number' ? (
+                                            typeof header === 'number' ? (
                                             <Typography
                                                 variant="subtitle2"
                                                 htmlElement="p"
@@ -72,7 +72,7 @@ const Table = forwardRef(
                                         className="CoreLabUI__table-body-column">
                                         <div>
                                             {typeof row[column] === 'string' ||
-                                            typeof row[column] === 'number' ? (
+                                                typeof row[column] === 'number' ? (
                                                 <Typography
                                                     variant="body2"
                                                     margin={false}
@@ -82,8 +82,7 @@ const Table = forwardRef(
                                                     }>
                                                     {row[column]}
                                                 </Typography>
-                                            ) : typeof row[column] ===
-                                              'object' ? (
+                                            ) : typeof row[column] === 'object' ? (
                                                 <Typography
                                                     variant="body2"
                                                     margin={false}
@@ -92,9 +91,8 @@ const Table = forwardRef(
                                                         'ellipsis'
                                                     }
                                                     dangerouslySetInnerHTML={
-                                                        row[column].node && {
-                                                            __html: row[column]
-                                                                .text
+                                                        row[column]?.node && {
+                                                            __html: row[column]?.text
                                                         }
                                                     }
                                                 />

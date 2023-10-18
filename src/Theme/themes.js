@@ -20,6 +20,7 @@ export const defaultTheme = {
     error: '#da344d',
     warning: '#fdc921',
     success: '#40916c',
+    accent: '#3D00A7',
     title: '#000000e0',
     subtitle: '#000000e0',
     text: '#000000bf',
@@ -124,5 +125,6 @@ export const darkTheme = {
     tagBorderOutlined: '#ffffffe0',
     surface: '#2a2f45',
     surfaceDark: '#353b43',
-    surfaceLight: '#3c4257'
+    surfaceLight: '#3c4257',
+    accent: '#BC95FF'
 };

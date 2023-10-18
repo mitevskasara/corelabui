@@ -1,6 +1,6 @@
 {
     "name": "corelabui",
-    "version": "0.0.2",
+    "version": "0.0.7",
     "description": "Collection of ready-to-use customisable React components available in multiple themes",
     "private": false,
     "scripts": {
