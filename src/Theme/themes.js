@@ -62,9 +62,9 @@ export const defaultTheme = {
     dividerColor: '#d8dae5',
     headerHeight: '55px',
     headerShadow: 'rgba(0, 0, 0, 0.05) 0px 1px 2px 0px',
-    surface: '#ffffff',
+    surface: '#f7fafc',
     surfaceLight: '#ffffff',
-    surfaceDark: '#ffffff'
+    surfaceDark: '#e3e8ee'
 };
 
 export const winterTheme = {

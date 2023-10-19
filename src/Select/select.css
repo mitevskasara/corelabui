@@ -126,7 +126,7 @@
 }
 
 .CoreLabUI__select-menu__option--selected {
-    background-color: var(--surface-light);
+    background-color: var(--surface-dark);
 }
 
 .CoreLabUI__select-menu__option--disabled,

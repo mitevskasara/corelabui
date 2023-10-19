@@ -31,7 +31,7 @@
 }
 
 .CoreLabUI__table-head > .CoreLabUI__table-body-row {
-    background-color: var(--surface-light);
+    background-color: var(--surface-dark);
 }
 
 .CoreLabUI__table-body-row--bordered {
@@ -40,5 +40,5 @@
 }
 
 .CoreLabUI__table-body > .CoreLabUI__table-body-row--striped:nth-child(even) {
-    background-color: var(--surface-light);
+    background-color: var(--surface-dark);
 }
