@@ -88,9 +88,7 @@ export default ({
                                 : ''
                         }`}
                         onClick={
-                            option?.disabled
-                                ? null
-                                : () => onChange(option.value)
+                            option?.disabled ? null : () => onChange(option)
                         }>
                         {option.label}
                     </div>
