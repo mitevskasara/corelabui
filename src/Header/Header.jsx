@@ -4,6 +4,7 @@ import Button from '../Button/Button';
 import useClickAway from '../helpers/useClickAway';
 import { injectTheme } from '../Theme';
 import { injectStyle } from '../utils';
+import { injectStylesheetServerSide } from '../utils';
 import './header.css';
 
 injectTheme();
@@ -53,8 +54,9 @@ const Header = forwardRef(
                         }}>
                         <img src={logo} className="CoreLabUI__header-logo" />
                         <div
-                            className={`CoreLabUI__header-nav CoreLabUI__header-nav--${isOpen ? 'open' : 'closed'
-                                }`}
+                            className={`CoreLabUI__header-nav CoreLabUI__header-nav--${
+                                isOpen ? 'open' : 'closed'
+                            }`}
                             style={{
                                 '--header-items-margin':
                                     align === 'center' && 'auto',
@@ -88,8 +90,9 @@ const Header = forwardRef(
                         </div>
                     </div>
                     <div
-                        className={`CoreLabUI__header-nav--mobile CoreLabUI__header-nav--mobile--${isOpen ? 'open' : 'closed'
-                            }`}
+                        className={`CoreLabUI__header-nav--mobile CoreLabUI__header-nav--mobile--${
+                            isOpen ? 'open' : 'closed'
+                        }`}
                         style={{
                             '--header-padding': spacing
                         }}>

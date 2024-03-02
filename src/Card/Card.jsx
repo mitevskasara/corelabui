@@ -3,6 +3,7 @@ import Typography from '../Typography';
 import Tag from '../Tag';
 import { injectTheme } from '../Theme';
 import { injectStyle } from '../utils';
+import { injectStylesheetServerSide } from '../utils';
 import './card.css';
 
 injectTheme();

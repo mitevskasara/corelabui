@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Tab } from './index';
 import { injectTheme } from '../Theme';
 import { injectStyle } from '../utils';
+import { injectStylesheetServerSide } from '../utils';
 import useKeyPress from '../helpers/useKeyPress';
 import './tabs.css';
 

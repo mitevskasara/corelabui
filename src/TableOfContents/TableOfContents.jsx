@@ -2,6 +2,7 @@ import React, { forwardRef } from 'react';
 import Typography from '../Typography';
 import { injectTheme } from '../Theme';
 import { injectStyle } from '../utils';
+import { injectStylesheetServerSide } from '../utils';
 
 import './tableOfContents.css';
 
@@ -26,8 +27,9 @@ const TableOfContents = forwardRef(
                             key={key}
                             href={!item?.onClick && item?.anchor}
                             onClick={item?.onClick && item?.onClick}
-                            className={`CoreLabUI__table-of-contents-item CoreLabUI__table-of-contents-item--${item?.active ? 'active' : 'inactive'
-                                }`}>
+                            className={`CoreLabUI__table-of-contents-item CoreLabUI__table-of-contents-item--${
+                                item?.active ? 'active' : 'inactive'
+                            }`}>
                             <Typography
                                 variant="caption"
                                 margin={false}

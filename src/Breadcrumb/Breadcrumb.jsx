@@ -3,6 +3,7 @@ import Typography from '../Typography';
 import Flex from '../Flex';
 import { injectTheme } from '../Theme';
 import { injectStyle } from '../utils';
+import { injectStylesheetServerSide } from '../utils';
 import './breadcrumb.css';
 
 injectTheme();
@@ -21,7 +22,8 @@ const Breadcrumb = forwardRef(
                         <a
                             href={item?.link}
                             className={`CoreLabUI__breadcrumb-item 
-                                CoreLabUI__breadcrumb-item--${item?.active ? 'active' : 'inactive'
+                                CoreLabUI__breadcrumb-item--${
+                                    item?.active ? 'active' : 'inactive'
                                 }`}>
                             {item?.icon ? item?.icon : null}
                             <Typography

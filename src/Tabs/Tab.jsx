@@ -2,6 +2,7 @@ import React from 'react';
 import Typography from '../Typography';
 import { injectTheme } from '../Theme';
 import { injectStyle } from '../utils';
+import { injectStylesheetServerSide } from '../utils';
 import './tab.css';
 
 injectTheme();
@@ -34,8 +35,9 @@ const Tab = ({ className, active, index, title, onChange }) => {
                 )}
             </button>
             <div
-                className={`CoreLabUI__tab-line--${active === index ? 'active' : 'inactive'
-                    }`}
+                className={`CoreLabUI__tab-line--${
+                    active === index ? 'active' : 'inactive'
+                }`}
             />
         </div>
     );

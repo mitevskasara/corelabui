@@ -1,6 +1,7 @@
 import React, { forwardRef } from 'react';
 import { injectTheme } from '../Theme';
 import { injectStyle } from '../utils';
+import { injectStylesheetServerSide } from '../utils';
 
 import './highlight.css';
 
@@ -30,11 +31,13 @@ const Highlight = forwardRef(
         if (className) classes += ` ${className}`;
         let gradientStyle = gradient
             ? {
-                '--highlight-webkit-linear-gradient': `-webkit-linear-gradient(to ${gradient?.direction || 'right'
-                    }, ${gradient?.colors})`,
-                '--highlight-linear-gradient': `linear-gradient(to ${gradient?.direction || 'right'
-                    }, ${gradient?.colors})`
-            }
+                  '--highlight-webkit-linear-gradient': `-webkit-linear-gradient(to ${
+                      gradient?.direction || 'right'
+                  }, ${gradient?.colors})`,
+                  '--highlight-linear-gradient': `linear-gradient(to ${
+                      gradient?.direction || 'right'
+                  }, ${gradient?.colors})`
+              }
             : {};
         if (textGradient)
             gradientStyle = {

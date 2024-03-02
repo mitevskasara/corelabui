@@ -1,6 +1,7 @@
 import React, { forwardRef, useState } from 'react';
 import { injectTheme } from '../Theme';
 import { injectStyle } from '../utils';
+import { injectStylesheetServerSide } from '../utils';
 
 import Button from '../Button';
 import useClickAway from '../helpers/useClickAway';
@@ -33,8 +34,9 @@ const Dropdown = forwardRef(
 
         let contentClasses = `CoreLabUI__dropdown-content`;
         if (trigger === 'click')
-            contentClasses += ` CoreLabUI__dropdown-content--${open ? 'open' : 'closed'
-                }`;
+            contentClasses += ` CoreLabUI__dropdown-content--${
+                open ? 'open' : 'closed'
+            }`;
 
         const handleClick = (event) => {
             setAnchorEl(open ? null : event.currentTarget);
@@ -60,7 +62,7 @@ const Dropdown = forwardRef(
                             position === 'left'
                                 ? 0
                                 : position === 'center' &&
-                                `calc(50% - ${minWidth}/2)`,
+                                  `calc(50% - ${minWidth}/2)`,
                         '--right': position === 'right' && 0
                     }}>
                     <div className="CoreLabUI__dropdown-arrow" />

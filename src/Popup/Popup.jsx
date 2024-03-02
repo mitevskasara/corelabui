@@ -2,6 +2,7 @@ import React, { forwardRef } from 'react';
 import Scrollable from '../Scrollable';
 import { injectTheme } from '../Theme';
 import { injectStyle } from '../utils';
+import { injectStylesheetServerSide } from '../utils';
 import useKeyPress from '../helpers/useKeyPress';
 
 import './popup.css';

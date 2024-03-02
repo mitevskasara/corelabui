@@ -1,6 +1,7 @@
 import React from 'react';
 import { injectTheme } from '../Theme';
 import { injectStyle } from '../utils';
+import { injectStylesheetServerSide } from '../utils';
 import './layoutLeft.css';
 
 injectTheme();
@@ -29,14 +30,14 @@ export default ({
             style={
                 type === 'custom'
                     ? {
-                        '--left-layout-grid-column': `${colStart} / span ${colSpan}`,
-                        '--left-layout-grid-row': `${rowStart} / span ${rowSpan}`,
-                        '--padding': padding,
-                        '--margin': margin
-                    }
+                          '--left-layout-grid-column': `${colStart} / span ${colSpan}`,
+                          '--left-layout-grid-row': `${rowStart} / span ${rowSpan}`,
+                          '--padding': padding,
+                          '--margin': margin
+                      }
                     : {
-                        '--padding': padding
-                    }
+                          '--padding': padding
+                      }
             }>
             {children}
         </section>

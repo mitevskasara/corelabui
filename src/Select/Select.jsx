@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { injectTheme } from '../Theme';
 import { injectStyle } from '../utils';
+import { injectStylesheetServerSide } from '../utils';
 import './select.css';
 
 injectTheme();
@@ -42,8 +43,9 @@ export default ({
     return (
         <div className="CoreLabUI CoreLabUI__wrapper">
             <div
-                className={`CoreLabUI__root CoreLabUI__root--${disabled ? 'disabled' : ''
-                    } CoreLabUI__root--${error ? 'error' : ''}`}
+                className={`CoreLabUI__root CoreLabUI__root--${
+                    disabled ? 'disabled' : ''
+                } CoreLabUI__root--${error ? 'error' : ''}`}
                 ref={ref}
                 onClick={() => toggle(!open)}>
                 {label && (
@@ -57,8 +59,9 @@ export default ({
                     {...props}
                     name={props.name}
                     value={options?.find((o) => o.value === value)?.label}
-                    className={`CoreLabUI__select CoreLabUI__select--${size} CoreLabUI__select--${error ? 'error' : ''
-                        }`}
+                    className={`CoreLabUI__select CoreLabUI__select--${size} CoreLabUI__select--${
+                        error ? 'error' : ''
+                    }`}
                     readOnly
                     ref={inputRef}
                 />
@@ -69,21 +72,24 @@ export default ({
                 )}
             </div>
             <div
-                className={`CoreLabUI__select-menu CoreLabUI__select-menu--${open ? 'open' : 'closed'
-                    }`}>
+                className={`CoreLabUI__select-menu CoreLabUI__select-menu--${
+                    open ? 'open' : 'closed'
+                }`}>
                 {options?.map((option, index) => (
                     <div
                         key={index}
                         value={option.value}
                         className={`CoreLabUI__select-menu__option--${size}
-                        ${option.value === value
+                        ${
+                            option.value === value
                                 ? 'CoreLabUI__select-menu__option--selected'
                                 : ''
-                            }
-                        ${option?.disabled
+                        }
+                        ${
+                            option?.disabled
                                 ? 'CoreLabUI__select-menu__option--disabled'
                                 : ''
-                            }`}
+                        }`}
                         onClick={
                             option?.disabled ? null : () => onChange(option)
                         }>

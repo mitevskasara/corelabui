@@ -1,6 +1,7 @@
 import React, { forwardRef } from 'react';
 import { injectTheme } from '../Theme';
 import { injectStyle } from '../utils';
+import { injectStylesheetServerSide } from '../utils';
 import './scrollable.css';
 
 injectTheme();

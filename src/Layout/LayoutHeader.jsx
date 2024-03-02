@@ -1,6 +1,7 @@
 import React from 'react';
 import { injectTheme } from '../Theme';
 import { injectStyle } from '../utils';
+import { injectStylesheetServerSide } from '../utils';
 import './layoutHeader.css';
 
 injectTheme();
@@ -30,15 +31,15 @@ export default ({
             style={
                 type === 'custom'
                     ? {
-                        '--header-layout-grid-column': `${colStart} / span ${colSpan}`,
-                        '--header-layout-grid-row': `${rowStart} / span ${rowSpan}`,
-                        '--padding': padding,
-                        '--margin': margin
-                    }
+                          '--header-layout-grid-column': `${colStart} / span ${colSpan}`,
+                          '--header-layout-grid-row': `${rowStart} / span ${rowSpan}`,
+                          '--padding': padding,
+                          '--margin': margin
+                      }
                     : {
-                        '--padding': padding,
-                        '--margin': margin
-                    }
+                          '--padding': padding,
+                          '--margin': margin
+                      }
             }>
             {children}
         </section>

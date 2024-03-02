@@ -2,6 +2,7 @@ import React, { forwardRef } from 'react';
 import Typography from '../Typography';
 import { injectTheme } from '../Theme';
 import { injectStyle } from '../utils';
+import { injectStylesheetServerSide } from '../utils';
 import './table.css';
 
 injectTheme();
@@ -45,7 +46,7 @@ const Table = forwardRef(
                                     className="CoreLabUI__table-head-column">
                                     <div>
                                         {typeof header === 'string' ||
-                                            typeof header === 'number' ? (
+                                        typeof header === 'number' ? (
                                             <Typography
                                                 variant="subtitle2"
                                                 htmlElement="p"
@@ -74,7 +75,7 @@ const Table = forwardRef(
                                         className="CoreLabUI__table-body-column">
                                         <div>
                                             {typeof row[column] === 'string' ||
-                                                typeof row[column] === 'number' ? (
+                                            typeof row[column] === 'number' ? (
                                                 <Typography
                                                     variant="body2"
                                                     margin={false}
@@ -85,7 +86,7 @@ const Table = forwardRef(
                                                     {row[column]}
                                                 </Typography>
                                             ) : typeof row[column] ===
-                                                'object' ? (
+                                              'object' ? (
                                                 <Typography
                                                     variant="body2"
                                                     margin={false}

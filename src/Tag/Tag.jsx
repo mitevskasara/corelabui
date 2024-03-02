@@ -2,6 +2,7 @@ import React, { forwardRef } from 'react';
 import Typography from '../Typography';
 import { injectTheme } from '../Theme';
 import { injectStyle } from '../utils';
+import { injectStylesheetServerSide } from '../utils';
 import './tag.css';
 
 injectTheme();
