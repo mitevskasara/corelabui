@@ -7,6 +7,8 @@ import './flex.css';
 injectTheme();
 injectStyle('Flex', {});
 
+export const stylesheet = injectStylesheetServerSide('Flex', {});
+
 const Flex = forwardRef(
     (
         {

@@ -6,6 +6,8 @@ import './scrollable.css';
 injectTheme();
 injectStyle('Scrollable', {});
 
+export const stylesheet = injectStylesheetServerSide('Scrollable', {});
+
 const Scrollable = forwardRef(({ className, children, ...props }, ref) => {
     let classes = 'CoreLabUI CoreLabUI__scrollable';
     if (className) classes += ` ${className}`;

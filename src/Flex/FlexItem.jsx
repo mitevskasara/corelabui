@@ -7,6 +7,8 @@ import './flexItem.css';
 injectTheme();
 injectStyle('FlexItem', {});
 
+export const stylesheet = injectStylesheetServerSide('FlexItem', {});
+
 const FlexItem = forwardRef(
     (
         {

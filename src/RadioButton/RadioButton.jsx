@@ -6,6 +6,8 @@ import './radioButton.css';
 injectTheme();
 injectStyle('RadioButton', {});
 
+export const stylesheet = injectStylesheetServerSide('RadioButton', {});
+
 const RadioButton = forwardRef(
     (
         {

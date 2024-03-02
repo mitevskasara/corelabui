@@ -7,6 +7,8 @@ import './quote.css';
 injectTheme();
 injectStyle('Quote', {});
 
+export const stylesheet = injectStylesheetServerSide('Quote', {});
+
 const Quote = forwardRef(
     ({ className, children, cite, separator = 'line', ...props }, ref) => {
         let classes = 'CoreLabUI__quote';

@@ -6,6 +6,8 @@ import './layoutLeft.css';
 injectTheme();
 injectStyle('LayoutLeft', {});
 
+export const stylesheet = injectStylesheetServerSide('LayoutLeft', {});
+
 export default ({
     children,
     className,
@@ -27,14 +29,14 @@ export default ({
             style={
                 type === 'custom'
                     ? {
-                          '--left-layout-grid-column': `${colStart} / span ${colSpan}`,
-                          '--left-layout-grid-row': `${rowStart} / span ${rowSpan}`,
-                          '--padding': padding,
-                          '--margin': margin
-                      }
+                        '--left-layout-grid-column': `${colStart} / span ${colSpan}`,
+                        '--left-layout-grid-row': `${rowStart} / span ${rowSpan}`,
+                        '--padding': padding,
+                        '--margin': margin
+                    }
                     : {
-                          '--padding': padding
-                      }
+                        '--padding': padding
+                    }
             }>
             {children}
         </section>

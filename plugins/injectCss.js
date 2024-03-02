@@ -12,7 +12,7 @@ module.exports = {
                 dir = dir.join('/');
                 const key = args.path
                     .split('/')
-                    [args.path.split('/').length - 1].split('.')[0];
+                [args.path.split('/').length - 1].split('.')[0];
 
                 let cssFileName = content.match(
                     new RegExp(/(?<=import)(.*)(?=.css)/)
@@ -48,6 +48,10 @@ module.exports = {
                     fileContent = content.replace(
                         "injectStyle('" + key + "', {});",
                         minifiedCss + "\ninjectStyle('" + key + "', css);"
+                    );
+                    fileContent = content.replace(
+                        "injectStylesheetServerSide('" + key + "', {});",
+                        "injectStylesheetServerSide('" + key + "', css);"
                     );
                 }
 

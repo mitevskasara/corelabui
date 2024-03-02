@@ -6,6 +6,8 @@ import './layoutHeader.css';
 injectTheme();
 injectStyle('LayoutHeader', {});
 
+export const stylesheet = injectStylesheetServerSide('LayoutHeader', {});
+
 export default ({
     children,
     className,
@@ -28,15 +30,15 @@ export default ({
             style={
                 type === 'custom'
                     ? {
-                          '--header-layout-grid-column': `${colStart} / span ${colSpan}`,
-                          '--header-layout-grid-row': `${rowStart} / span ${rowSpan}`,
-                          '--padding': padding,
-                          '--margin': margin
-                      }
+                        '--header-layout-grid-column': `${colStart} / span ${colSpan}`,
+                        '--header-layout-grid-row': `${rowStart} / span ${rowSpan}`,
+                        '--padding': padding,
+                        '--margin': margin
+                    }
                     : {
-                          '--padding': padding,
-                          '--margin': margin
-                      }
+                        '--padding': padding,
+                        '--margin': margin
+                    }
             }>
             {children}
         </section>

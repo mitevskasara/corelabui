@@ -8,6 +8,8 @@ import './navigationItem.css';
 injectTheme();
 injectStyle('NavigationItem', {});
 
+export const stylesheet = injectStylesheetServerSide('NavigationItem', {});
+
 const NavigationItem = forwardRef(
     (
         {

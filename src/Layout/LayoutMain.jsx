@@ -6,6 +6,8 @@ import './layoutMain.css';
 injectTheme();
 injectStyle('LayoutMain', {});
 
+export const stylesheet = injectStylesheetServerSide('LayoutMain', {});
+
 export default ({
     children,
     className,
@@ -27,15 +29,15 @@ export default ({
             style={
                 type === 'custom'
                     ? {
-                          '--main-layout-grid-column': `${colStart} / span ${colSpan}`,
-                          '--main-layout-grid-row': `${rowStart} / span ${rowSpan}`,
-                          '--padding': padding,
-                          '--margin': margin
-                      }
+                        '--main-layout-grid-column': `${colStart} / span ${colSpan}`,
+                        '--main-layout-grid-row': `${rowStart} / span ${rowSpan}`,
+                        '--padding': padding,
+                        '--margin': margin
+                    }
                     : {
-                          '--padding': padding,
-                          '--margin': margin
-                      }
+                        '--padding': padding,
+                        '--margin': margin
+                    }
             }>
             {children}
         </section>

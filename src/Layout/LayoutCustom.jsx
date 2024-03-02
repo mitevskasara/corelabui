@@ -1,5 +1,7 @@
 import React from 'react';
 
+export const stylesheet = injectStylesheetServerSide('LayoutCustom', {});
+
 export default ({
     children,
     className,

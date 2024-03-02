@@ -6,6 +6,8 @@ import './button.css';
 injectTheme();
 injectStyle('Button', {});
 
+export const stylesheet = injectStylesheetServerSide('Button', {});
+
 const Button = forwardRef(
     (
         {

@@ -6,6 +6,8 @@ import './tabContent.css';
 injectTheme();
 injectStyle('TabContent', {});
 
+export const stylesheet = injectStylesheetServerSide('TabContent', {});
+
 const TabContent = ({ children, className, active, index, ...props }) => {
     let classes = 'CoreLabUI__tab-content';
     if (active === index) classes += ' CoreLabUI__tab-content--active';

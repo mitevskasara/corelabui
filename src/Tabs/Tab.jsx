@@ -7,6 +7,8 @@ import './tab.css';
 injectTheme();
 injectStyle('Tab', {});
 
+export const stylesheet = injectStylesheetServerSide('Tab', {});
+
 const Tab = ({ className, active, index, title, onChange }) => {
     let classes = 'CoreLabUI__tab';
     if (active === index) classes += ' CoreLabUI__tab--active';
@@ -32,9 +34,8 @@ const Tab = ({ className, active, index, title, onChange }) => {
                 )}
             </button>
             <div
-                className={`CoreLabUI__tab-line--${
-                    active === index ? 'active' : 'inactive'
-                }`}
+                className={`CoreLabUI__tab-line--${active === index ? 'active' : 'inactive'
+                    }`}
             />
         </div>
     );

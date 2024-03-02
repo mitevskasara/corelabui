@@ -7,6 +7,8 @@ import './tag.css';
 injectTheme();
 injectStyle('Tag', {});
 
+export const stylesheet = injectStylesheetServerSide('Tag', {});
+
 const Tag = forwardRef(
     (
         {

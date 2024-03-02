@@ -6,6 +6,8 @@ import './layoutRight.css';
 injectTheme();
 injectStyle('LayoutRight', {});
 
+export const stylesheet = injectStylesheetServerSide('LayoutRight', {});
+
 export default ({
     children,
     className,
@@ -27,15 +29,15 @@ export default ({
             style={
                 type === 'custom'
                     ? {
-                          '--right-layout-grid-column': `${colStart} / span ${colSpan}`,
-                          '--right-layout-grid-row': `${rowStart} / span ${rowSpan}`,
-                          '--padding': padding,
-                          '--margin': margin
-                      }
+                        '--right-layout-grid-column': `${colStart} / span ${colSpan}`,
+                        '--right-layout-grid-row': `${rowStart} / span ${rowSpan}`,
+                        '--padding': padding,
+                        '--margin': margin
+                    }
                     : {
-                          '--padding': padding,
-                          '--margin': margin
-                      }
+                        '--padding': padding,
+                        '--margin': margin
+                    }
             }>
             {children}
         </section>

@@ -7,6 +7,8 @@ import './input.css';
 injectTheme();
 injectStyle('Input', {});
 
+export const stylesheet = injectStylesheetServerSide('Input', {});
+
 const Input = forwardRef(
     (
         {

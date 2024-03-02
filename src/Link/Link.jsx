@@ -7,6 +7,8 @@ import './link.css';
 injectTheme();
 injectStyle('Link', {});
 
+export const stylesheet = injectStylesheetServerSide('Link', {});
+
 const Link = forwardRef(
     (
         { children, disabled, size = 'medium', color, className, ...props },

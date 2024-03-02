@@ -6,6 +6,8 @@ import './layoutFooter.css';
 injectTheme();
 injectStyle('LayoutFooter', {});
 
+export const stylesheet = injectStylesheetServerSide('LayoutFooter', {});
+
 export default ({
     children,
     className,

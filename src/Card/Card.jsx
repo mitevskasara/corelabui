@@ -8,6 +8,8 @@ import './card.css';
 injectTheme();
 injectStyle('Card', {});
 
+export const stylesheet = injectStylesheetServerSide('Card', {});
+
 const Card = forwardRef(
     (
         {

@@ -7,6 +7,8 @@ import './divider.css';
 injectTheme();
 injectStyle('Divider', {});
 
+export const stylesheet = injectStylesheetServerSide('Divider', {});
+
 const Divider = forwardRef(
     (
         {

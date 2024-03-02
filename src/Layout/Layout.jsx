@@ -6,6 +6,8 @@ import './layout.css';
 injectTheme();
 injectStyle('Layout', {});
 
+export const stylesheet = injectStylesheetServerSide('Layout', {});
+
 export default ({
     children,
     className,
@@ -24,8 +26,8 @@ export default ({
             style={
                 type === 'custom' && templateAreas
                     ? {
-                          '--layout-template-areas': templateAreas
-                      }
+                        '--layout-template-areas': templateAreas
+                    }
                     : null
             }>
             {children}

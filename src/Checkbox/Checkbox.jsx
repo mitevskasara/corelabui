@@ -6,6 +6,8 @@ import './checkbox.css';
 injectTheme();
 injectStyle('Checkbox', {});
 
+export const stylesheet = injectStylesheetServerSide('Checkbox', {});
+
 const Checkbox = forwardRef(
     (
         {

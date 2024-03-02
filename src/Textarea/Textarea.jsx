@@ -6,6 +6,8 @@ import './textarea.css';
 injectTheme();
 injectStyle('Textarea', {});
 
+export const stylesheet = injectStylesheetServerSide('Textarea', {});
+
 const Textarea = forwardRef(
     (
         { disabled = false, label, error, helperText, className, ...props },

@@ -9,6 +9,8 @@ import './popup.css';
 injectTheme();
 injectStyle('Popup', {});
 
+export const stylesheet = injectStylesheetServerSide('Popup', {});
+
 const Popup = forwardRef(
     (
         {

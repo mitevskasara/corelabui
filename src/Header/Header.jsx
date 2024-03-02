@@ -9,6 +9,8 @@ import './header.css';
 injectTheme();
 injectStyle('Header', {});
 
+export const stylesheet = injectStylesheetServerSide('Header', {});
+
 const Header = forwardRef(
     (
         {
@@ -51,9 +53,8 @@ const Header = forwardRef(
                         }}>
                         <img src={logo} className="CoreLabUI__header-logo" />
                         <div
-                            className={`CoreLabUI__header-nav CoreLabUI__header-nav--${
-                                isOpen ? 'open' : 'closed'
-                            }`}
+                            className={`CoreLabUI__header-nav CoreLabUI__header-nav--${isOpen ? 'open' : 'closed'
+                                }`}
                             style={{
                                 '--header-items-margin':
                                     align === 'center' && 'auto',
@@ -87,9 +88,8 @@ const Header = forwardRef(
                         </div>
                     </div>
                     <div
-                        className={`CoreLabUI__header-nav--mobile CoreLabUI__header-nav--mobile--${
-                            isOpen ? 'open' : 'closed'
-                        }`}
+                        className={`CoreLabUI__header-nav--mobile CoreLabUI__header-nav--mobile--${isOpen ? 'open' : 'closed'
+                            }`}
                         style={{
                             '--header-padding': spacing
                         }}>

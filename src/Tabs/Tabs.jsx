@@ -8,6 +8,8 @@ import './tabs.css';
 injectTheme();
 injectStyle('Tabs', {});
 
+export const stylesheet = injectStylesheetServerSide('Tabs', {});
+
 const Tabs = ({ children, className, items, active, onChange, ...props }) => {
     let classes = 'CoreLabUI__tabs';
     if (className) classes += ` ${className}`;

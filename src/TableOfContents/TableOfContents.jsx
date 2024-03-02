@@ -8,6 +8,8 @@ import './tableOfContents.css';
 injectTheme();
 injectStyle('TableOfContents', {});
 
+export const stylesheet = injectStylesheetServerSide('TableOfContents', {});
+
 const TableOfContents = forwardRef(
     ({ className, title, items, ...props }, ref) => {
         let classes = `CoreLabUI CoreLabUI__table-of-contents`;
@@ -24,9 +26,8 @@ const TableOfContents = forwardRef(
                             key={key}
                             href={!item?.onClick && item?.anchor}
                             onClick={item?.onClick && item?.onClick}
-                            className={`CoreLabUI__table-of-contents-item CoreLabUI__table-of-contents-item--${
-                                item?.active ? 'active' : 'inactive'
-                            }`}>
+                            className={`CoreLabUI__table-of-contents-item CoreLabUI__table-of-contents-item--${item?.active ? 'active' : 'inactive'
+                                }`}>
                             <Typography
                                 variant="caption"
                                 margin={false}

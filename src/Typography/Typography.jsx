@@ -6,6 +6,8 @@ import './typography.css';
 injectTheme();
 injectStyle('Typography', {});
 
+export const stylesheet = injectStylesheetServerSide('Typography', {});
+
 const VARIANTS = {
     heading1: 'h1',
     heading2: 'h2',

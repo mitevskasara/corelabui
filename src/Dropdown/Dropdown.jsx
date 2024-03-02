@@ -9,6 +9,8 @@ import './dropdown.css';
 injectTheme();
 injectStyle('Dropdown', {});
 
+export const stylesheet = injectStylesheetServerSide('Dropdown', {});
+
 const Dropdown = forwardRef(
     (
         {
@@ -31,9 +33,8 @@ const Dropdown = forwardRef(
 
         let contentClasses = `CoreLabUI__dropdown-content`;
         if (trigger === 'click')
-            contentClasses += ` CoreLabUI__dropdown-content--${
-                open ? 'open' : 'closed'
-            }`;
+            contentClasses += ` CoreLabUI__dropdown-content--${open ? 'open' : 'closed'
+                }`;
 
         const handleClick = (event) => {
             setAnchorEl(open ? null : event.currentTarget);
@@ -59,7 +60,7 @@ const Dropdown = forwardRef(
                             position === 'left'
                                 ? 0
                                 : position === 'center' &&
-                                  `calc(50% - ${minWidth}/2)`,
+                                `calc(50% - ${minWidth}/2)`,
                         '--right': position === 'right' && 0
                     }}>
                     <div className="CoreLabUI__dropdown-arrow" />

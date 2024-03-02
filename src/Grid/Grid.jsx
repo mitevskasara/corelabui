@@ -7,6 +7,8 @@ import './grid.css';
 injectTheme();
 injectStyle('Grid', {});
 
+export const stylesheet = injectStylesheetServerSide('Grid', {});
+
 const Grid = forwardRef(
     (
         {

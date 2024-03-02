@@ -8,6 +8,8 @@ import './popupActions.css';
 injectTheme();
 injectStyle('PopupActions', {});
 
+export const stylesheet = injectStylesheetServerSide('PopupActions', {});
+
 const PopupActions = forwardRef(({ className, actions }, ref) => {
     return (
         <Flex
