@@ -15,4 +15,6 @@ dist
 !demo/*
 demo/dist
 !vercel.json
+!.github
+!.github/**
 .DS_Store

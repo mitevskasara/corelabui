@@ -6,7 +6,8 @@
     "scripts": {
         "build": "find . -mindepth 1 -maxdepth 1 -type d ! -name 'node_modules' ! -name 'src' ! -name 'plugins' ! -name 'demo' -exec sh -c 'find \"{}\" -type f -name \"*.js\" | read' \\; -exec rm -rf {} \\; && node esbuild.js",
         "build:demo": "node demo/build.js",
-        "demo": "node demo/build.js --serve"
+        "demo": "node demo/build.js --serve",
+        "prepublishOnly": "npm run build"
     },
     "repository": {
         "type": "git",

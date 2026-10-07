@@ -6,3 +6,4 @@ plugins
 esbuild.js
 demo
 vercel.json
+.github
