@@ -33,6 +33,8 @@ const Divider = forwardRef(
                 {...props}
                 className={classes}
                 ref={ref}
+                role={text ? undefined : 'separator'}
+                aria-orientation={text ? undefined : 'horizontal'}
                 style={{
                     ...style,
                     '--divider-width': width

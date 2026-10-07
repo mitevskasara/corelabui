@@ -17,6 +17,7 @@ const Table = forwardRef(
             data,
             className,
             children,
+            caption,
             spacing = '0.5em 1em',
             striped = false,
             bordered = true,
@@ -37,12 +38,18 @@ const Table = forwardRef(
                 className={classes}
                 ref={ref}
                 style={{ '--spacing': spacing }}>
+                {caption && (
+                    <caption className="CoreLabUI__table-caption">
+                        {caption}
+                    </caption>
+                )}
                 {headers && (
                     <thead className="CoreLabUI__table-head">
                         <tr className={rowClasses}>
                             {headers?.map((header, index) => (
                                 <th
                                     key={index}
+                                    scope="col"
                                     className="CoreLabUI__table-head-column">
                                     <div>
                                         {typeof header === 'string' ||

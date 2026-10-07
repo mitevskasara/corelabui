@@ -31,14 +31,14 @@ const Quote = forwardRef(
                     children
                 )}
                 {cite && (
-                    <figcaption className="CoreLabUI__quote-cite">
+                    <footer className="CoreLabUI__quote-cite">
                         <div className="CoreLabUI__quote-divider" />
                         {typeof cite === 'string' ? (
                             <Typography variant="caption">{cite}</Typography>
                         ) : (
                             cite
                         )}
-                    </figcaption>
+                    </footer>
                 )}
             </blockquote>
         );

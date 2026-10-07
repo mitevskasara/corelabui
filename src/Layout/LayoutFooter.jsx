@@ -12,6 +12,7 @@ export const stylesheet = injectStylesheetServerSide('LayoutFooter', {});
 export default ({
     children,
     className,
+    label,
     type = 'dashboard',
     padding,
     margin,
@@ -22,6 +23,7 @@ export default ({
     return (
         <section
             {...props}
+            {...(label ? { 'aria-label': label } : {})}
             className={classes}
             style={{
                 '--padding': padding,

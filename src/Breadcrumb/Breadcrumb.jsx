@@ -12,15 +12,16 @@ injectStyle('Breadcrumb', {});
 export const stylesheet = injectStylesheetServerSide('Breadcrumb', {});
 
 const Breadcrumb = forwardRef(
-    ({ items, className, separator, ...props }, ref) => {
+    ({ items, className, separator, label = 'Breadcrumb', ...props }, ref) => {
         let classes = `CoreLabUI CoreLabUI__breadcrumb`;
         if (className) classes += ` ${className}`;
         return (
-            <div {...props} className={classes} ref={ref}>
+            <nav {...props} className={classes} ref={ref} aria-label={label}>
                 {items?.map((item, index) => (
                     <Flex key={index} alignItems="center" gap="0.5">
                         <a
                             href={item?.link}
+                            aria-current={item?.active ? 'page' : undefined}
                             className={`CoreLabUI__breadcrumb-item 
                                 CoreLabUI__breadcrumb-item--${
                                     item?.active ? 'active' : 'inactive'
@@ -34,7 +35,9 @@ const Breadcrumb = forwardRef(
                                 {item?.title}
                             </Typography>
                         </a>
-                        <span className="CoreLabUI__breadcrumb-separator">
+                        <span
+                            aria-hidden="true"
+                            className="CoreLabUI__breadcrumb-separator">
                             {index < items?.length - 1
                                 ? separator
                                     ? separator
@@ -43,7 +46,7 @@ const Breadcrumb = forwardRef(
                         </span>
                     </Flex>
                 ))}
-            </div>
+            </nav>
         );
     }
 );

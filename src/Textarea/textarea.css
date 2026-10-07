@@ -72,3 +72,12 @@
     > .CoreLabUI__field-multiline__helper-text {
     color: var(--error) !important;
 }
+
+.CoreLabUI__field-multiline:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 1px;
+}
+
+.CoreLabUI__field-multiline-root--error .CoreLabUI__field-multiline:focus-visible {
+    outline-color: var(--error);
+}

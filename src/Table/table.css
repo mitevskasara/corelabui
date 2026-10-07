@@ -42,3 +42,13 @@
 .CoreLabUI__table-body > .CoreLabUI__table-body-row--striped:nth-child(even) {
     background-color: var(--surface-dark);
 }
+
+.CoreLabUI__table-caption {
+    caption-side: top;
+    text-align: left;
+    font-size: var(--font-small);
+    color: var(--text-secondary);
+    font-family: var(--font-family);
+    background-color: var(--surface-dark);
+    padding: 1em 1em 0.5em;
+}

@@ -1,10 +1,18 @@
 import React from 'react';
+import { injectTheme } from '../Theme';
+import { injectStyle } from '../utils';
+import { injectStylesheetServerSide } from '../utils';
+import './layoutCustom.css';
+
+injectTheme();
+injectStyle('LayoutCustom', {});
 
 export const stylesheet = injectStylesheetServerSide('LayoutCustom', {});
 
 export default ({
     children,
     className,
+    label,
     area,
     colStart,
     rowStart,
@@ -17,6 +25,7 @@ export default ({
     return (
         <section
             {...props}
+            {...(label ? { 'aria-label': label } : {})}
             className={className}
             style={{
                 gridColumn: `${colStart} / span ${colSpan}`,

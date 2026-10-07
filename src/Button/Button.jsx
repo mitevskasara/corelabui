@@ -9,6 +9,18 @@ injectStyle('Button', {});
 
 export const stylesheet = injectStylesheetServerSide('Button', {});
 
+const SR_ONLY = {
+    position: 'absolute',
+    width: '1px',
+    height: '1px',
+    padding: 0,
+    margin: '-1px',
+    overflow: 'hidden',
+    clip: 'rect(0, 0, 0, 0)',
+    whiteSpace: 'nowrap',
+    border: 0
+};
+
 const Button = forwardRef(
     (
         {
@@ -35,14 +47,19 @@ const Button = forwardRef(
                 <button
                     {...props}
                     className={`CoreLabUI__btn CoreLabUI__btn--${variant} CoreLabUI__btn--${size}`}
-                    disabled={disabled || loading}>
+                    disabled={disabled || loading}
+                    aria-busy={loading || undefined}>
                     {loading ? (
-                        <div
-                            className={`CoreLabUI__btn__loader CoreLabUI__btn__loader--${variant}`}>
-                            <span />
-                            <span />
-                            <span />
-                        </div>
+                        <>
+                            <div
+                                aria-hidden="true"
+                                className={`CoreLabUI__btn__loader CoreLabUI__btn__loader--${variant}`}>
+                                <span />
+                                <span />
+                                <span />
+                            </div>
+                            <span style={SR_ONLY}>Loading...</span>
+                        </>
                     ) : (
                         <span>
                             {title}

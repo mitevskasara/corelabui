@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react';
+import React, { forwardRef, useId } from 'react';
 import { injectTheme } from '../Theme';
 import { injectStyle } from '../utils';
 import { injectStylesheetServerSide } from '../utils';
@@ -19,6 +19,7 @@ const Input = forwardRef(
             error,
             helperText,
             className,
+            id,
             ...props
         },
         ref
@@ -31,23 +32,30 @@ const Input = forwardRef(
         let inputClasses = `CoreLabUI__field CoreLabUI__field--${size}`;
         if (error) inputClasses += ' CoreLabUI__field--error';
 
+        const uid = useId();
+        const inputId = id || `${uid}-input`;
+        const helperId = helperText ? `${uid}-helper` : undefined;
+
         return (
             <div className={classes}>
                 {label && (
                     <label
                         className="CoreLabUI__field__label"
-                        htmlFor={props.name}>
+                        htmlFor={inputId}>
                         {label}
                     </label>
                 )}
                 <input
                     {...props}
+                    id={inputId}
                     className={inputClasses}
-                    readOnly={disabled}
+                    disabled={disabled}
+                    aria-invalid={error ? true : undefined}
+                    aria-describedby={helperId}
                     ref={ref}
                 />
                 {helperText && (
-                    <span className="CoreLabUI__field__helper-text">
+                    <span id={helperId} className="CoreLabUI__field__helper-text">
                         {helperText}
                     </span>
                 )}

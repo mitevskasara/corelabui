@@ -17,3 +17,10 @@
 .CoreLabUI__breadcrumb-item:hover {
     color: var(--text);
 }
+
+.CoreLabUI__breadcrumb-item:focus-visible {
+    color: var(--text);
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+    border-radius: var(--border-radius);
+}

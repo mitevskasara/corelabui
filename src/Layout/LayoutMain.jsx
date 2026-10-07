@@ -12,6 +12,7 @@ export const stylesheet = injectStylesheetServerSide('LayoutMain', {});
 export default ({
     children,
     className,
+    label,
     type = 'dashboard',
     colStart,
     rowStart,
@@ -26,6 +27,7 @@ export default ({
     return (
         <section
             {...props}
+            {...(label ? { 'aria-label': label } : {})}
             className={classes}
             style={
                 type === 'custom'
