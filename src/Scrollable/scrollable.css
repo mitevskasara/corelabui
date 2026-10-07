@@ -2,6 +2,12 @@
     overflow: hidden;
 }
 
-.CoreLabUI__scrollable:hover {
+.CoreLabUI__scrollable:hover,
+.CoreLabUI__scrollable:focus-within {
     overflow-y: auto;
+}
+
+.CoreLabUI__scrollable:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: -2px;
 }

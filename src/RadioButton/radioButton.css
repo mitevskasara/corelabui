@@ -106,3 +106,8 @@
 .CoreLabUI__radio-checkmark--rounded:after {
     border-radius: 50%;
 }
+
+.CoreLabUI__radio-label > input:focus-visible ~ .CoreLabUI__radio-checkmark {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+}

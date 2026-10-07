@@ -10,7 +10,14 @@ injectStyle('Tab', {});
 
 export const stylesheet = injectStylesheetServerSide('Tab', {});
 
-const Tab = ({ className, active, index, title, onChange }) => {
+const Tab = ({
+    className,
+    active,
+    index,
+    title,
+    onChange,
+    idPrefix = 'corelab-ui'
+}) => {
     let classes = 'CoreLabUI__tab';
     if (active === index) classes += ' CoreLabUI__tab--active';
     if (className) classes += ` ${className}`;
@@ -20,9 +27,10 @@ const Tab = ({ className, active, index, title, onChange }) => {
         <div className="CoreLabUI__tab-root">
             <button
                 className={classes}
+                type="button"
                 role="tab"
-                id={`corelab-ui-tab-${index}`}
-                aria-controls={`corelab-ui-tabpanel-${index}`}
+                id={`${idPrefix}-tab-${index}`}
+                aria-controls={`${idPrefix}-tabpanel-${index}`}
                 aria-selected={active === index}
                 tabIndex={active !== index ? -1 : undefined}
                 onClick={(e) => onChange(e, index)}>

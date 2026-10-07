@@ -9,9 +9,16 @@ injectStyle('TabContent', {});
 
 export const stylesheet = injectStylesheetServerSide('TabContent', {});
 
-const TabContent = ({ children, className, active, index, ...props }) => {
+const TabContent = ({
+    children,
+    className,
+    active,
+    index,
+    idPrefix = 'corelab-ui',
+    ...props
+}) => {
     let classes = 'CoreLabUI__tab-content';
-    if (active === index) classes += ' CoreLabUI__tab-content--active';
+    if (active === index) classes += ` CoreLabUI__tab-content--active`;
     if (className) classes += ` ${className}`;
     classes += ' CoreLabUI';
 
@@ -19,9 +26,9 @@ const TabContent = ({ children, className, active, index, ...props }) => {
         <div
             {...props}
             className={classes}
-            id={`corelab-ui-tabpanel-${index}`}
+            id={`${idPrefix}-tabpanel-${index}`}
             role="tabpanel"
-            aria-labelledby={`corelab-ui-tab-${index}`}
+            aria-labelledby={`${idPrefix}-tab-${index}`}
             tabIndex="0">
             {children}
         </div>

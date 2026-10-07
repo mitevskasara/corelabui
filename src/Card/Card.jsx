@@ -25,6 +25,7 @@ const Card = forwardRef(
             onClick,
             tags,
             icon,
+            alt = '',
             ...props
         },
         ref
@@ -34,13 +35,24 @@ const Card = forwardRef(
         if (clickable) classes += ` CoreLabUI__card--clickable`;
         if (className) classes += ` ${className}`;
         classes += ' CoreLabUI';
+        const isInteractive = clickable && Boolean(onClick);
+        const handleKeyDown = (event) => {
+            if (!isInteractive) return;
+            if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                onClick(event);
+            }
+        };
         return (
             <div
                 {...props}
                 className={classes}
                 ref={ref}
                 style={{ '--card-width': width, '--card-height': height }}
-                onClick={clickable ? onClick : null}>
+                role={isInteractive ? 'button' : undefined}
+                tabIndex={isInteractive ? 0 : undefined}
+                onKeyDown={isInteractive ? handleKeyDown : undefined}
+                onClick={isInteractive ? onClick : null}>
                 <div className="CoreLabUI__card-header">
                     {typeof title === 'string' ? (
                         <Typography
@@ -58,7 +70,13 @@ const Card = forwardRef(
                         </div>
                     )}
                 </div>
-                {image && <img src={image} className="CoreLabUI__card-image" />}
+                {image && (
+                    <img
+                        src={image}
+                        alt={alt}
+                        className="CoreLabUI__card-image"
+                    />
+                )}
                 {description && (
                     <Typography
                         variant="body2"

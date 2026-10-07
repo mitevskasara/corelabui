@@ -1,9 +1,8 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Tab } from './index';
 import { injectTheme } from '../Theme';
 import { injectStyle } from '../utils';
 import { injectStylesheetServerSide } from '../utils';
-import useKeyPress from '../helpers/useKeyPress';
 import './tabs.css';
 
 injectTheme();
@@ -11,36 +10,45 @@ injectStyle('Tabs', {});
 
 export const stylesheet = injectStylesheetServerSide('Tabs', {});
 
-const Tabs = ({ children, className, items, active, onChange, ...props }) => {
+const Tabs = ({
+    children,
+    className,
+    items,
+    active,
+    onChange,
+    idPrefix = 'corelab-ui',
+    ...props
+}) => {
     let classes = 'CoreLabUI__tabs';
     if (className) classes += ` ${className}`;
     classes += ' CoreLabUI';
-    const leftPressed = useKeyPress('ArrowLeft');
-    const rightPressed = useKeyPress('ArrowRight');
 
-    useEffect(() => {
-        if (leftPressed === true) {
-            const index = active === 0 ? items?.length - 1 : active - 1;
-            if (typeof document === 'object') {
-                document.getElementById(`corelab-ui-tab-${index}`)?.focus();
-            }
-            onChange(null, index);
+    const handleKeyDown = (event) => {
+        if (!items?.length) return;
+        let index = null;
+        if (event.key === 'ArrowRight') {
+            index = active === items.length - 1 ? 0 : active + 1;
+        } else if (event.key === 'ArrowLeft') {
+            index = active === 0 ? items.length - 1 : active - 1;
+        } else if (event.key === 'Home') {
+            index = 0;
+        } else if (event.key === 'End') {
+            index = items.length - 1;
         }
-        if (rightPressed === true) {
-            const index = active === items?.length - 1 ? 0 : active + 1;
-            onChange(null, index);
-            if (typeof document === 'object') {
-                document.getElementById(`corelab-ui-tab-${index}`)?.focus();
-            }
-        }
-    }, [leftPressed, rightPressed]);
+        if (index === null) return;
+        event.preventDefault();
+        onChange?.(null, index);
+        document
+            .getElementById(`${idPrefix}-tab-${index}`)
+            ?.focus?.();
+    };
 
     return (
         <div
             {...props}
             className={classes}
             role="tablist"
-            aria-labelledby="corelab-ui-tabs">
+            onKeyDown={handleKeyDown}>
             {items?.map((item, key) => {
                 return (
                     <Tab
@@ -48,6 +56,7 @@ const Tabs = ({ children, className, items, active, onChange, ...props }) => {
                         title={item?.title}
                         active={active}
                         index={key}
+                        idPrefix={idPrefix}
                         onChange={onChange}
                     />
                 );

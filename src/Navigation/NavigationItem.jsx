@@ -35,10 +35,43 @@ const NavigationItem = forwardRef(
         if (divider) classes += ` CoreLabUI__navigation-item--divided`;
         if (disabled) classes += ` CoreLabUI__navigation-item--disabled`;
         if (className) classes += ` ${className}`;
-        const Element = link ? 'a' : 'div';
-        const elementProps = link
-            ? { ...props, href: link }
-            : { ...props, onClick };
+        const isLink = Boolean(link);
+        const isInteractive = Boolean(onClick) && !disabled;
+        const handleClick = (event) => {
+            if (disabled) {
+                event.preventDefault();
+                return;
+            }
+            if (typeof onClick === 'function') onClick(event);
+        };
+        const handleKeyDown = (event) => {
+            if (!isInteractive || isLink) return;
+            if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                onClick(event);
+            }
+        };
+        const currentProps = {
+            'aria-current': active ? 'page' : undefined
+        };
+        const elementProps = isLink
+            ? {
+                  ...props,
+                  ...currentProps,
+                  href: link,
+                  'aria-disabled': disabled || undefined,
+                  onClick: handleClick
+              }
+            : {
+                  ...props,
+                  ...currentProps,
+                  onClick: isInteractive ? handleClick : undefined,
+                  tabIndex: isInteractive ? 0 : undefined,
+                  role: isInteractive ? 'button' : undefined,
+                  onKeyDown: isInteractive ? handleKeyDown : undefined
+              };
+
+        const Element = isLink ? 'a' : 'div';
 
         return (
             <Element

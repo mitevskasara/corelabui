@@ -17,29 +17,64 @@ const TableOfContents = forwardRef(
         if (className) classes += ` ${className}`;
 
         return (
-            <div {...props} ref={ref}>
+            <nav
+                {...props}
+                ref={ref}
+                aria-label={
+                    typeof title === 'string' ? title : undefined
+                }>
                 <Typography variant="heading6" overflow="ellipsis">
                     {title}
                 </Typography>
                 <div className={classes}>
-                    {items?.map((item, key) => (
-                        <a
-                            key={key}
-                            href={!item?.onClick && item?.anchor}
-                            onClick={item?.onClick && item?.onClick}
-                            className={`CoreLabUI__table-of-contents-item CoreLabUI__table-of-contents-item--${
-                                item?.active ? 'active' : 'inactive'
-                            }`}>
+                    {items?.map((item, key) => {
+                        const itemClasses = `CoreLabUI__table-of-contents-item CoreLabUI__table-of-contents-item--${
+                            item?.active ? 'active' : 'inactive'
+                        }`;
+                        const current = item?.active ? 'page' : undefined;
+                        const content = (
                             <Typography
                                 variant="caption"
                                 margin={false}
                                 overflow="ellipsis">
                                 {item?.title}
                             </Typography>
-                        </a>
-                    ))}
+                        );
+                        if (item?.anchor) {
+                            return (
+                                <a
+                                    key={key}
+                                    href={item.anchor}
+                                    onClick={item.onClick}
+                                    aria-current={current}
+                                    className={itemClasses}>
+                                    {content}
+                                </a>
+                            );
+                        }
+                        if (item?.onClick) {
+                            return (
+                                <button
+                                    key={key}
+                                    type="button"
+                                    onClick={item.onClick}
+                                    aria-current={current}
+                                    className={itemClasses}>
+                                    {content}
+                                </button>
+                            );
+                        }
+                        return (
+                            <span
+                                key={key}
+                                aria-current={current}
+                                className={itemClasses}>
+                                {content}
+                            </span>
+                        );
+                    })}
                 </div>
-            </div>
+            </nav>
         );
     }
 );

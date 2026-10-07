@@ -45,10 +45,19 @@
     position: relative;
     margin-bottom: 1em;
     margin-left: auto;
+    background: none;
+    border: 0;
+    padding: 0;
 }
 
-.CoreLabUI__popup-close-icon:hover {
+.CoreLabUI__popup-close-icon:hover,
+.CoreLabUI__popup-close-icon:focus-visible {
     opacity: 1;
+}
+
+.CoreLabUI__popup-close-icon:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
 }
 
 .CoreLabUI__popup-close-icon:before,

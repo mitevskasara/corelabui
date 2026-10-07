@@ -14,7 +14,7 @@ const Scrollable = forwardRef(({ className, children, ...props }, ref) => {
     if (className) classes += ` ${className}`;
 
     return (
-        <div {...props} className={classes} ref={ref}>
+        <div tabIndex={0} {...props} className={classes} ref={ref}>
             {children}
         </div>
     );

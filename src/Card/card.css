@@ -40,6 +40,12 @@
     transform: scale(0.97);
 }
 
+.CoreLabUI__card:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+    box-shadow: var(--box-shadow-hover);
+}
+
 .CoreLabUI__card-header,
 .CoreLabUI__card-tags {
     display: flex;

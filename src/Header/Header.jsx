@@ -1,4 +1,4 @@
-import React, { forwardRef, useRef, useState } from 'react';
+import React, { forwardRef, useRef, useState, useId } from 'react';
 import Link from '../Link/Link';
 import Button from '../Button/Button';
 import useClickAway from '../helpers/useClickAway';
@@ -18,6 +18,7 @@ const Header = forwardRef(
             children,
             classes,
             logo,
+            alt = '',
             items,
             actions,
             align = 'right',
@@ -29,6 +30,9 @@ const Header = forwardRef(
     ) => {
         const headerRef = useRef();
         const [isOpen, open] = useState(false);
+        const uid = useId();
+        const mobileNavId = `${uid}-mobile-nav`;
+        const menuIconId = `${uid}-menu-icon`;
         let classesRoot = `CoreLabUI__header-root`;
         if (classes?.root) classesRoot += ` ${classes?.root}`;
         classesRoot += ' CoreLabUI';
@@ -38,12 +42,21 @@ const Header = forwardRef(
 
         useClickAway(headerRef?.current, () => open(false));
 
+        const handleKeyDown = (event) => {
+            if (event.key === 'Escape' && isOpen) {
+                event.stopPropagation();
+                open(false);
+                document.getElementById(menuIconId)?.focus?.();
+            }
+        };
+
         return (
             <>
                 <div
                     {...props}
                     className={classesRoot}
                     ref={headerRef}
+                    onKeyDown={handleKeyDown}
                     style={{
                         '--header-padding': spacing
                     }}>
@@ -52,11 +65,16 @@ const Header = forwardRef(
                         style={{
                             '--header-max-width': maxWidth
                         }}>
-                        <img src={logo} className="CoreLabUI__header-logo" />
-                        <div
+                        <img
+                            src={logo}
+                            alt={alt}
+                            className="CoreLabUI__header-logo"
+                        />
+                        <nav
                             className={`CoreLabUI__header-nav CoreLabUI__header-nav--${
                                 isOpen ? 'open' : 'closed'
                             }`}
+                            aria-label="Main"
                             style={{
                                 '--header-items-margin':
                                     align === 'center' && 'auto',
@@ -65,48 +83,57 @@ const Header = forwardRef(
                                 '--header-items-margin-right':
                                     align === 'left' && 'auto'
                             }}>
-                            <menu className="CoreLabUI__header-menu">
+                            <ul className="CoreLabUI__header-menu">
                                 {items?.map((item, key) => (
-                                    <Link href={item.link} key={key}>
-                                        {item.title}
-                                    </Link>
+                                    <li key={key}>
+                                        <Link href={item.link}>
+                                            {item.title}
+                                        </Link>
+                                    </li>
                                 ))}
                                 {actions?.map((action, key) => (
-                                    <Button
-                                        {...action}
-                                        key={key}
-                                        width="100%"
-                                    />
+                                    <li key={`action-${key}`}>
+                                        <Button {...action} width="100%" />
+                                    </li>
                                 ))}
-                            </menu>
-                        </div>
-                        <div
+                            </ul>
+                        </nav>
+                        <button
+                            type="button"
+                            id={menuIconId}
                             className="CoreLabUI__header-menu-icon"
+                            aria-label="Toggle navigation menu"
+                            aria-expanded={isOpen}
+                            aria-controls={mobileNavId}
                             onClick={() => open(!isOpen)}>
                             <span />
                             <span />
                             <span />
                             <span />
-                        </div>
+                        </button>
                     </div>
-                    <div
+                    <nav
+                        id={mobileNavId}
                         className={`CoreLabUI__header-nav--mobile CoreLabUI__header-nav--mobile--${
                             isOpen ? 'open' : 'closed'
                         }`}
+                        aria-label="Main"
                         style={{
                             '--header-padding': spacing
                         }}>
-                        <menu className="CoreLabUI__header-menu">
+                        <ul className="CoreLabUI__header-menu">
                             {items?.map((item, key) => (
-                                <Link href={item.link} key={key}>
-                                    {item.title}
-                                </Link>
+                                <li key={key}>
+                                    <Link href={item.link}>{item.title}</Link>
+                                </li>
                             ))}
                             {actions?.map((action, key) => (
-                                <Button {...action} key={key} />
+                                <li key={`action-${key}`}>
+                                    <Button {...action} />
+                                </li>
                             ))}
-                        </menu>
-                    </div>
+                        </ul>
+                    </nav>
                 </div>
             </>
         );

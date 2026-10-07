@@ -111,3 +111,8 @@
 .CoreLabUI__checkbox-checkmark--rounded {
     border-radius: 50%;
 }
+
+.CoreLabUI__checkbox-label > input:focus-visible ~ .CoreLabUI__checkbox-checkmark {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+}

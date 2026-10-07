@@ -69,9 +69,3 @@
     animation: CoreLabUI-dropdown-close-keyframe 0.3s ease-in-out forwards;
     display: none;
 }
-
-.CoreLabUI__dropdown-trigger:hover + .CoreLabUI__dropdown-content {
-    opacity: 1;
-    transform: translateY(0);
-    z-index: 4;
-}

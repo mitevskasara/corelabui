@@ -61,6 +61,11 @@
     border: 1px solid var(--primary-hover);
 }
 
+.CoreLabUI__select:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 1px;
+}
+
 .CoreLabUI__root:hover > .label {
     color: var(--primary-hover);
 }
@@ -127,6 +132,11 @@
 
 .CoreLabUI__select-menu__option--selected {
     background-color: var(--surface-dark);
+}
+
+.CoreLabUI__select-menu__option--active,
+.CoreLabUI__select-menu__option--active:hover {
+    background-color: var(--hover);
 }
 
 .CoreLabUI__select-menu__option--disabled,

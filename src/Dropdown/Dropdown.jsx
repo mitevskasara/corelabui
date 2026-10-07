@@ -1,10 +1,9 @@
-import React, { forwardRef, useState } from 'react';
+import React, { forwardRef, useEffect, useId, useRef, useState } from 'react';
 import { injectTheme } from '../Theme';
 import { injectStyle } from '../utils';
 import { injectStylesheetServerSide } from '../utils';
 
 import Button from '../Button';
-import useClickAway from '../helpers/useClickAway';
 import './dropdown.css';
 
 injectTheme();
@@ -26,35 +25,81 @@ const Dropdown = forwardRef(
         },
         ref
     ) => {
-        const [anchorEl, setAnchorEl] = useState(null);
-        const open = Boolean(anchorEl);
+        const [open, setOpen] = useState(false);
+        const rootRef = useRef(null);
+        const uid = useId();
+        const contentId = `${uid}-dropdown`;
+        const triggerId = buttonProps?.id || `${uid}-trigger`;
 
         let classes = `CoreLabUI CoreLabUI__dropdown`;
         if (className) classes += ` ${className}`;
 
-        let contentClasses = `CoreLabUI__dropdown-content`;
-        if (trigger === 'click')
-            contentClasses += ` CoreLabUI__dropdown-content--${
-                open ? 'open' : 'closed'
-            }`;
+        const contentClasses = `CoreLabUI__dropdown-content CoreLabUI__dropdown-content--${
+            open ? 'open' : 'closed'
+        }`;
 
-        const handleClick = (event) => {
-            setAnchorEl(open ? null : event.currentTarget);
+        const handleToggle = () => {
+            if (disabled) return;
+            setOpen((current) => !current);
         };
 
-        const handleClose = () => setAnchorEl(null);
+        const handleMouseEnter = () => {
+            if (trigger === 'hover' && !disabled) setOpen(true);
+        };
 
-        useClickAway(anchorEl, handleClose);
+        const handleMouseLeave = () => {
+            if (trigger === 'hover') setOpen(false);
+        };
+
+        const handleKeyDown = (event) => {
+            if (event.key === 'Escape' && open) {
+                event.stopPropagation();
+                setOpen(false);
+                document.getElementById(triggerId)?.focus?.();
+            }
+        };
+
+        const handleBlur = (event) => {
+            if (!rootRef.current?.contains(event.relatedTarget)) {
+                setOpen(false);
+            }
+        };
+
+        useEffect(() => {
+            if (!open) return;
+            const handleClickAway = (event) => {
+                if (rootRef.current && !rootRef.current.contains(event.target)) {
+                    setOpen(false);
+                }
+            };
+            document.addEventListener('click', handleClickAway);
+            return () => document.removeEventListener('click', handleClickAway);
+        }, [open]);
 
         return (
-            <div {...props} className={classes} ref={ref}>
+            <div
+                {...props}
+                className={classes}
+                ref={(element) => {
+                    rootRef.current = element;
+                    if (typeof ref === 'function') ref(element);
+                    else if (ref) ref.current = element;
+                }}
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+                onKeyDown={handleKeyDown}
+                onBlur={handleBlur}>
                 <Button
                     {...buttonProps}
+                    id={triggerId}
                     className="CoreLabUI__dropdown-trigger"
                     disabled={disabled}
-                    onClick={handleClick}
+                    aria-expanded={open}
+                    aria-controls={contentId}
+                    onClick={handleToggle}
                 />
                 <div
+                    id={contentId}
                     className={contentClasses}
                     style={{
                         '--min-width': minWidth,
