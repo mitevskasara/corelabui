@@ -5,6 +5,7 @@ const deps = require('./package.json');
 esbuild
     .build({
         entryPoints: [
+            'src/index.js',
             'src/utils/index.js',
             'src/Theme/index.js',
             'src/ThemeProvider/index.js',
@@ -31,6 +32,7 @@ esbuild
             'src/Table/index.js',
             'src/TableOfContents/index.js',
             'src/Tag/index.js',
+            'src/Tabs/index.js',
             'src/Textarea/index.js'
         ],
         outdir: '.',
