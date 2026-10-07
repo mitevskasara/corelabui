@@ -22,12 +22,6 @@ npm run build       # build the library (required once, and after every src/ cha
 npm run demo        # serve the demo at http://localhost:3000
 ```
 
-To get a hosted URL, import the repository into Vercel — it is preconfigured in [`vercel.json`](vercel.json) (builds the library, builds the demo and serves `demo/dist`):
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/mitevskasara/corelabui)
-
-> The demo is excluded from the npm package (see [`.npmignore`](.npmignore)) — it is only part of the repository.
-
 ## Installation
 
 Corelab UI is available as an npm package. Make sure you have Node.js installed, then run:
