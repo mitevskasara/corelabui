@@ -4,7 +4,9 @@
     "description": "Collection of ready-to-use customisable React components available in multiple themes",
     "private": false,
     "scripts": {
-        "build": "find . -mindepth 1 -maxdepth 1 -type d ! -name 'node_modules' ! -name 'src' ! -name 'plugins' -exec sh -c 'find \"{}\" -type f -name \"*.js\" | read' \\; -exec rm -rf {} \\; && node esbuild.js"
+        "build": "find . -mindepth 1 -maxdepth 1 -type d ! -name 'node_modules' ! -name 'src' ! -name 'plugins' ! -name 'demo' -exec sh -c 'find \"{}\" -type f -name \"*.js\" | read' \\; -exec rm -rf {} \\; && node esbuild.js",
+        "build:demo": "node demo/build.js",
+        "demo": "node demo/build.js --serve"
     },
     "repository": {
         "type": "git",

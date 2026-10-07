@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Corelab UI — Live Demo</title>
+        <meta
+            name="description"
+            content="Interactive demo of Corelab UI, a collection of ready-to-use, customisable React components available in multiple themes."
+        />
+        <meta name="theme-color" content="#393053" />
+        <link
+            rel="icon"
+            href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23393053'/%3E%3Cpath d='M22 11.5a7.5 7.5 0 1 0 0 9' stroke='white' stroke-width='3' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Fira+Code:wght@400;500&display=swap"
+        />
+        <style>
+            *,
+            *::before,
+            *::after {
+                box-sizing: border-box;
+            }
+
+            html {
+                scroll-behavior: smooth;
+            }
+
+            body {
+                margin: 0;
+                font-family: var(
+                    --font-family,
+                    'Roboto',
+                    'Helvetica',
+                    'Arial',
+                    sans-serif
+                );
+                background: var(--background, #ffffff);
+                color: var(--text, #333333);
+                -webkit-font-smoothing: antialiased;
+                transition: background-color 0.3s ease, color 0.3s ease;
+            }
+
+            a {
+                color: var(--primary);
+            }
+
+            .demo-topbar {
+                position: sticky;
+                top: 0;
+                z-index: 50;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                gap: 12px 24px;
+                padding: 12px clamp(16px, 4vw, 40px);
+                background: var(--background, #ffffff);
+                border-bottom: 1px solid var(--border-color, #d3d3d3);
+            }
+
+            .demo-brand {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                font-weight: 500;
+                font-size: 1.05rem;
+                color: var(--title);
+                text-decoration: none;
+            }
+
+            .demo-brand-mark {
+                display: grid;
+                place-items: center;
+                width: 30px;
+                height: 30px;
+                border-radius: 8px;
+                background: var(--primary);
+                color: #fff;
+                font-size: 1rem;
+                font-weight: 700;
+            }
+
+            .demo-version {
+                padding: 2px 8px;
+                border: 1px solid var(--border-color);
+                border-radius: 999px;
+                font-size: 0.72rem;
+                font-weight: 500;
+                color: var(--text-secondary);
+            }
+
+            .demo-topbar-actions {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                flex-wrap: wrap;
+            }
+
+            .demo-themes {
+                display: flex;
+                align-items: center;
+                gap: 6px;
+                padding: 4px;
+                border: 1px solid var(--border-color);
+                border-radius: 999px;
+                background: var(--light);
+            }
+
+            .demo-theme {
+                display: flex;
+                align-items: center;
+                gap: 6px;
+                padding: 5px 11px;
+                border: 1px solid transparent;
+                border-radius: 999px;
+                background: transparent;
+                color: var(--text);
+                font-family: inherit;
+                font-size: 0.78rem;
+                cursor: pointer;
+                transition: background 0.15s ease, border-color 0.15s ease;
+            }
+
+            .demo-theme:hover {
+                background: var(--hover);
+            }
+
+            .demo-theme.is-active {
+                background: var(--background);
+                border-color: var(--border-color);
+                box-shadow: var(--box-shadow);
+                color: var(--title);
+                font-weight: 500;
+            }
+
+            .demo-theme-swatch {
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+                border: 1px solid rgba(0, 0, 0, 0.15);
+                flex-shrink: 0;
+            }
+
+            .demo-github {
+                display: flex;
+                align-items: center;
+                gap: 6px;
+                padding: 7px 14px;
+                border: 1px solid var(--border-color);
+                border-radius: 999px;
+                background: var(--background);
+                color: var(--title);
+                font-size: 0.8rem;
+                font-weight: 500;
+                text-decoration: none;
+                transition: background 0.15s ease;
+            }
+
+            .demo-github:hover {
+                background: var(--hover);
+            }
+
+            .demo-shell {
+                display: grid;
+                grid-template-columns: 220px minmax(0, 1fr);
+                gap: clamp(24px, 4vw, 56px);
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: clamp(24px, 4vw, 48px) clamp(16px, 4vw, 40px) 80px;
+            }
+
+            .demo-sidebar {
+                position: sticky;
+                top: 84px;
+                align-self: start;
+            }
+
+            .demo-main {
+                min-width: 0;
+            }
+
+            .demo-hero {
+                padding-bottom: 8px;
+            }
+
+            .demo-section {
+                padding-top: 40px;
+                scroll-margin-top: 84px;
+            }
+
+            .demo-section + .demo-section {
+                margin-top: 24px;
+                border-top: 1px solid var(--border-color);
+            }
+
+            .demo-section-head {
+                display: flex;
+                flex-direction: column;
+                gap: 6px;
+                margin-bottom: 22px;
+            }
+
+            .demo-section-body {
+                display: flex;
+                flex-direction: column;
+                gap: 26px;
+            }
+
+            .demo-panel {
+                display: flex;
+                flex-direction: column;
+                gap: 14px;
+                padding: clamp(16px, 3vw, 26px);
+                border: 1px solid var(--border-color);
+                border-radius: var(--border-radius, 3px);
+                background: var(--light, #fcfcfc);
+            }
+
+            .demo-panel-label {
+                font-size: 0.72rem;
+                font-weight: 500;
+                letter-spacing: 0.08em;
+                text-transform: uppercase;
+                color: var(--text-secondary);
+            }
+
+            .demo-code {
+                margin: 0;
+                padding: 14px 16px;
+                overflow-x: auto;
+                border: 1px solid var(--border-color);
+                border-radius: var(--border-radius, 3px);
+                background: var(--light, #f7f7f9);
+                color: var(--title);
+                font-family: 'Fira Code', ui-monospace, SFMono-Regular, Menlo,
+                    monospace;
+                font-size: 0.8rem;
+                line-height: 1.7;
+                tab-size: 2;
+            }
+
+            .demo-code .demo-code-accent {
+                color: var(--primary);
+            }
+
+            .demo-row {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                gap: 14px;
+            }
+
+            .demo-row-vertical {
+                display: flex;
+                flex-direction: column;
+                gap: 14px;
+            }
+
+            .demo-fill {
+                width: 100%;
+            }
+
+            .demo-box {
+                display: grid;
+                place-items: center;
+                min-height: 64px;
+                padding: 12px;
+                border: 1px dashed var(--primary);
+                border-radius: var(--border-radius, 3px);
+                background: var(--light);
+                color: var(--text);
+                font-size: 0.85rem;
+            }
+
+            .demo-footer {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: space-between;
+                gap: 12px;
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 26px clamp(16px, 4vw, 40px) 40px;
+                border-top: 1px solid var(--border-color);
+                color: var(--text-secondary);
+                font-size: 0.85rem;
+            }
+
+            .demo-loading {
+                width: 100%;
+            }
+
+            @media (max-width: 900px) {
+                .demo-shell {
+                    grid-template-columns: minmax(0, 1fr);
+                }
+
+                .demo-sidebar {
+                    display: none;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div id="root"></div>
+        <script src="./app.js"></script>
+    </body>
+</html>

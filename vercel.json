@@ -1,0 +1,6 @@
+{
+    "framework": null,
+    "installCommand": "npm install --include=dev",
+    "buildCommand": "npm run build && npm run build:demo",
+    "outputDirectory": "demo/dist"
+}

@@ -11,3 +11,8 @@ dist
 !plugins
 !esbuild.js
 !utils
+!demo
+!demo/*
+demo/dist
+!vercel.json
+.DS_Store
