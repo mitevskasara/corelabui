@@ -1,0 +1,79 @@
+@keyframes CoreLabUI-popup-keyframe {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.CoreLabUI__popup-backdrop {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 1000%;
+    background-color: var(--backdrop);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.1;
+}
+
+.CoreLabUI__popup {
+    position: fixed;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow-hover);
+    z-index: 2;
+    animation: CoreLabUI-popup-keyframe 0.2s ease-in-out forwards;
+    background-color: var(--background);
+    padding: 1.5em 2em;
+    display: flex;
+    flex-direction: column;
+    width: var(--popup-width);
+    height: var(--popup-height);
+    top: 25%;
+}
+
+.CoreLabUI__popup-close-icon {
+    width: 20px;
+    height: 20px;
+    opacity: 0.3;
+    cursor: pointer;
+    position: relative;
+    margin-bottom: 1em;
+    margin-left: auto;
+    background: none;
+    border: 0;
+    padding: 0;
+}
+
+.CoreLabUI__popup-close-icon:hover,
+.CoreLabUI__popup-close-icon:focus-visible {
+    opacity: 1;
+}
+
+.CoreLabUI__popup-close-icon:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+}
+
+.CoreLabUI__popup-close-icon:before,
+.CoreLabUI__popup-close-icon:after {
+    content: var(--content);
+    height: 20px;
+    width: 2.5px;
+    background-color: var(--text);
+    position: absolute;
+    right: 10px;
+}
+
+.CoreLabUI__popup-close-icon:before {
+    transform: rotate(45deg);
+}
+
+.CoreLabUI__popup-close-icon:after {
+    transform: rotate(-45deg);
+}

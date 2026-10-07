@@ -1,0 +1,83 @@
+.CoreLabUI__field-multiline-root {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    font-family: var(--font-family);
+}
+
+.CoreLabUI__field-multiline {
+    font-family: var(--font-family);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    outline: none;
+    font-size: var(--font-medium);
+    color: var(--text);
+    resize: none;
+    padding: 10px 16px;
+    background-color: var(--fields-background);
+}
+
+.CoreLabUI__field-multiline__helper-text {
+    font-size: var(--font-xsmall);
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.CoreLabUI__field-multiline__label {
+    font-size: var(--font-small);
+    color: var(--text);
+    font-weight: 600;
+}
+
+.CoreLabUI__field-multiline::placeholder {
+    font-family: var(--font-family);
+    font-size: var(--font-medium);
+    color: var(--text-secondary);
+}
+
+.CoreLabUI__field-multiline:hover {
+    border: 1px solid var(--primary-hover);
+}
+
+.CoreLabUI__field-multiline:focus {
+    border: 1px solid var(--primary-hover);
+}
+
+.CoreLabUI__field-multiline-root:hover > .CoreLabUI__field-multiline__label {
+    color: var(--primary-hover);
+}
+
+.CoreLabUI__field-multiline-root--disabled > textarea:hover,
+.CoreLabUI__field-multiline-root--disabled > textarea:focus {
+    border: 1px solid var(--border-color);
+    color: var(--border-color);
+}
+
+.CoreLabUI__field-multiline-root--disabled > textarea::placeholder,
+.CoreLabUI__field-multiline-root--disabled > .CoreLabUI__field-multiline__label,
+.CoreLabUI__field-multiline-root--disabled
+    > .CoreLabUI__field-multiline__helper-text {
+    color: var(--border-color) !important;
+}
+
+.CoreLabUI__field-multiline--error,
+.CoreLabUI__field-multiline-root--error > textarea:hover,
+.CoreLabUI__field-multiline-root--error > textarea:focus {
+    border: 1px solid var(--error);
+}
+
+.CoreLabUI__field-multiline-root--error > .CoreLabUI__field-multiline__label,
+.CoreLabUI__field-multiline-root--error
+    > .CoreLabUI__field-multiline__helper-text {
+    color: var(--error) !important;
+}
+
+.CoreLabUI__field-multiline:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 1px;
+}
+
+.CoreLabUI__field-multiline-root--error .CoreLabUI__field-multiline:focus-visible {
+    outline-color: var(--error);
+}

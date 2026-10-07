@@ -1,0 +1,33 @@
+.CoreLabUI__flex-item {
+    flex: var(--flex);
+    margin: var(--margin);
+    padding: var(--padding);
+}
+
+.CoreLabUI__flex-item-align-self--baseline {
+    align-self: baseline;
+}
+
+.CoreLabUI__flex-item-align-self--center {
+    align-self: center;
+}
+
+.CoreLabUI__flex-item-align-self--start {
+    align-self: flex-start;
+}
+
+.CoreLabUI__flex-item-align-self--end {
+    align-self: flex-end;
+}
+
+.CoreLabUI__flex-item-align-self--strech {
+    align-self: stretch;
+}
+
+.CoreLabUI__flex-item-align-self--unset {
+    align-self: unset;
+}
+
+.CoreLabUI__flex-item-order {
+    order: var(--order);
+}

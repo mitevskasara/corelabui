@@ -1,0 +1,37 @@
+.CoreLabUI__tab-root {
+    margin-bottom: -2px;
+}
+
+.CoreLabUI__tab {
+    background-color: transparent;
+    box-shadow: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.3em 0.5em;
+}
+
+.CoreLabUI__tab--active {
+    color: var(--primary);
+}
+
+.CoreLabUI__tab:focus-visible {
+    color: var(--primary);
+    outline: 2px solid var(--primary);
+    outline-offset: -2px;
+}
+
+.CoreLabUI__tab-line--active {
+    border-bottom: 2px solid var(--primary);
+}
+
+.CoreLabUI__tab-line--active {
+    border-bottom: 2px solid var(--primary);
+    width: 100%;
+    transition: width linear 0.2s;
+    background-color: transparent;
+}
+
+.CoreLabUI__tab-line--inactive {
+    width: 0px;
+}

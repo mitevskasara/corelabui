@@ -1,0 +1,71 @@
+@keyframes CoreLabUI-dropdown-arrow-keyframe {
+    0% {
+        top: 0;
+    }
+
+    100% {
+        top: -5px;
+        opacity: 1;
+    }
+}
+
+@keyframes CoreLabUI-dropdown-open-keyframe {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        visibility: visible;
+        z-index: 2;
+    }
+}
+
+@keyframes CoreLabUI-dropdown-close-keyframe {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+        visibility: visible;
+        z-index: 2;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+}
+
+.CoreLabUI__dropdown {
+    width: fit-content;
+    position: relative;
+}
+
+.CoreLabUI__dropdown-content {
+    position: absolute;
+    background-color: var(--background);
+    box-shadow: var(--box-shadow-hover);
+    padding: 0.7em 0.7em 0.7em;
+    min-width: var(--min-width);
+    margin-top: 0.1em;
+    border: 1px solid var(--border-color);
+    border-radius: 3px;
+    box-sizing: border-box;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: transform 0.5s, opacity 0.1s;
+    left: var(--left);
+    right: var(--right);
+}
+
+.CoreLabUI__dropdown-content--open {
+    animation: CoreLabUI-dropdown-open-keyframe 0.3s ease-in-out forwards;
+    display: block;
+    z-index: 4;
+}
+
+.CoreLabUI__dropdown-content--closed {
+    animation: CoreLabUI-dropdown-close-keyframe 0.3s ease-in-out forwards;
+    display: none;
+}

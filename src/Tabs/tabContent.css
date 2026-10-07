@@ -1,0 +1,8 @@
+.CoreLabUI__tab-content {
+    display: none;
+    padding: 1em 0px;
+}
+
+.CoreLabUI__tab-content--active {
+    display: block;
+}

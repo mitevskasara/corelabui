@@ -1,0 +1,38 @@
+.CoreLabUI__divider {
+    display: flex;
+    width: var(--divider-width);
+    align-items: center;
+}
+
+.CoreLabUI__divider-text {
+    width: fit-content;
+    margin: 1em;
+}
+
+.CoreLabUI__divider::before,
+.CoreLabUI__divider::after {
+    content: var(--content);
+    padding: 0.5px;
+    background-color: var(--divider-color);
+}
+
+.CoreLabUI__divider--center::before,
+.CoreLabUI__divider--center::after {
+    flex: 1;
+}
+
+.CoreLabUI__divider--left::before {
+    flex: 0.1;
+}
+
+.CoreLabUI__divider--left::after {
+    flex: 2;
+}
+
+.CoreLabUI__divider--right::before {
+    flex: 2;
+}
+
+.CoreLabUI__divider--right::after {
+    flex: 0.1;
+}

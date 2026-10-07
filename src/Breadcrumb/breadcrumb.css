@@ -1,0 +1,26 @@
+.CoreLabUI__breadcrumb {
+    display: flex;
+    position: relative;
+    align-items: center;
+    gap: 0.5em;
+    font-family: var(--font-family);
+}
+
+.CoreLabUI__breadcrumb-item,
+.CoreLabUI__breadcrumb-item--inactive,
+.CoreLabUI__breadcrumb-separator {
+    color: var(--text-secondary);
+    text-decoration: none;
+}
+
+.CoreLabUI__breadcrumb-item--active,
+.CoreLabUI__breadcrumb-item:hover {
+    color: var(--text);
+}
+
+.CoreLabUI__breadcrumb-item:focus-visible {
+    color: var(--text);
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+    border-radius: var(--border-radius);
+}

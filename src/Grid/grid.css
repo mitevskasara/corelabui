@@ -1,0 +1,11 @@
+.CoreLabUI__grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    margin: var(--margin);
+    padding: var(--padding);
+}
+
+.CoreLabUI__grid-gap {
+    column-gap: var(--column-gap);
+    row-gap: var(--row-gap);
+}

@@ -1,0 +1,24 @@
+.CoreLabUI__layout-main--dashboard {
+    grid-area: main;
+    padding: var(--padding);
+    margin: var(--margin);
+    overflow-y: auto;
+    grid-row: 2 / span 9;
+}
+
+.CoreLabUI__layout-main--website {
+    grid-area: main;
+    margin-top: calc(var(--header-height) + 1em);
+    padding: var(--padding);
+    margin: var(--margin);
+    overflow-y: auto;
+}
+
+.CoreLabUI__layout-main--custom {
+    grid-column: var(--main-layout-grid-column);
+    grid-row: var(--main-layout-grid-row);
+    margin-top: calc(var(--header-height) + 1em);
+    padding: var(--padding);
+    margin: var(--margin);
+    overflow-y: auto;
+}

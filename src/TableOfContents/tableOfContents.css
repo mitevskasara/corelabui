@@ -1,0 +1,41 @@
+.CoreLabUI__table-of-contents-item {
+    display: block;
+    padding: 0.2em 1em;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    border-left: 2px solid transparent;
+    font: inherit;
+    text-align: left;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button.CoreLabUI__table-of-contents-item {
+    background: none;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 0;
+}
+
+span.CoreLabUI__table-of-contents-item {
+    cursor: default;
+}
+
+.CoreLabUI__table-of-contents-item:hover {
+    border-left: 2px solid var(--primary);
+    color: var(--primary);
+}
+
+.CoreLabUI__table-of-contents-item:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: -2px;
+    border-left: 2px solid var(--primary);
+    color: var(--primary);
+}
+
+.CoreLabUI__table-of-contents-item--active,
+.CoreLabUI__table-of-contents-item:active {
+    border-left: 2px solid var(--primary);
+    background-color: var(--primary-active);
+}

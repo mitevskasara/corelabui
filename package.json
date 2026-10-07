@@ -1,0 +1,41 @@
+{
+    "name": "corelabui",
+    "version": "0.0.12",
+    "description": "Collection of ready-to-use customisable React components available in multiple themes",
+    "private": false,
+    "scripts": {
+        "build": "find . -mindepth 1 -maxdepth 1 -type d ! -name 'node_modules' ! -name 'src' ! -name 'plugins' ! -name 'demo' -exec sh -c 'find \"{}\" -type f -name \"*.js\" | read' \\; -exec rm -rf {} \\; && node esbuild.js",
+        "build:demo": "node demo/build.js",
+        "demo": "node demo/build.js --serve",
+        "prepublishOnly": "npm run build"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/mitevskasara/corelabui.git"
+    },
+    "keywords": [
+        "javascript",
+        "typescript",
+        "react",
+        "react-components"
+    ],
+    "sideEffects": [
+        "**/*.css"
+    ],
+    "main": "index.js",
+    "module": "index.js",
+    "author": "Corelab UI",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/mitevskasara/corelabui/issues"
+    },
+    "homepage": "https://github.com/mitevskasara/corelabui#readme",
+    "peerDependencies": {
+        "react": ">=18"
+    },
+    "devDependencies": {
+        "esbuild": "^0.18.10",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
+    }
+}

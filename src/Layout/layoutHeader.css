@@ -1,0 +1,18 @@
+.CoreLabUI__layout-header--dashboard {
+    grid-area: hd;
+    padding: var(--padding);
+    margin: var(--margin);
+}
+
+.CoreLabUI__layout-header--website {
+    grid-area: hd;
+    padding: var(--padding);
+    margin: var(--margin);
+}
+
+.CoreLabUI__layout-header--custom {
+    grid-column: var(--header-layout-grid-column);
+    grid-row: var(--header-layout-grid-row);
+    padding: var(--padding);
+    margin: var(--margin);
+}

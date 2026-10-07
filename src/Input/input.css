@@ -1,0 +1,89 @@
+.CoreLabUI__field-root {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    font-family: var(--font-family);
+}
+
+.CoreLabUI__field {
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    outline: none;
+    font-size: var(--font-medium);
+    color: var(--text);
+    background-color: var(--fields-background);
+}
+
+.CoreLabUI__field--small {
+    padding: 10px 16px;
+}
+
+.CoreLabUI__field--medium {
+    padding: 10px 16px;
+}
+
+.CoreLabUI__field--large {
+    padding: 10px 16px;
+}
+
+.CoreLabUI__field__helper-text {
+    font-size: var(--font-xsmall);
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.CoreLabUI__field__label {
+    font-size: var(--font-small);
+    color: var(--text);
+    font-weight: 600;
+}
+
+.CoreLabUI__field::placeholder {
+    font-size: var(--font-medium);
+    color: var(--text-secondary);
+}
+
+.CoreLabUI__field:hover {
+    border: 1px solid var(--primary-hover);
+}
+
+.CoreLabUI__field:focus {
+    border: 1px solid var(--primary-hover);
+}
+
+.CoreLabUI__field-root:hover > .CoreLabUI__field__label {
+    color: var(--primary-hover);
+}
+
+.CoreLabUI__field-root--disabled > input:hover,
+.CoreLabUI__field-root--disabled > input:focus {
+    border: 1px solid var(--border-color);
+    color: var(--border-color);
+}
+
+.CoreLabUI__field-root--disabled > input::placeholder,
+.CoreLabUI__field-root--disabled > .CoreLabUI__field__label,
+.CoreLabUI__field-root--disabled > .CoreLabUI__field__helper-text {
+    color: var(--border-color) !important;
+}
+
+.CoreLabUI__field--error,
+.CoreLabUI__field-root--error > input:hover,
+.CoreLabUI__field-root--error > input:focus {
+    border: 1px solid var(--error);
+}
+
+.CoreLabUI__field-root--error > .CoreLabUI__field__label,
+.CoreLabUI__field-root--error > .CoreLabUI__field__helper-text {
+    color: var(--error) !important;
+}
+
+.CoreLabUI__field:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 1px;
+}
+
+.CoreLabUI__field-root--error .CoreLabUI__field:focus-visible {
+    outline-color: var(--error);
+}

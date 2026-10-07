@@ -1,0 +1,67 @@
+@keyframes card-header-action-pulse {
+    0% {
+        transform: scale(0.95);
+    }
+
+    70% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(0.95);
+    }
+}
+
+.CoreLabUI__card {
+    font-family: var(--font-family);
+    width: var(--card-width);
+    height: var(--card-height);
+    background-color: var(--surface);
+    display: flex;
+    flex-direction: column;
+    border-radius: var(--border-radius);
+    border: 1px solid transparent;
+    padding: 1em;
+    gap: 0.5em;
+    box-shadow: var(--box-shadow);
+    border: 1px solid var(--border-color);
+}
+
+.CoreLabUI__card--clickable {
+    cursor: pointer;
+}
+
+.CoreLabUI__card--clickable:hover {
+    border: 1px solid var(--border-color);
+    box-shadow: var(--box-shadow-hover);
+}
+
+.CoreLabUI__card--clickable:active {
+    transform: scale(0.97);
+}
+
+.CoreLabUI__card:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+    box-shadow: var(--box-shadow-hover);
+}
+
+.CoreLabUI__card-header,
+.CoreLabUI__card-tags {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.CoreLabUI__card-tags {
+    width: var(--card-width);
+    justify-content: start;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    margin-top: 1em;
+}
+
+.CoreLabUI__card-image {
+    width: calc(100% + 2em);
+    margin: 0px -1em;
+}

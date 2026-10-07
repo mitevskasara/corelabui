@@ -1,0 +1,54 @@
+.CoreLabUI__table {
+    border-spacing: 1em;
+    border-collapse: collapse;
+    border-radius: var(--border-radius);
+    background-color: var(--border-color);
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    text-align: left;
+    box-shadow: var(--box-shadow);
+    border: 1px solid var(--border-color);
+    table-layout: fixed;
+}
+
+.CoreLabUI__table > * {
+    position: relative;
+}
+
+.CoreLabUI__table-head-column {
+    padding: 1em;
+    color: var(--text-secondary);
+}
+
+.CoreLabUI__table-body-column {
+    padding: 0.5em 1em;
+}
+
+.CoreLabUI__table-head-column > div {
+    display: flex;
+}
+
+.CoreLabUI__table-head > .CoreLabUI__table-body-row {
+    background-color: var(--surface-dark);
+}
+
+.CoreLabUI__table-body-row--bordered {
+    background-color: var(--surface);
+    border: 0.5px solid var(--border-color);
+}
+
+.CoreLabUI__table-body > .CoreLabUI__table-body-row--striped:nth-child(even) {
+    background-color: var(--surface-dark);
+}
+
+.CoreLabUI__table-caption {
+    caption-side: top;
+    text-align: left;
+    font-size: var(--font-small);
+    color: var(--text-secondary);
+    font-family: var(--font-family);
+    background-color: var(--surface-dark);
+    padding: 1em 1em 0.5em;
+}

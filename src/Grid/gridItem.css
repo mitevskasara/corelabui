@@ -1,0 +1,29 @@
+.CoreLabUI__grid-item {
+    grid-column: var(--col);
+    margin: var(--margin);
+    padding: var(--padding);
+}
+
+@media (max-width: 600px) {
+    .CoreLabUI__grid-item {
+        grid-column: var(--col-xs) !important;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .CoreLabUI__grid-item {
+        grid-column: var(--col-sm) !important;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .CoreLabUI__grid-item {
+        grid-column: var(--col-md) !important;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .CoreLabUI__grid-item {
+        grid-column: var(--col-lg) !important;
+    }
+}

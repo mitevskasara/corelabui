@@ -1,0 +1,19 @@
+.CoreLabUI__quote {
+    margin: 0;
+    padding: 0px 1em;
+}
+
+.CoreLabUI__quote--line {
+    border-left: 4px solid var(--primary);
+}
+
+.CoreLabUI__quote-cite {
+    width: fit-content;
+    margin-top: 1em;
+}
+
+.CoreLabUI__quote-divider {
+    border-top: 1px solid var(--primary);
+    width: 30%;
+    padding-bottom: 0.5em;
+}
