@@ -24,9 +24,9 @@ export const defaultTheme = {
     title: '#000000e0',
     subtitle: '#000000e0',
     text: '#000000bf',
-    textSecondary: '#00000073',
+    textSecondary: '#00000091',
     textDisabled: '#00000040',
-    captionColor: '#00000073',
+    captionColor: '#00000091',
     borderRadius: '3px',
     checkboxBorderRadius: '4px',
     fontXsmall: '12px',
@@ -77,33 +77,33 @@ export const winterTheme = {
 
 export const springTheme = {
     ...defaultTheme,
-    primary: '#77BFA3',
-    primaryHover: '#98C9A3',
+    primary: '#17815a',
+    primaryHover: '#0f6d4a',
     primaryActive: '#EDEEC94f',
-    primaryDisabled: '#77BFA34D'
+    primaryDisabled: '#17815a4D'
 };
 
 export const summerTheme = {
     ...defaultTheme,
-    primary: '#FFD400',
-    primaryHover: '#FFDD32',
+    primary: '#8a6d00',
+    primaryHover: '#756000',
     primaryActive: '#fffae580',
-    primaryDisabled: '#FFD4004D'
+    primaryDisabled: '#8a6d004D'
 };
 
 export const fallTheme = {
     ...defaultTheme,
-    primary: '#F1580C',
-    primaryHover: '#F5793B',
-    primaryActive: '#f79a6b4f',
-    primaryDisabled: '#F1580C4D'
+    primary: '#c2410c',
+    primaryHover: '#ad3f0a',
+    primaryActive: '#fbc7a833',
+    primaryDisabled: '#c2410c4D'
 };
 
 export const darkTheme = {
     ...defaultTheme,
     primary: '#75a2ce',
     primaryHover: '#8db1d7',
-    primaryActive: '#0096C745',
+    primaryActive: '#0096C726',
     primaryDisabled: '#8e9093',
     light: '#171b20',
     background: '#171b20',
@@ -115,9 +115,9 @@ export const darkTheme = {
     title: '#ffffffe0',
     subtitle: '#ffffffe0',
     text: '#ffffffe0',
-    textSecondary: '#ffffff73',
+    textSecondary: '#ffffff99',
     textDisabled: '#74777a',
-    captionColor: '#ffffff73',
+    captionColor: '#ffffff99',
     borderColor: '#575757',
     boxShadow: 'none',
     tagColorOutlined: '#ffffffe0',

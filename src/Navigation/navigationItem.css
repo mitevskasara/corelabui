@@ -42,6 +42,8 @@
 }
 
 .CoreLabUI__navigation-item--active,
+.CoreLabUI__navigation-item--active:hover,
+.CoreLabUI__navigation-item--active:focus-visible,
 .CoreLabUI__navigation-item:active {
     background-color: var(--primary-active);
 }
