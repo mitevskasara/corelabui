@@ -4,7 +4,7 @@
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 Corelab UI is a collection of ready-to-use React components that aims to speed up the development process of user interfaces.
-With Corelab UI, you can quickly integrate beautifully designed and highly functional components into your React projects. The components are customisable, and you can also select from one of the library's themes that follow the latest UX design trends.
+With Corelab UI, you can quickly integrate minimal, simple components into your React projects. The components are customisable, and you can pick from six built-in themes. Many components ship with accessible markup — proper ARIA roles and states, keyboard navigation and labelled interactive elements.
 
 - **Styles ship with the code** — no CSS files to import, each component injects its own stylesheet.
 - **6 built-in themes** — switch the whole look of your app with a single prop, or override individual design tokens.
@@ -193,12 +193,6 @@ npm run demo         # watch and serve the demo at http://localhost:3000
 | `esbuild.js` | Library build (CommonJS, minified, one folder per component) |
 | `demo/` | Vercel-hosted demo app (excluded from the npm package) |
 | root folders such as `Button/`, `Table/` | Build output — what gets published to npm |
-
-Releasing:
-
-```bash
-npm run build && npm publish
-```
 
 ## License
 
